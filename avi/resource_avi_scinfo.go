@@ -23,10 +23,15 @@ func ResourceSCInfoSchema() *schema.Resource {
 			},
 			"obj_info": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceSCKeySchema()},
+				Required: true, Elem: ResourceSCKeySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

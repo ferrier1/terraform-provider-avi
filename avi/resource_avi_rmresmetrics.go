@@ -15,6 +15,7 @@ func ResourceRmResMetricsSchema() *schema.Resource {
 			"cpu_score": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
@@ -23,7 +24,8 @@ func ResourceRmResMetricsSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

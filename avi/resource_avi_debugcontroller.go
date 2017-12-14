@@ -15,27 +15,36 @@ func ResourceDebugControllerSchema() *schema.Resource {
 			"filters": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDebugFilterUnionSchema()},
+				Elem:     ResourceDebugFilterUnionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"log_level": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sub_module": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"trace_level": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

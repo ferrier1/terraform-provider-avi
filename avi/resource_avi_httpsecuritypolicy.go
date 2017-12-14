@@ -15,7 +15,8 @@ func ResourceHTTPSecurityPolicySchema() *schema.Resource {
 			"rules": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHTTPSecurityRuleSchema()},
+				Elem:     ResourceHTTPSecurityRuleSchema(),
+			},
 		},
 	}
 }

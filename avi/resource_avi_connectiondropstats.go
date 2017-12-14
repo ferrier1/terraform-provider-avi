@@ -14,31 +14,40 @@ func ResourceConnectionDropStatsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"connections_dropped_after_established": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"connections_dropped_before_established": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"fin_wait_2_timeout_drops": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"keepalive_timeout_drops": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"listen_queue_overflow_drops": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_resets_received": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_resets_sent": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"persist_timeout_drops": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"retransmit_timeout_drops": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

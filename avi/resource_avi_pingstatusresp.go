@@ -32,7 +32,8 @@ func ResourcePingStatusRespSchema() *schema.Resource {
 			"status": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_SUCCESS"},
+				Default:  "SYSERR_SUCCESS",
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

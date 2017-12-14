@@ -274,7 +274,8 @@ func ResourceVserverL4MetricsObjSchema() *schema.Resource {
 			},
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"pct_application_dos_attacks": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,

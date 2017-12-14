@@ -14,7 +14,8 @@ func ResourceCC_ParkIntfSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"intf_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"intf_ip": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -30,10 +31,12 @@ func ResourceCC_ParkIntfSchema() *schema.Resource {
 			"other_ips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"subnet_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tenant_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -15,18 +15,31 @@ func ResourceFailActionSchema() *schema.Resource {
 			"backup_pool": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceFailActionBackupPoolSchema()},
+				Elem:     ResourceFailActionBackupPoolSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"local_rsp": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceFailActionHTTPLocalResponseSchema()},
+				Elem:     ResourceFailActionHTTPLocalResponseSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"redirect": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceFailActionHTTPRedirectSchema()},
+				Elem:     ResourceFailActionHTTPRedirectSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

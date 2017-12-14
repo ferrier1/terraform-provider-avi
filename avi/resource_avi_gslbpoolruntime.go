@@ -15,7 +15,8 @@ func ResourceGslbPoolRuntimeSchema() *schema.Resource {
 			"members": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbPoolMemberRuntimeInfoSchema()},
+				Elem:     ResourceGslbPoolMemberRuntimeInfoSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

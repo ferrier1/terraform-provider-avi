@@ -15,7 +15,11 @@ func ResourceAnomalyDataSchema() *schema.Resource {
 			"anomaly_context": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAnomalyContextSchema()},
+				Elem:     ResourceAnomalyContextSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"anomaly_model": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,7 +35,8 @@ func ResourceAnomalyDataSchema() *schema.Resource {
 			"obj_id_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_OBJ_ID_TYPE_SERVER"},
+				Default:  "METRICS_OBJ_ID_TYPE_SERVER",
+			},
 			"pool_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -42,10 +47,12 @@ func ResourceAnomalyDataSchema() *schema.Resource {
 			},
 			"timestamp": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

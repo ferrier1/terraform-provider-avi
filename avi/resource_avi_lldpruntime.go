@@ -15,11 +15,16 @@ func ResourceLldpRuntimeSchema() *schema.Resource {
 			"interface_lldp_entry": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceInterfaceLldpEntrySchema()},
+				Elem:     ResourceInterfaceLldpEntrySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"namespace_lldp_summary": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNamespaceLldpEntrySchema()},
+				Elem:     ResourceNamespaceLldpEntrySchema(),
+			},
 		},
 	}
 }

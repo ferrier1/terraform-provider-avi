@@ -15,7 +15,8 @@ func ResourceRmMetricsSchema() *schema.Resource {
 			"se_grp_metrics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRmSeGrpMetricsSchema()},
+				Elem:     ResourceRmSeGrpMetricsSchema(),
+			},
 		},
 	}
 }

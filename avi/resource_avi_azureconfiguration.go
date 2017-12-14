@@ -23,7 +23,8 @@ func ResourceAzureConfigurationSchema() *schema.Resource {
 			"network_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAzureNetworkInfoSchema()},
+				Elem:     ResourceAzureNetworkInfoSchema(),
+			},
 			"resource_group": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -14,7 +14,8 @@ func ResourceApplicationPerformanceScoreDataSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -26,7 +27,8 @@ func ResourceApplicationPerformanceScoreDataSchema() *schema.Resource {
 			"virtualservice_performance_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVirtualServicePerformanceScoreSchema()},
+				Elem:     ResourceVirtualServicePerformanceScoreSchema(),
+			},
 		},
 	}
 }

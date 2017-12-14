@@ -14,7 +14,8 @@ func ResourceResourceStatusSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -22,7 +23,8 @@ func ResourceResourceStatusSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

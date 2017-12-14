@@ -20,7 +20,8 @@ func ResourceTCPApplicationProfileSchema() *schema.Resource {
 			"proxy_protocol_version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "PROXY_PROTOCOL_VERSION_1"},
+				Default:  "PROXY_PROTOCOL_VERSION_1",
+			},
 		},
 	}
 }

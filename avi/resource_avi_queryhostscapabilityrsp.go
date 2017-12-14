@@ -23,7 +23,8 @@ func ResourceQueryHostsCapabilityRspSchema() *schema.Resource {
 			"host_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHostInfoSchema()},
+				Elem:     ResourceHostInfoSchema(),
+			},
 			"obj_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -34,7 +35,8 @@ func ResourceQueryHostsCapabilityRspSchema() *schema.Resource {
 			},
 			"status": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"status_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

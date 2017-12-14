@@ -24,7 +24,8 @@ func ResourceCustomParamsSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

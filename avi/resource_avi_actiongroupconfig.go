@@ -33,13 +33,16 @@ func ResourceActionGroupConfigSchema() map[string]*schema.Schema {
 		},
 		"external_only": &schema.Schema{
 			Type:     schema.TypeBool,
-			Required: true},
+			Required: true,
+		},
 		"level": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"snmp_trap_profile_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -55,7 +58,8 @@ func ResourceActionGroupConfigSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

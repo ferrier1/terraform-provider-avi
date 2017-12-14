@@ -18,13 +18,16 @@ func ResourceSysTestEmailParamsSchema() *schema.Resource {
 			},
 			"subject": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"text": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"to_emails": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

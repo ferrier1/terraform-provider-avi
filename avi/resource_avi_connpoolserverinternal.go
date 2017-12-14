@@ -15,14 +15,20 @@ func ResourceConnpoolServerInternalSchema() *schema.Resource {
 			"conn_bind": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConnectionItemSchema()},
+				Elem:     ResourceConnectionItemSchema(),
+			},
 			"conn_free": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConnectionItemSchema()},
+				Elem:     ResourceConnectionItemSchema(),
+			},
 			"ip_addr": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"max_connection": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -38,14 +44,23 @@ func ResourceConnpoolServerInternalSchema() *schema.Resource {
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConnpoolStatsSchema()},
+				Elem:     ResourceConnpoolStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

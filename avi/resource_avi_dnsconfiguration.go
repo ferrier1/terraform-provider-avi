@@ -19,7 +19,8 @@ func ResourceDNSConfigurationSchema() *schema.Resource {
 			"server_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 		},
 	}
 }

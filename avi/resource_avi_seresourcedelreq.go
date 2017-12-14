@@ -15,7 +15,8 @@ func ResourceSeResourceDelReqSchema() *schema.Resource {
 			"reason_code": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SE_DEREG_POWERED_OFF"},
+				Default:  "SE_DEREG_POWERED_OFF",
+			},
 			"se_deleted": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -27,7 +28,8 @@ func ResourceSeResourceDelReqSchema() *schema.Resource {
 			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

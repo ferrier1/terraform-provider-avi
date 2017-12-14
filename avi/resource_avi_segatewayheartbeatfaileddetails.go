@@ -14,7 +14,8 @@ func ResourceSeGatewayHeartbeatFailedDetailsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"gateway_ip": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vrf_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

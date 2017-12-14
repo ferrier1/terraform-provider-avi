@@ -19,11 +19,13 @@ func ResourceApicVSPlacementReqSchema() *schema.Resource {
 			"lifs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceLifSchema()},
+				Elem:     ResourceLifSchema(),
+			},
 			"network_rel": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAPICNetworkRelSchema()},
+				Elem:     ResourceAPICNetworkRelSchema(),
+			},
 			"tenant_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

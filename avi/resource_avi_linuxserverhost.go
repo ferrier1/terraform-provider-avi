@@ -15,10 +15,15 @@ func ResourceLinuxServerHostSchema() *schema.Resource {
 			"host_attr": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHostAttributesSchema()},
+				Elem:     ResourceHostAttributesSchema(),
+			},
 			"host_ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"node_availability_zone": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

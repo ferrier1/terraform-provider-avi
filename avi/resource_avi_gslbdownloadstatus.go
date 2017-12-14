@@ -15,7 +15,11 @@ func ResourceGslbDownloadStatusSchema() *schema.Resource {
 			"last_changed_time": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

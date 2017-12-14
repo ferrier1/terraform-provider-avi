@@ -20,7 +20,8 @@ func ResourceSSLKeyRSAParamsSchema() *schema.Resource {
 			"key_size": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SSL_KEY_2048_BITS"},
+				Default:  "SSL_KEY_2048_BITS",
+			},
 		},
 	}
 }

@@ -15,7 +15,8 @@ func ResourceSeVipProtoSchema() *schema.Resource {
 			"con_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConVipInfoSchema()},
+				Elem:     ResourceConVipInfoSchema(),
+			},
 			"num_consumers_sharing_vip": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -23,19 +24,26 @@ func ResourceSeVipProtoSchema() *schema.Resource {
 			"primary_se_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVipInfoSchema()},
+				Elem:     ResourceSeVipInfoSchema(),
+			},
 			"secondary_se_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVipInfoSchema()},
+				Elem:     ResourceSeVipInfoSchema(),
+			},
 			"standby_se_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVipInfoSchema()},
+				Elem:     ResourceSeVipInfoSchema(),
+			},
 			"vip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

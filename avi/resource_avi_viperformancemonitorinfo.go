@@ -14,14 +14,19 @@ func ResourceVIPerformanceMonitorInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"admin": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVIAdminCredentialsSchema()},
+				Required: true, Elem: ResourceVIAdminCredentialsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cloud_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"dc_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"refresh_rate": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

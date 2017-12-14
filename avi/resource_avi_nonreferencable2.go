@@ -14,27 +14,33 @@ func ResourceNonReferencable2Schema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"bool_data": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"enum_data": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"int_data": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"optional_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"ref_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"repeated_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"string_data": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -20,11 +20,13 @@ func ResourceVIMgrIPSubnetRuntimeSchema() *schema.Resource {
 			"fip_subnet_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"floatingip_subnets": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceFloatingIpSubnetSchema()},
+				Elem:     ResourceFloatingIpSubnetSchema(),
+			},
 			"ip_subnet": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -35,7 +37,11 @@ func ResourceVIMgrIPSubnetRuntimeSchema() *schema.Resource {
 			},
 			"prefix": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Required: true, Elem: ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"primary": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -48,11 +54,13 @@ func ResourceVIMgrIPSubnetRuntimeSchema() *schema.Resource {
 			"se_ref_count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

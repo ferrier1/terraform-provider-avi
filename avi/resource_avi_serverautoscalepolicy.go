@@ -53,11 +53,13 @@ func ResourceServerAutoScalePolicySchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"scalein_alertconfig_refs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"scalein_cooldown": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -66,7 +68,8 @@ func ResourceServerAutoScalePolicySchema() map[string]*schema.Schema {
 		"scaleout_alertconfig_refs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"scaleout_cooldown": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -84,7 +87,8 @@ func ResourceServerAutoScalePolicySchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

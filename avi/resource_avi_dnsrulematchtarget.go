@@ -15,23 +15,43 @@ func ResourceDnsRuleMatchTargetSchema() *schema.Resource {
 			"client_ip_address": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsClientIpMatchSchema()},
+				Elem:     ResourceDnsClientIpMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"geo_location": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsGeoLocationMatchSchema()},
+				Elem:     ResourceDnsGeoLocationMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"protocol": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsTransportProtocolMatchSchema()},
+				Elem:     ResourceDnsTransportProtocolMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"query_name": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsQueryNameMatchSchema()},
+				Elem:     ResourceDnsQueryNameMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"query_type": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsQueryTypeMatchSchema()},
+				Elem:     ResourceDnsQueryTypeMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

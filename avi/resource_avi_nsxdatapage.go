@@ -15,11 +15,16 @@ func ResourcensxDataPageSchema() *schema.Resource {
 			"paginginfo": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxPagingInfoSchema()},
+				Elem:     ResourcensxPagingInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"systemevent": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxSystemEventSchema()},
+				Elem:     ResourcensxSystemEventSchema(),
+			},
 		},
 	}
 }

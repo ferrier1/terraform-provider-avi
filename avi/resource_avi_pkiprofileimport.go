@@ -15,14 +15,17 @@ func ResourcePKIProfileImportSchema() *schema.Resource {
 			"ca_certs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"crls": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCRLImportSchema()},
+				Elem:     ResourceCRLImportSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

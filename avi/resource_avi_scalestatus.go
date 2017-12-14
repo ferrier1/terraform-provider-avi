@@ -31,7 +31,8 @@ func ResourceScaleStatusSchema() *schema.Resource {
 			"reason": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"reason_code": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -51,7 +52,11 @@ func ResourceScaleStatusSchema() *schema.Resource {
 			"vip_placement_resolution_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVipPlacementResolutionInfoSchema()},
+				Elem:     ResourceVipPlacementResolutionInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

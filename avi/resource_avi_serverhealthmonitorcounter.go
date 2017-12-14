@@ -14,10 +14,12 @@ func ResourceServerHealthMonitorCounterSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"count": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

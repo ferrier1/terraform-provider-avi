@@ -17,15 +17,24 @@ func ResourceSystemConfigurationSchema() map[string]*schema.Schema {
 		"admin_auth_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceAdminAuthConfigurationSchema()},
+			Elem:     ResourceAdminAuthConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"dns_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceDNSConfigurationSchema()},
+			Elem:     ResourceDNSConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"dns_virtualservice_refs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"docker_mode": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -34,47 +43,82 @@ func ResourceSystemConfigurationSchema() map[string]*schema.Schema {
 		"email_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceEmailConfigurationSchema()},
+			Elem:     ResourceEmailConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"global_tenant_config": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceTenantConfigurationSchema()},
+			Elem:     ResourceTenantConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"linux_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceLinuxConfigurationSchema()},
+			Elem:     ResourceLinuxConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"mgmt_ip_access_control": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceMgmtIpAccessControlSchema()},
+			Elem:     ResourceMgmtIpAccessControlSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"ntp_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceNTPConfigurationSchema()},
+			Elem:     ResourceNTPConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"portal_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourcePortalConfigurationSchema()},
+			Elem:     ResourcePortalConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"proxy_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceProxyConfigurationSchema()},
+			Elem:     ResourceProxyConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"snmp_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceSnmpConfigurationSchema()},
+			Elem:     ResourceSnmpConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"ssh_ciphers": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"ssh_hmacs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

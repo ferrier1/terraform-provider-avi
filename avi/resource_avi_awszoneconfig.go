@@ -14,10 +14,12 @@ func ResourceAwsZoneConfigSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"availability_zone": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mgmt_network_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mgmt_network_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

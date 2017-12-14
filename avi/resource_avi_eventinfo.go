@@ -15,7 +15,8 @@ func ResourceEventInfoSchema() *schema.Resource {
 			"msg": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,7 +24,8 @@ func ResourceEventInfoSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

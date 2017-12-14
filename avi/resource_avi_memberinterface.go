@@ -19,7 +19,8 @@ func ResourceMemberInterfaceSchema() *schema.Resource {
 			},
 			"if_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mac_address": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

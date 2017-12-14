@@ -30,7 +30,11 @@ func ResourceVsResProfileSchema() *schema.Resource {
 			},
 			"res": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceResourceSchema()},
+				Required: true, Elem: ResourceVirtualServiceResourceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

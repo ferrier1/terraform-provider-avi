@@ -15,11 +15,13 @@ func ResourceSeUpgradePreviewSchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vs_errors": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsErrorSchema()},
+				Elem:     ResourceVsErrorSchema(),
+			},
 		},
 	}
 }

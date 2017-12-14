@@ -15,7 +15,8 @@ func ResourceLifSchema() *schema.Resource {
 			"cifs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCifSchema()},
+				Elem:     ResourceCifSchema(),
+			},
 			"lif": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

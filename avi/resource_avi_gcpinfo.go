@@ -18,17 +18,20 @@ func ResourceGcpInfoSchema() *schema.Resource {
 			},
 			"network": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"project": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"subnet": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"zone": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

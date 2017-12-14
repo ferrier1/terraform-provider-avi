@@ -14,14 +14,17 @@ func ResourcePoolVmRefRspSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"obj_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vm_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcePoolVmRefInfoSchema()},
+				Elem:     ResourcePoolVmRefInfoSchema(),
+			},
 			"vrf_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

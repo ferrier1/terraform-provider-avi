@@ -15,11 +15,16 @@ func ResourceGslbServiceStatusSchema() *schema.Resource {
 			"details": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"gs_runtime": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbServiceRuntimeSchema()},
+				Elem:     ResourceGslbServiceRuntimeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -27,7 +32,8 @@ func ResourceGslbServiceStatusSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

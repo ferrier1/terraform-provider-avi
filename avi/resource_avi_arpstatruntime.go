@@ -14,36 +14,44 @@ func ResourceArpStatRuntimeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"dropped": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"dupips": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"received": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"rxreplies": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"rxrequests": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"timeouts": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"txreplies": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"txrequests": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

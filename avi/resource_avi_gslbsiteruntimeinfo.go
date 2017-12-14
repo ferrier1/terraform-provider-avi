@@ -23,7 +23,11 @@ func ResourceGslbSiteRuntimeInfoSchema() *schema.Resource {
 			"dns_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbDnsInfoSchema()},
+				Elem:     ResourceGslbDnsInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"enabled": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -31,7 +35,11 @@ func ResourceGslbSiteRuntimeInfoSchema() *schema.Resource {
 			"event_cache": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceEventCacheSchema()},
+				Elem:     ResourceEventCacheSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"hs_state": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -39,7 +47,11 @@ func ResourceGslbSiteRuntimeInfoSchema() *schema.Resource {
 			"last_changed_time": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -47,19 +59,26 @@ func ResourceGslbSiteRuntimeInfoSchema() *schema.Resource {
 			"num_of_retries": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"role": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "GSLB_NOT_A_MEMBER"},
+				Default:  "GSLB_NOT_A_MEMBER",
+			},
 			"rrtoken": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"site_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -71,7 +90,8 @@ func ResourceGslbSiteRuntimeInfoSchema() *schema.Resource {
 			"sw_version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "Not-Initialized"},
+				Default:  "Not-Initialized",
+			},
 		},
 	}
 }

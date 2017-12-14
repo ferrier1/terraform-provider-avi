@@ -14,7 +14,8 @@ func ResourceHypervisor_PropertiesSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"htype": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"max_ips_per_nic": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

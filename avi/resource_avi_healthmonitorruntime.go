@@ -15,7 +15,8 @@ func ResourceHealthMonitorRuntimeSchema() *schema.Resource {
 			"health_monitor": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHealthMonitorSchema()},
+				Elem:     ResourceHealthMonitorSchema(),
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

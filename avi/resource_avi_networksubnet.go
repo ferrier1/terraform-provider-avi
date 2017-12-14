@@ -15,7 +15,8 @@ func ResourceNetworkSubnetSchema() *schema.Resource {
 			"cloud_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/api/cloud?name=Default-Cloud"},
+				Default:  "/api/cloud?name=Default-Cloud",
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,7 +24,8 @@ func ResourceNetworkSubnetSchema() *schema.Resource {
 			"subnet": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSubnetListSchema()},
+				Elem:     ResourceSubnetListSchema(),
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,11 +33,13 @@ func ResourceNetworkSubnetSchema() *schema.Resource {
 			"url": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vrf_context_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

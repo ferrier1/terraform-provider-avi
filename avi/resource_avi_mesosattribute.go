@@ -14,7 +14,8 @@ func ResourceMesosAttributeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"attribute": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

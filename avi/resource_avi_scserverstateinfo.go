@@ -15,11 +15,19 @@ func ResourceSCServerStateInfoSchema() *schema.Resource {
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"server_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"server_port": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

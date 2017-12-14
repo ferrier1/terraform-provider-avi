@@ -17,7 +17,8 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"active_standby_se_tag": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "ACTIVE_STANDBY_SE_1"},
+			Default:  "ACTIVE_STANDBY_SE_1",
+		},
 		"add_vnic_se_uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -39,7 +40,8 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"attach_ip_fail_reason_code": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SYSERR_FAILURE"},
+			Default:  "SYSERR_FAILURE",
+		},
 		"availability_zone": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -60,7 +62,8 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"cloud_apis_unready_reason_code": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SYSERR_FAILURE"},
+			Default:  "SYSERR_FAILURE",
+		},
 		"cloud_ready": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -73,7 +76,8 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"cloud_unready_reason_code": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SYSERR_FAILURE"},
+			Default:  "SYSERR_FAILURE",
+		},
 		"cookie": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -91,7 +95,8 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"dns_info": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceDnsInfoSchema()},
+			Elem:     ResourceDnsInfoSchema(),
+		},
 		"east_west_placement": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -120,7 +125,11 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"fip": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+			Elem:     ResourceIpAddrSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"ign_pool_net_reach": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -134,7 +143,8 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"lifs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -145,45 +155,57 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		},
 		"notify_on_avail": &schema.Schema{
 			Type:     schema.TypeBool,
-			Required: true},
+			Required: true,
+		},
 		"notify_q_name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"num_se": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"num_se_pending": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"num_seq_attach_ip_fail": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"num_seq_spawn_fail": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"num_seq_vnic_fail": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"num_spawn_attempts": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"num_stby_se": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"num_stby_se_pending": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"num_vnics": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"op_start_ticks": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"parent_uuid": &schema.Schema{
 			Type:     schema.TypeString,
@@ -210,11 +232,13 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"placement_disabled_reason_code": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SYSERR_FAILURE"},
+			Default:  "SYSERR_FAILURE",
+		},
 		"placement_history": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourcePlacementHistorySchema()},
+			Elem:     ResourcePlacementHistorySchema(),
+		},
 		"query_host_pending": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -226,14 +250,23 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		},
 		"res_pending": &schema.Schema{
 			Type:     schema.TypeSet,
-			Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVsResProfileSchema()},
+			Required: true, Elem: ResourceVsResProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"res_total": &schema.Schema{
 			Type:     schema.TypeSet,
-			Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVsResProfileSchema()},
+			Required: true, Elem: ResourceVsResProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"resources_consumed": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceSeResourceConsumedProtoSchema()},
+			Elem:     ResourceSeResourceConsumedProtoSchema(),
+		},
 		"scaleout_ecmp": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -246,23 +279,34 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"se_placement_pending": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeResourceConsumedProtoSchema()},
+			Elem:     ResourceSeResourceConsumedProtoSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"servers": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceConServerSchema()},
+			Elem:     ResourceConServerSchema(),
+		},
 		"service_subnet": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+			Elem:     ResourceIpAddrPrefixSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"services": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceVsProtocolSchema()},
+			Elem:     ResourceVsProtocolSchema(),
+		},
 		"snat_ip": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrSchema()},
+			Elem:     ResourceIpAddrSchema(),
+		},
 		"spawn_fail_reason": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -270,7 +314,8 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"spawn_fail_reason_code": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SYSERR_FAILURE"},
+			Default:  "SYSERR_FAILURE",
+		},
 		"static_se_uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -278,7 +323,8 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"static_se_uuids": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"svc_obj_uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -293,11 +339,16 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		},
 		"use_res_profile": &schema.Schema{
 			Type:     schema.TypeBool,
-			Required: true},
+			Required: true,
+		},
 		"vip": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceConVipSchema()},
+			Elem:     ResourceConVipSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"vnic_ip_disabled": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -315,7 +366,11 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"write_ops_disabled_info": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceVipPlacementResolutionInfoSchema()},
+			Elem:     ResourceVipPlacementResolutionInfoSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"write_ops_disabled_reason": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -323,7 +378,8 @@ func ResourceSeConsumerProtoSchema() map[string]*schema.Schema {
 		"write_ops_disabled_reason_code": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SYSERR_FAILURE"},
+			Default:  "SYSERR_FAILURE",
+		},
 	}
 }
 

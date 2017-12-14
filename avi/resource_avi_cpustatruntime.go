@@ -23,7 +23,8 @@ func ResourceCpuStatRuntimeSchema() *schema.Resource {
 			"process_cpu_utilization": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceProcCpuStatSchema()},
+				Elem:     ResourceProcCpuStatSchema(),
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

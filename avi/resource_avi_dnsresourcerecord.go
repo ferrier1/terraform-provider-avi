@@ -27,7 +27,11 @@ func ResourceDnsResourceRecordSchema() *schema.Resource {
 			"location": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGeoLocationSchema()},
+				Elem:     ResourceGeoLocationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -46,10 +50,12 @@ func ResourceDnsResourceRecordSchema() *schema.Resource {
 			},
 			"ttl": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vs_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

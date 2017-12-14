@@ -20,6 +20,7 @@ func ResourceSeResourceVnicSchema() *schema.Resource {
 			"del_retries": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"enabled": &schema.Schema{
 				Type:     schema.TypeBool,
@@ -32,10 +33,12 @@ func ResourceSeResourceVnicSchema() *schema.Resource {
 			},
 			"is_avi_internal_network": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"last_vnic_op_ticks": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"lif": &schema.Schema{
 				Type:     schema.TypeString,
@@ -47,7 +50,8 @@ func ResourceSeResourceVnicSchema() *schema.Resource {
 			},
 			"mac_addr": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"marked_for_del": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -60,11 +64,16 @@ func ResourceSeResourceVnicSchema() *schema.Resource {
 			"subnet": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"virtual_network_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -72,7 +81,8 @@ func ResourceSeResourceVnicSchema() *schema.Resource {
 			"vnic_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "RM_VNIC_FRONTEND"},
+				Default:  "RM_VNIC_FRONTEND",
+			},
 			"vrf_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

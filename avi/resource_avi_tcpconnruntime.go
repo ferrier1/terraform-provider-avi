@@ -15,7 +15,8 @@ func ResourceTcpConnRuntimeSchema() *schema.Resource {
 			"connection": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSimpleconnEntrySchema()},
+				Elem:     ResourceSimpleconnEntrySchema(),
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

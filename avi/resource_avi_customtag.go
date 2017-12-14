@@ -14,7 +14,8 @@ func ResourceCustomTagSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"tag_key": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tag_val": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

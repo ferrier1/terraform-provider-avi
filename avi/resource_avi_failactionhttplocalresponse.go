@@ -15,11 +15,16 @@ func ResourceFailActionHTTPLocalResponseSchema() *schema.Resource {
 			"file": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPLocalFileSchema()},
+				Elem:     ResourceHTTPLocalFileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"status_code": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "FAIL_HTTP_STATUS_CODE_503"},
+				Default:  "FAIL_HTTP_STATUS_CODE_503",
+			},
 		},
 	}
 }

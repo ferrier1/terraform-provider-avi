@@ -15,7 +15,8 @@ func Resourcecc_deconfigure_reqSchema() *schema.Resource {
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"delete": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

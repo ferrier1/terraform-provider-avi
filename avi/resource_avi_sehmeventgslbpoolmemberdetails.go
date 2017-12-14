@@ -15,7 +15,8 @@ func ResourceSeHmEventGslbPoolMemberDetailsSchema() *schema.Resource {
 			"app_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAppInfoSchema()},
+				Elem:     ResourceAppInfoSchema(),
+			},
 			"domain": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -26,11 +27,16 @@ func ResourceSeHmEventGslbPoolMemberDetailsSchema() *schema.Resource {
 			},
 			"ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"shm": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeHmEventShmDetailsSchema()},
+				Elem:     ResourceSeHmEventShmDetailsSchema(),
+			},
 			"ssl_error_code": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

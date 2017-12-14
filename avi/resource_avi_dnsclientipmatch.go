@@ -15,7 +15,11 @@ func ResourceDnsClientIpMatchSchema() *schema.Resource {
 			"client_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrMatchSchema()},
+				Elem:     ResourceIpAddrMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"use_edns_client_subnet_ip": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

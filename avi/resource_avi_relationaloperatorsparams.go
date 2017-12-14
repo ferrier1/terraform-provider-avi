@@ -18,10 +18,12 @@ func ResourceRelationalOperatorsParamsSchema() *schema.Resource {
 			},
 			"metric_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"right_arg": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

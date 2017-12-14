@@ -15,7 +15,8 @@ func ResourceLeastConnectionStatSchema() *schema.Resource {
 			"entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceLcEntrySchema()},
+				Elem:     ResourceLcEntrySchema(),
+			},
 		},
 	}
 }

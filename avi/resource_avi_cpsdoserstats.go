@@ -15,7 +15,8 @@ func ResourceCpsDoserStatsSchema() *schema.Resource {
 			"cps_doser_entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCpsDoserEntrySchema()},
+				Elem:     ResourceCpsDoserEntrySchema(),
+			},
 			"num_cps_dosers": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

@@ -15,7 +15,11 @@ func ResourceDnsRuleSchema() *schema.Resource {
 			"action": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsRuleActionSchema()},
+				Elem:     ResourceDnsRuleActionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"enable": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -32,7 +36,11 @@ func ResourceDnsRuleSchema() *schema.Resource {
 			"match": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsRuleMatchTargetSchema()},
+				Elem:     ResourceDnsRuleMatchTargetSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

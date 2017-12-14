@@ -42,7 +42,8 @@ func ResourceMetricsRumAnalyticsObjSchema() *schema.Resource {
 			},
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"page_download_time": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,

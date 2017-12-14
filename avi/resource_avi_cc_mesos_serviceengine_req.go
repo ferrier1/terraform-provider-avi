@@ -14,14 +14,17 @@ func Resourcecc_mesos_serviceengine_reqSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"action": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"host": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -14,21 +14,25 @@ func ResourceServerAutoScaleInCompleteInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"nscalein": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"reason_code": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"scaled_in_servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerIdSchema()},
+				Elem:     ResourceServerIdSchema(),
+			},
 		},
 	}
 }

@@ -21,7 +21,8 @@ func ResourceGslbGeoDbProfileSchema() map[string]*schema.Schema {
 		"entries": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceGslbGeoDbEntrySchema()},
+			Elem:     ResourceGslbGeoDbEntrySchema(),
+		},
 		"is_federated": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -29,7 +30,8 @@ func ResourceGslbGeoDbProfileSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -37,7 +39,8 @@ func ResourceGslbGeoDbProfileSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

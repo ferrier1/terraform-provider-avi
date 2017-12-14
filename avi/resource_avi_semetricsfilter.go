@@ -14,7 +14,8 @@ func ResourceSeMetricsFilterSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

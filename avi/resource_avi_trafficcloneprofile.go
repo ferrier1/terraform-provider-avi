@@ -17,14 +17,17 @@ func ResourceTrafficCloneProfileSchema() map[string]*schema.Schema {
 		"clone_servers": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceCloneServerSchema()},
+			Elem:     ResourceCloneServerSchema(),
+		},
 		"cloud_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "/api/cloud?name=Default-Cloud"},
+			Default:  "/api/cloud?name=Default-Cloud",
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"preserve_client_ip": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -37,7 +40,8 @@ func ResourceTrafficCloneProfileSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

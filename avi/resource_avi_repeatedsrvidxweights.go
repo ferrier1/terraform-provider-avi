@@ -15,7 +15,8 @@ func ResourceRepeatedSrvIdxWeightsSchema() *schema.Resource {
 			"vals": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRepeatedSrvIdxWeightSchema()},
+				Elem:     ResourceRepeatedSrvIdxWeightSchema(),
+			},
 		},
 	}
 }

@@ -19,7 +19,8 @@ func ResourcensxExcludeListConfigurationSchema() *schema.Resource {
 			"excludemember": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxExcludeMemberSchema()},
+				Elem:     ResourcensxExcludeMemberSchema(),
+			},
 			"isuniversal": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -43,7 +44,11 @@ func ResourcensxExcludeListConfigurationSchema() *schema.Resource {
 			"type": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxFwObjTypeSchema()},
+				Elem:     ResourcensxFwObjTypeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"universalrevision": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

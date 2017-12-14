@@ -18,7 +18,8 @@ func ResourceMetricLogSchema() *schema.Resource {
 			},
 			"metric_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"report_timestamp": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
@@ -30,10 +31,15 @@ func ResourceMetricLogSchema() *schema.Resource {
 			"time_series": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsQueryResponseSchema()},
+				Elem:     ResourceMetricsQueryResponseSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

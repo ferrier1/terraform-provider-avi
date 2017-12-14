@@ -23,7 +23,8 @@ func ResourceSeResourcePreReleaseReqSchema() *schema.Resource {
 			},
 			"migrate_primary": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"new_primary_se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -35,10 +36,12 @@ func ResourceSeResourcePreReleaseReqSchema() *schema.Resource {
 			},
 			"num_se": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_stby_se": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"rel_se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
@@ -47,14 +50,23 @@ func ResourceSeResourcePreReleaseReqSchema() *schema.Resource {
 			"res_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsResProfileSchema()},
+				Elem:     ResourceVsResProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_alloc_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAllocInfoSchema()},
+				Elem:     ResourceSeAllocInfoSchema(),
+			},
 			"svc_id": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceSeMgrSvcIdSchema()},
+				Required: true, Elem: ResourceSeMgrSvcIdSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"use_res_profile": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

@@ -14,7 +14,8 @@ func ResourceCC_HostSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"host": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"host_ip": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -33,7 +34,8 @@ func ResourceCC_HostSchema() *schema.Resource {
 			},
 			"ssh_state": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

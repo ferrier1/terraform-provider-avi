@@ -14,13 +14,16 @@ func ResourceNsxLoginSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"nsx_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"nsx_password": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"nsx_username": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -15,11 +15,16 @@ func ResourceSeAgentGraphDBNodeTxnStatsSchema() *schema.Resource {
 			"history": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAgentGraphDBNodeTxnDetailSchema()},
+				Elem:     ResourceSeAgentGraphDBNodeTxnDetailSchema(),
+			},
 			"longest_txn": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeAgentGraphDBNodeTxnDetailSchema()},
+				Elem:     ResourceSeAgentGraphDBNodeTxnDetailSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

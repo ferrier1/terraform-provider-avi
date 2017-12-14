@@ -28,7 +28,8 @@ func ResourceHttpCookiePersistenceProfileSchema() *schema.Resource {
 			"key": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHttpCookiePersistenceKeySchema()},
+				Elem:     ResourceHttpCookiePersistenceKeySchema(),
+			},
 			"timeout": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

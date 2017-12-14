@@ -19,7 +19,8 @@ func ResourceMetricsRealTimeUpdateSchema() *schema.Resource {
 			},
 			"enabled": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

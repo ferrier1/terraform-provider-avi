@@ -15,7 +15,8 @@ func ResourceRetrieveIpsRspSchema() *schema.Resource {
 			"ips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 		},
 	}
 }

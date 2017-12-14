@@ -19,7 +19,8 @@ func ResourceIpDNSRecordSchema() *schema.Resource {
 			"ips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_rrs": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -27,7 +28,8 @@ func ResourceIpDNSRecordSchema() *schema.Resource {
 			"ports": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeInt}},
+				Elem:     &schema.Schema{Type: schema.TypeInt},
+			},
 			"service_domain": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

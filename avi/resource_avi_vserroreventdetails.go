@@ -27,14 +27,20 @@ func ResourceVsErrorEventDetailsSchema() *schema.Resource {
 			"se_assigned": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVipSeAssignedSchema()},
+				Elem:     ResourceVipSeAssignedSchema(),
+			},
 			"se_requested": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceResourceSchema()},
+				Elem:     ResourceVirtualServiceResourceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

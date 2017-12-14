@@ -14,14 +14,16 @@ func ResourceVIFaultInjectionSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"api": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"cloud_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"count": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"network_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -29,7 +31,8 @@ func ResourceVIFaultInjectionSchema() *schema.Resource {
 			"status": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SEVM_CREATE_FAILURE"},
+				Default:  "SEVM_CREATE_FAILURE",
+			},
 		},
 	}
 }

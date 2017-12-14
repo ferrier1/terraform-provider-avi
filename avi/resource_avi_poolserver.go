@@ -18,7 +18,11 @@ func ResourcePoolServerSchema() *schema.Resource {
 			},
 			"ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

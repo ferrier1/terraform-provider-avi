@@ -22,7 +22,8 @@ func ResourceVISeVmIpConfParamsSchema() *schema.Resource {
 			},
 			"mgmt_ip_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mgmt_net_mask": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

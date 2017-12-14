@@ -14,7 +14,8 @@ func ResourceVIMgrInterestedEntitySchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"interested_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

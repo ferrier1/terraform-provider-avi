@@ -15,19 +15,23 @@ func ResourceMarathonSeDeploymentSchema() *schema.Resource {
 			"docker_image": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "fedora"},
+				Default:  "fedora",
+			},
 			"host_os": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "COREOS"},
+				Default:  "COREOS",
+			},
 			"resource_roles": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"uris": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

@@ -15,10 +15,15 @@ func ResourceMetricsDataSeriesSchema() *schema.Resource {
 			"data": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsDataSchema()},
+				Elem:     ResourceMetricsDataSchema(),
+			},
 			"header": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceMetricsDataHeaderSchema()},
+				Required: true, Elem: ResourceMetricsDataHeaderSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

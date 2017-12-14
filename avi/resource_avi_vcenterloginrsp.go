@@ -15,17 +15,23 @@ func ResourceVcenterLoginRspSchema() *schema.Resource {
 			"datacenters": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIDCInfoSchema()},
+				Elem:     ResourceVIDCInfoSchema(),
+			},
 			"login": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVcenterLoginSchema()},
+				Required: true, Elem: ResourceVcenterLoginSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"start_ts": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vcenter_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

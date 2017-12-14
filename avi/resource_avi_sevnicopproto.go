@@ -19,7 +19,8 @@ func ResourceSeVnicOpProtoSchema() *schema.Resource {
 			"macs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"oper_start_ticks": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -30,7 +31,8 @@ func ResourceSeVnicOpProtoSchema() *schema.Resource {
 			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"se_vm_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -38,18 +40,21 @@ func ResourceSeVnicOpProtoSchema() *schema.Resource {
 			"virtual_network_ids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vnic_op_infra": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"vnic_op_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vrf_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

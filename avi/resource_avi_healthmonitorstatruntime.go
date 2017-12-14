@@ -15,15 +15,27 @@ func ResourceHealthMonitorStatRuntimeSchema() *schema.Resource {
 			"last_transition_timestamp_1": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"last_transition_timestamp_2": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"last_transition_timestamp_3": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -35,7 +47,8 @@ func ResourceHealthMonitorStatRuntimeSchema() *schema.Resource {
 			"server_hm_stat": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerHMStatRuntimeSchema()},
+				Elem:     ResourceServerHMStatRuntimeSchema(),
+			},
 		},
 	}
 }

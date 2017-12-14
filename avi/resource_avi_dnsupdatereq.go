@@ -15,7 +15,8 @@ func ResourceDNSUpdateReqSchema() *schema.Resource {
 			"dns_rrs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpDNSRecordSchema()},
+				Elem:     ResourceIpDNSRecordSchema(),
+			},
 		},
 	}
 }

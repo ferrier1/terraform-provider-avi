@@ -15,11 +15,16 @@ func ResourceSeResourceFindReqBatchSchema() *schema.Resource {
 			"child_reqs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeResourceFindReqSchema()},
+				Elem:     ResourceSeResourceFindReqSchema(),
+			},
 			"parent_req": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeResourceFindReqSchema()},
+				Elem:     ResourceSeResourceFindReqSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

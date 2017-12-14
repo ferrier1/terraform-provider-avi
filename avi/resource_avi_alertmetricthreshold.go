@@ -14,7 +14,8 @@ func ResourceAlertMetricThresholdSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"comparator": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"threshold": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

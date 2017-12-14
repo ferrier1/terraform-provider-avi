@@ -20,7 +20,8 @@ func ResourceSePreReleaseFailRespSchema() *schema.Resource {
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "Failed to release SE"},
+				Default:  "Failed to release SE",
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -28,7 +29,8 @@ func ResourceSePreReleaseFailRespSchema() *schema.Resource {
 			"syserr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_FAILURE"},
+				Default:  "SYSERR_FAILURE",
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

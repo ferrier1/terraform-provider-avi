@@ -14,10 +14,12 @@ func ResourceSeThreshEventDetailsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"curr_value": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"thresh": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

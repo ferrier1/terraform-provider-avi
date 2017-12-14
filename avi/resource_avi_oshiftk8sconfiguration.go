@@ -20,7 +20,11 @@ func ResourceOShiftK8SConfigurationSchema() *schema.Resource {
 			"avi_bridge_subnet": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ca_tls_key_and_certificate_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -37,7 +41,8 @@ func ResourceOShiftK8SConfigurationSchema() *schema.Resource {
 			"coredump_directory": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/var/lib/systemd/coredump"},
+				Default:  "/var/lib/systemd/coredump",
+			},
 			"default_service_as_east_west_service": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -66,11 +71,19 @@ func ResourceOShiftK8SConfigurationSchema() *schema.Resource {
 			"docker_registry_se": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDockerRegistrySchema()},
+				Elem:     ResourceDockerRegistrySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"east_west_placement_subnet": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"enable_event_subscription": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -88,7 +101,8 @@ func ResourceOShiftK8SConfigurationSchema() *schema.Resource {
 			"http_container_ports": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeInt}},
+				Elem:     &schema.Schema{Type: schema.TypeInt},
+			},
 			"l4_health_monitoring": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -97,7 +111,8 @@ func ResourceOShiftK8SConfigurationSchema() *schema.Resource {
 			"master_nodes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"node_availability_zone_label": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -105,15 +120,21 @@ func ResourceOShiftK8SConfigurationSchema() *schema.Resource {
 			"ns_exclude_attributes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMesosAttributeSchema()},
+				Elem:     ResourceMesosAttributeSchema(),
+			},
 			"ns_include_attributes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMesosAttributeSchema()},
+				Elem:     ResourceMesosAttributeSchema(),
+			},
 			"nuage_controller": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceNuageSDNControllerSchema()},
+				Elem:     ResourceNuageSDNControllerSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sdn_overlay": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -122,15 +143,18 @@ func ResourceOShiftK8SConfigurationSchema() *schema.Resource {
 			"se_deployment_method": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SE_CREATE_SSH"},
+				Default:  "SE_CREATE_SSH",
+			},
 			"se_exclude_attributes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMesosAttributeSchema()},
+				Elem:     ResourceMesosAttributeSchema(),
+			},
 			"se_include_attributes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMesosAttributeSchema()},
+				Elem:     ResourceMesosAttributeSchema(),
+			},
 			"se_spawn_rate": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -139,7 +163,8 @@ func ResourceOShiftK8SConfigurationSchema() *schema.Resource {
 			"se_volume": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/opt/avi"},
+				Default:  "/opt/avi",
+			},
 			"secure_egress_mode": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

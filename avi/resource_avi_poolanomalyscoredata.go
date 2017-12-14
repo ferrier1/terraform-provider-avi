@@ -15,28 +15,33 @@ func ResourcePoolAnomalyScoreDataSchema() *schema.Resource {
 			"anomalous_l4_metrics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"anomalous_l7_metrics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"avg_server_anomaly_score": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
 			},
 			"per_anomalous_l4_metrics": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 			"per_anomalous_l7_metrics": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
 			},
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -48,7 +53,8 @@ func ResourcePoolAnomalyScoreDataSchema() *schema.Resource {
 			"server_anomaly_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerAnomalyScoreSchema()},
+				Elem:     ResourceServerAnomalyScoreSchema(),
+			},
 		},
 	}
 }

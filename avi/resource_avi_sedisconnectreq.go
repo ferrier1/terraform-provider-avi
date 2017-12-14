@@ -26,7 +26,8 @@ func ResourceSeDisconnectReqSchema() *schema.Resource {
 			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"upgrading": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

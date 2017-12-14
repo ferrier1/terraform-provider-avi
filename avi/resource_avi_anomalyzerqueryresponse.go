@@ -19,16 +19,20 @@ func ResourceAnomalyzerQueryResponseSchema() *schema.Resource {
 			"series": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAnomalyDataSeriesSchema()},
+				Elem:     ResourceAnomalyDataSeriesSchema(),
+			},
 			"start": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"step": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"stop": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -15,16 +15,23 @@ func ResourceSeInfoSchema() *schema.Resource {
 			"se_alloc_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAllocInfoSchema()},
+				Elem:     ResourceSeAllocInfoSchema(),
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"status": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Required: true, Elem: ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

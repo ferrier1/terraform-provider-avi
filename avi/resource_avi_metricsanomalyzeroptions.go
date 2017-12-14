@@ -15,11 +15,13 @@ func ResourceMetricsAnomalyzerOptionsSchema() *schema.Resource {
 			"anomaly_interpretation": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "COMBINE_MODELS_ALL"},
+				Default:  "COMBINE_MODELS_ALL",
+			},
 			"anomaly_model_opts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsAnomalyModelOptionsSchema()},
+				Elem:     ResourceMetricsAnomalyModelOptionsSchema(),
+			},
 			"skip_eval_period": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

@@ -14,7 +14,8 @@ func ResourceSeFaultInjectExhaustMSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"num_objects": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

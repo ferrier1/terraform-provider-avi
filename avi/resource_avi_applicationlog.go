@@ -14,7 +14,8 @@ func ResourceApplicationLogSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"adf": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"all_request_headers": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -30,7 +31,8 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			"body_updated": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "NOT_UPDATED"},
+				Default:  "NOT_UPDATED",
+			},
 			"cache_hit": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -47,7 +49,8 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			},
 			"client_dest_port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"client_device": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -58,7 +61,8 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			},
 			"client_ip": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"client_location": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -69,10 +73,12 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			},
 			"client_rtt": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"client_src_port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"compression": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -84,7 +90,11 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			"connection_error_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConnErrorInfoSchema()},
+				Elem:     ResourceConnErrorInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"data_transfer_time": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -92,7 +102,11 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			"datascript_error_trace": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDataScriptErrorTraceSchema()},
+				Elem:     ResourceDataScriptErrorTraceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"datascript_log": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -131,7 +145,8 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			},
 			"log_id": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"method": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -175,7 +190,8 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			},
 			"report_timestamp": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"request_content_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -288,18 +304,21 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			},
 			"service_engine": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"significance": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"significant": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"significant_log": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"spdy_version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -322,7 +341,8 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			},
 			"udf": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"uri_path": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -341,10 +361,12 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			},
 			"vcpu_id": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"virtualservice": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vs_ip": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -352,7 +374,11 @@ func ResourceApplicationLogSchema() *schema.Resource {
 			"waf_log": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceWafLogSchema()},
+				Elem:     ResourceWafLogSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"xff": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

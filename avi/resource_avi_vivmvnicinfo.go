@@ -14,7 +14,8 @@ func ResourceVIVmVnicInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"mac_addr": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vcenter_portgroup": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

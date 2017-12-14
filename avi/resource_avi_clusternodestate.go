@@ -14,10 +14,12 @@ func ResourceClusterNodeStateSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"role": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"up_since": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -15,7 +15,8 @@ func ResourceCoreAffinityStatSchema() *schema.Resource {
 			"compact_core_nums": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeInt}},
+				Elem:     &schema.Schema{Type: schema.TypeInt},
+			},
 			"core_nonaffinity": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -27,7 +28,8 @@ func ResourceCoreAffinityStatSchema() *schema.Resource {
 			"servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceLbServerSchema()},
+				Elem:     ResourceLbServerSchema(),
+			},
 			"stretch_factor": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -39,7 +41,8 @@ func ResourceCoreAffinityStatSchema() *schema.Resource {
 			"weighted_core_s_indices": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRepeatedSrvIdxWeightsSchema()},
+				Elem:     ResourceRepeatedSrvIdxWeightsSchema(),
+			},
 		},
 	}
 }

@@ -18,17 +18,20 @@ func ResourceSeResourcesSchema() *schema.Resource {
 			},
 			"disk": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"hyper_threading": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
 			},
 			"memory": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_vcpus": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"sockets": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

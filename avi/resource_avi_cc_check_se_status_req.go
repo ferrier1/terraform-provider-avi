@@ -15,7 +15,8 @@ func Resourcecc_check_se_status_reqSchema() *schema.Resource {
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"num_hb_miss": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -23,7 +24,8 @@ func Resourcecc_check_se_status_reqSchema() *schema.Resource {
 			},
 			"se_vm_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

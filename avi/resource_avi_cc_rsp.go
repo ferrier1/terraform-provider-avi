@@ -14,7 +14,8 @@ func Resourcecc_rspSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

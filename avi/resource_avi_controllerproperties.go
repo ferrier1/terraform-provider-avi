@@ -169,7 +169,8 @@ func ResourceControllerPropertiesSchema() map[string]*schema.Schema {
 		"ssl_certificate_expiry_warning_days": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeInt}},
+			Elem:     &schema.Schema{Type: schema.TypeInt},
+		},
 		"unresponsive_se_reboot": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -188,7 +189,8 @@ func ResourceControllerPropertiesSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"vnic_op_fail_time": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,

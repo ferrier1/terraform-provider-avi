@@ -14,11 +14,13 @@ func ResourceVinfraPoolServerDeleteDetailsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"pool_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"server_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

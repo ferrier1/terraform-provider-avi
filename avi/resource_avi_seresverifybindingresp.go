@@ -14,14 +14,17 @@ func ResourceSeResVerifyBindingRespSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"binding_status": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"rpc_status": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"se_binding_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAllocInfoSchema()},
+				Elem:     ResourceSeAllocInfoSchema(),
+			},
 		},
 	}
 }

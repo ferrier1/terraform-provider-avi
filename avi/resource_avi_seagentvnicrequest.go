@@ -35,7 +35,8 @@ func ResourceSeAgentVnicRequestSchema() *schema.Resource {
 			"route": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAgentRouteSchema()},
+				Elem:     ResourceSeAgentRouteSchema(),
+			},
 			"upd_vrf_id": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -47,11 +48,13 @@ func ResourceSeAgentVnicRequestSchema() *schema.Resource {
 			"vnic": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcevNICSchema()},
+				Elem:     ResourcevNICSchema(),
+			},
 			"vrf": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVrfContextSchema()},
+				Elem:     ResourceVrfContextSchema(),
+			},
 		},
 	}
 }

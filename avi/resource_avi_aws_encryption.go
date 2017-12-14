@@ -19,7 +19,8 @@ func Resourceaws_encryptionSchema() *schema.Resource {
 			"mode": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "AWS_ENCRYPTION_MODE_NONE"},
+				Default:  "AWS_ENCRYPTION_MODE_NONE",
+			},
 		},
 	}
 }

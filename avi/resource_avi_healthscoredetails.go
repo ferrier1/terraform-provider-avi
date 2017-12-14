@@ -15,6 +15,7 @@ func ResourceHealthScoreDetailsSchema() *schema.Resource {
 			"anomaly_penalty": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"anomaly_reason": &schema.Schema{
 				Type:     schema.TypeString,
@@ -31,7 +32,8 @@ func ResourceHealthScoreDetailsSchema() *schema.Resource {
 			},
 			"previous_value": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -39,6 +41,7 @@ func ResourceHealthScoreDetailsSchema() *schema.Resource {
 			"resources_penalty": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"resources_reason": &schema.Schema{
 				Type:     schema.TypeString,
@@ -47,6 +50,7 @@ func ResourceHealthScoreDetailsSchema() *schema.Resource {
 			"security_penalty": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"security_reason": &schema.Schema{
 				Type:     schema.TypeString,
@@ -62,10 +66,12 @@ func ResourceHealthScoreDetailsSchema() *schema.Resource {
 			},
 			"timestamp": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

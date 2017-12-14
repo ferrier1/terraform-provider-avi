@@ -15,15 +15,18 @@ func ResourceCloudAnalysisSchema() *schema.Resource {
 			"host_issues": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudHostAnalysisSchema()},
+				Elem:     ResourceCloudHostAnalysisSchema(),
+			},
 			"host_without_se": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_hosts_discovered": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -59,15 +62,18 @@ func ResourceCloudAnalysisSchema() *schema.Resource {
 			"se_down_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"se_issues": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudSeAnalysisSchema()},
+				Elem:     ResourceCloudSeAnalysisSchema(),
+			},
 			"se_without_host": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

@@ -15,7 +15,8 @@ func ResourceMetricsQueryCollectionResponseSchema() *schema.Resource {
 			"responses": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsQueryResponseSchema()},
+				Elem:     ResourceMetricsQueryResponseSchema(),
+			},
 		},
 	}
 }

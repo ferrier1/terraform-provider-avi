@@ -23,11 +23,13 @@ func ResourceEmailConfigurationSchema() *schema.Resource {
 			"from_email": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "admin@avicontroller.net"},
+				Default:  "admin@avicontroller.net",
+			},
 			"mail_server_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "localhost"},
+				Default:  "localhost",
+			},
 			"mail_server_port": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -35,7 +37,8 @@ func ResourceEmailConfigurationSchema() *schema.Resource {
 			},
 			"smtp_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

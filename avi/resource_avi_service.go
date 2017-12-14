@@ -27,10 +27,12 @@ func ResourceServiceSchema() *schema.Resource {
 			},
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"port_range_end": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 		},
 	}

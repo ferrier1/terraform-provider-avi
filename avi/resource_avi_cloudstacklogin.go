@@ -14,13 +14,16 @@ func ResourceCloudStackLoginSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"access_key_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"api_url": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"secret_access_key": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

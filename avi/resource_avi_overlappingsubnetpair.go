@@ -27,7 +27,11 @@ func ResourceOverlappingSubnetPairSchema() *schema.Resource {
 			"subnet": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

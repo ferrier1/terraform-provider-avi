@@ -15,11 +15,19 @@ func ResourceIpamDnsAzureProfileSchema() *schema.Resource {
 			"azure_serviceprincipal": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureServicePrincipalCredentialsSchema()},
+				Elem:     ResourceAzureServicePrincipalCredentialsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"azure_userpass": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureUserPassCredentialsSchema()},
+				Elem:     ResourceAzureUserPassCredentialsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"resource_group": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,11 +39,13 @@ func ResourceIpamDnsAzureProfileSchema() *schema.Resource {
 			"usable_domains": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"usable_network_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"use_enhanced_ha": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -44,7 +54,8 @@ func ResourceIpamDnsAzureProfileSchema() *schema.Resource {
 			"virtual_network_ids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

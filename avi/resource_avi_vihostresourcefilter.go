@@ -14,7 +14,8 @@ func ResourceVIHostResourceFilterSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"datacenter": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

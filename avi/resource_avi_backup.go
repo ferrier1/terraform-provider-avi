@@ -20,7 +20,8 @@ func ResourceBackupSchema() map[string]*schema.Schema {
 		},
 		"file_name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"local_file_url": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -44,7 +45,8 @@ func ResourceBackupSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

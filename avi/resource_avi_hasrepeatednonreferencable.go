@@ -14,11 +14,13 @@ func ResourceHasRepeatedNonReferencableSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"non_referencables": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNonReferencableSchema()},
+				Elem:     ResourceNonReferencableSchema(),
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -26,7 +28,8 @@ func ResourceHasRepeatedNonReferencableSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

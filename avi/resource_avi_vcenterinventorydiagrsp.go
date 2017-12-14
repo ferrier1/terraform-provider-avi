@@ -23,11 +23,16 @@ func ResourceVcenterInventoryDiagRspSchema() *schema.Resource {
 			"hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVcenterHostDiagSchema()},
+				Elem:     ResourceVcenterHostDiagSchema(),
+			},
 			"networks": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVcenterNetworkDiagSchema()},
+				Elem:     ResourceVcenterNetworkDiagSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"total_hosts": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

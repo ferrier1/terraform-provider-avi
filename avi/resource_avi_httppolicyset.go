@@ -29,15 +29,27 @@ func ResourceHTTPPolicySetSchema() map[string]*schema.Schema {
 		"http_request_policy": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPRequestPolicySchema()},
+			Elem:     ResourceHTTPRequestPolicySchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"http_response_policy": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPResponsePolicySchema()},
+			Elem:     ResourceHTTPResponsePolicySchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"http_security_policy": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPSecurityPolicySchema()},
+			Elem:     ResourceHTTPSecurityPolicySchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"is_internal_policy": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -45,7 +57,8 @@ func ResourceHTTPPolicySetSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -53,7 +66,8 @@ func ResourceHTTPPolicySetSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

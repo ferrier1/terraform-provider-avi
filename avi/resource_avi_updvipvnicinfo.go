@@ -15,7 +15,8 @@ func ResourceUpdVipVnicInfoSchema() *schema.Resource {
 			"mac_addr": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"primary": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

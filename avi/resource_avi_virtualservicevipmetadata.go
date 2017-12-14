@@ -15,7 +15,8 @@ func ResourceVirtualServiceVipMetaDataSchema() *schema.Resource {
 			"last_state": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "OPER_DISABLED"},
+				Default:  "OPER_DISABLED",
+			},
 			"vip_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

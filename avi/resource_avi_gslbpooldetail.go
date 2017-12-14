@@ -15,15 +15,21 @@ func ResourceGslbPoolDetailSchema() *schema.Resource {
 			"algorithm": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "GSLB_ALGORITHM_ROUND_ROBIN"},
+				Default:  "GSLB_ALGORITHM_ROUND_ROBIN",
+			},
 			"hmon": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthMonitorStatRuntimeSchema()},
+				Elem:     ResourceHealthMonitorStatRuntimeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"members": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbPoolMemberDetailSchema()},
+				Elem:     ResourceGslbPoolMemberDetailSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -43,7 +49,11 @@ func ResourceGslbPoolDetailSchema() *schema.Resource {
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"priority": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -51,7 +61,11 @@ func ResourceGslbPoolDetailSchema() *schema.Resource {
 			"stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbServiceGroupStatsSchema()},
+				Elem:     ResourceGslbServiceGroupStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

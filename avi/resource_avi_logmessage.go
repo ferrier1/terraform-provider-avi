@@ -15,15 +15,18 @@ func ResourceLogMessageSchema() *schema.Resource {
 			"alertconfigs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAlertConfigSchema()},
+				Elem:     ResourceAlertConfigSchema(),
+			},
 			"applogs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceApplicationLogSchema()},
+				Elem:     ResourceApplicationLogSchema(),
+			},
 			"connlogs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConnectionLogSchema()},
+				Elem:     ResourceConnectionLogSchema(),
+			},
 			"count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -39,19 +42,29 @@ func ResourceLogMessageSchema() *schema.Resource {
 			"eventlogs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceEventLogSchema()},
+				Elem:     ResourceEventLogSchema(),
+			},
 			"lcmd": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceLogCommandSchema()},
+				Elem:     ResourceLogCommandSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"lquery": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceLogQuerySchema()},
+				Elem:     ResourceLogQuerySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"matching_files": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceFileInfoSchema()},
+				Elem:     ResourceFileInfoSchema(),
+			},
 			"percent_remaining": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -71,11 +84,13 @@ func ResourceLogMessageSchema() *schema.Resource {
 			"rsynced_files": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"rsyncing_files": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"sender_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -83,15 +98,18 @@ func ResourceLogMessageSchema() *schema.Resource {
 			"text_resp": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"uptodate_files": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceFileInfoSchema()},
+				Elem:     ResourceFileInfoSchema(),
+			},
 			"vs_id": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

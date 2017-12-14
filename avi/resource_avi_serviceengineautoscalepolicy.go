@@ -56,11 +56,13 @@ func ResourceServiceEngineAutoScalePolicySchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"scalein_alertconfig_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"scalein_cooldown": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -69,7 +71,8 @@ func ResourceServiceEngineAutoScalePolicySchema() *schema.Resource {
 			"scaleout_alertconfig_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"scaleout_cooldown": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -82,7 +85,8 @@ func ResourceServiceEngineAutoScalePolicySchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

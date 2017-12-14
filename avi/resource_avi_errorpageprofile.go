@@ -17,19 +17,23 @@ func ResourceErrorPageProfileSchema() map[string]*schema.Schema {
 		"app_name": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "VS Name"},
+			Default:  "VS Name",
+		},
 		"company_name": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "Avi Networks"},
+			Default:  "Avi Networks",
+		},
 		"error_pages": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceErrorPageSchema()},
+			Elem:     ResourceErrorPageSchema(),
+		},
 		"host_name": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "Host Header"},
+			Default:  "Host Header",
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -41,7 +45,8 @@ func ResourceErrorPageProfileSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

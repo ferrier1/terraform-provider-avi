@@ -38,7 +38,8 @@ func ResourceVnicRuntimeSchema() *schema.Resource {
 			},
 			"mac_addr": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mtu": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -61,7 +62,8 @@ func ResourceVnicRuntimeSchema() *schema.Resource {
 			"vnic_networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcevNICNetworkSchema()},
+				Elem:     ResourcevNICNetworkSchema(),
+			},
 		},
 	}
 }

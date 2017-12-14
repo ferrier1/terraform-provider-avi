@@ -22,7 +22,11 @@ func ResourceCloudIpChangeSchema() *schema.Resource {
 			},
 			"ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ip_mask": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

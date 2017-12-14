@@ -22,10 +22,12 @@ func ResourceMarathonServicePortConflictSchema() *schema.Resource {
 			},
 			"marathon_url": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -23,7 +23,8 @@ func ResourceGslbSubDomainPlacementRuntimeSchema() *schema.Resource {
 			"transition_ops": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "GSLB_NONE"},
+				Default:  "GSLB_NONE",
+			},
 		},
 	}
 }

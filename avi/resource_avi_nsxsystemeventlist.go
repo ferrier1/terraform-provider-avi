@@ -15,7 +15,8 @@ func ResourcensxSystemEventListSchema() *schema.Resource {
 			"datapage": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxDataPageSchema()},
+				Elem:     ResourcensxDataPageSchema(),
+			},
 		},
 	}
 }

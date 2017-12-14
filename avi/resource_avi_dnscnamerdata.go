@@ -14,7 +14,8 @@ func ResourceDnsCnameRdataSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"cname": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

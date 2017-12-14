@@ -14,7 +14,8 @@ func ResourceSeVmCreateStatusSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"cookie": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"cpu": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -29,7 +30,8 @@ func ResourceSeVmCreateStatusSchema() *schema.Resource {
 			},
 			"status": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"status_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -37,15 +39,18 @@ func ResourceSeVmCreateStatusSchema() *schema.Resource {
 			"syserr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_FAILURE"},
+				Default:  "SYSERR_FAILURE",
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcevNICSchema()},
+				Elem:     ResourcevNICSchema(),
+			},
 		},
 	}
 }

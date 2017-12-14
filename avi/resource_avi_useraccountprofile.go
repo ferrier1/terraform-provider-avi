@@ -27,6 +27,7 @@ func ResourceUserAccountProfileSchema() map[string]*schema.Schema {
 		"max_concurrent_sessions": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"max_login_failure_count": &schema.Schema{
 			Type:     schema.TypeInt,
@@ -40,11 +41,13 @@ func ResourceUserAccountProfileSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

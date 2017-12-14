@@ -20,7 +20,8 @@ func ResourceDnsRuleActionResponseSchema() *schema.Resource {
 			"rcode": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "DNS_RCODE_NOERROR"},
+				Default:  "DNS_RCODE_NOERROR",
+			},
 			"truncation": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

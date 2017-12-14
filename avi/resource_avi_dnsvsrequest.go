@@ -15,7 +15,8 @@ func ResourceDNSVSRequestSchema() *schema.Resource {
 			"dns_vs_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

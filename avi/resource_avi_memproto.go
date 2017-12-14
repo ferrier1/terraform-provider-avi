@@ -14,13 +14,16 @@ func ResourceMemProtoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"current_usage": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"max_mem_usage": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"memory_mapped": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

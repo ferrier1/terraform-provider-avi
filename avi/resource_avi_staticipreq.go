@@ -24,11 +24,13 @@ func ResourceStaticIPReqSchema() *schema.Resource {
 			"dns_rrs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpDNSRecordSchema()},
+				Elem:     ResourceIpDNSRecordSchema(),
+			},
 			"dns_vs_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"free_all": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -37,13 +39,16 @@ func ResourceStaticIPReqSchema() *schema.Resource {
 			"ip_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceStaticIPInfoSchema()},
+				Elem:     ResourceStaticIPInfoSchema(),
+			},
 			"obj_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"obj_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tenant_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

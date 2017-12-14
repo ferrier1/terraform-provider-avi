@@ -19,7 +19,8 @@ func ResourcePoolPerformanceScoreDataSchema() *schema.Resource {
 			"apdexr": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
-				Default:  "100.0"},
+				Default:  "100.0",
+			},
 			"avg_uptime": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
@@ -30,10 +31,12 @@ func ResourcePoolPerformanceScoreDataSchema() *schema.Resource {
 			},
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

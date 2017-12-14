@@ -14,14 +14,17 @@ func ResourceVISubfoldersSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"datacenter": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"folder": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"subfolders": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSubfolderInfoSchema()},
+				Elem:     ResourceSubfolderInfoSchema(),
+			},
 		},
 	}
 }

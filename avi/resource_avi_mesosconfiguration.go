@@ -30,7 +30,8 @@ func ResourceMesosConfigurationSchema() *schema.Resource {
 			"coredump_directory": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/var/lib/systemd/coredump"},
+				Default:  "/var/lib/systemd/coredump",
+			},
 			"disable_auto_backend_service_sync": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -54,11 +55,19 @@ func ResourceMesosConfigurationSchema() *schema.Resource {
 			"docker_registry_se": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDockerRegistrySchema()},
+				Elem:     ResourceDockerRegistrySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"east_west_placement_subnet": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"enable_event_subscription": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -67,7 +76,8 @@ func ResourceMesosConfigurationSchema() *schema.Resource {
 			"feproxy_bridge_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cbr1"},
+				Default:  "cbr1",
+			},
 			"feproxy_container_port_as_service": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -76,7 +86,11 @@ func ResourceMesosConfigurationSchema() *schema.Resource {
 			"feproxy_route_publish": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceFeProxyRoutePublishConfigSchema()},
+				Elem:     ResourceFeProxyRoutePublishConfigSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"feproxy_vips_enable_proxy_arp": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -89,19 +103,26 @@ func ResourceMesosConfigurationSchema() *schema.Resource {
 			"http_container_ports": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeInt}},
+				Elem:     &schema.Schema{Type: schema.TypeInt},
+			},
 			"marathon_configurations": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMarathonConfigurationSchema()},
+				Elem:     ResourceMarathonConfigurationSchema(),
+			},
 			"marathon_se_deployment": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMarathonSeDeploymentSchema()},
+				Elem:     ResourceMarathonSeDeploymentSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"mesos_url": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "http://leader.mesos:5050"},
+				Default:  "http://leader.mesos:5050",
+			},
 			"node_availability_zone_label": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -109,23 +130,31 @@ func ResourceMesosConfigurationSchema() *schema.Resource {
 			"nuage_controller": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceNuageSDNControllerSchema()},
+				Elem:     ResourceNuageSDNControllerSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_deployment_method": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "MESOS_SE_CREATE_FLEET"},
+				Default:  "MESOS_SE_CREATE_FLEET",
+			},
 			"se_exclude_attributes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMesosAttributeSchema()},
+				Elem:     ResourceMesosAttributeSchema(),
+			},
 			"se_include_attributes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMesosAttributeSchema()},
+				Elem:     ResourceMesosAttributeSchema(),
+			},
 			"se_resources": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMesosSeResourcesSchema()},
+				Elem:     ResourceMesosSeResourcesSchema(),
+			},
 			"se_spawn_rate": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -134,7 +163,8 @@ func ResourceMesosConfigurationSchema() *schema.Resource {
 			"se_volume": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/opt/avi/se"},
+				Default:  "/opt/avi/se",
+			},
 			"services_accessible_all_interfaces": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -167,7 +197,11 @@ func ResourceMesosConfigurationSchema() *schema.Resource {
 			"vip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

@@ -15,563 +15,1123 @@ func ResourceEventDetailsSchema() *schema.Resource {
 			"add_networks_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRmAddNetworksEventDetailsSchema()},
+				Elem:     ResourceRmAddNetworksEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"all_seupgrade_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAllSeUpgradeEventDetailsSchema()},
+				Elem:     ResourceAllSeUpgradeEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"anomaly_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAnomalyEventDetailsSchema()},
+				Elem:     ResourceAnomalyEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"apic_agent_bd_vrf_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceApicAgentBridgeDomainVrfChangeSchema()},
+				Elem:     ResourceApicAgentBridgeDomainVrfChangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"apic_agent_generic_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceApicAgentGenericEventDetailsSchema()},
+				Elem:     ResourceApicAgentGenericEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"apic_agent_vs_network_error": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceApicAgentVsNetworkErrorSchema()},
+				Elem:     ResourceApicAgentVsNetworkErrorSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"avg_uptime_change_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAvgUptimeChangeDetailsSchema()},
+				Elem:     ResourceAvgUptimeChangeDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"aws_asg_notif_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAWSASGNotifDetailsSchema()},
+				Elem:     ResourceAWSASGNotifDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"aws_infra_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAWSSetupSchema()},
+				Elem:     ResourceAWSSetupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"azure_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureSetupSchema()},
+				Elem:     ResourceAzureSetupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"bind_vs_se_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRmBindVsSeEventDetailsSchema()},
+				Elem:     ResourceRmBindVsSeEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"bm_infra_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceBMSetupSchema()},
+				Elem:     ResourceBMSetupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"bootup_fail_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRmSeBootupFailEventDetailsSchema()},
+				Elem:     ResourceRmSeBootupFailEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_cluster_vip_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudClusterVipSchema()},
+				Elem:     ResourceCloudClusterVipSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_dns_update_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudDnsUpdateSchema()},
+				Elem:     ResourceCloudDnsUpdateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_health_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudHealthSchema()},
+				Elem:     ResourceCloudHealthSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_infra_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudGenericSchema()},
+				Elem:     ResourceCloudGenericSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_ip_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudIpChangeSchema()},
+				Elem:     ResourceCloudIpChangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_parkintf_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudVipParkingIntfSchema()},
+				Elem:     ResourceCloudVipParkingIntfSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_se_vm_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudSeVmChangeSchema()},
+				Elem:     ResourceCloudSeVmChangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_sync_services_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudSyncServicesSchema()},
+				Elem:     ResourceCloudSyncServicesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_tenant_del_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudTenantsDeletedSchema()},
+				Elem:     ResourceCloudTenantsDeletedSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_vip_update_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudVipUpdateSchema()},
+				Elem:     ResourceCloudVipUpdateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_vnic_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudVnicChangeSchema()},
+				Elem:     ResourceCloudVnicChangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_config_failed_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterConfigFailedEventSchema()},
+				Elem:     ResourceClusterConfigFailedEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_leader_failover_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterLeaderFailoverEventSchema()},
+				Elem:     ResourceClusterLeaderFailoverEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_node_add_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterNodeAddEventSchema()},
+				Elem:     ResourceClusterNodeAddEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_node_db_failed_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterNodeDbFailedEventSchema()},
+				Elem:     ResourceClusterNodeDbFailedEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_node_remove_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterNodeRemoveEventSchema()},
+				Elem:     ResourceClusterNodeRemoveEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_node_shutdown_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterNodeShutdownEventSchema()},
+				Elem:     ResourceClusterNodeShutdownEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_node_started_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterNodeStartedEventSchema()},
+				Elem:     ResourceClusterNodeStartedEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_service_critical_failure_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterServiceCriticalFailureEventSchema()},
+				Elem:     ResourceClusterServiceCriticalFailureEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_service_failed_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterServiceFailedEventSchema()},
+				Elem:     ResourceClusterServiceFailedEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_service_restored_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterServiceRestoredEventSchema()},
+				Elem:     ResourceClusterServiceRestoredEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cluster_warm_reboot_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterWarmRebootEventSchema()},
+				Elem:     ResourceClusterWarmRebootEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cntlr_host_list_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVinfraCntlrHostUnreachableListSchema()},
+				Elem:     ResourceVinfraCntlrHostUnreachableListSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"config_action_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigActionDetailsSchema()},
+				Elem:     ResourceConfigActionDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"config_create_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigCreateDetailsSchema()},
+				Elem:     ResourceConfigCreateDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"config_delete_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigDeleteDetailsSchema()},
+				Elem:     ResourceConfigDeleteDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"config_password_change_request_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigUserPasswordChangeRequestSchema()},
+				Elem:     ResourceConfigUserPasswordChangeRequestSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"config_update_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigUpdateDetailsSchema()},
+				Elem:     ResourceConfigUpdateDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"config_user_authrz_rule_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigUserAuthrzByRuleSchema()},
+				Elem:     ResourceConfigUserAuthrzByRuleSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"config_user_login_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigUserLoginSchema()},
+				Elem:     ResourceConfigUserLoginSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"config_user_logout_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigUserLogoutSchema()},
+				Elem:     ResourceConfigUserLogoutSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"config_user_not_authrz_rule_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigUserNotAuthrzByRuleSchema()},
+				Elem:     ResourceConfigUserNotAuthrzByRuleSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"container_cloud_setup": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceContainerCloudSetupSchema()},
+				Elem:     ResourceContainerCloudSetupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"container_cloud_sevice": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceContainerCloudServiceSchema()},
+				Elem:     ResourceContainerCloudServiceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cs_infra_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudStackSetupSchema()},
+				Elem:     ResourceCloudStackSetupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"delete_se_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRmDeleteSeEventDetailsSchema()},
+				Elem:     ResourceRmDeleteSeEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"disable_se_migrate_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDisableSeMigrateEventDetailsSchema()},
+				Elem:     ResourceDisableSeMigrateEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"disc_summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVinfraDiscSummaryDetailsSchema()},
+				Elem:     ResourceVinfraDiscSummaryDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dns_sync_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDNSVsSyncInfoSchema()},
+				Elem:     ResourceDNSVsSyncInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"docker_ucp_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDockerUCPSetupSchema()},
+				Elem:     ResourceDockerUCPSetupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dos_attack_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDosAttackEventDetailsSchema()},
+				Elem:     ResourceDosAttackEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gcp_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGCPSetupSchema()},
+				Elem:     ResourceGCPSetupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"glb_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbStatusSchema()},
+				Elem:     ResourceGslbStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gs_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbServiceStatusSchema()},
+				Elem:     ResourceGslbServiceStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"host_unavail_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHostUnavailEventDetailsSchema()},
+				Elem:     ResourceHostUnavailEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"hs_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthScoreDetailsSchema()},
+				Elem:     ResourceHealthScoreDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ip_fail_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRmSeIpFailEventDetailsSchema()},
+				Elem:     ResourceRmSeIpFailEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"license_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceLicenseDetailsSchema()},
+				Elem:     ResourceLicenseDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"license_expiry_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceLicenseExpiryDetailsSchema()},
+				Elem:     ResourceLicenseExpiryDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"marathon_service_port_conflict_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMarathonServicePortConflictSchema()},
+				Elem:     ResourceMarathonServicePortConflictSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"mesos_infra_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMesosSetupSchema()},
+				Elem:     ResourceMesosSetupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"metric_threshold_up_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricThresoldUpDetailsSchema()},
+				Elem:     ResourceMetricThresoldUpDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"metrics_db_disk_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsDbDiskEventDetailsSchema()},
+				Elem:     ResourceMetricsDbDiskEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"mgmt_nw_change_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVinfraMgmtNwChangeDetailsSchema()},
+				Elem:     ResourceVinfraMgmtNwChangeDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"modify_networks_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRmModifyNetworksEventDetailsSchema()},
+				Elem:     ResourceRmModifyNetworksEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"network_subnet_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceNetworkSubnetInfoSchema()},
+				Elem:     ResourceNetworkSubnetInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"nw_subnet_clash_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceNetworkSubnetClashSchema()},
+				Elem:     ResourceNetworkSubnetClashSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"nw_summarized_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSummarizedInfoSchema()},
+				Elem:     ResourceSummarizedInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"os_infra_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOpenStackClusterSetupSchema()},
+				Elem:     ResourceOpenStackClusterSetupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"os_ip_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOpenStackIpChangeSchema()},
+				Elem:     ResourceOpenStackIpChangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"os_lbaudit_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOpenStackLbProvAuditCheckSchema()},
+				Elem:     ResourceOpenStackLbProvAuditCheckSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"os_lbplugin_op_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOpenStackLbPluginOpSchema()},
+				Elem:     ResourceOpenStackLbPluginOpSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"os_se_vm_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOpenStackSeVmChangeSchema()},
+				Elem:     ResourceOpenStackSeVmChangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"os_sync_services_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOpenStackSyncServicesSchema()},
+				Elem:     ResourceOpenStackSyncServicesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"os_vnic_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOpenStackVnicChangeSchema()},
+				Elem:     ResourceOpenStackVnicChangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_deployment_failure_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePoolDeploymentFailureInfoSchema()},
+				Elem:     ResourcePoolDeploymentFailureInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_deployment_success_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePoolDeploymentSuccessInfoSchema()},
+				Elem:     ResourcePoolDeploymentSuccessInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_server_delete_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVinfraPoolServerDeleteDetailsSchema()},
+				Elem:     ResourceVinfraPoolServerDeleteDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rebalance_migrate_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRebalanceMigrateEventDetailsSchema()},
+				Elem:     ResourceRebalanceMigrateEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rebalance_scalein_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRebalanceScaleinEventDetailsSchema()},
+				Elem:     ResourceRebalanceScaleinEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rebalance_scaleout_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRebalanceScaleoutEventDetailsSchema()},
+				Elem:     ResourceRebalanceScaleoutEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"reboot_se_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRmRebootSeEventDetailsSchema()},
+				Elem:     ResourceRmRebootSeEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"scheduler_action_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSchedulerActionDetailsSchema()},
+				Elem:     ResourceSchedulerActionDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeMgrEventDetailsSchema()},
+				Elem:     ResourceSeMgrEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_dupip_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeDupipEventDetailsSchema()},
+				Elem:     ResourceSeDupipEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_gateway_heartbeat_failed_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeGatewayHeartbeatFailedDetailsSchema()},
+				Elem:     ResourceSeGatewayHeartbeatFailedDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_gateway_heartbeat_success_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeGatewayHeartbeatSuccessDetailsSchema()},
+				Elem:     ResourceSeGatewayHeartbeatSuccessDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_geo_db_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeGeoDbDetailsSchema()},
+				Elem:     ResourceSeGeoDbDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_hb_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeHBEventDetailsSchema()},
+				Elem:     ResourceSeHBEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_hm_gs_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeHmEventGSDetailsSchema()},
+				Elem:     ResourceSeHmEventGSDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_hm_gsgroup_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeHmEventGslbPoolDetailsSchema()},
+				Elem:     ResourceSeHmEventGslbPoolDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_hm_pool_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeHmEventPoolDetailsSchema()},
+				Elem:     ResourceSeHmEventPoolDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_hm_vs_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeHmEventVsDetailsSchema()},
+				Elem:     ResourceSeHmEventVsDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_ip_added_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeIpAddedEventDetailsSchema()},
+				Elem:     ResourceSeIpAddedEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_ip_removed_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeIpRemovedEventDetailsSchema()},
+				Elem:     ResourceSeIpRemovedEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_ipfailure_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeIpfailureEventDetailsSchema()},
+				Elem:     ResourceSeIpfailureEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_persistence_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSePersistenceEventDetailsSchema()},
+				Elem:     ResourceSePersistenceEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_pool_lb_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSePoolLbEventDetailsSchema()},
+				Elem:     ResourceSePoolLbEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_thresh_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeThreshEventDetailsSchema()},
+				Elem:     ResourceSeThreshEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_version_check_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeVersionCheckFailedEventSchema()},
+				Elem:     ResourceSeVersionCheckFailedEventSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_vnic_down_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeVnicDownEventDetailsSchema()},
+				Elem:     ResourceSeVnicDownEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_vnic_tx_queue_stall_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeVnicTxQueueStallEventDetailsSchema()},
+				Elem:     ResourceSeVnicTxQueueStallEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"semigrate_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeMigrateEventDetailsSchema()},
+				Elem:     ResourceSeMigrateEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"server_autoscale_failed_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServerAutoScaleFailedInfoSchema()},
+				Elem:     ResourceServerAutoScaleFailedInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"server_autoscalein_complete_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServerAutoScaleInCompleteInfoSchema()},
+				Elem:     ResourceServerAutoScaleInCompleteInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"server_autoscalein_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServerAutoScaleInInfoSchema()},
+				Elem:     ResourceServerAutoScaleInInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"server_autoscaleout_complete_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServerAutoScaleOutCompleteInfoSchema()},
+				Elem:     ResourceServerAutoScaleOutCompleteInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"server_autoscaleout_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServerAutoScaleOutInfoSchema()},
+				Elem:     ResourceServerAutoScaleOutInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"seupgrade_disrupted_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeUpgradeVsDisruptedEventDetailsSchema()},
+				Elem:     ResourceSeUpgradeVsDisruptedEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"seupgrade_event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeUpgradeEventDetailsSchema()},
+				Elem:     ResourceSeUpgradeEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"seupgrade_migrate_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeUpgradeMigrateEventDetailsSchema()},
+				Elem:     ResourceSeUpgradeMigrateEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"seupgrade_scalein_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeUpgradeScaleinEventDetailsSchema()},
+				Elem:     ResourceSeUpgradeScaleinEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"seupgrade_scaleout_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeUpgradeScaleoutEventDetailsSchema()},
+				Elem:     ResourceSeUpgradeScaleoutEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"spawn_se_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRmSpawnSeEventDetailsSchema()},
+				Elem:     ResourceRmSpawnSeEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ssl_expire_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLExpireDetailsSchema()},
+				Elem:     ResourceSSLExpireDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ssl_export_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLExportDetailsSchema()},
+				Elem:     ResourceSSLExportDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ssl_renew_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLRenewDetailsSchema()},
+				Elem:     ResourceSSLRenewDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ssl_renew_failed_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLRenewFailedDetailsSchema()},
+				Elem:     ResourceSSLRenewFailedDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"switchover_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSwitchoverEventDetailsSchema()},
+				Elem:     ResourceSwitchoverEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"switchover_fail_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSwitchoverFailEventDetailsSchema()},
+				Elem:     ResourceSwitchoverFailEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"system_upgrade_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSystemUpgradeDetailsSchema()},
+				Elem:     ResourceSystemUpgradeDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"unbind_vs_se_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRmUnbindVsSeEventDetailsSchema()},
+				Elem:     ResourceRmUnbindVsSeEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vca_infra_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVCASetupSchema()},
+				Elem:     ResourceVCASetupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vcenter_connectivity_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVinfraVcenterConnectivityStatusSchema()},
+				Elem:     ResourceVinfraVcenterConnectivityStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vcenter_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVinfraVcenterBadCredentialsSchema()},
+				Elem:     ResourceVinfraVcenterBadCredentialsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vcenter_disc_failure": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVinfraVcenterDiscoveryFailureSchema()},
+				Elem:     ResourceVinfraVcenterDiscoveryFailureSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vcenter_obj_delete_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVinfraVcenterObjDeleteDetailsSchema()},
+				Elem:     ResourceVinfraVcenterObjDeleteDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vip_dns_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDNSRegisterInfoSchema()},
+				Elem:     ResourceDNSRegisterInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vm_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVinfraVmDetailsSchema()},
+				Elem:     ResourceVinfraVmDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_awaitingse_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsAwaitingSeEventDetailsSchema()},
+				Elem:     ResourceVsAwaitingSeEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_error_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsErrorEventDetailsSchema()},
+				Elem:     ResourceVsErrorEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_fsm_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsFsmEventDetailsSchema()},
+				Elem:     ResourceVsFsmEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_initialplacement_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsInitialPlacementEventDetailsSchema()},
+				Elem:     ResourceVsInitialPlacementEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_migrate_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsMigrateEventDetailsSchema()},
+				Elem:     ResourceVsMigrateEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_pool_nw_fltr_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsPoolNwFilterEventDetailsSchema()},
+				Elem:     ResourceVsPoolNwFilterEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_scalein_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsScaleInEventDetailsSchema()},
+				Elem:     ResourceVsScaleInEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_scaleout_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsScaleOutEventDetailsSchema()},
+				Elem:     ResourceVsScaleOutEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

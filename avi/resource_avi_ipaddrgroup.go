@@ -17,7 +17,8 @@ func ResourceIpAddrGroupSchema() map[string]*schema.Schema {
 		"addrs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrSchema()},
+			Elem:     ResourceIpAddrSchema(),
+		},
 		"apic_epg_name": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -25,7 +26,8 @@ func ResourceIpAddrGroupSchema() map[string]*schema.Schema {
 		"country_codes": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"description": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -33,7 +35,8 @@ func ResourceIpAddrGroupSchema() map[string]*schema.Schema {
 		"ip_ports": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrPortSchema()},
+			Elem:     ResourceIpAddrPortSchema(),
+		},
 		"marathon_app_name": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -44,15 +47,18 @@ func ResourceIpAddrGroupSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"prefixes": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrPrefixSchema()},
+			Elem:     ResourceIpAddrPrefixSchema(),
+		},
 		"ranges": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrRangeSchema()},
+			Elem:     ResourceIpAddrRangeSchema(),
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -60,7 +66,8 @@ func ResourceIpAddrGroupSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

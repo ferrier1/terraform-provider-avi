@@ -15,15 +15,18 @@ func ResourceFiuModuleExchangeSchema() *schema.Resource {
 			"controller": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "fiu_mod_controller_exchange"},
+				Default:  "fiu_mod_controller_exchange",
+			},
 			"dp": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "fiu_mod_dataplane_exchange"},
+				Default:  "fiu_mod_dataplane_exchange",
+			},
 			"seagent": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "fiu_mod_seagent_exchange"},
+				Default:  "fiu_mod_seagent_exchange",
+			},
 		},
 	}
 }

@@ -18,7 +18,8 @@ func ResourceVsMetricsFilterSchema() *schema.Resource {
 			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

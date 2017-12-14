@@ -15,7 +15,8 @@ func ResourceSeOperationalAnalysisSummarySchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_se_with_oper_issues": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -23,7 +24,8 @@ func ResourceSeOperationalAnalysisSummarySchema() *schema.Resource {
 			"se_with_oper_issues_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

@@ -19,11 +19,13 @@ func ResourceCloudAZSchema() *schema.Resource {
 			"hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudHostSchema()},
+				Elem:     ResourceCloudHostSchema(),
+			},
 			"meta": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudMetaSchema()},
+				Elem:     ResourceCloudMetaSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

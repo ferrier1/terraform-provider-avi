@@ -19,7 +19,8 @@ func ResourceDnsQueryTypeMatchSchema() *schema.Resource {
 			"query_type": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

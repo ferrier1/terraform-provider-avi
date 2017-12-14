@@ -15,10 +15,15 @@ func ResourceHealthScoreDataSeriesSchema() *schema.Resource {
 			"data": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHealthScoreDataSchema()},
+				Elem:     ResourceHealthScoreDataSchema(),
+			},
 			"header": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceHealthScoreHeaderSchema()},
+				Required: true, Elem: ResourceHealthScoreHeaderSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

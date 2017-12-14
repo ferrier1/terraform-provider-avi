@@ -15,7 +15,8 @@ func ResourceAlertRuleEventSchema() *schema.Resource {
 			"event_details": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceEventDetailsFilterSchema()},
+				Elem:     ResourceEventDetailsFilterSchema(),
+			},
 			"event_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

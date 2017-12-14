@@ -23,6 +23,7 @@ func ResourceCC_HealthSchema() *schema.Resource {
 			"last_fails": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"last_ok": &schema.Schema{
 				Type:     schema.TypeString,
@@ -31,11 +32,13 @@ func ResourceCC_HealthSchema() *schema.Resource {
 			"num_fails": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"services": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_Service_HealthSchema()},
+				Elem:     ResourceCC_Service_HealthSchema(),
+			},
 		},
 	}
 }

@@ -14,10 +14,12 @@ func ResourceDebugSeCpuSharesSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"cpu": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"shares": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

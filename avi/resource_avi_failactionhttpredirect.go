@@ -14,7 +14,8 @@ func ResourceFailActionHTTPRedirectSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"host": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"path": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -22,7 +23,8 @@ func ResourceFailActionHTTPRedirectSchema() *schema.Resource {
 			"protocol": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "HTTPS"},
+				Default:  "HTTPS",
+			},
 			"query": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -30,7 +32,8 @@ func ResourceFailActionHTTPRedirectSchema() *schema.Resource {
 			"status_code": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "HTTP_REDIRECT_STATUS_CODE_302"},
+				Default:  "HTTP_REDIRECT_STATUS_CODE_302",
+			},
 		},
 	}
 }

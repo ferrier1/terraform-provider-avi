@@ -15,10 +15,12 @@ func ResourceTagSchema() *schema.Resource {
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "USER_DEFINED"},
+				Default:  "USER_DEFINED",
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

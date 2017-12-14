@@ -33,7 +33,8 @@ func ResourceDockerConfigurationSchema() *schema.Resource {
 			"coredump_directory": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/var/lib/systemd/coredump"},
+				Default:  "/var/lib/systemd/coredump",
+			},
 			"disable_auto_backend_service_sync": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -52,11 +53,19 @@ func ResourceDockerConfigurationSchema() *schema.Resource {
 			"docker_registry_se": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDockerRegistrySchema()},
+				Elem:     ResourceDockerRegistrySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"east_west_placement_subnet": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"enable_event_subscription": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -79,19 +88,23 @@ func ResourceDockerConfigurationSchema() *schema.Resource {
 			"http_container_ports": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeInt}},
+				Elem:     &schema.Schema{Type: schema.TypeInt},
+			},
 			"se_deployment_method": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SE_CREATE_SSH"},
+				Default:  "SE_CREATE_SSH",
+			},
 			"se_exclude_attributes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMesosAttributeSchema()},
+				Elem:     ResourceMesosAttributeSchema(),
+			},
 			"se_include_attributes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMesosAttributeSchema()},
+				Elem:     ResourceMesosAttributeSchema(),
+			},
 			"se_spawn_rate": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -100,7 +113,8 @@ func ResourceDockerConfigurationSchema() *schema.Resource {
 			"se_volume": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/opt/avi"},
+				Default:  "/opt/avi",
+			},
 			"services_accessible_all_interfaces": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -113,7 +127,8 @@ func ResourceDockerConfigurationSchema() *schema.Resource {
 			"ucp_nodes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"use_container_ip_port": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

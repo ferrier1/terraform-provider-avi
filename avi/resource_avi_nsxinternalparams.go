@@ -19,7 +19,8 @@ func ResourceNsxInternalParamsSchema() *schema.Resource {
 			},
 			"cloud": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ipsets": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

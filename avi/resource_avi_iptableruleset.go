@@ -14,14 +14,17 @@ func ResourceIptableRuleSetSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"chain": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"rules": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIptableRuleSchema()},
+				Elem:     ResourceIptableRuleSchema(),
+			},
 			"table": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

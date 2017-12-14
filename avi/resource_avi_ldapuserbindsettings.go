@@ -19,11 +19,13 @@ func ResourceLdapUserBindSettingsSchema() *schema.Resource {
 			"token": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "<user>"},
+				Default:  "<user>",
+			},
 			"user_attributes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"user_id_attribute": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

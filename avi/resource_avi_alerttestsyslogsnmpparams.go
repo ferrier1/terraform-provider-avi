@@ -14,11 +14,13 @@ func ResourceAlertTestSyslogSnmpParamsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"text": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

@@ -15,18 +15,31 @@ func ResourceHealthScoreAnomalyDataSchema() *schema.Resource {
 			"application_anomaly": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceApplicationAnomalyScoreDataSchema()},
+				Elem:     ResourceApplicationAnomalyScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"controller_anomaly": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceControllerAnomalyScoreDataSchema()},
+				Elem:     ResourceControllerAnomalyScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_anomaly": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePoolAnomalyScoreDataSchema()},
+				Elem:     ResourcePoolAnomalyScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -34,18 +47,31 @@ func ResourceHealthScoreAnomalyDataSchema() *schema.Resource {
 			"server_anomaly": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServerAnomalyScoreDataSchema()},
+				Elem:     ResourceServerAnomalyScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"serviceengine_anomaly": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServiceEngineAnomalyScoreDataSchema()},
+				Elem:     ResourceServiceEngineAnomalyScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 			"virtualservice_anomaly": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceAnomalyScoreDataSchema()},
+				Elem:     ResourceVirtualServiceAnomalyScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

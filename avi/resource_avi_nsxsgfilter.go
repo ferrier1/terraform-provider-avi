@@ -18,7 +18,8 @@ func ResourceNsxSgFilterSchema() *schema.Resource {
 			},
 			"securitygroup": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

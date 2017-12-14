@@ -19,10 +19,12 @@ func Resourcecc_webhook_marathon_reqSchema() *schema.Resource {
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"event_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"task_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

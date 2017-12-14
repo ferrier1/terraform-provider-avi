@@ -14,38 +14,53 @@ func ResourceMostDifficultObjectEverSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"bool_data": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"enum_data": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"int_data": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"nonref_2": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceNonReferencable2Schema()},
+				Required: true, Elem: ResourceNonReferencable2Schema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"optional_nonref_2": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceNonReferencable2Schema()},
+				Elem:     ResourceNonReferencable2Schema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"optional_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"ref_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"repeated_nonref_2": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNonReferencable2Schema()},
+				Elem:     ResourceNonReferencable2Schema(),
+			},
 			"repeated_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"string_data": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

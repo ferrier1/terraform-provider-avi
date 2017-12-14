@@ -14,10 +14,12 @@ func ResourceNetworkSecurityPolicyActionRLParamSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"burst_size": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"max_rate": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

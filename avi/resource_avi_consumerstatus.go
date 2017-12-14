@@ -14,14 +14,17 @@ func ResourceConsumerStatusSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"num_se_assigned": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_se_requested": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
@@ -38,7 +41,8 @@ func ResourceConsumerStatusSchema() *schema.Resource {
 			"resources": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceResourceStatusSchema()},
+				Elem:     ResourceResourceStatusSchema(),
+			},
 			"se_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -46,11 +50,16 @@ func ResourceConsumerStatusSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vip_placement_resolution_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVipPlacementResolutionInfoSchema()},
+				Elem:     ResourceVipPlacementResolutionInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

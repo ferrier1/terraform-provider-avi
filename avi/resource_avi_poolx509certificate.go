@@ -19,7 +19,8 @@ func ResourcePoolX509CertificateSchema() *schema.Resource {
 			},
 			"pem_cert": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

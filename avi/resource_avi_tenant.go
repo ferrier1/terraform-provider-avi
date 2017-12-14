@@ -17,7 +17,11 @@ func ResourceTenantSchema() map[string]*schema.Schema {
 		"config_settings": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceTenantConfigurationSchema()},
+			Elem:     ResourceTenantConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"created_by": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -33,11 +37,13 @@ func ResourceTenantSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

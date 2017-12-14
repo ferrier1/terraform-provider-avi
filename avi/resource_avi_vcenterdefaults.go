@@ -15,7 +15,8 @@ func ResourcevCenterDefaultsSchema() *schema.Resource {
 			"avi_internal_network": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "Avi Internal"},
+				Default:  "Avi Internal",
+			},
 		},
 	}
 }

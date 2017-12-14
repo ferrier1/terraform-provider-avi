@@ -14,13 +14,16 @@ func ResourceDebugSeAgentSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"log_level": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sub_module": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"trace_level": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

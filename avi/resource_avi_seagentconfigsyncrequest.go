@@ -15,7 +15,8 @@ func ResourceSeAgentConfigSyncRequestSchema() *schema.Resource {
 			"vs_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

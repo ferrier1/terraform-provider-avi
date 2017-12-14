@@ -19,7 +19,11 @@ func ResourceMatchReplacePairSchema() *schema.Resource {
 			"replacement_string": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceReplaceStringVarSchema()},
+				Elem:     ResourceReplaceStringVarSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

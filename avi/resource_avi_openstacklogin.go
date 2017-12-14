@@ -15,7 +15,8 @@ func ResourceOpenstackLoginSchema() *schema.Resource {
 			"admin_tenant": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "admin"},
+				Default:  "admin",
+			},
 			"auth_url": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

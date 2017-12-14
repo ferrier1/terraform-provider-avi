@@ -15,18 +15,22 @@ func ResourceVirtualServiceRelatedEntitiesSchema() *schema.Resource {
 			"pools": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsEntityDataSchema()},
+				Elem:     ResourceMetricsEntityDataSchema(),
+			},
 			"servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsEntityDataSchema()},
+				Elem:     ResourceMetricsEntityDataSchema(),
+			},
 			"serviceengines": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsEntityDataSchema()},
+				Elem:     ResourceMetricsEntityDataSchema(),
+			},
 			"virtualservice_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

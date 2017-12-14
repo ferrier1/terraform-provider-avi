@@ -18,10 +18,12 @@ func ResourceSeMgrSvcIdSchema() *schema.Resource {
 			},
 			"svc_q_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"svc_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

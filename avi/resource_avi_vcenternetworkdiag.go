@@ -15,11 +15,16 @@ func ResourceVcenterNetworkDiagSchema() *schema.Resource {
 			"mgmt_nw_diag": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVcenterMgmtNwDiagSchema()},
+				Elem:     ResourceVcenterMgmtNwDiagSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"overlapping_subnets": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceOverlappingSubnetInfoSchema()},
+				Elem:     ResourceOverlappingSubnetInfoSchema(),
+			},
 		},
 	}
 }

@@ -14,13 +14,16 @@ func ResourceVinfraVcenterConnectivityStatusSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"cloud": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"datacenter": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vcenter": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -17,11 +17,13 @@ func ResourceVsVipSchema() map[string]*schema.Schema {
 		"cloud_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "/api/cloud?name=Default-Cloud"},
+			Default:  "/api/cloud?name=Default-Cloud",
+		},
 		"dns_info": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceDnsInfoSchema()},
+			Elem:     ResourceDnsInfoSchema(),
+		},
 		"east_west_placement": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -29,7 +31,8 @@ func ResourceVsVipSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -37,11 +40,13 @@ func ResourceVsVipSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"vip": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceVipSchema()},
+			Elem:     ResourceVipSchema(),
+		},
 		"vrf_context_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,

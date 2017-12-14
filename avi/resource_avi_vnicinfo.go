@@ -18,7 +18,11 @@ func ResourceVnicInfoSchema() *schema.Resource {
 			},
 			"interface_stats": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceInterfaceStatsSchema()},
+				Required: true, Elem: ResourceInterfaceStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"intferface_up": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -26,7 +30,8 @@ func ResourceVnicInfoSchema() *schema.Resource {
 			"ip_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpInterfaceSchema()},
+				Elem:     ResourceIpInterfaceSchema(),
+			},
 			"iptable_filter": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -37,11 +42,13 @@ func ResourceVnicInfoSchema() *schema.Resource {
 			},
 			"mac_address": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mbr_intfs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMbrIntfSchema()},
+				Elem:     ResourceMbrIntfSchema(),
+			},
 			"num_vs_delete_drops": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -52,27 +59,32 @@ func ResourceVnicInfoSchema() *schema.Resource {
 			},
 			"vlan_id": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"vnic_id": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"vnic_mtu": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"vnic_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vnic_owner": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"vnic_parent": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"vnic_weight": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"vrf_id": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

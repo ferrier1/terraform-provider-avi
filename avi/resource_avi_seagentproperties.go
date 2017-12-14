@@ -105,6 +105,7 @@ func ResourceSeAgentPropertiesSchema() *schema.Resource {
 			"headless_timeout_sec": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"ignore_docker_mac_change": &schema.Schema{
 				Type:     schema.TypeBool,

@@ -15,17 +15,20 @@ func ResourceSCKeySchema() *schema.Resource {
 			"action": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SC_UPDATE"},
+				Default:  "SC_UPDATE",
+			},
 			"metadata": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"obj_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

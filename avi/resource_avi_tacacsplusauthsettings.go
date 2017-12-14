@@ -15,7 +15,8 @@ func ResourceTacacsPlusAuthSettingsSchema() *schema.Resource {
 			"authorization_attrs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAuthTacacsPlusAttributeValuePairSchema()},
+				Elem:     ResourceAuthTacacsPlusAttributeValuePairSchema(),
+			},
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -24,11 +25,13 @@ func ResourceTacacsPlusAuthSettingsSchema() *schema.Resource {
 			"server": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"service": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "AUTH_TACACS_PLUS_SERVICE_LOGIN"},
+				Default:  "AUTH_TACACS_PLUS_SERVICE_LOGIN",
+			},
 		},
 	}
 }

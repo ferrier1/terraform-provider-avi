@@ -15,7 +15,11 @@ func ResourceGslbGeoLocationSchema() *schema.Resource {
 			"location": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGeoLocationSchema()},
+				Elem:     ResourceGeoLocationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"source": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

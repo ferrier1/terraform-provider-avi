@@ -23,11 +23,13 @@ func ResourcePoolDeploymentSuccessInfoSchema() *schema.Resource {
 			"results": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcePGDeploymentRuleResultSchema()},
+				Elem:     ResourcePGDeploymentRuleResultSchema(),
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"webhook_reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

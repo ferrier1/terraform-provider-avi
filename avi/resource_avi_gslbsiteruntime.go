@@ -15,19 +15,35 @@ func ResourceGslbSiteRuntimeSchema() *schema.Resource {
 			"rxed_site_hs": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbSiteHealthStatusSchema()},
+				Elem:     ResourceGslbSiteHealthStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"site_cfg": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbSiteRuntimeCfgSchema()},
+				Elem:     ResourceGslbSiteRuntimeCfgSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"site_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbSiteRuntimeInfoSchema()},
+				Elem:     ResourceGslbSiteRuntimeInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"site_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbSiteRuntimeStatsSchema()},
+				Elem:     ResourceGslbSiteRuntimeStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

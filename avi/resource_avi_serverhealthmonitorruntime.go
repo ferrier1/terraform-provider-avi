@@ -23,25 +23,32 @@ func ResourceServerHealthMonitorRuntimeSchema() *schema.Resource {
 			"bad_response_timestamp": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"curr_count": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerHealthMonitorCounterSchema()},
+				Elem:     ResourceServerHealthMonitorCounterSchema(),
+			},
 			"curr_failed_checks": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"fall_count": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"health_monitor_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"health_monitor_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"hm_icmp_accept_rsp": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -61,15 +68,27 @@ func ResourceServerHealthMonitorRuntimeSchema() *schema.Resource {
 			"last_transition_timestamp_1": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"last_transition_timestamp_2": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"last_transition_timestamp_3": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"max_response_time": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -104,11 +123,16 @@ func ResourceServerHealthMonitorRuntimeSchema() *schema.Resource {
 			},
 			"rise_count": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"snat_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ssl_error_code": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -120,7 +144,8 @@ func ResourceServerHealthMonitorRuntimeSchema() *schema.Resource {
 			"total_count": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerHealthMonitorCounterSchema()},
+				Elem:     ResourceServerHealthMonitorCounterSchema(),
+			},
 			"total_failed_checks": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -128,7 +153,8 @@ func ResourceServerHealthMonitorRuntimeSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

@@ -22,7 +22,8 @@ func ResourceSSLCertificateRequestSchema() *schema.Resource {
 			},
 			"common_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"country": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -35,7 +36,8 @@ func ResourceSSLCertificateRequestSchema() *schema.Resource {
 			"dynamic_params": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCustomParamsSchema()},
+				Elem:     ResourceCustomParamsSchema(),
+			},
 			"email_address": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -47,14 +49,19 @@ func ResourceSSLCertificateRequestSchema() *schema.Resource {
 			"key_params": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLKeyParamsSchema()},
+				Elem:     ResourceSSLKeyParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"locality": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"organization": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -65,15 +72,18 @@ func ResourceSSLCertificateRequestSchema() *schema.Resource {
 			},
 			"self_signed": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"subject_alt_names": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SSL_CERTIFICATE_TYPE_VIRTUALSERVICE"},
+				Default:  "SSL_CERTIFICATE_TYPE_VIRTUALSERVICE",
+			},
 		},
 	}
 }

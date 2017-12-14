@@ -14,17 +14,20 @@ func ResourceWrrEntrySchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"ip_addr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"weight": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

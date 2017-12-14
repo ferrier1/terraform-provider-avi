@@ -20,14 +20,20 @@ func ResourceSeResourceManagerProtoRuntimeSchema() *schema.Resource {
 			"pending_creates": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeCreatePendingProtoSchema()},
+				Elem:     ResourceSeCreatePendingProtoSchema(),
+			},
 			"se_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePlacementStatsSchema()},
+				Elem:     ResourcePlacementStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ticks": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"upgrade_in_progress": &schema.Schema{
 				Type:     schema.TypeBool,
@@ -37,11 +43,13 @@ func ResourceSeResourceManagerProtoRuntimeSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vrfs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRmVrfProtoSchema()},
+				Elem:     ResourceRmVrfProtoSchema(),
+			},
 			"vs_resync_in_progress": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

@@ -15,19 +15,23 @@ func ResourceDiskUsageSchema() *schema.Resource {
 			"cntlr_disk_free": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceOverallInfoSchema()},
+				Elem:     ResourceOverallInfoSchema(),
+			},
 			"cntlr_disk_usage": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcePartitionInfoSchema()},
+				Elem:     ResourcePartitionInfoSchema(),
+			},
 			"se_disk_free": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceOverallInfoSchema()},
+				Elem:     ResourceOverallInfoSchema(),
+			},
 			"se_disk_usage": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcePartitionInfoSchema()},
+				Elem:     ResourcePartitionInfoSchema(),
+			},
 		},
 	}
 }

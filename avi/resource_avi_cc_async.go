@@ -15,7 +15,8 @@ func ResourceCC_AsyncSchema() *schema.Resource {
 			"tasks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_AsyncTaskSchema()},
+				Elem:     ResourceCC_AsyncTaskSchema(),
+			},
 		},
 	}
 }

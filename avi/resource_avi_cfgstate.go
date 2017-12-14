@@ -23,7 +23,11 @@ func ResourceCfgStateSchema() *schema.Resource {
 			"last_changed_time": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -35,11 +39,13 @@ func ResourceCfgStateSchema() *schema.Resource {
 			"status": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_SUCCESS"},
+				Default:  "SYSERR_SUCCESS",
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

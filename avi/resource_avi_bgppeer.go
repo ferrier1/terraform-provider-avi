@@ -40,6 +40,7 @@ func ResourceBgpPeerSchema() *schema.Resource {
 			"ebgp_multihop": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"hold_time": &schema.Schema{
 				Type:     schema.TypeInt,
@@ -65,7 +66,11 @@ func ResourceBgpPeerSchema() *schema.Resource {
 			},
 			"peer_ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"remote_as": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -78,7 +83,11 @@ func ResourceBgpPeerSchema() *schema.Resource {
 			},
 			"subnet": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Required: true, Elem: ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

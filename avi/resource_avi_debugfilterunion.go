@@ -15,42 +15,79 @@ func ResourceDebugFilterUnionSchema() *schema.Resource {
 			"alert_debug_filter": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAlertMgrDebugFilterSchema()},
+				Elem:     ResourceAlertMgrDebugFilterSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"autoscale_mgr_debug_filter": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAutoScaleMgrDebugFilterSchema()},
+				Elem:     ResourceAutoScaleMgrDebugFilterSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cloud_connector_debug_filter": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudConnectorDebugFilterSchema()},
+				Elem:     ResourceCloudConnectorDebugFilterSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"hs_debug_filter": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHSMgrDebugFilterSchema()},
+				Elem:     ResourceHSMgrDebugFilterSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"mesos_metrics_debug_filter": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMesosMetricsDebugFilterSchema()},
+				Elem:     ResourceMesosMetricsDebugFilterSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"metrics_debug_filter": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsMgrDebugFilterSchema()},
+				Elem:     ResourceMetricsMgrDebugFilterSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_mgr_debug_filter": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeMgrDebugFilterSchema()},
+				Elem:     ResourceSeMgrDebugFilterSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"state_cache_mgr_debug_filter": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceStateCacheMgrDebugFilterSchema()},
+				Elem:     ResourceStateCacheMgrDebugFilterSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vs_debug_filter": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsDebugFilterSchema()},
+				Elem:     ResourceVsDebugFilterSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

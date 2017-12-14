@@ -31,7 +31,8 @@ func ResourceSecureChannelMappingSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"pub_key": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -43,11 +44,13 @@ func ResourceSecureChannelMappingSchema() *schema.Resource {
 			"status": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SECURE_CHANNEL_NONE"},
+				Default:  "SECURE_CHANNEL_NONE",
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

@@ -15,10 +15,12 @@ func ResourceUltimateTestRepeatedSchema() *schema.Resource {
 			"most_difficult": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMostDifficultObjectEverSchema()},
+				Elem:     ResourceMostDifficultObjectEverSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -26,7 +28,8 @@ func ResourceUltimateTestRepeatedSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

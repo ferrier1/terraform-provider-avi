@@ -18,10 +18,12 @@ func ResourceSeAgentVrfRuntimeSchema() *schema.Resource {
 			},
 			"ns": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ns_created": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"previous_default_gw": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -29,17 +31,24 @@ func ResourceSeAgentVrfRuntimeSchema() *schema.Resource {
 			"route": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAgentRouteSchema()},
+				Elem:     ResourceSeAgentRouteSchema(),
+			},
 			"vnic": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAgentVnicRuntimeSchema()},
+				Elem:     ResourceSeAgentVnicRuntimeSchema(),
+			},
 			"vrf_context": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVrfContextSchema()},
+				Required: true, Elem: ResourceVrfContextSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vrf_id": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

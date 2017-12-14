@@ -15,10 +15,15 @@ func ResourceSeConsumerResyncRespSchema() *schema.Resource {
 			"res_rsp": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeResourceFindRespSchema()},
+				Elem:     ResourceSeResourceFindRespSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"status": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

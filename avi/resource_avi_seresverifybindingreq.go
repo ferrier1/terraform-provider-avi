@@ -14,7 +14,11 @@ func ResourceSeResVerifyBindingReqSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"con_info": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceSeResourceFindReqSchema()},
+				Required: true, Elem: ResourceSeResourceFindReqSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"update_consumer": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

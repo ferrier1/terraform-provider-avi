@@ -18,7 +18,8 @@ func ResourceSEFaultInjectExhaustParamSchema() *schema.Resource {
 			},
 			"num": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

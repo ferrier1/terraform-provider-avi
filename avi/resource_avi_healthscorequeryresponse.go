@@ -14,10 +14,12 @@ func ResourceHealthScoreQueryResponseSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"entity_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"metric_entity": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -25,20 +27,24 @@ func ResourceHealthScoreQueryResponseSchema() *schema.Resource {
 			"series": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHealthScoreDataSeriesSchema()},
+				Elem:     ResourceHealthScoreDataSeriesSchema(),
+			},
 			"server": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"start": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"step": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"stop": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

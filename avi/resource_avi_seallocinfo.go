@@ -25,7 +25,8 @@ func ResourceSeAllocInfoSchema() *schema.Resource {
 			"attach_ip_status": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "Programming Network reachability to the Virtual Service IP in the Cloud"},
+				Default:  "Programming Network reachability to the Virtual Service IP in the Cloud",
+			},
 			"attach_ip_success": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -34,13 +35,16 @@ func ResourceSeAllocInfoSchema() *schema.Resource {
 			"floating_intf_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"is_connected": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"is_primary": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"is_standby": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -60,7 +64,8 @@ func ResourceSeAllocInfoSchema() *schema.Resource {
 			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sec_idx": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -72,10 +77,12 @@ func ResourceSeAllocInfoSchema() *schema.Resource {
 			},
 			"total_se_memory": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"total_se_vcpus": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"vcpus": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -83,11 +90,13 @@ func ResourceSeAllocInfoSchema() *schema.Resource {
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "0.0.0"},
+				Default:  "0.0.0",
+			},
 			"vip_intf_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVipInterfaceListSchema()},
+				Elem:     ResourceSeVipInterfaceListSchema(),
+			},
 			"vip_subnet_ip": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -99,7 +108,8 @@ func ResourceSeAllocInfoSchema() *schema.Resource {
 			"vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeResourceVnicSchema()},
+				Elem:     ResourceSeResourceVnicSchema(),
+			},
 		},
 	}
 }

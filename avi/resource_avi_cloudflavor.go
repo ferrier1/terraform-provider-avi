@@ -26,7 +26,8 @@ func ResourceCloudFlavorSchema() *schema.Resource {
 			},
 			"id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"max_ips_per_nic": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -38,10 +39,12 @@ func ResourceCloudFlavorSchema() *schema.Resource {
 			"meta": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudMetaSchema()},
+				Elem:     ResourceCloudMetaSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"public": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

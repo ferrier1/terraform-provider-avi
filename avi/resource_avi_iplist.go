@@ -19,23 +19,31 @@ func ResourceIpListSchema() *schema.Resource {
 			"ips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"obj_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "Unknown"},
+				Default:  "Unknown",
+			},
 			"obj_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "Unknown"},
+				Default:  "Unknown",
+			},
 			"only_conn_subnets": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeBool}},
+				Elem:     &schema.Schema{Type: schema.TypeBool},
+			},
 			"pool_update": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePoolUpdateSchema()},
+				Elem:     ResourcePoolUpdateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vrf_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -43,7 +51,11 @@ func ResourceIpListSchema() *schema.Resource {
 			"vs_update": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsUpdateSchema()},
+				Elem:     ResourceVsUpdateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

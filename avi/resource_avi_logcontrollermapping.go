@@ -19,7 +19,8 @@ func ResourceLogControllerMappingSchema() *schema.Resource {
 			"metrics_mgr_port": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_MGR_PORT_0"},
+				Default:  "METRICS_MGR_PORT_0",
+			},
 			"node_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,7 +32,8 @@ func ResourceLogControllerMappingSchema() *schema.Resource {
 			"prev_metrics_mgr_port": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_MGR_PORT_0"},
+				Default:  "METRICS_MGR_PORT_0",
+			},
 			"static_mapping": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -44,10 +46,12 @@ func ResourceLogControllerMappingSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

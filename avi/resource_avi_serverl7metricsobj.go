@@ -114,7 +114,8 @@ func ResourceServerL7MetricsObjSchema() *schema.Resource {
 			},
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"pct_response_errors": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,

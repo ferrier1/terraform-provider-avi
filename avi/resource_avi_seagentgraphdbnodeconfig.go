@@ -15,103 +15,203 @@ func ResourceSeAgentGraphDBNodeConfigSchema() *schema.Resource {
 			"analytics_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAnalyticsProfileSchema()},
+				Elem:     ResourceAnalyticsProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"application_persistence_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceApplicationPersistenceProfileSchema()},
+				Elem:     ResourceApplicationPersistenceProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"application_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceApplicationProfileSchema()},
+				Elem:     ResourceApplicationProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cloud": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudSchema()},
+				Elem:     ResourceCloudSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gslb": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbSchema()},
+				Elem:     ResourceGslbSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gslbgeodbprofile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbGeoDbProfileSchema()},
+				Elem:     ResourceGslbGeoDbProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gslbservice": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbServiceSchema()},
+				Elem:     ResourceGslbServiceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"health_monitor": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthMonitorSchema()},
+				Elem:     ResourceHealthMonitorSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"http_request_policy": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPRequestPolicySchema()},
+				Elem:     ResourceHTTPRequestPolicySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"http_response_policy": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPResponsePolicySchema()},
+				Elem:     ResourceHTTPResponsePolicySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"http_security_policy": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPSecurityPolicySchema()},
+				Elem:     ResourceHTTPSecurityPolicySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ip_addr_group": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrGroupSchema()},
+				Elem:     ResourceIpAddrGroupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"microservice": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMicroServiceSchema()},
+				Elem:     ResourceMicroServiceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"network_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceNetworkProfileSchema()},
+				Elem:     ResourceNetworkProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"network_security_policy": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceNetworkSecurityPolicySchema()},
+				Elem:     ResourceNetworkSecurityPolicySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePoolSchema()},
+				Elem:     ResourcePoolSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_group": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePoolGroupSchema()},
+				Elem:     ResourcePoolGroupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"priority_labels": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePriorityLabelsSchema()},
+				Elem:     ResourcePriorityLabelsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"serviceenginegroup": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServiceEngineGroupSchema()},
+				Elem:     ResourceServiceEngineGroupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ssl_key_and_certificate": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLKeyAndCertificateSchema()},
+				Elem:     ResourceSSLKeyAndCertificateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ssl_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLProfileSchema()},
+				Elem:     ResourceSSLProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"string_group": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceStringGroupSchema()},
+				Elem:     ResourceStringGroupSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tenant": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTenantSchema()},
+				Elem:     ResourceTenantSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"virtual_service_se": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceSeSchema()},
+				Elem:     ResourceVirtualServiceSeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_data_script": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVSDataScriptSetSchema()},
+				Elem:     ResourceVSDataScriptSetSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

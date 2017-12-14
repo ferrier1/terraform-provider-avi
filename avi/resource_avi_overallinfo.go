@@ -14,20 +14,24 @@ func ResourceOverallInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"available": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"free_percent": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"path": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"size": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"used": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -15,11 +15,19 @@ func Resourcecc_update_vip_rspSchema() *schema.Resource {
 			"alloced_fip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"alloced_vip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"availability_zone": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -50,7 +58,8 @@ func Resourcecc_update_vip_rspSchema() *schema.Resource {
 			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -66,7 +75,11 @@ func Resourcecc_update_vip_rspSchema() *schema.Resource {
 			"vip_subnet_prefix": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

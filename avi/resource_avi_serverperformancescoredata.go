@@ -30,10 +30,12 @@ func ResourceServerPerformanceScoreDataSchema() *schema.Resource {
 			},
 			"pool_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -44,7 +46,8 @@ func ResourceServerPerformanceScoreDataSchema() *schema.Resource {
 			},
 			"server": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sum_finished_conns": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,

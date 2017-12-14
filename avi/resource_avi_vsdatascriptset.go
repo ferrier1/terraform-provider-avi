@@ -21,7 +21,8 @@ func ResourceVSDataScriptSetSchema() map[string]*schema.Schema {
 		"datascript": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceVSDataScriptSchema()},
+			Elem:     ResourceVSDataScriptSchema(),
+		},
 		"description": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -29,22 +30,27 @@ func ResourceVSDataScriptSetSchema() map[string]*schema.Schema {
 		"ipgroup_refs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"pool_group_refs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"pool_refs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"string_group_refs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -52,7 +58,8 @@ func ResourceVSDataScriptSetSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

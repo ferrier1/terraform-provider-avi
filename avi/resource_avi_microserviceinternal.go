@@ -19,7 +19,8 @@ func ResourceMicroServiceInternalSchema() *schema.Resource {
 			"containers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceContainerInternalSchema()},
+				Elem:     ResourceContainerInternalSchema(),
+			},
 			"ip_list": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -39,7 +40,8 @@ func ResourceMicroServiceInternalSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

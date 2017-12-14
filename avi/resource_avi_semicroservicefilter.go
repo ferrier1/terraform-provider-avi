@@ -15,7 +15,8 @@ func ResourceSeMicroServiceFilterSchema() *schema.Resource {
 			"container_key": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceContainerTaskIdFilterKeySchema()},
+				Elem:     ResourceContainerTaskIdFilterKeySchema(),
+			},
 			"microservice_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

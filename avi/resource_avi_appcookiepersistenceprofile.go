@@ -18,7 +18,8 @@ func ResourceAppCookiePersistenceProfileSchema() *schema.Resource {
 			},
 			"prst_hdr_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"timeout": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

@@ -19,7 +19,8 @@ func ResourceRouteTableRuntimeSchema() *schema.Resource {
 			"route_entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRouteEntrySchema()},
+				Elem:     ResourceRouteEntrySchema(),
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

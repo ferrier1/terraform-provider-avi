@@ -19,14 +19,16 @@ func ResourceSeMigrateEventDetailsSchema() *schema.Resource {
 			"reason": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"se_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vs_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

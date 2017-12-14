@@ -14,11 +14,13 @@ func ResourcensxRuleSrcsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"excluded": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"source": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxSrcDestSchema()},
+				Elem:     ResourcensxSrcDestSchema(),
+			},
 		},
 	}
 }

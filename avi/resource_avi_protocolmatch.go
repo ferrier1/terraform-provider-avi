@@ -14,10 +14,12 @@ func ResourceProtocolMatchSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"match_criteria": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"protocols": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

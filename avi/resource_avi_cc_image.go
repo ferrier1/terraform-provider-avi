@@ -47,7 +47,8 @@ func ResourceCC_ImageSchema() *schema.Resource {
 			"shares": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_RefCntSchema()},
+				Elem:     ResourceCC_RefCntSchema(),
+			},
 			"tenant_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

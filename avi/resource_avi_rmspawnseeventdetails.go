@@ -39,11 +39,13 @@ func ResourceRmSpawnSeEventDetailsSchema() *schema.Resource {
 			"network_names": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

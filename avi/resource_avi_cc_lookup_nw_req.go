@@ -19,11 +19,13 @@ func Resourcecc_lookup_nw_reqSchema() *schema.Resource {
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"ips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     Resourcecc_lookup_network_ipSchema()},
+				Elem:     Resourcecc_lookup_network_ipSchema(),
+			},
 			"tenant_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

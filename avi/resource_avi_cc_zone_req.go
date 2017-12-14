@@ -15,7 +15,8 @@ func Resourcecc_zone_reqSchema() *schema.Resource {
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"detail": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

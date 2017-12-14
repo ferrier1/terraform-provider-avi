@@ -15,7 +15,8 @@ func ResourceGslbSiteOpsMaintenanceModeSchema() *schema.Resource {
 			"details": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"enabled": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

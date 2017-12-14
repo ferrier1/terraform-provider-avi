@@ -14,13 +14,16 @@ func ResourceTLSTicketSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"aes_key": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"hmac_key": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

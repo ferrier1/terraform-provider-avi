@@ -15,7 +15,8 @@ func ResourcePlacementStatusSchema() *schema.Resource {
 			"consumers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConsumerStatusSchema()},
+				Elem:     ResourceConsumerStatusSchema(),
+			},
 		},
 	}
 }

@@ -14,10 +14,12 @@ func ResourcePBDescriptionSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"file_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"type_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

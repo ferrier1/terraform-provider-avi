@@ -15,7 +15,8 @@ func ResourceDebugVrfContextSchema() *schema.Resource {
 			"flags": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDebugVrfSchema()},
+				Elem:     ResourceDebugVrfSchema(),
+			},
 		},
 	}
 }

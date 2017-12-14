@@ -15,10 +15,12 @@ func ResourcensxVersionSchema() *schema.Resource {
 			"module": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxModuleSchema()},
+				Elem:     ResourcensxModuleSchema(),
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

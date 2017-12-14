@@ -34,7 +34,8 @@ func ResourceIndexingTaskResponseSchema() *schema.Resource {
 			},
 			"success": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

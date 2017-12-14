@@ -14,13 +14,16 @@ func ResourceSeHbStatusSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"last_hb_req_sent": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"last_hb_resp_recv": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"num_hb_misses": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -15,7 +15,8 @@ func ResourceVcenterHostsSchema() *schema.Resource {
 			"host_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"include": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

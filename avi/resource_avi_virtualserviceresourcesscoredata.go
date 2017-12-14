@@ -31,10 +31,12 @@ func ResourceVirtualServiceResourcesScoreDataSchema() *schema.Resource {
 			"pool_resources_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcePoolResourcesScoreSchema()},
+				Elem:     ResourcePoolResourcesScoreSchema(),
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -46,7 +48,8 @@ func ResourceVirtualServiceResourcesScoreDataSchema() *schema.Resource {
 			"serviceengine_resources_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServiceEngineResourcesScoreSchema()},
+				Elem:     ResourceServiceEngineResourcesScoreSchema(),
+			},
 		},
 	}
 }

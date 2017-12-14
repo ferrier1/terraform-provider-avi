@@ -15,7 +15,8 @@ func ResourceConnectionDumpRuntimeSchema() *schema.Resource {
 			"connection": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConnectionEntrySchema()},
+				Elem:     ResourceConnectionEntrySchema(),
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

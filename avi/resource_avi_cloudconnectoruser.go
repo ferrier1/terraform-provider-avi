@@ -17,14 +17,23 @@ func ResourceCloudConnectorUserSchema() map[string]*schema.Schema {
 		"azure_serviceprincipal": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureServicePrincipalCredentialsSchema()},
+			Elem:     ResourceAzureServicePrincipalCredentialsSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"azure_userpass": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureUserPassCredentialsSchema()},
+			Elem:     ResourceAzureUserPassCredentialsSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"private_key": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -40,7 +49,8 @@ func ResourceCloudConnectorUserSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

@@ -20,10 +20,12 @@ func ResourceWafRuleGroupSchema() *schema.Resource {
 			"exclude_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceWafExcludeListEntrySchema()},
+				Elem:     ResourceWafExcludeListEntrySchema(),
+			},
 			"index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,7 +33,8 @@ func ResourceWafRuleGroupSchema() *schema.Resource {
 			"rules": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceWafRuleSchema()},
+				Elem:     ResourceWafRuleSchema(),
+			},
 		},
 	}
 }

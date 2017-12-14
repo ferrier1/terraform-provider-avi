@@ -30,13 +30,16 @@ func ResourceServerAutoScaleOutInfoSchema() *schema.Resource {
 			},
 			"num_scaleout_servers": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_servers_up": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -44,7 +47,8 @@ func ResourceServerAutoScaleOutInfoSchema() *schema.Resource {
 			"reason_code": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_SUCCESS"},
+				Default:  "SYSERR_SUCCESS",
+			},
 		},
 	}
 }

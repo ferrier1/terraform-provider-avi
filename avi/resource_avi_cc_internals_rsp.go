@@ -15,37 +15,45 @@ func Resourcecc_internals_rspSchema() *schema.Resource {
 			"agents": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_AgentInternalSchema()},
+				Elem:     ResourceCC_AgentInternalSchema(),
+			},
 			"mtu": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"node_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"notifiers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_NotifierSchema()},
+				Elem:     ResourceCC_NotifierSchema(),
+			},
 			"num_rsp_miss": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_rsp_unexp": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_rxq_full": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_rxq_tmo": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_txq_full": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"reactor_main_pid": &schema.Schema{
 				Type:     schema.TypeString,
@@ -54,24 +62,28 @@ func Resourcecc_internals_rspSchema() *schema.Resource {
 			"reactor_work_pids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"service_pid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"up_time": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"worker_pid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

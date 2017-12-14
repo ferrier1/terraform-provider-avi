@@ -15,7 +15,8 @@ func ResourceInterfaceSummaryRuntimeSchema() *schema.Resource {
 			"interface_entries": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceInterfaceSummaryEntrySchema()},
+				Elem:     ResourceInterfaceSummaryEntrySchema(),
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

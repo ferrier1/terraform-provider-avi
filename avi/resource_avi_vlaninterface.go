@@ -19,7 +19,8 @@ func ResourceVlanInterfaceSchema() *schema.Resource {
 			},
 			"if_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"is_mgmt": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -28,11 +29,13 @@ func ResourceVlanInterfaceSchema() *schema.Resource {
 			"vlan_id": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"vnic_networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcevNICNetworkSchema()},
+				Elem:     ResourcevNICNetworkSchema(),
+			},
 			"vrf_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

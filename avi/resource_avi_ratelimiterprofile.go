@@ -15,43 +15,80 @@ func ResourceRateLimiterProfileSchema() *schema.Resource {
 			"client_ip_connections_rate_limit": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"client_ip_failed_requests_rate_limit": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"client_ip_requests_rate_limit": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"client_ip_scanners_requests_rate_limit": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"client_ip_to_uri_failed_requests_rate_limit": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"client_ip_to_uri_requests_rate_limit": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"http_header_rate_limits": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+			},
 			"uri_failed_requests_rate_limit": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"uri_requests_rate_limit": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"uri_scanners_requests_rate_limit": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

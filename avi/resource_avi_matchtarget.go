@@ -15,43 +15,80 @@ func ResourceMatchTargetSchema() *schema.Resource {
 			"client_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrMatchSchema()},
+				Elem:     ResourceIpAddrMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cookie": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCookieMatchSchema()},
+				Elem:     ResourceCookieMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"hdrs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHdrMatchSchema()},
+				Elem:     ResourceHdrMatchSchema(),
+			},
 			"host_hdr": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHostHdrMatchSchema()},
+				Elem:     ResourceHostHdrMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"method": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMethodMatchSchema()},
+				Elem:     ResourceMethodMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"path": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePathMatchSchema()},
+				Elem:     ResourcePathMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"protocol": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceProtocolMatchSchema()},
+				Elem:     ResourceProtocolMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"query": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceQueryMatchSchema()},
+				Elem:     ResourceQueryMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"version": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPVersionMatchSchema()},
+				Elem:     ResourceHTTPVersionMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_port": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePortMatchSchema()},
+				Elem:     ResourcePortMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

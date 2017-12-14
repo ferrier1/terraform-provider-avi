@@ -14,13 +14,16 @@ func ResourceTaskResponseBaseSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"method": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"method_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"request_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"response_data": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

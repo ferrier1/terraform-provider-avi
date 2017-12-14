@@ -14,20 +14,24 @@ func ResourceCC_BGTaskSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"abort": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"added": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"admin_state": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"bgworker": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"oper_state": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"poll_timer": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -42,7 +46,8 @@ func ResourceCC_BGTaskSchema() *schema.Resource {
 			},
 			"task_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

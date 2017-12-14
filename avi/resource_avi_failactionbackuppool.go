@@ -14,7 +14,8 @@ func ResourceFailActionBackupPoolSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"backup_pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

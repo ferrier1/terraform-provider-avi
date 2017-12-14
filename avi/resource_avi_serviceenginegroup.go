@@ -32,7 +32,8 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"algo": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "PLACEMENT_ALGO_PACKED"},
+			Default:  "PLACEMENT_ALGO_PACKED",
+		},
 		"archive_shm_limit": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -56,11 +57,13 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"auto_rebalance_capacity_per_se": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeInt}},
+			Elem:     &schema.Schema{Type: schema.TypeInt},
+		},
 		"auto_rebalance_criteria": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"auto_rebalance_interval": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -79,7 +82,8 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"cloud_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "/api/cloud?name=Default-Cloud"},
+			Default:  "/api/cloud?name=Default-Cloud",
+		},
 		"connection_memory_percentage": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -98,15 +102,18 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"custom_securitygroups_data": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"custom_securitygroups_mgmt": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"custom_tag": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceCustomTagSchema()},
+			Elem:     ResourceCustomTagSchema(),
+		},
 		"dedicated_dispatcher_core": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -144,23 +151,28 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"extra_config_multiplier": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
+			Default:  "0.0",
 		},
 		"extra_shared_config_memory": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"floating_intf_ip": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrSchema()},
+			Elem:     ResourceIpAddrSchema(),
+		},
 		"floating_intf_ip_se_2": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrSchema()},
+			Elem:     ResourceIpAddrSchema(),
+		},
 		"ha_mode": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "HA_MODE_SHARED"},
+			Default:  "HA_MODE_SHARED",
+		},
 		"hardwaresecuritymodulegroup_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -195,11 +207,13 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"ingress_access_data": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SG_INGRESS_ACCESS_ALL"},
+			Default:  "SG_INGRESS_ACCESS_ALL",
+		},
 		"ingress_access_mgmt": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SG_INGRESS_ACCESS_ALL"},
+			Default:  "SG_INGRESS_ACCESS_ALL",
+		},
 		"instance_flavor": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -207,7 +221,8 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"iptables": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIptableRuleSetSchema()},
+			Elem:     ResourceIptableRuleSetSchema(),
+		},
 		"least_load_core_selection": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -255,7 +270,11 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"mgmt_subnet": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+			Elem:     ResourceIpAddrPrefixSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"min_cpu_usage": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -268,7 +287,8 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"non_significant_log_throttle": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -282,7 +302,8 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"openstack_availability_zones": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"openstack_mgmt_network_name": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -294,6 +315,7 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"os_reserved_memory": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"per_app": &schema.Schema{
 			Type:     schema.TypeBool,
@@ -303,11 +325,16 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"placement_mode": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "PLACEMENT_MODE_AUTO"},
+			Default:  "PLACEMENT_MODE_AUTO",
+		},
 		"realtime_se_metrics": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRealTimeUpdateSchema()},
+			Elem:     ResourceMetricsRealTimeUpdateSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"se_deprovision_delay": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -316,7 +343,11 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"se_dos_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceDosThresholdProfileSchema()},
+			Elem:     ResourceDosThresholdProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"se_ipc_udp_port": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -325,7 +356,8 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"se_name_prefix": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "Avi"},
+			Default:  "Avi",
+		},
 		"se_probe_port": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -354,6 +386,7 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"se_tunnel_mode": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"se_tunnel_udp_port": &schema.Schema{
 			Type:     schema.TypeInt,
@@ -363,6 +396,7 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"se_udp_encap_ipc": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"se_vs_hb_max_pkts_in_batch": &schema.Schema{
 			Type:     schema.TypeInt,
@@ -377,7 +411,8 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"service_ip_subnets": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrPrefixSchema()},
+			Elem:     ResourceIpAddrPrefixSchema(),
+		},
 		"significant_log_throttle": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -395,19 +430,26 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"vcenter_clusters": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceVcenterClustersSchema()},
+			Elem:     ResourceVcenterClustersSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"vcenter_datastore_mode": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "VCENTER_DATASTORE_ANY"},
+			Default:  "VCENTER_DATASTORE_ANY",
+		},
 		"vcenter_datastores": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceVcenterDatastoreSchema()},
+			Elem:     ResourceVcenterDatastoreSchema(),
+		},
 		"vcenter_datastores_include": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -416,11 +458,16 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"vcenter_folder": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "AviSeFolder"},
+			Default:  "AviSeFolder",
+		},
 		"vcenter_hosts": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceVcenterHostsSchema()},
+			Elem:     ResourceVcenterHostsSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"vcpus_per_se": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -449,7 +496,11 @@ func ResourceServiceEngineGroupSchema() map[string]*schema.Schema {
 		"vss_placement": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceVssPlacementSchema()},
+			Elem:     ResourceVssPlacementSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"waf_mempool": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,

@@ -19,11 +19,16 @@ func ResourceGslbGeoDbProfileRuntimeSchema() *schema.Resource {
 			"flr_state": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+			},
 			"ldr_state": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,7 +36,8 @@ func ResourceGslbGeoDbProfileRuntimeSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

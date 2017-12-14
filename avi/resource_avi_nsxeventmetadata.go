@@ -15,7 +15,8 @@ func ResourcensxEventMetaDataSchema() *schema.Resource {
 			"data": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxEventDataSchema()},
+				Elem:     ResourcensxEventDataSchema(),
+			},
 		},
 	}
 }

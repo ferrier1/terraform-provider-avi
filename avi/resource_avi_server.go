@@ -27,7 +27,8 @@ func ResourceServerSchema() *schema.Resource {
 			"discovered_networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDiscoveredNetworkSchema()},
+				Elem:     ResourceDiscoveredNetworkSchema(),
+			},
 			"enabled": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -47,11 +48,19 @@ func ResourceServerSchema() *schema.Resource {
 			},
 			"ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"location": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGeoLocationSchema()},
+				Elem:     ResourceGeoLocationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"mac_address": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

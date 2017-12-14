@@ -21,7 +21,8 @@ func ResourcePoolGroupSchema() map[string]*schema.Schema {
 		"cloud_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "/api/cloud?name=Default-Cloud"},
+			Default:  "/api/cloud?name=Default-Cloud",
+		},
 		"created_by": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -37,7 +38,11 @@ func ResourcePoolGroupSchema() map[string]*schema.Schema {
 		"fail_action": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceFailActionSchema()},
+			Elem:     ResourceFailActionSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"implicit_priority_labels": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -46,14 +51,17 @@ func ResourcePoolGroupSchema() map[string]*schema.Schema {
 		"members": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourcePoolGroupMemberSchema()},
+			Elem:     ResourcePoolGroupMemberSchema(),
+		},
 		"min_servers": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"priority_labels_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -65,7 +73,8 @@ func ResourcePoolGroupSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

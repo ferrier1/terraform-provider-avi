@@ -18,7 +18,8 @@ func ResourceSeVmDetachIpStatusSchema() *schema.Resource {
 			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"status_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -26,10 +27,12 @@ func ResourceSeVmDetachIpStatusSchema() *schema.Resource {
 			"syserr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_SUCCESS"},
+				Default:  "SYSERR_SUCCESS",
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -20,18 +20,22 @@ func ResourcePlacementGlobalsSchema() *schema.Resource {
 			"num_consumers": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_create_pending": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_resources": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"ticks": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"upgrade_in_progress": &schema.Schema{
 				Type:     schema.TypeBool,

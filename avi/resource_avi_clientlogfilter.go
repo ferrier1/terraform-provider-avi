@@ -20,7 +20,11 @@ func ResourceClientLogFilterSchema() *schema.Resource {
 			"client_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrMatchSchema()},
+				Elem:     ResourceIpAddrMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"duration": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -28,17 +32,24 @@ func ResourceClientLogFilterSchema() *schema.Resource {
 			},
 			"enabled": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"uri": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceStringMatchSchema()},
+				Elem:     ResourceStringMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

@@ -19,30 +19,46 @@ func ResourceDebugVirtualServiceSchema() *schema.Resource {
 			"capture_params": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDebugVirtualServiceCaptureSchema()},
+				Elem:     ResourceDebugVirtualServiceCaptureSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cloud_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/api/cloud?name=Default-Cloud"},
+				Default:  "/api/cloud?name=Default-Cloud",
+			},
 			"debug_hm": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "DEBUG_VS_HM_NONE"},
+				Default:  "DEBUG_VS_HM_NONE",
+			},
 			"debug_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDebugIpAddrSchema()},
+				Elem:     ResourceDebugIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"flags": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDebugVsDataplaneSchema()},
+				Elem:     ResourceDebugVsDataplaneSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"se_params": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDebugVirtualServiceSeParamsSchema()},
+				Elem:     ResourceDebugVirtualServiceSeParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -50,7 +66,8 @@ func ResourceDebugVirtualServiceSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

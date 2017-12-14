@@ -26,11 +26,16 @@ func ResourceVISetvNicNwReqSchema() *schema.Resource {
 			},
 			"sevm_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vcenter_admin": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVIAdminCredentialsSchema()},
+				Elem:     ResourceVIAdminCredentialsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vcenter_sevm_mor": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -38,7 +43,8 @@ func ResourceVISetvNicNwReqSchema() *schema.Resource {
 			"vcenter_vnic_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIVmVnicInfoSchema()},
+				Elem:     ResourceVIVmVnicInfoSchema(),
+			},
 		},
 	}
 }

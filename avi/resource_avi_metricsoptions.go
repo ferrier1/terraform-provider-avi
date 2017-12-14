@@ -15,19 +15,23 @@ func ResourceMetricsOptionsSchema() *schema.Resource {
 			"archive_policy": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_DB_TABLE_ARCHIVE_ALL"},
+				Default:  "METRICS_DB_TABLE_ARCHIVE_ALL",
+			},
 			"entity_types": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"indexes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"metrics_aggregation": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"metrics_obj_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

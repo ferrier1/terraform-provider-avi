@@ -15,7 +15,8 @@ func ResourceSchedulerActionDetailsSchema() *schema.Resource {
 			"backup_uri": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"control_script_output": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

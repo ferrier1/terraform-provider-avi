@@ -15,7 +15,11 @@ func ResourceVISetMgmtIpSEReqSchema() *schema.Resource {
 			"admin": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVIAdminCredentialsSchema()},
+				Elem:     ResourceVIAdminCredentialsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"all_vnic_connected": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -31,7 +35,11 @@ func ResourceVISetMgmtIpSEReqSchema() *schema.Resource {
 			},
 			"ip_params": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVISeVmIpConfParamsSchema()},
+				Required: true, Elem: ResourceVISeVmIpConfParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"power_on": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -43,7 +51,8 @@ func ResourceVISetMgmtIpSEReqSchema() *schema.Resource {
 			},
 			"sevm_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

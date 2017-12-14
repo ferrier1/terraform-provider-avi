@@ -15,10 +15,12 @@ func Resourcecc_status_rspSchema() *schema.Resource {
 			"agents": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudStatusSchema()},
+				Elem:     ResourceCloudStatusSchema(),
+			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

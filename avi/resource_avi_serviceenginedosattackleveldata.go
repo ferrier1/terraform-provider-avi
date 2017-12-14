@@ -38,7 +38,8 @@ func ResourceServiceEngineDosAttackLevelDataSchema() *schema.Resource {
 			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -50,6 +51,7 @@ func ResourceServiceEngineDosAttackLevelDataSchema() *schema.Resource {
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 		},
 	}

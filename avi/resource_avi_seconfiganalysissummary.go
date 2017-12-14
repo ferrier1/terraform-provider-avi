@@ -15,7 +15,8 @@ func ResourceSeConfigAnalysisSummarySchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_se_config_inconsistent": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -23,7 +24,8 @@ func ResourceSeConfigAnalysisSummarySchema() *schema.Resource {
 			"se_config_inconsistent_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

@@ -14,7 +14,8 @@ func Resourcecc_securitygroup_rspSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -22,7 +23,8 @@ func Resourcecc_securitygroup_rspSchema() *schema.Resource {
 			"securitygroups": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudSecurityGroupSchema()},
+				Elem:     ResourceCloudSecurityGroupSchema(),
+			},
 		},
 	}
 }

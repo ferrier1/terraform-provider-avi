@@ -14,10 +14,12 @@ func ResourceHealthScoreEntitySchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"entity_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"metrics_entity": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -15,7 +15,8 @@ func ResourceGslbPoolSchema() *schema.Resource {
 			"algorithm": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "GSLB_ALGORITHM_ROUND_ROBIN"},
+				Default:  "GSLB_ALGORITHM_ROUND_ROBIN",
+			},
 			"consistent_hash_mask": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -27,7 +28,8 @@ func ResourceGslbPoolSchema() *schema.Resource {
 			"members": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbPoolMemberSchema()},
+				Elem:     ResourceGslbPoolMemberSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -28,11 +28,19 @@ func ResourceVirtualServiceSeSchema() *schema.Resource {
 			"datapath_debug": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDebugVirtualServiceSchema()},
+				Elem:     ResourceDebugVirtualServiceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"first_se_assigned_time": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"geo_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -40,7 +48,8 @@ func ResourceVirtualServiceSeSchema() *schema.Resource {
 			"gs_refs_v2": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"gslb_clear_on_max_retries": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -56,7 +65,8 @@ func ResourceVirtualServiceSeSchema() *schema.Resource {
 			"ipam_dns_records": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsRecordSchema()},
+				Elem:     ResourceDnsRecordSchema(),
+			},
 			"marked_for_delete": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -88,11 +98,13 @@ func ResourceVirtualServiceSeSchema() *schema.Resource {
 			"se_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeListSchema()},
+				Elem:     ResourceSeListSchema(),
+			},
 			"tls_ticket_key": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceTLSTicketSchema()},
+				Elem:     ResourceTLSTicketSchema(),
+			},
 			"total_ses": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -109,15 +121,21 @@ func ResourceVirtualServiceSeSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"version": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"virtual_service": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceSchema()},
+				Elem:     ResourceVirtualServiceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

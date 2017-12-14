@@ -14,7 +14,11 @@ func Resourcecc_lookup_network_ipSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"only_direct": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

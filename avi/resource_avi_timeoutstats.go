@@ -14,13 +14,16 @@ func ResourceTimeoutStatsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"keepalive_timeout": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"persist_timeout": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"retransmit_timeout": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

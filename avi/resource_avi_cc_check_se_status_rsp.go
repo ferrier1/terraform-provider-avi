@@ -18,7 +18,8 @@ func Resourcecc_check_se_status_rspSchema() *schema.Resource {
 			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

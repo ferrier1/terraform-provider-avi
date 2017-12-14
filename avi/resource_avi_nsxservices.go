@@ -15,7 +15,8 @@ func ResourcensxServicesSchema() *schema.Resource {
 			"service": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxServiceSchema()},
+				Elem:     ResourcensxServiceSchema(),
+			},
 		},
 	}
 }

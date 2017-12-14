@@ -19,13 +19,16 @@ func ResourceSeResourceFindRespSchema() *schema.Resource {
 			"se_alloc_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAllocInfoSchema()},
+				Elem:     ResourceSeAllocInfoSchema(),
+			},
 			"status": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"svc_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

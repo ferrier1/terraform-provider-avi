@@ -35,7 +35,8 @@ func ResourceSeUpgradeParamsSchema() *schema.Resource {
 			"se_group_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"suspend_on_failure": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -49,7 +50,8 @@ func ResourceSeUpgradeParamsSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

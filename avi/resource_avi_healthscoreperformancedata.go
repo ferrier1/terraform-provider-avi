@@ -15,14 +15,23 @@ func ResourceHealthScorePerformanceDataSchema() *schema.Resource {
 			"application_performance": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceApplicationPerformanceScoreDataSchema()},
+				Elem:     ResourceApplicationPerformanceScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_performance": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePoolPerformanceScoreDataSchema()},
+				Elem:     ResourcePoolPerformanceScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -30,18 +39,31 @@ func ResourceHealthScorePerformanceDataSchema() *schema.Resource {
 			"server_performance": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServerPerformanceScoreDataSchema()},
+				Elem:     ResourceServerPerformanceScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"serviceengine_performance": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServiceEnginePerformanceScoreDataSchema()},
+				Elem:     ResourceServiceEnginePerformanceScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 			"virtualservice_performance": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServicePerformanceScoreDataSchema()},
+				Elem:     ResourceVirtualServicePerformanceScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

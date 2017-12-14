@@ -26,7 +26,8 @@ func ResourceMetricThresoldUpDetailsSchema() *schema.Resource {
 			},
 			"metric_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"pool_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

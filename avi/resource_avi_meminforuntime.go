@@ -15,7 +15,11 @@ func ResourceMeminfoRuntimeSchema() *schema.Resource {
 			"memory_config": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMemConfigSchema()},
+				Elem:     ResourceMemConfigSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,11 +27,19 @@ func ResourceMeminfoRuntimeSchema() *schema.Resource {
 			"process_memory_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMallstatsSchema()},
+				Elem:     ResourceMallstatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"protobuf_memory_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMemProtoSchema()},
+				Elem:     ResourceMemProtoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -35,7 +47,11 @@ func ResourceMeminfoRuntimeSchema() *schema.Resource {
 			"shared_memory_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceJestatsSchema()},
+				Elem:     ResourceJestatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

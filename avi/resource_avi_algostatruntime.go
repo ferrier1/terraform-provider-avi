@@ -15,7 +15,11 @@ func ResourceAlgoStatRuntimeSchema() *schema.Resource {
 			"ca_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCoreAffinityStatSchema()},
+				Elem:     ResourceCoreAffinityStatSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"lb_algorithm": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,15 +27,27 @@ func ResourceAlgoStatRuntimeSchema() *schema.Resource {
 			"lc_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceLeastConnectionStatSchema()},
+				Elem:     ResourceLeastConnectionStatSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ns_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceNsStatSchema()},
+				Elem:     ResourceNsStatSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"wrr_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceWrrStatSchema()},
+				Elem:     ResourceWrrStatSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

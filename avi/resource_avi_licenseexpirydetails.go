@@ -31,7 +31,8 @@ func ResourceLicenseExpiryDetailsSchema() *schema.Resource {
 			"license_tier": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"license_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

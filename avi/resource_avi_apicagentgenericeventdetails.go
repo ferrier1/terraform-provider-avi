@@ -15,19 +15,23 @@ func ResourceApicAgentGenericEventDetailsSchema() *schema.Resource {
 			"contract_graphs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"lif_cif_attachment": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"lifs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -35,7 +39,8 @@ func ResourceApicAgentGenericEventDetailsSchema() *schema.Resource {
 			"service_engine_vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"tenant_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -47,7 +52,8 @@ func ResourceApicAgentGenericEventDetailsSchema() *schema.Resource {
 			"vnic_network_attachment": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vs_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -15,10 +15,12 @@ func Resourcecc_flavor_rspSchema() *schema.Resource {
 			"flavors": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudFlavorSchema()},
+				Elem:     ResourceCloudFlavorSchema(),
+			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -26,17 +26,20 @@ func ResourceOpenStackLbProvAuditCheckSchema() *schema.Resource {
 			},
 			"id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"result": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"tenant": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"user": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

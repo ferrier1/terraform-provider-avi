@@ -15,7 +15,8 @@ func ResourceInterestedHostsSchema() *schema.Resource {
 			"host_mor": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

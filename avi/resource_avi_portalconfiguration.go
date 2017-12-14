@@ -58,7 +58,8 @@ func ResourcePortalConfigurationSchema() *schema.Resource {
 			"sslkeyandcertificate_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"sslprofile_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

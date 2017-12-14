@@ -15,7 +15,11 @@ func ResourceAlertRuleSchema() *schema.Resource {
 			"conn_app_log_rule": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAlertFilterSchema()},
+				Elem:     ResourceAlertFilterSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"event_match_filter": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,15 +27,18 @@ func ResourceAlertRuleSchema() *schema.Resource {
 			"metrics_rule": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAlertRuleMetricSchema()},
+				Elem:     ResourceAlertRuleMetricSchema(),
+			},
 			"operator": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "OPERATOR_AND"},
+				Default:  "OPERATOR_AND",
+			},
 			"sys_event_rule": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAlertRuleEventSchema()},
+				Elem:     ResourceAlertRuleEventSchema(),
+			},
 		},
 	}
 }

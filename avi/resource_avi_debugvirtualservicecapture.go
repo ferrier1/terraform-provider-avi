@@ -15,6 +15,7 @@ func ResourceDebugVirtualServiceCaptureSchema() *schema.Resource {
 			"duration": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_pkts": &schema.Schema{
 				Type:     schema.TypeInt,

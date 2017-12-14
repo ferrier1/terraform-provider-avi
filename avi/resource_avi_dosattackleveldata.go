@@ -27,18 +27,22 @@ func ResourceDosAttackLevelDataSchema() *schema.Resource {
 			"pct_application_dos_attacks": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"pct_connections_dos_attacks": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"pct_dos_bandwidth": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"pct_dos_rx_bytes": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"pct_network_dos_attacks": &schema.Schema{
 				Type:     schema.TypeFloat,
@@ -47,14 +51,17 @@ func ResourceDosAttackLevelDataSchema() *schema.Resource {
 			"pct_pkts_dos_attacks": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"pct_policy_drops": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -66,14 +73,17 @@ func ResourceDosAttackLevelDataSchema() *schema.Resource {
 			"serviceengine_dos_attack_level_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServiceEngineDosAttackLevelSchema()},
+				Elem:     ResourceServiceEngineDosAttackLevelSchema(),
+			},
 			"serviceengine_dosattklevel_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServiceEngineDosAttackLevelSchema()},
+				Elem:     ResourceServiceEngineDosAttackLevelSchema(),
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 		},
 	}

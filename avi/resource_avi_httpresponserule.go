@@ -18,18 +18,25 @@ func ResourceHTTPResponseRuleSchema() *schema.Resource {
 			},
 			"enable": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"hdr_action": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHTTPHdrActionSchema()},
+				Elem:     ResourceHTTPHdrActionSchema(),
+			},
 			"index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"loc_hdr_action": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPRewriteLocHdrActionSchema()},
+				Elem:     ResourceHTTPRewriteLocHdrActionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"log": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -37,10 +44,15 @@ func ResourceHTTPResponseRuleSchema() *schema.Resource {
 			"match": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceResponseMatchTargetSchema()},
+				Elem:     ResourceResponseMatchTargetSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

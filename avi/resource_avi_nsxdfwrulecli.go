@@ -15,28 +15,35 @@ func ResourceNsxDfwRuleCliSchema() *schema.Resource {
 			"applications": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNsxObjCliSchema()},
+				Elem:     ResourceNsxObjCliSchema(),
+			},
 			"apply_to": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNsxObjCliSchema()},
+				Elem:     ResourceNsxObjCliSchema(),
+			},
 			"destinations": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNsxObjCliSchema()},
+				Elem:     ResourceNsxObjCliSchema(),
+			},
 			"key": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"section_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sources": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNsxObjCliSchema()},
+				Elem:     ResourceNsxObjCliSchema(),
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

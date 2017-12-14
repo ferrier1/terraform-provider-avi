@@ -31,7 +31,8 @@ func ResourceWafLogSchema() *schema.Resource {
 			"rule_logs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceWafRuleLogSchema()},
+				Elem:     ResourceWafRuleLogSchema(),
+			},
 			"status": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

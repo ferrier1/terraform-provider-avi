@@ -14,13 +14,16 @@ func ResourceEventDetailsFilterSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"comparator": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"event_details_key": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"event_details_value": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

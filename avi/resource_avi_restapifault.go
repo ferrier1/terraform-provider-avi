@@ -15,10 +15,12 @@ func ResourceRestApiFaultSchema() *schema.Resource {
 			"count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"delay": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 		},
 	}

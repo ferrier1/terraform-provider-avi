@@ -1342,7 +1342,8 @@ func ResourceSeStatsObjSchema() *schema.Resource {
 			},
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"pct_connections_dropped": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,

@@ -21,7 +21,11 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"ab_pool": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceAbPoolSchema()},
+			Elem:     ResourceAbPoolSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"ab_priority": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -41,7 +45,8 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"autoscale_networks": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"autoscale_policy_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -54,6 +59,7 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"capacity_estimation_ttfb_thresh": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"cloud_config_cksum": &schema.Schema{
 			Type:     schema.TypeString,
@@ -62,7 +68,8 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"cloud_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "/api/cloud?name=Default-Cloud"},
+			Default:  "/api/cloud?name=Default-Cloud",
+		},
 		"connection_ramp_duration": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -84,7 +91,8 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"domain_name": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"east_west": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -97,11 +105,16 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"external_autoscale_groups": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"fail_action": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceFailActionSchema()},
+			Elem:     ResourceFailActionSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"fewest_tasks_feedback_delay": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -115,7 +128,8 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"health_monitor_refs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"host_check_enabled": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -133,7 +147,8 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"lb_algorithm": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "LB_ALGORITHM_LEAST_CONNECTIONS"},
+			Default:  "LB_ALGORITHM_LEAST_CONNECTIONS",
+		},
 		"lb_algorithm_consistent_hash_hdr": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -146,7 +161,8 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"lb_algorithm_hash": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "LB_ALGORITHM_CONSISTENT_HASH_SOURCE_IP_ADDRESS"},
+			Default:  "LB_ALGORITHM_CONSISTENT_HASH_SOURCE_IP_ADDRESS",
+		},
 		"lookup_server_by_name": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -155,22 +171,30 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"max_concurrent_connections_per_server": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"max_conn_rate_per_server": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+			Elem:     ResourceRateProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"networks": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceNetworkFilterSchema()},
+			Elem:     ResourceNetworkFilterSchema(),
+		},
 		"nsx_securitygroup": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"pki_profile_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -178,7 +202,8 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"placement_networks": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourcePlacementNetworkSchema()},
+			Elem:     ResourcePlacementNetworkSchema(),
+		},
 		"prst_hdr_name": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -211,6 +236,7 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"server_count": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"server_name": &schema.Schema{
 			Type:     schema.TypeString,
@@ -219,11 +245,16 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"server_reselect": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPServerReselectSchema()},
+			Elem:     ResourceHTTPServerReselectSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"servers": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceServerSchema()},
+			Elem:     ResourceServerSchema(),
+		},
 		"sni_enabled": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -249,7 +280,8 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"vrf_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,

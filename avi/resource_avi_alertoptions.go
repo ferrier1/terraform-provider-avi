@@ -15,13 +15,16 @@ func ResourceAlertOptionsSchema() *schema.Resource {
 			"cfg_scope": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "ALERT_CONFIG_SCOPE_TENANT"},
+				Default:  "ALERT_CONFIG_SCOPE_TENANT",
+			},
 			"level": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"threshold": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

@@ -14,7 +14,8 @@ func ResourceHasOptionalReferencableSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"referencable_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -26,7 +27,8 @@ func ResourceHasOptionalReferencableSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

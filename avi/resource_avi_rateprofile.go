@@ -15,14 +15,20 @@ func ResourceRateProfileSchema() *schema.Resource {
 			"action": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateLimiterActionSchema()},
+				Elem:     ResourceRateLimiterActionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"burst_sz": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"explicit_tracking": &schema.Schema{
 				Type:     schema.TypeBool,

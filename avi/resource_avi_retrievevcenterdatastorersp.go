@@ -19,10 +19,15 @@ func ResourceRetrieveVcenterDatastoreRspSchema() *schema.Resource {
 			"ds_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVIDatastoreSchema()},
+				Elem:     ResourceVIDatastoreSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

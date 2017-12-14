@@ -17,10 +17,15 @@ func ResourceSSLKeyAndCertificateSchema() map[string]*schema.Schema {
 		"ca_certs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceCertificateAuthoritySchema()},
+			Elem:     ResourceCertificateAuthoritySchema(),
+		},
 		"certificate": &schema.Schema{
 			Type:     schema.TypeSet,
-			Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceSSLCertificateSchema()},
+			Required: true, Elem: ResourceSSLCertificateSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"certificate_management_profile_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -32,7 +37,8 @@ func ResourceSSLKeyAndCertificateSchema() map[string]*schema.Schema {
 		"dynamic_params": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceCustomParamsSchema()},
+			Elem:     ResourceCustomParamsSchema(),
+		},
 		"enckey_base64": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -52,14 +58,20 @@ func ResourceSSLKeyAndCertificateSchema() map[string]*schema.Schema {
 		"key_params": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLKeyParamsSchema()},
+			Elem:     ResourceSSLKeyParamsSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"status": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SSL_CERTIFICATE_FINISHED"},
+			Default:  "SSL_CERTIFICATE_FINISHED",
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -67,11 +79,13 @@ func ResourceSSLKeyAndCertificateSchema() map[string]*schema.Schema {
 		"type": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SSL_CERTIFICATE_TYPE_VIRTUALSERVICE"},
+			Default:  "SSL_CERTIFICATE_TYPE_VIRTUALSERVICE",
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

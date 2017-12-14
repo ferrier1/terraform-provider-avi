@@ -22,24 +22,28 @@ func ResourceSeAgentVnicRuntimeSchema() *schema.Resource {
 			},
 			"connected": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"consumed_by_dataplane": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
 			},
 			"dhcp_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"enabled": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"enabled_flag": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
 			},
 			"if_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"is_complete": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -50,10 +54,12 @@ func ResourceSeAgentVnicRuntimeSchema() *schema.Resource {
 			},
 			"linux_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mac_address": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mtu": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -65,10 +71,12 @@ func ResourceSeAgentVnicRuntimeSchema() *schema.Resource {
 			"nw": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAgentVnicNwRuntimeSchema()},
+				Elem:     ResourceSeAgentVnicNwRuntimeSchema(),
+			},
 			"pci_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"pushed_to_controller": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

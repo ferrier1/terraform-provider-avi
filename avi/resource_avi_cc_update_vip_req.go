@@ -15,7 +15,8 @@ func Resourcecc_update_vip_reqSchema() *schema.Resource {
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"free_old": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -24,18 +25,27 @@ func Resourcecc_update_vip_reqSchema() *schema.Resource {
 			"new": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: Resourcecc_vip_infoSchema()},
+				Elem:     Resourcecc_vip_infoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"old": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: Resourcecc_vip_infoSchema()},
+				Elem:     Resourcecc_vip_infoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tenant_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

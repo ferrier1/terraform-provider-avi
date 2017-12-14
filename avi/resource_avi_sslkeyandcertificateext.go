@@ -20,7 +20,8 @@ func ResourceSSLKeyAndCertificateExtSchema() *schema.Resource {
 			"format": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SSL_PEM"},
+				Default:  "SSL_PEM",
+			},
 			"key_base64": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

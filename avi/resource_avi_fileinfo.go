@@ -14,10 +14,12 @@ func ResourceFileInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"filename": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mod_timestamp": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

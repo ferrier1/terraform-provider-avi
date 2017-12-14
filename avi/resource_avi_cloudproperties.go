@@ -17,23 +17,31 @@ func ResourceCloudPropertiesSchema() map[string]*schema.Schema {
 		"cc_props": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_PropertiesSchema()},
+			Elem:     ResourceCC_PropertiesSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"cc_vtypes": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"hyp_props": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceHypervisor_PropertiesSchema()},
+			Elem:     ResourceHypervisor_PropertiesSchema(),
+		},
 		"info": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceCloudInfoSchema()},
+			Elem:     ResourceCloudInfoSchema(),
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

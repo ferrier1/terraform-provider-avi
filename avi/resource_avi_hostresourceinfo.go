@@ -18,10 +18,12 @@ func ResourceHostResourceInfoSchema() *schema.Resource {
 			},
 			"managed_object_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"num_ses": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

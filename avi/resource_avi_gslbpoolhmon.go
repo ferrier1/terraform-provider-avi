@@ -15,7 +15,8 @@ func ResourceGslbPoolHmonSchema() *schema.Resource {
 			"hmon": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHealthMonitorStatRuntimeSchema()},
+				Elem:     ResourceHealthMonitorStatRuntimeSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -27,11 +27,13 @@ func ResourceRumSampleQuerySchema() *schema.Resource {
 			"dimension_filter_op": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_FILTER_EQUALS"},
+				Default:  "METRICS_FILTER_EQUALS",
+			},
 			"dimensions": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"duration": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -39,7 +41,8 @@ func ResourceRumSampleQuerySchema() *schema.Resource {
 			},
 			"entity_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"include_refs": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -60,7 +63,8 @@ func ResourceRumSampleQuerySchema() *schema.Resource {
 			},
 			"metric_entity": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"os": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -73,14 +77,17 @@ func ResourceRumSampleQuerySchema() *schema.Resource {
 			"result_format": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_FORMAT_JSON"},
+				Default:  "METRICS_FORMAT_JSON",
+			},
 			"sample_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"start": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "1970-01-01T00:00:00"},
+				Default:  "1970-01-01T00:00:00",
+			},
 			"stop": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -92,7 +99,8 @@ func ResourceRumSampleQuerySchema() *schema.Resource {
 			"url": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

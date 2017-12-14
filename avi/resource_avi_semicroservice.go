@@ -15,7 +15,8 @@ func ResourceSeMicroServiceSchema() *schema.Resource {
 			"containers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceContainerInternalSchema()},
+				Elem:     ResourceContainerInternalSchema(),
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -27,7 +28,8 @@ func ResourceSeMicroServiceSchema() *schema.Resource {
 			"services": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMicroServiceInternalSchema()},
+				Elem:     ResourceMicroServiceInternalSchema(),
+			},
 		},
 	}
 }

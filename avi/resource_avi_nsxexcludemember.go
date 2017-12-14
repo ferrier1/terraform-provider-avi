@@ -15,7 +15,11 @@ func ResourcensxExcludeMemberSchema() *schema.Resource {
 			"member": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxMemberSchema()},
+				Elem:     ResourcensxMemberSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

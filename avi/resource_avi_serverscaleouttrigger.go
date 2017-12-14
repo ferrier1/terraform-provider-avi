@@ -14,7 +14,8 @@ func ResourceServerScaleOutTriggerSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

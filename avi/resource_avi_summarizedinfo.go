@@ -15,7 +15,8 @@ func ResourceSummarizedInfoSchema() *schema.Resource {
 			"subnet_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSummarizedSubnetInfoSchema()},
+				Elem:     ResourceSummarizedSubnetInfoSchema(),
+			},
 		},
 	}
 }

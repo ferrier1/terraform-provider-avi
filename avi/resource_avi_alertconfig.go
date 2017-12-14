@@ -20,14 +20,19 @@ func ResourceAlertConfigSchema() map[string]*schema.Schema {
 		},
 		"alert_rule": &schema.Schema{
 			Type:     schema.TypeSet,
-			Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceAlertRuleSchema()},
+			Required: true, Elem: ResourceAlertRuleSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"autoscale_alert": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
 		},
 		"category": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"description": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -44,7 +49,8 @@ func ResourceAlertConfigSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"obj_uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -64,7 +70,8 @@ func ResourceAlertConfigSchema() map[string]*schema.Schema {
 		},
 		"source": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"summary": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -86,7 +93,8 @@ func ResourceAlertConfigSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

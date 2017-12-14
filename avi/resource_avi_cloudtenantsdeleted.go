@@ -19,7 +19,8 @@ func ResourceCloudTenantsDeletedSchema() *schema.Resource {
 			"tenants": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudTenantCleanupSchema()},
+				Elem:     ResourceCloudTenantCleanupSchema(),
+			},
 			"vtype": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

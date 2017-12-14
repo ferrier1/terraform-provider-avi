@@ -31,7 +31,11 @@ func ResourceSeHmEventVsDetailsSchema() *schema.Resource {
 			"vip_address": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vip_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

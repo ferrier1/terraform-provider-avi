@@ -14,11 +14,13 @@ func ResourceNetworkSubnetListSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"count": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"results": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNetworkSubnetSchema()},
+				Elem:     ResourceNetworkSubnetSchema(),
+			},
 		},
 	}
 }

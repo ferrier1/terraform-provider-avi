@@ -36,19 +36,32 @@ func ResourceGslbPoolMemberSchema() *schema.Resource {
 			"hm_proxies": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbHealthMonitorProxySchema()},
+				Elem:     ResourceGslbHealthMonitorProxySchema(),
+			},
 			"ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"location": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbGeoLocationSchema()},
+				Elem:     ResourceGslbGeoLocationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"public_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbIpAddrSchema()},
+				Elem:     ResourceGslbIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ratio": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

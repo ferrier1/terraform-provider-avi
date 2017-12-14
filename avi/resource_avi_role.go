@@ -16,11 +16,13 @@ func ResourceRoleSchema() map[string]*schema.Schema {
 	return map[string]*schema.Schema{
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"privileges": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourcePermissionSchema()},
+			Elem:     ResourcePermissionSchema(),
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -28,7 +30,8 @@ func ResourceRoleSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

@@ -14,13 +14,16 @@ func ResourceArpEntrySchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ip_address": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mac_address": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vnic_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vrf_id": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

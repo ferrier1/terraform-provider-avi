@@ -23,7 +23,11 @@ func ResourceSeHmEventGslbPoolDetailsSchema() *schema.Resource {
 			"gsmember": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeHmEventGslbPoolMemberDetailsSchema()},
+				Elem:     ResourceSeHmEventGslbPoolMemberDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ha_reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

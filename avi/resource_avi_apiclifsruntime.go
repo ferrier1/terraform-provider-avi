@@ -19,17 +19,20 @@ func ResourceAPICLifsRuntimeSchema() *schema.Resource {
 			"cifs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCifSchema()},
+				Elem:     ResourceCifSchema(),
+			},
 			"lif_label": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"multi_vrf": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"network": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -37,14 +40,16 @@ func ResourceAPICLifsRuntimeSchema() *schema.Resource {
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"subnet": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"tenant_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -52,15 +57,18 @@ func ResourceAPICLifsRuntimeSchema() *schema.Resource {
 			"transaction_uuid": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

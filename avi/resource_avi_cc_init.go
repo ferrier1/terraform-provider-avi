@@ -62,7 +62,8 @@ func ResourceCC_InitSchema() *schema.Resource {
 			},
 			"inited": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"is_leader": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

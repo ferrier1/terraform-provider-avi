@@ -54,7 +54,8 @@ func ResourceMetricsSourceInsightsObjSchema() *schema.Resource {
 			},
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sum_client_end2end_latency": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,

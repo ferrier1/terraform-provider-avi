@@ -20,14 +20,17 @@ func ResourceHealthScoreQuerySchema() *schema.Resource {
 			"dimension_aggregation": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_DIMENSION_AGG_NONE"},
+				Default:  "METRICS_DIMENSION_AGG_NONE",
+			},
 			"entity_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"hs_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "HEALTH_SCORE"},
+				Default:  "HEALTH_SCORE",
+			},
 			"include_refs": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -45,7 +48,8 @@ func ResourceHealthScoreQuerySchema() *schema.Resource {
 			},
 			"metric_entity": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"order_series_by": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -67,7 +71,8 @@ func ResourceHealthScoreQuerySchema() *schema.Resource {
 			"result_format": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_FORMAT_JSON"},
+				Default:  "METRICS_FORMAT_JSON",
+			},
 			"server": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -75,7 +80,8 @@ func ResourceHealthScoreQuerySchema() *schema.Resource {
 			"start": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "1970-01-01T00:00:00"},
+				Default:  "1970-01-01T00:00:00",
+			},
 			"step": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

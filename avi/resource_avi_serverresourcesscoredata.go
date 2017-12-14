@@ -50,10 +50,12 @@ func ResourceServerResourcesScoreDataSchema() *schema.Resource {
 			},
 			"pool_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -64,7 +66,8 @@ func ResourceServerResourcesScoreDataSchema() *schema.Resource {
 			},
 			"server": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

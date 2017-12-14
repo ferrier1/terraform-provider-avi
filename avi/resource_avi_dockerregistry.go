@@ -15,7 +15,11 @@ func ResourceDockerRegistrySchema() *schema.Resource {
 			"oshift_registry": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOshiftDockerRegistryMetaDataSchema()},
+				Elem:     ResourceOshiftDockerRegistryMetaDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"private": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -24,7 +28,8 @@ func ResourceDockerRegistrySchema() *schema.Resource {
 			"registry": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "avinetworks/se"},
+				Default:  "avinetworks/se",
+			},
 			"se_repository_push": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

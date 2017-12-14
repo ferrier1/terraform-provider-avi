@@ -15,10 +15,15 @@ func ResourceSeUpgradeScaleinEventDetailsSchema() *schema.Resource {
 			"scalein_params": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsScaleinParamsSchema()},
+				Elem:     ResourceVsScaleinParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -21,7 +21,8 @@ func ResourceServiceEngineSchema() map[string]*schema.Schema {
 		"cloud_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "/api/cloud?name=Default-Cloud"},
+			Default:  "/api/cloud?name=Default-Cloud",
+		},
 		"container_mode": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -30,7 +31,8 @@ func ResourceServiceEngineSchema() map[string]*schema.Schema {
 		"container_type": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "CONTAINER_TYPE_HOST"},
+			Default:  "CONTAINER_TYPE_HOST",
+		},
 		"controller_created": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -43,11 +45,13 @@ func ResourceServiceEngineSchema() map[string]*schema.Schema {
 		"data_vnics": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourcevNICSchema()},
+			Elem:     ResourcevNICSchema(),
+		},
 		"enable_state": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SE_STATE_ENABLED"},
+			Default:  "SE_STATE_ENABLED",
+		},
 		"flavor": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -63,15 +67,24 @@ func ResourceServiceEngineSchema() map[string]*schema.Schema {
 		"mgmt_vnic": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourcevNICSchema()},
+			Elem:     ResourcevNICSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "VM name unknown"},
+			Default:  "VM name unknown",
+		},
 		"resources": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeResourcesSchema()},
+			Elem:     ResourceSeResourcesSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"se_group_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -83,7 +96,8 @@ func ResourceServiceEngineSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

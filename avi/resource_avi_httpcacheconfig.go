@@ -45,6 +45,7 @@ func ResourceHttpCacheConfigSchema() *schema.Resource {
 			"max_cache_size": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"max_object_size": &schema.Schema{
 				Type:     schema.TypeInt,
@@ -54,19 +55,23 @@ func ResourceHttpCacheConfigSchema() *schema.Resource {
 			"mime_types_black_group_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"mime_types_black_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"mime_types_group_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"mime_types_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"min_object_size": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

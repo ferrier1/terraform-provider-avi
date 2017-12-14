@@ -15,7 +15,11 @@ func ResourceSyserrInfoSchema() *schema.Resource {
 			"syserr_test1_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSyserrTest1InfoSchema()},
+				Elem:     ResourceSyserrTest1InfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

@@ -21,11 +21,19 @@ func ResourceHealthMonitorSchema() map[string]*schema.Schema {
 		"dns_monitor": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthMonitorDNSSchema()},
+			Elem:     ResourceHealthMonitorDNSSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"external_monitor": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthMonitorExternalSchema()},
+			Elem:     ResourceHealthMonitorExternalSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"failed_checks": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -34,11 +42,19 @@ func ResourceHealthMonitorSchema() map[string]*schema.Schema {
 		"http_monitor": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthMonitorHttpSchema()},
+			Elem:     ResourceHealthMonitorHttpSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"https_monitor": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthMonitorHttpSchema()},
+			Elem:     ResourceHealthMonitorHttpSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"is_federated": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -50,7 +66,8 @@ func ResourceHealthMonitorSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"receive_timeout": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -69,22 +86,32 @@ func ResourceHealthMonitorSchema() map[string]*schema.Schema {
 		"tcp_monitor": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthMonitorTcpSchema()},
+			Elem:     ResourceHealthMonitorTcpSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
 		},
 		"type": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"udp_monitor": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthMonitorUdpSchema()},
+			Elem:     ResourceHealthMonitorUdpSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

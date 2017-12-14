@@ -15,15 +15,24 @@ func ResourceCloudInfoSchema() *schema.Resource {
 			"cca_props": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_AgentPropertiesSchema()},
+				Elem:     ResourceCC_AgentPropertiesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"controller_props": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceControllerPropertiesSchema()},
+				Elem:     ResourceControllerPropertiesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"flavor_props": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudFlavorSchema()},
+				Elem:     ResourceCloudFlavorSchema(),
+			},
 			"flavor_regex_filter": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,10 +40,12 @@ func ResourceCloudInfoSchema() *schema.Resource {
 			"htypes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vtype": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -14,10 +14,12 @@ func ResourceAbPoolSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ratio": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 		},
 	}

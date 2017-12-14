@@ -14,13 +14,16 @@ func ResourceVsPoolNwFilterEventDetailsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"filter": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"network": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

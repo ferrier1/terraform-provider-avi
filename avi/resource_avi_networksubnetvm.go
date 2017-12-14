@@ -14,10 +14,12 @@ func ResourceNetworkSubnetVMSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ip_addr": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

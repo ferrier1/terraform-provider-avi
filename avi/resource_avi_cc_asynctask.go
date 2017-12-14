@@ -14,14 +14,16 @@ func ResourceCC_AsyncTaskSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"function": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"opaque_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"task_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"thread_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

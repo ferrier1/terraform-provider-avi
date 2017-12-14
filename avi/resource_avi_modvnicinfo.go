@@ -15,11 +15,13 @@ func ResourceModVnicInfoSchema() *schema.Resource {
 			"mac_addr": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"network_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"recoverable": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

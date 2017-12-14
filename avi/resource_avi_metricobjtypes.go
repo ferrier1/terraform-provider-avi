@@ -15,135 +15,267 @@ func ResourceMetricObjTypesSchema() *schema.Resource {
 			"anomaly": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsAnomalyObjSchema()},
+				Elem:     ResourceMetricsAnomalyObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"app_insights": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsAppInsightsObjSchema()},
+				Elem:     ResourceMetricsAppInsightsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"collection": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricCollectionsSchema()},
+				Elem:     ResourceMetricCollectionsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"controller_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceControllerStatsObjSchema()},
+				Elem:     ResourceControllerStatsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dns_client": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsVserverDNSObjSchema()},
+				Elem:     ResourceMetricsVserverDNSObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dns_server": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsServerDNSObjSchema()},
+				Elem:     ResourceMetricsServerDNSObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dos": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsDosAnalyticsObjSchema()},
+				Elem:     ResourceMetricsDosAnalyticsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"healthscore": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsHealthScoreObjSchema()},
+				Elem:     ResourceMetricsHealthScoreObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"l4_client": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVserverL4MetricsObjSchema()},
+				Elem:     ResourceVserverL4MetricsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"l4_server": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServerL4MetricsObjSchema()},
+				Elem:     ResourceServerL4MetricsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"l7_client": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVserverL7MetricsObjSchema()},
+				Elem:     ResourceVserverL7MetricsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"l7_server": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServerL7MetricsObjSchema()},
+				Elem:     ResourceServerL7MetricsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"process_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceProcessStatsObjSchema()},
+				Elem:     ResourceProcessStatsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rum": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRumAnalyticsObjSchema()},
+				Elem:     ResourceMetricsRumAnalyticsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rum_browser": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRumPreaggBrowserObjSchema()},
+				Elem:     ResourceMetricsRumPreaggBrowserObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rum_country": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRumPreaggCountryObjSchema()},
+				Elem:     ResourceMetricsRumPreaggCountryObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rum_devtype": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRumPreaggDevtypeObjSchema()},
+				Elem:     ResourceMetricsRumPreaggDevtypeObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rum_ipgroup": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRumPreaggIPGroupObjSchema()},
+				Elem:     ResourceMetricsRumPreaggIPGroupObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rum_lang": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRumPreaggLangObjSchema()},
+				Elem:     ResourceMetricsRumPreaggLangObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rum_os": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRumPreaggOsObjSchema()},
+				Elem:     ResourceMetricsRumPreaggOsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rum_url": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRumPreaggUrlObjSchema()},
+				Elem:     ResourceMetricsRumPreaggUrlObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"samples_blob": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRumSamplesBlobObjSchema()},
+				Elem:     ResourceMetricsRumSamplesBlobObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"samples_dimension": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsRumSamplesDimensionObjSchema()},
+				Elem:     ResourceMetricsRumSamplesDimensionObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_if": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsSeIfStatsObjSchema()},
+				Elem:     ResourceMetricsSeIfStatsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeStatsObjSchema()},
+				Elem:     ResourceSeStatsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"service_insights": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsServiceInsightsObjSchema()},
+				Elem:     ResourceMetricsServiceInsightsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"source_insights": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsSourceInsightsObjSchema()},
+				Elem:     ResourceMetricsSourceInsightsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tenant_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsTenantStatsObjSchema()},
+				Elem:     ResourceMetricsTenantStatsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"user_metrics": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsUserMetricsObjSchema()},
+				Elem:     ResourceMetricsUserMetricsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vm_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVmStatsObjSchema()},
+				Elem:     ResourceVmStatsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"waf_group": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsWafGroupMetricsObjSchema()},
+				Elem:     ResourceMetricsWafGroupMetricsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"waf_rule": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsWafRuleMetricsObjSchema()},
+				Elem:     ResourceMetricsWafRuleMetricsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"waf_tag": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsWafTagMetricsObjSchema()},
+				Elem:     ResourceMetricsWafTagMetricsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

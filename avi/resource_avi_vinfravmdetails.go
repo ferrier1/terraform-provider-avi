@@ -22,7 +22,8 @@ func ResourceVinfraVmDetailsSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

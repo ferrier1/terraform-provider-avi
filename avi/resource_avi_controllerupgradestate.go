@@ -18,11 +18,13 @@ func ResourceControllerUpgradeStateSchema() *schema.Resource {
 			},
 			"in_progress": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"rollback": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -30,7 +32,8 @@ func ResourceControllerUpgradeStateSchema() *schema.Resource {
 			"tasks_completed": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceUpgradeTaskSchema()},
+				Elem:     ResourceUpgradeTaskSchema(),
+			},
 		},
 	}
 }

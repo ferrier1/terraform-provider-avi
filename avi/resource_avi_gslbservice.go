@@ -34,11 +34,16 @@ func ResourceGslbServiceSchema() map[string]*schema.Schema {
 		"domain_names": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"down_response": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbServiceDownResponseSchema()},
+			Elem:     ResourceGslbServiceDownResponseSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"enabled": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -47,15 +52,18 @@ func ResourceGslbServiceSchema() map[string]*schema.Schema {
 		"groups": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceGslbPoolSchema()},
+			Elem:     ResourceGslbPoolSchema(),
+		},
 		"health_monitor_refs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"health_monitor_scope": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "GSLB_SERVICE_HEALTH_MONITOR_ALL_MEMBERS"},
+			Default:  "GSLB_SERVICE_HEALTH_MONITOR_ALL_MEMBERS",
+		},
 		"is_federated": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -64,10 +72,12 @@ func ResourceGslbServiceSchema() map[string]*schema.Schema {
 		"min_members": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"num_dns_ip": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -75,7 +85,8 @@ func ResourceGslbServiceSchema() map[string]*schema.Schema {
 		"pool_algorithm": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "GSLB_SERVICE_ALGORITHM_PRIORITY"},
+			Default:  "GSLB_SERVICE_ALGORITHM_PRIORITY",
+		},
 		"site_persistence_enabled": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -97,7 +108,8 @@ func ResourceGslbServiceSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"wildcard_match": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,

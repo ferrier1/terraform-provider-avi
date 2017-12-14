@@ -14,13 +14,16 @@ func ResourceVinfraMgmtNwChangeDetailsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"existing_nw": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"new_nw": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vcenter": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

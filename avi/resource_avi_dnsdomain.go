@@ -14,11 +14,13 @@ func ResourceDnsDomainSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"domain_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"domain_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "DOMAIN_DEFAULT"},
+				Default:  "DOMAIN_DEFAULT",
+			},
 		},
 	}
 }

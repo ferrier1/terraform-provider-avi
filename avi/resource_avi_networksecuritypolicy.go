@@ -33,7 +33,8 @@ func ResourceNetworkSecurityPolicySchema() map[string]*schema.Schema {
 		"rules": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceNetworkSecurityRuleSchema()},
+			Elem:     ResourceNetworkSecurityRuleSchema(),
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -41,7 +42,8 @@ func ResourceNetworkSecurityPolicySchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

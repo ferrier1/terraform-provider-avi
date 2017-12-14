@@ -15,26 +15,45 @@ func ResourceNsxFaultSchema() *schema.Resource {
 			"cloud_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/api/cloud?name=Default-Cloud"},
+				Default:  "/api/cloud?name=Default-Cloud",
+			},
 			"del_fault": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceRestApiFaultSchema()},
+				Required: true, Elem: ResourceRestApiFaultSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"get_fault": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceRestApiFaultSchema()},
+				Required: true, Elem: ResourceRestApiFaultSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"post_fault": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceRestApiFaultSchema()},
+				Required: true, Elem: ResourceRestApiFaultSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"put_fault": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceRestApiFaultSchema()},
+				Required: true, Elem: ResourceRestApiFaultSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

@@ -15,7 +15,8 @@ func ResourceSEVMCreateProgressSchema() *schema.Resource {
 			"sevms": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSEVMCreateProgressSingleSchema()},
+				Elem:     ResourceSEVMCreateProgressSingleSchema(),
+			},
 		},
 	}
 }

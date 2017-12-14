@@ -23,11 +23,16 @@ func ResourceGslbPoolMemberRuntimeInfoSchema() *schema.Resource {
 			"controller_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"datapath_status": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbPoolMemberDatapathStatusSchema()},
+				Elem:     ResourceGslbPoolMemberDatapathStatusSchema(),
+			},
 			"fqdn": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -43,7 +48,11 @@ func ResourceGslbPoolMemberRuntimeInfoSchema() *schema.Resource {
 			"ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ip_value_to_se": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -51,15 +60,21 @@ func ResourceGslbPoolMemberRuntimeInfoSchema() *schema.Resource {
 			"oper_ips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"services": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServiceSchema()},
+				Elem:     ResourceServiceSchema(),
+			},
 			"site_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -67,7 +82,8 @@ func ResourceGslbPoolMemberRuntimeInfoSchema() *schema.Resource {
 			"sp_pools": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbServiceSitePersistencePoolSchema()},
+				Elem:     ResourceGslbServiceSitePersistencePoolSchema(),
+			},
 			"vip_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -83,11 +99,19 @@ func ResourceGslbPoolMemberRuntimeInfoSchema() *schema.Resource {
 			"vserver_l4_metrics": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVserverL4MetricsObjSchema()},
+				Elem:     ResourceVserverL4MetricsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vserver_l7_metrics": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVserverL7MetricsObjSchema()},
+				Elem:     ResourceVserverL7MetricsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

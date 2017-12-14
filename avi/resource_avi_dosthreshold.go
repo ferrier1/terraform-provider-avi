@@ -14,13 +14,16 @@ func ResourceDosThresholdSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"attack": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"max_value": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"min_value": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

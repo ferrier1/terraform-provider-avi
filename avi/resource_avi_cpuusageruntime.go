@@ -14,10 +14,18 @@ func ResourceCpuUsageRuntimeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"current": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceCpuUsageEntrySchema()},
+				Required: true, Elem: ResourceCpuUsageEntrySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"last_5_sec_period": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceCpuUsageEntrySchema()},
+				Required: true, Elem: ResourceCpuUsageEntrySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -28,7 +36,11 @@ func ResourceCpuUsageRuntimeSchema() *schema.Resource {
 			},
 			"since_boot": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceCpuUsageEntrySchema()},
+				Required: true, Elem: ResourceCpuUsageEntrySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

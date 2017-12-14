@@ -15,7 +15,8 @@ func ResourceVirtualServiceAnalysisSummarySchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_eastwest_vs_all_good": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -43,15 +44,27 @@ func ResourceVirtualServiceAnalysisSummarySchema() *schema.Resource {
 			"vs_config_summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsConfigAnalysisSummarySchema()},
+				Elem:     ResourceVsConfigAnalysisSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_operational_summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsOperationalAnalysisSummarySchema()},
+				Elem:     ResourceVsOperationalAnalysisSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_placement_summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsPlacementAnalysisSummarySchema()},
+				Elem:     ResourceVsPlacementAnalysisSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

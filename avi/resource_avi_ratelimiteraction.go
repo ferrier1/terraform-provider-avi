@@ -15,19 +15,29 @@ func ResourceRateLimiterActionSchema() *schema.Resource {
 			"file": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPLocalFileSchema()},
+				Elem:     ResourceHTTPLocalFileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"redirect": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPRedirectActionSchema()},
+				Elem:     ResourceHTTPRedirectActionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"status_code": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "HTTP_LOCAL_RESPONSE_STATUS_CODE_429"},
+				Default:  "HTTP_LOCAL_RESPONSE_STATUS_CODE_429",
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "RL_ACTION_NONE"},
+				Default:  "RL_ACTION_NONE",
+			},
 		},
 	}
 }

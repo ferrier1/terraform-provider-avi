@@ -14,11 +14,13 @@ func ResourceServerStateUpdateInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"pool_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerStateSchema()},
+				Elem:     ResourceServerStateSchema(),
+			},
 		},
 	}
 }

@@ -14,15 +14,21 @@ func ResourceSubnetSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"prefix": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Required: true, Elem: ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"static_ips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"static_ranges": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrRangeSchema()},
+				Elem:     ResourceIpAddrRangeSchema(),
+			},
 		},
 	}
 }

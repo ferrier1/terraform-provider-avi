@@ -24,7 +24,11 @@ func ResourceSeResourceAddReqSchema() *schema.Resource {
 			"azure_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureInfoSchema()},
+				Elem:     ResourceAzureInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"container_mode": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -33,10 +37,12 @@ func ResourceSeResourceAddReqSchema() *schema.Resource {
 			"container_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "CONTAINER_TYPE_HOST"},
+				Default:  "CONTAINER_TYPE_HOST",
+			},
 			"disk_gb": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"enable_state": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -61,10 +67,12 @@ func ResourceSeResourceAddReqSchema() *schema.Resource {
 			"ip_mac_addr": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"memory": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"online": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -80,22 +88,27 @@ func ResourceSeResourceAddReqSchema() *schema.Resource {
 			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"subnet_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"subnet_mask": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeInt}},
+				Elem:     &schema.Schema{Type: schema.TypeInt},
+			},
 			"vcpus": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "0.0.0"},
+				Default:  "0.0.0",
+			},
 			"vinfra_discovered": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -103,7 +116,8 @@ func ResourceSeResourceAddReqSchema() *schema.Resource {
 			"vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeResourceVnicSchema()},
+				Elem:     ResourceSeResourceVnicSchema(),
+			},
 		},
 	}
 }

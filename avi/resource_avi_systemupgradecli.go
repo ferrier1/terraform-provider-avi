@@ -22,7 +22,8 @@ func ResourceSystemUpgradeCliSchema() *schema.Resource {
 			},
 			"image_path": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"patch": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -35,7 +36,8 @@ func ResourceSystemUpgradeCliSchema() *schema.Resource {
 			"se_group_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"suspend_on_failure": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

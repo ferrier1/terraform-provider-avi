@@ -15,18 +15,28 @@ func ResourceHardwareSecurityModuleSchema() *schema.Resource {
 			"nethsm": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHSMThalesNetHsmSchema()},
+				Elem:     ResourceHSMThalesNetHsmSchema(),
+			},
 			"rfs": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHSMThalesRFSSchema()},
+				Elem:     ResourceHSMThalesRFSSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sluna": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHSMSafenetLunaSchema()},
+				Elem:     ResourceHSMSafenetLunaSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

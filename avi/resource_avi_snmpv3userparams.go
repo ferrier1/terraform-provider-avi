@@ -15,19 +15,23 @@ func ResourceSnmpV3UserParamsSchema() *schema.Resource {
 			"auth_passphrase": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "avinetworks"},
+				Default:  "avinetworks",
+			},
 			"auth_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SNMP_V3_AUTH_MD5"},
+				Default:  "SNMP_V3_AUTH_MD5",
+			},
 			"priv_passphrase": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "avinetworks"},
+				Default:  "avinetworks",
+			},
 			"priv_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SNMP_V3_PRIV_DES"},
+				Default:  "SNMP_V3_PRIV_DES",
+			},
 		},
 	}
 }

@@ -5,23 +5,26 @@
  */
 package avi
 
-//import (
-//	"github.com/hashicorp/terraform/helper/schema"
-//)
-//
-//func ResourceRumSampleQueryResponseSchema() *schema.Resource {
-//	return &schema.Resource{
-//		Schema: map[string]*schema.Schema{
-//			"entity_uuid": &schema.Schema{
-//				Type:     schema.TypeString,
-//				Required: true},
-//			"metric_entity": &schema.Schema{
-//				Type:     schema.TypeString,
-//				Required: true},
-//			"series": &schema.Schema{
-//				Type:     schema.TypeList,
-//				Optional: true,
-//				Elem:     ResourceRumSampleDataSeriesSchema()},
-//		},
-//	}
-//}
+import (
+	"github.com/hashicorp/terraform/helper/schema"
+)
+
+func ResourceRumSampleQueryResponseSchema() *schema.Resource {
+	return &schema.Resource{
+		Schema: map[string]*schema.Schema{
+			"entity_uuid": &schema.Schema{
+				Type:     schema.TypeString,
+				Required: true,
+			},
+			"metric_entity": &schema.Schema{
+				Type:     schema.TypeString,
+				Required: true,
+			},
+			"series": &schema.Schema{
+				Type:     schema.TypeList,
+				Optional: true,
+				Elem:     ResourceRumSampleDataSeriesSchema(),
+			},
+		},
+	}
+}

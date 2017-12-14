@@ -19,7 +19,8 @@ func ResourceVirtualServiceLogmgrMapSchema() *schema.Resource {
 			"metrics_mgr_port": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_MGR_PORT_0"},
+				Default:  "METRICS_MGR_PORT_0",
+			},
 			"prev_controller_ip": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -27,11 +28,13 @@ func ResourceVirtualServiceLogmgrMapSchema() *schema.Resource {
 			"prev_metrics_mgr_port": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_MGR_PORT_0"},
+				Default:  "METRICS_MGR_PORT_0",
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

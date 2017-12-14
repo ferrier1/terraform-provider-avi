@@ -31,7 +31,8 @@ func ResourceSeVsHbStatRuntimeSchema() *schema.Resource {
 			"se_vs_hb_stat_entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVsHbStatEntrySchema()},
+				Elem:     ResourceSeVsHbStatEntrySchema(),
+			},
 		},
 	}
 }

@@ -19,7 +19,8 @@ func ResourceMicroServiceDetailSchema() *schema.Resource {
 			"containers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceContainerDetailSchema()},
+				Elem:     ResourceContainerDetailSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -35,7 +36,8 @@ func ResourceMicroServiceDetailSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

@@ -14,10 +14,12 @@ func ResourceMallstatsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"bytes_allocated": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"bytes_mapped": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

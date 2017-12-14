@@ -23,7 +23,8 @@ func ResourceMarathonConfigurationSchema() *schema.Resource {
 			"marathon_url": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "http://leader.mesos:8080"},
+				Default:  "http://leader.mesos:8080",
+			},
 			"marathon_username": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,15 +32,24 @@ func ResourceMarathonConfigurationSchema() *schema.Resource {
 			"private_port_range": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePortRangeSchema()},
+				Elem:     ResourcePortRangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"public_port_range": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePortRangeSchema()},
+				Elem:     ResourcePortRangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tenant": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "admin"},
+				Default:  "admin",
+			},
 			"use_token_auth": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

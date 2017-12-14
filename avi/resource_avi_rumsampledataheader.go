@@ -15,10 +15,12 @@ func ResourceRumSampleDataHeaderSchema() *schema.Resource {
 			"dimension_data": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsDimensionDataSchema()},
+				Elem:     ResourceMetricsDimensionDataSchema(),
+			},
 			"sample_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

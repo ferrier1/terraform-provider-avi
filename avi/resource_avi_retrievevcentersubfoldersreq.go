@@ -15,17 +15,23 @@ func ResourceRetrieveVcenterSubfoldersReqSchema() *schema.Resource {
 			"admin": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVIAdminCredentialsSchema()},
+				Elem:     ResourceVIAdminCredentialsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cloud_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"datacenter": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"folder": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

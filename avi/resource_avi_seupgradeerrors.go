@@ -31,7 +31,8 @@ func ResourceSeUpgradeErrorsSchema() *schema.Resource {
 			"reason": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"se_group_ha_mode": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -46,7 +47,8 @@ func ResourceSeUpgradeErrorsSchema() *schema.Resource {
 			},
 			"task": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"to_se_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -19,15 +19,21 @@ func ResourceGslbServiceRuntimeSchema() *schema.Resource {
 			"flr_state": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+			},
 			"groups": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbPoolRuntimeSchema()},
+				Elem:     ResourceGslbPoolRuntimeSchema(),
+			},
 			"ldr_state": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -35,7 +41,11 @@ func ResourceGslbServiceRuntimeSchema() *schema.Resource {
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"send_event": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -51,7 +61,11 @@ func ResourceGslbServiceRuntimeSchema() *schema.Resource {
 			"sp_oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tenant_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -59,7 +73,8 @@ func ResourceGslbServiceRuntimeSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

@@ -15,7 +15,11 @@ func ResourceVirtualServiceRuntimeSummarySchema() *schema.Resource {
 			"config_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigurationStatusSchema()},
+				Elem:     ResourceConfigurationStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"east_west": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -29,10 +33,15 @@ func ResourceVirtualServiceRuntimeSummarySchema() *schema.Resource {
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"percent_ses_up": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"recommendation": &schema.Schema{
 				Type:     schema.TypeString,
@@ -41,15 +50,18 @@ func ResourceVirtualServiceRuntimeSummarySchema() *schema.Resource {
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "VS_TYPE_NORMAL"},
+				Default:  "VS_TYPE_NORMAL",
+			},
 			"vh_child_vs_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vip_summary": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVipRuntimeSummarySchema()},
+				Elem:     ResourceVipRuntimeSummarySchema(),
+			},
 		},
 	}
 }

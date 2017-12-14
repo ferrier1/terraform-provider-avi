@@ -15,13 +15,16 @@ func ResourceStaticIPResyncReqSchema() *schema.Resource {
 			"current_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceStaticIPInfoSchema()},
+				Elem:     ResourceStaticIPInfoSchema(),
+			},
 			"se_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

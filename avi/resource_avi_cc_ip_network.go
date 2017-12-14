@@ -18,7 +18,11 @@ func Resourcecc_ip_networkSchema() *schema.Resource {
 			},
 			"ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"network_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -30,7 +34,11 @@ func Resourcecc_ip_networkSchema() *schema.Resource {
 			"subnet_prefix": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"subnet_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

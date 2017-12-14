@@ -14,10 +14,12 @@ func ResourceHttpCacheETypeStatsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"count": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"encoding": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

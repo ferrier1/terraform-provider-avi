@@ -31,7 +31,11 @@ func ResourceDnsRequestSchema() *schema.Resource {
 			"client_location": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGeoLocationSchema()},
+				Elem:     ResourceGeoLocationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"identifier": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -47,7 +51,11 @@ func ResourceDnsRequestSchema() *schema.Resource {
 			"opt_record": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsOptRecordSchema()},
+				Elem:     ResourceDnsOptRecordSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"query_or_response": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

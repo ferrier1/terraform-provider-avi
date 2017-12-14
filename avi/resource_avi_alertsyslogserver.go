@@ -14,7 +14,8 @@ func ResourceAlertSyslogServerSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"syslog_server": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"syslog_server_port": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -22,7 +23,8 @@ func ResourceAlertSyslogServerSchema() *schema.Resource {
 			},
 			"udp": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

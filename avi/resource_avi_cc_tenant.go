@@ -26,7 +26,8 @@ func ResourceCC_TenantSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"role": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

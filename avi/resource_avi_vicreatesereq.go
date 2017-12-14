@@ -26,7 +26,11 @@ func ResourceVICreateSEReqSchema() *schema.Resource {
 			},
 			"se_params": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVISeVmOvaParamsSchema()},
+				Required: true, Elem: ResourceVISeVmOvaParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tenant_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -34,11 +38,16 @@ func ResourceVICreateSEReqSchema() *schema.Resource {
 			"vcenter_admin": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVIAdminCredentialsSchema()},
+				Elem:     ResourceVIAdminCredentialsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vcenter_vnic_portgroups": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

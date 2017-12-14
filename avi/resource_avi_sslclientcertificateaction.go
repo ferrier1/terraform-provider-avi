@@ -20,7 +20,8 @@ func ResourceSSLClientCertificateActionSchema() *schema.Resource {
 			"headers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSSLClientRequestHeaderSchema()},
+				Elem:     ResourceSSLClientRequestHeaderSchema(),
+			},
 		},
 	}
 }

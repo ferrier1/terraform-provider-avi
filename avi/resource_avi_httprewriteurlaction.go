@@ -15,15 +15,27 @@ func ResourceHTTPRewriteURLActionSchema() *schema.Resource {
 			"host_hdr": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceURIParamSchema()},
+				Elem:     ResourceURIParamSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"path": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceURIParamSchema()},
+				Elem:     ResourceURIParamSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"query": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceURIParamQuerySchema()},
+				Elem:     ResourceURIParamQuerySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

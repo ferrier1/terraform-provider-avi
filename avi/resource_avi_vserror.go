@@ -15,7 +15,8 @@ func ResourceVsErrorSchema() *schema.Resource {
 			"reason": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"se_group_ha_mode": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

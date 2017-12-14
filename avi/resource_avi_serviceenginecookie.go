@@ -18,7 +18,8 @@ func ResourceServiceEngineCookieSchema() *schema.Resource {
 			},
 			"cookie": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"se_group_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -19,17 +19,20 @@ func ResourceOsLbProvAuditFormSchema() *schema.Resource {
 			"prov_name": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"tenant": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"token": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"user": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

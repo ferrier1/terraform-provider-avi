@@ -20,15 +20,18 @@ func ResourceClientLogConfigurationSchema() *schema.Resource {
 			"filtered_log_processing": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "LOGS_PROCESSING_SYNC_AND_INDEX_ON_DEMAND"},
+				Default:  "LOGS_PROCESSING_SYNC_AND_INDEX_ON_DEMAND",
+			},
 			"non_significant_log_processing": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "LOGS_PROCESSING_SYNC_AND_INDEX_ON_DEMAND"},
+				Default:  "LOGS_PROCESSING_SYNC_AND_INDEX_ON_DEMAND",
+			},
 			"significant_log_processing": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "LOGS_PROCESSING_SYNC_AND_INDEX_ON_DEMAND"},
+				Default:  "LOGS_PROCESSING_SYNC_AND_INDEX_ON_DEMAND",
+			},
 		},
 	}
 }

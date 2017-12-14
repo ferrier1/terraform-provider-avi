@@ -19,10 +19,15 @@ func ResourceSubnetRuntimeSchema() *schema.Resource {
 			"ip_alloced": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAllocInfoSchema()},
+				Elem:     ResourceIpAllocInfoSchema(),
+			},
 			"prefix": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Required: true, Elem: ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"total_ip_count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

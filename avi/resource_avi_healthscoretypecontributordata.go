@@ -15,10 +15,12 @@ func ResourceHealthScoreTypeContributorDataSchema() *schema.Resource {
 			"entities": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHealthScoreEntitySchema()},
+				Elem:     ResourceHealthScoreEntitySchema(),
+			},
 			"hs_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"metric_ids": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -28,7 +28,8 @@ func ResourceSslScoreDataSchema() *schema.Resource {
 			"disable_client_renegotiation_score": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
-				Default:  "5.0"},
+				Default:  "5.0",
+			},
 			"earliest_cert_expiry": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -71,7 +72,8 @@ func ResourceSslScoreDataSchema() *schema.Resource {
 			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -96,7 +98,8 @@ func ResourceSslScoreDataSchema() *schema.Resource {
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
-				Default:  "5.0"},
+				Default:  "5.0",
+			},
 			"weak_signature_algorithm": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

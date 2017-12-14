@@ -15,7 +15,11 @@ func ResourceVipDbExtensionSchema() *schema.Resource {
 			"first_se_assigned_time": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"num_additional_se": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -23,11 +27,16 @@ func ResourceVipDbExtensionSchema() *schema.Resource {
 			"requested_resource": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceResourceSchema()},
+				Elem:     ResourceVirtualServiceResourceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeListSchema()},
+				Elem:     ResourceSeListSchema(),
+			},
 			"vip_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

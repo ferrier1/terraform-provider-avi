@@ -58,7 +58,8 @@ func ResourceServiceEngineResourcesScoreDataSchema() *schema.Resource {
 			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

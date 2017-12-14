@@ -14,7 +14,8 @@ func ResourceSystemUpgradeServiceSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"image_path": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

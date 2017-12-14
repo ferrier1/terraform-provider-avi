@@ -14,7 +14,8 @@ func ResourcevCenterNumJavaThreadsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"num_threads": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -15,7 +15,8 @@ func ResourceTrafficCloneRuntimeSchema() *schema.Resource {
 			"clone_srvr_stats": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloneServerStatsSchema()},
+				Elem:     ResourceCloneServerStatsSchema(),
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

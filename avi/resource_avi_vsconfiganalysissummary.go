@@ -15,11 +15,13 @@ func ResourceVsConfigAnalysisSummarySchema() *schema.Resource {
 			"eastwest_vs_config_inconsistent_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_eastwest_vs_config_inconsistent": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -31,7 +33,8 @@ func ResourceVsConfigAnalysisSummarySchema() *schema.Resource {
 			"vs_config_inconsistent_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

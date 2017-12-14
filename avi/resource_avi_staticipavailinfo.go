@@ -23,7 +23,8 @@ func ResourceStaticIPAvailInfoSchema() *schema.Resource {
 			},
 			"network_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_code": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -31,7 +32,11 @@ func ResourceStaticIPAvailInfoSchema() *schema.Resource {
 			"subnet": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

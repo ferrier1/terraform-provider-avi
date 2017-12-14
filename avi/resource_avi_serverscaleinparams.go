@@ -19,11 +19,13 @@ func ResourceServerScaleInParamsSchema() *schema.Resource {
 			"servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerIdSchema()},
+				Elem:     ResourceServerIdSchema(),
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

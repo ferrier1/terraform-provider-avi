@@ -14,11 +14,16 @@ func ResourceSeAssignReqSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"con_info": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceSeResourceFindReqSchema()},
+				Required: true, Elem: ResourceSeResourceFindReqSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"curr_se_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCurSeInfoSchema()},
+				Elem:     ResourceCurSeInfoSchema(),
+			},
 			"host_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

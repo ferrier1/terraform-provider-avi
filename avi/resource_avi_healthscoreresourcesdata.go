@@ -15,18 +15,31 @@ func ResourceHealthScoreResourcesDataSchema() *schema.Resource {
 			"application_resources": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceApplicationResourcesScoreDataSchema()},
+				Elem:     ResourceApplicationResourcesScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"controller_resources": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceControllerResourcesScoreDataSchema()},
+				Elem:     ResourceControllerResourcesScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_resources": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePoolResourcesScoreDataSchema()},
+				Elem:     ResourcePoolResourcesScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -34,18 +47,31 @@ func ResourceHealthScoreResourcesDataSchema() *schema.Resource {
 			"server_resources": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServerResourcesScoreDataSchema()},
+				Elem:     ResourceServerResourcesScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"serviceengine_resources": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServiceEngineResourcesScoreDataSchema()},
+				Elem:     ResourceServiceEngineResourcesScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 			"virtualservice_resources": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceResourcesScoreDataSchema()},
+				Elem:     ResourceVirtualServiceResourcesScoreDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

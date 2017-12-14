@@ -15,15 +15,21 @@ func ResourceServiceEngineDbExtensionSchema() *schema.Resource {
 			"active_tags": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"azure_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureInfoSchema()},
+				Elem:     ResourceAzureInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"consumers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConInfoSchema()},
+				Elem:     ResourceConInfoSchema(),
+			},
 			"container_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,7 +37,11 @@ func ResourceServiceEngineDbExtensionSchema() *schema.Resource {
 			"gcp_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGcpInfoSchema()},
+				Elem:     ResourceGcpInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"inband_mgmt": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -40,11 +50,13 @@ func ResourceServiceEngineDbExtensionSchema() *schema.Resource {
 			"migrate_state": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SE_MIGRATE_STATE_IDLE"},
+				Default:  "SE_MIGRATE_STATE_IDLE",
+			},
 			"networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeNetworkSubnetSchema()},
+				Elem:     ResourceSeNetworkSubnetSchema(),
+			},
 			"online_since": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -57,7 +69,8 @@ func ResourceServiceEngineDbExtensionSchema() *schema.Resource {
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "0.0.0"},
+				Default:  "0.0.0",
+			},
 			"vinfra_discovered": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -66,7 +79,8 @@ func ResourceServiceEngineDbExtensionSchema() *schema.Resource {
 			"vs_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

@@ -14,10 +14,12 @@ func ResourceAppInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"app_hdr_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"app_hdr_value": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -14,10 +14,12 @@ func ResourceIpInterfaceSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ip_addr": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"net_mask": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

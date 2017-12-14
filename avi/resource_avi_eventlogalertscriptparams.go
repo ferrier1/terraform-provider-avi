@@ -15,10 +15,15 @@ func ResourceEventLogAlertScriptParamsSchema() *schema.Resource {
 			"event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceEventDetailsSchema()},
+				Elem:     ResourceEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"event_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"obj_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -33,7 +38,8 @@ func ResourceEventLogAlertScriptParamsSchema() *schema.Resource {
 			},
 			"report_timestamp": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -29,7 +29,8 @@ func ResourceDnsPolicySchema() map[string]*schema.Schema {
 		"rule": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceDnsRuleSchema()},
+			Elem:     ResourceDnsRuleSchema(),
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -37,7 +38,8 @@ func ResourceDnsPolicySchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

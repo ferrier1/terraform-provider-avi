@@ -15,7 +15,8 @@ func ResourceContentRewriteProfileSchema() *schema.Resource {
 			"req_match_replace_pair": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMatchReplacePairSchema()},
+				Elem:     ResourceMatchReplacePairSchema(),
+			},
 			"request_rewrite_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -33,7 +34,8 @@ func ResourceContentRewriteProfileSchema() *schema.Resource {
 			"rsp_match_replace_pair": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMatchReplacePairSchema()},
+				Elem:     ResourceMatchReplacePairSchema(),
+			},
 		},
 	}
 }

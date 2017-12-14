@@ -15,18 +15,31 @@ func ResourceSeVsRuntimeSummarySchema() *schema.Resource {
 			"last_ctrl_event_timestamp": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"last_se_event_timestamp": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceRuntimeSummarySchema()},
+				Elem:     ResourceVirtualServiceRuntimeSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vip_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

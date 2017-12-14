@@ -19,7 +19,8 @@ func ResourceIpamDnsRecordInfoSchema() *schema.Resource {
 			"records": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsRecordSchema()},
+				Elem:     ResourceDnsRecordSchema(),
+			},
 		},
 	}
 }

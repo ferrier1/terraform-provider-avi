@@ -20,10 +20,15 @@ func ResourceNetworkProfileSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"profile": &schema.Schema{
 			Type:     schema.TypeSet,
-			Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceNetworkProfileUnionSchema()},
+			Required: true, Elem: ResourceNetworkProfileUnionSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -31,7 +36,8 @@ func ResourceNetworkProfileSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

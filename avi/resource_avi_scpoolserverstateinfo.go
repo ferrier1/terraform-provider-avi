@@ -20,7 +20,11 @@ func ResourceSCPoolServerStateInfoSchema() *schema.Resource {
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -28,7 +32,8 @@ func ResourceSCPoolServerStateInfoSchema() *schema.Resource {
 			"server_states": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSCServerStateInfoSchema()},
+				Elem:     ResourceSCServerStateInfoSchema(),
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -36,7 +41,8 @@ func ResourceSCPoolServerStateInfoSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

@@ -14,14 +14,16 @@ func ResourceSeDisabledUpdReqSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"enable_state": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"se_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

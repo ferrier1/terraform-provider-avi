@@ -14,30 +14,36 @@ func ResourceConnectionLogSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"adf": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"average_turntime": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"client_dest_port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"client_ip": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"client_location": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"client_rtt": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"client_src_port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"connection_ended": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"dns_etype": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -49,7 +55,8 @@ func ResourceConnectionLogSchema() *schema.Resource {
 			"dns_ips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeInt}},
+				Elem:     &schema.Schema{Type: schema.TypeInt},
+			},
 			"dns_qtype": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -57,11 +64,19 @@ func ResourceConnectionLogSchema() *schema.Resource {
 			"dns_request": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsRequestSchema()},
+				Elem:     ResourceDnsRequestSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dns_response": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsResponseSchema()},
+				Elem:     ResourceDnsResponseSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gslbpool_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -76,7 +91,8 @@ func ResourceConnectionLogSchema() *schema.Resource {
 			},
 			"log_id": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"microservice": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -87,7 +103,8 @@ func ResourceConnectionLogSchema() *schema.Resource {
 			},
 			"mss": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"network_security_policy_rule_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -106,7 +123,8 @@ func ResourceConnectionLogSchema() *schema.Resource {
 			},
 			"out_of_orders": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"pool": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -125,25 +143,32 @@ func ResourceConnectionLogSchema() *schema.Resource {
 			},
 			"report_timestamp": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"retransmits": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"rx_bytes": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"rx_pkts": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_conn_src_ip": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_dest_port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_ip": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -154,40 +179,52 @@ func ResourceConnectionLogSchema() *schema.Resource {
 			},
 			"server_out_of_orders": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_retransmits": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_rtt": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_rx_bytes": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_rx_pkts": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_src_port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_timeouts": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_total_bytes": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_total_pkts": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_tx_bytes": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_tx_pkts": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"server_zero_window_size_events": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"service_engine": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -198,11 +235,13 @@ func ResourceConnectionLogSchema() *schema.Resource {
 			},
 			"significant": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"significant_log": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"ssl_cipher": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -217,44 +256,55 @@ func ResourceConnectionLogSchema() *schema.Resource {
 			},
 			"start_timestamp": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"timeouts": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"total_bytes": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"total_pkts": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"total_time": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"tx_bytes": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"tx_pkts": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"udf": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"vcpu_id": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"virtualservice": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vs_ip": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"zero_window_size_events": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

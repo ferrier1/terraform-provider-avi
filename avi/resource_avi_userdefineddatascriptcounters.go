@@ -14,11 +14,13 @@ func ResourceUserDefinedDataScriptCountersSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"udc": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceUserDefinedCounterSchema()},
+				Elem:     ResourceUserDefinedCounterSchema(),
+			},
 		},
 	}
 }

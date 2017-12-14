@@ -15,7 +15,8 @@ func ResourceWafRuleLogSchema() *schema.Resource {
 			"matches": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceWafRuleMatchDataSchema()},
+				Elem:     ResourceWafRuleMatchDataSchema(),
+			},
 			"msg": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -39,7 +40,8 @@ func ResourceWafRuleLogSchema() *schema.Resource {
 			"tags": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

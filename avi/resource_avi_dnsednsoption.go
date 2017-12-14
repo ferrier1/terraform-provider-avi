@@ -18,7 +18,8 @@ func ResourceDnsEdnsOptionSchema() *schema.Resource {
 			},
 			"code": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"scope_prefix_len": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

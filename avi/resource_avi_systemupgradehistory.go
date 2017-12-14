@@ -15,7 +15,8 @@ func ResourceSystemUpgradeHistorySchema() *schema.Resource {
 			"upgrade_events": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSystemUpgradeStateSchema()},
+				Elem:     ResourceSystemUpgradeStateSchema(),
+			},
 		},
 	}
 }

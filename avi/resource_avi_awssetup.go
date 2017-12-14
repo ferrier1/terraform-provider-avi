@@ -30,7 +30,8 @@ func ResourceAWSSetupSchema() *schema.Resource {
 			},
 			"region": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vpc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

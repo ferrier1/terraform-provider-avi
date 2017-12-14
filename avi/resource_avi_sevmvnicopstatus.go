@@ -15,14 +15,16 @@ func ResourceSeVmVnicOpStatusSchema() *schema.Resource {
 			"cc_vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_VnicInfoSchema()},
+				Elem:     ResourceCC_VnicInfoSchema(),
+			},
 			"cookie": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"status": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"status_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -30,15 +32,18 @@ func ResourceSeVmVnicOpStatusSchema() *schema.Resource {
 			"syserr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_FAILURE"},
+				Default:  "SYSERR_FAILURE",
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcevNICSchema()},
+				Elem:     ResourcevNICSchema(),
+			},
 		},
 	}
 }

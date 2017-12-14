@@ -18,10 +18,12 @@ func ResourceVsSeVnicSchema() *schema.Resource {
 			},
 			"mac": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

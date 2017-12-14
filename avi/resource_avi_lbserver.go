@@ -22,7 +22,11 @@ func ResourceLbServerSchema() *schema.Resource {
 			},
 			"ip_addr": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"non_affinity_core_open_conns": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -33,7 +37,8 @@ func ResourceLbServerSchema() *schema.Resource {
 			},
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -15,15 +15,18 @@ func ResourceRmSeGrpMetricsSchema() *schema.Resource {
 			"con_metrics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRmConMetricsSchema()},
+				Elem:     ResourceRmConMetricsSchema(),
+			},
 			"res_metrics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRmResMetricsSchema()},
+				Elem:     ResourceRmResMetricsSchema(),
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

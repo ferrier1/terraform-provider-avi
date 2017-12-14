@@ -15,34 +15,42 @@ func ResourceVIDatastoreContentsSchema() *schema.Resource {
 			"cluster_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrClusterRuntimeSchema()},
+				Elem:     ResourceVIMgrClusterRuntimeSchema(),
+			},
 			"dc_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrDCRuntimeSchema()},
+				Elem:     ResourceVIMgrDCRuntimeSchema(),
+			},
 			"host_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrHostRuntimeSchema()},
+				Elem:     ResourceVIMgrHostRuntimeSchema(),
+			},
 			"num_objects": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"nw_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrNWRuntimeSchema()},
+				Elem:     ResourceVIMgrNWRuntimeSchema(),
+			},
 			"sevm_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrSEVMRuntimeSchema()},
+				Elem:     ResourceVIMgrSEVMRuntimeSchema(),
+			},
 			"vcenter_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrVcenterRuntimeSchema()},
+				Elem:     ResourceVIMgrVcenterRuntimeSchema(),
+			},
 			"vm_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrVMRuntimeSchema()},
+				Elem:     ResourceVIMgrVMRuntimeSchema(),
+			},
 		},
 	}
 }

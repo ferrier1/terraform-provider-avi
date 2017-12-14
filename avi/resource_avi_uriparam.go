@@ -15,10 +15,12 @@ func ResourceURIParamSchema() *schema.Resource {
 			"tokens": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceURIParamTokenSchema()},
+				Elem:     ResourceURIParamTokenSchema(),
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -14,11 +14,13 @@ func ResourceServiceEngineAnalysisSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"result": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"task": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAnalysisTaskSchema()},
+				Elem:     ResourceSeAnalysisTaskSchema(),
+			},
 		},
 	}
 }

@@ -15,10 +15,12 @@ func Resourcecc_lookup_nw_rspSchema() *schema.Resource {
 			"ip_networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     Resourcecc_ip_networkSchema()},
+				Elem:     Resourcecc_ip_networkSchema(),
+			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

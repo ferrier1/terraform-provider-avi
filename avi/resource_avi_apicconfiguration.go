@@ -15,7 +15,8 @@ func ResourceAPICConfigurationSchema() *schema.Resource {
 			"apic_admin_tenant": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "common"},
+				Default:  "common",
+			},
 			"apic_domain": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,7 +24,8 @@ func ResourceAPICConfigurationSchema() *schema.Resource {
 			"apic_name": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"apic_password": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,7 +33,8 @@ func ResourceAPICConfigurationSchema() *schema.Resource {
 			"apic_product": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "ASP"},
+				Default:  "ASP",
+			},
 			"apic_username": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -39,7 +42,8 @@ func ResourceAPICConfigurationSchema() *schema.Resource {
 			"apic_vendor": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "Avi"},
+				Default:  "Avi",
+			},
 			"avi_controller_password": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -47,11 +51,13 @@ func ResourceAPICConfigurationSchema() *schema.Resource {
 			"avi_controller_username": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "admin"},
+				Default:  "admin",
+			},
 			"context_aware": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SINGLE_CONTEXT"},
+				Default:  "SINGLE_CONTEXT",
+			},
 			"deployment": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -64,11 +70,13 @@ func ResourceAPICConfigurationSchema() *schema.Resource {
 			"minor": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "2"},
+				Default:  "2",
+			},
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "1.0"},
+				Default:  "1.0",
+			},
 		},
 	}
 }

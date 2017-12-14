@@ -15,14 +15,20 @@ func ResourceHealthScoreDataSchema() *schema.Resource {
 			"anomaly_penalty": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"anomaly_score": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthScoreAnomalyDataSchema()},
+				Elem:     ResourceHealthScoreAnomalyDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dos_attack_level": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"is_null": &schema.Schema{
 				Type:     schema.TypeBool,
@@ -35,7 +41,11 @@ func ResourceHealthScoreDataSchema() *schema.Resource {
 			"performance_score": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthScorePerformanceDataSchema()},
+				Elem:     ResourceHealthScorePerformanceDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"performance_value": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -43,7 +53,8 @@ func ResourceHealthScoreDataSchema() *schema.Resource {
 			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -51,30 +62,42 @@ func ResourceHealthScoreDataSchema() *schema.Resource {
 			"resources_penalty": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"resources_score": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthScoreResourcesDataSchema()},
+				Elem:     ResourceHealthScoreResourcesDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"security_penalty": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"security_threat_level": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthScoreSecurityDataSchema()},
+				Elem:     ResourceHealthScoreSecurityDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ssl_score": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
-				Default:  "5.0"},
+				Default:  "5.0",
+			},
 			"timestamp": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

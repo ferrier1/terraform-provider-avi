@@ -14,7 +14,8 @@ func ResourceHostSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"host_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

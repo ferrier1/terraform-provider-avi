@@ -15,27 +15,51 @@ func ResourceTcpStatRuntimeSchema() *schema.Resource {
 			"connection_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConnectionStatsSchema()},
+				Elem:     ResourceConnectionStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"connections_dropped": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConnectionDropStatsSchema()},
+				Elem:     ResourceConnectionDropStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dns_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTcpDnsStatsSchema()},
+				Elem:     ResourceTcpDnsStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ecn_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceEcnStatsSchema()},
+				Elem:     ResourceEcnStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"misc_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMiscStatsSchema()},
+				Elem:     ResourceMiscStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"packets_dropped": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePacketDropStatsSchema()},
+				Elem:     ResourcePacketDropStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -43,15 +67,27 @@ func ResourceTcpStatRuntimeSchema() *schema.Resource {
 			"retransmit_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRetransmitStatsSchema()},
+				Elem:     ResourceRetransmitStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rx_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRxStatsSchema()},
+				Elem:     ResourceRxStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sack_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSackStatsSchema()},
+				Elem:     ResourceSackStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -59,15 +95,27 @@ func ResourceTcpStatRuntimeSchema() *schema.Resource {
 			"syncache_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSyncacheStatsSchema()},
+				Elem:     ResourceSyncacheStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"timeout": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeoutStatsSchema()},
+				Elem:     ResourceTimeoutStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tx_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTxStatsSchema()},
+				Elem:     ResourceTxStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

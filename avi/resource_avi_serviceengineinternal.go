@@ -31,11 +31,13 @@ func ResourceServiceEngineInternalSchema() *schema.Resource {
 			"data_vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcevNICSchema()},
+				Elem:     ResourcevNICSchema(),
+			},
 			"default_gws": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDefaultGatewaySchema()},
+				Elem:     ResourceDefaultGatewaySchema(),
+			},
 			"gateway_up": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -51,7 +53,11 @@ func ResourceServiceEngineInternalSchema() *schema.Resource {
 			"mgmt_vnic": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcevNICSchema()},
+				Elem:     ResourcevNICSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -59,7 +65,11 @@ func ResourceServiceEngineInternalSchema() *schema.Resource {
 			"resources": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeResourcesSchema()},
+				Elem:     ResourceSeResourcesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_group_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -71,11 +81,13 @@ func ResourceServiceEngineInternalSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "0.0.0"},
+				Default:  "0.0.0",
+			},
 		},
 	}
 }

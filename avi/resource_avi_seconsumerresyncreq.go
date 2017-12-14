@@ -18,11 +18,16 @@ func ResourceSeConsumerResyncReqSchema() *schema.Resource {
 			},
 			"consumer_info": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceSeResourceFindReqSchema()},
+				Required: true, Elem: ResourceSeResourceFindReqSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_alloc_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAllocInfoSchema()},
+				Elem:     ResourceSeAllocInfoSchema(),
+			},
 		},
 	}
 }

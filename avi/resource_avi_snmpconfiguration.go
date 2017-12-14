@@ -19,11 +19,16 @@ func ResourceSnmpConfigurationSchema() *schema.Resource {
 			"snmp_v3_config": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSnmpV3ConfigurationSchema()},
+				Elem:     ResourceSnmpV3ConfigurationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sys_contact": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "support@avinetworks.com"},
+				Default:  "support@avinetworks.com",
+			},
 			"sys_location": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,7 +36,8 @@ func ResourceSnmpConfigurationSchema() *schema.Resource {
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SNMP_VER2"},
+				Default:  "SNMP_VER2",
+			},
 		},
 	}
 }

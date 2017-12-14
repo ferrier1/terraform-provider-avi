@@ -15,11 +15,19 @@ func ResourceSamlSettingsSchema() *schema.Resource {
 			"idp": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSamlIdentityProviderSettingsSchema()},
+				Elem:     ResourceSamlIdentityProviderSettingsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sp": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSamlServiceProviderSettingsSchema()},
+				Elem:     ResourceSamlServiceProviderSettingsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

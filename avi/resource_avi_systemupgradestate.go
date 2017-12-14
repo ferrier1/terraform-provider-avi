@@ -15,7 +15,11 @@ func ResourceSystemUpgradeStateSchema() *schema.Resource {
 			"controller_state": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceControllerUpgradeStateSchema()},
+				Elem:     ResourceControllerUpgradeStateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"duration": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -30,7 +34,8 @@ func ResourceSystemUpgradeStateSchema() *schema.Resource {
 			},
 			"in_progress": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -46,7 +51,11 @@ func ResourceSystemUpgradeStateSchema() *schema.Resource {
 			"se_state": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeUpgradeStatusSummarySchema()},
+				Elem:     ResourceSeUpgradeStatusSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"start_time": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

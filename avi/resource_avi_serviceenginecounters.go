@@ -15,18 +15,22 @@ func ResourceServiceEngineCountersSchema() *schema.Resource {
 			"dp_hb_miss_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"hb_miss_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"hb_recv_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"hb_sent_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"last_down": &schema.Schema{
 				Type:     schema.TypeString,
@@ -51,18 +55,22 @@ func ResourceServiceEngineCountersSchema() *schema.Resource {
 			"reg_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"reg_fail_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"se_down_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"se_up_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 		},
 	}

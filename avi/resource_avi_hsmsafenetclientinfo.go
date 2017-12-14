@@ -22,7 +22,8 @@ func ResourceHSMSafenetClientInfoSchema() *schema.Resource {
 			},
 			"client_ip": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"client_priv_key": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

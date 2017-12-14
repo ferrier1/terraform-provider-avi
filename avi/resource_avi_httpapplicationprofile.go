@@ -20,7 +20,11 @@ func ResourceHTTPApplicationProfileSchema() *schema.Resource {
 			"cache_config": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHttpCacheConfigSchema()},
+				Elem:     ResourceHttpCacheConfigSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"client_body_timeout": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -34,6 +38,7 @@ func ResourceHTTPApplicationProfileSchema() *schema.Resource {
 			"client_max_body_size": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"client_max_header_size": &schema.Schema{
 				Type:     schema.TypeInt,
@@ -48,7 +53,11 @@ func ResourceHTTPApplicationProfileSchema() *schema.Resource {
 			"compression_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCompressionProfileSchema()},
+				Elem:     ResourceCompressionProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"connection_multiplexing_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -102,34 +111,42 @@ func ResourceHTTPApplicationProfileSchema() *schema.Resource {
 			"max_bad_rps_cip": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"max_bad_rps_cip_uri": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"max_bad_rps_uri": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"max_rps_cip": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"max_rps_cip_uri": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"max_rps_unknown_cip": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"max_rps_unknown_uri": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"max_rps_uri": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"pki_profile_ref": &schema.Schema{
 				Type:     schema.TypeString,
@@ -163,11 +180,16 @@ func ResourceHTTPApplicationProfileSchema() *schema.Resource {
 			"ssl_client_certificate_action": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLClientCertificateActionSchema()},
+				Elem:     ResourceSSLClientCertificateActionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ssl_client_certificate_mode": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SSL_CLIENT_CERTIFICATE_NONE"},
+				Default:  "SSL_CLIENT_CERTIFICATE_NONE",
+			},
 			"ssl_everywhere_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -191,7 +213,8 @@ func ResourceHTTPApplicationProfileSchema() *schema.Resource {
 			"xff_alternate_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "X-Forwarded-For"},
+				Default:  "X-Forwarded-For",
+			},
 			"xff_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

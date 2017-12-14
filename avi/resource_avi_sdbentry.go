@@ -14,10 +14,12 @@ func ResourceSdbEntrySchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"method": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sdb_key_s": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sdb_val_s": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

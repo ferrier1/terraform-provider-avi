@@ -15,15 +15,27 @@ func ResourceNetworkSecurityMatchTargetSchema() *schema.Resource {
 			"client_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrMatchSchema()},
+				Elem:     ResourceIpAddrMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"microservice": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMicroServiceMatchSchema()},
+				Elem:     ResourceMicroServiceMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_port": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePortMatchSchema()},
+				Elem:     ResourcePortMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

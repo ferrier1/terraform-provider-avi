@@ -15,7 +15,11 @@ func ResourcePlacementHistorySchema() *schema.Resource {
 			"info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePlacementOpInfoSchema()},
+				Elem:     ResourcePlacementOpInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

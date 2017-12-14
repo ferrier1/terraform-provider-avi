@@ -20,14 +20,17 @@ func ResourceFiuConfigSchema() *schema.Resource {
 			"fiu_action": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "FIU_ACTION_NONE"},
+				Default:  "FIU_ACTION_NONE",
+			},
 			"fiu_filters": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceFiuFilterSchema()},
+				Elem:     ResourceFiuFilterSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"probability": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

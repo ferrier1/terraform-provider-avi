@@ -15,7 +15,8 @@ func ResourceFiuConfigUpdateSchema() *schema.Resource {
 			"fiu_configs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceFiuConfigSchema()},
+				Elem:     ResourceFiuConfigSchema(),
+			},
 		},
 	}
 }

@@ -31,7 +31,11 @@ func ResourceGCPSetupSchema() *schema.Resource {
 			"nhop_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"project": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -51,7 +55,11 @@ func ResourceGCPSetupSchema() *schema.Resource {
 			"vip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -19,14 +19,16 @@ func ResourceSeUpgradeVsDisruptedEventDetailsSchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vip_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

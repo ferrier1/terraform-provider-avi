@@ -18,7 +18,8 @@ func ResourceOpenStackLbPluginOpSchema() *schema.Resource {
 			},
 			"command": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"detail": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -29,10 +30,12 @@ func ResourceOpenStackLbPluginOpSchema() *schema.Resource {
 			},
 			"id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"prov": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"result": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

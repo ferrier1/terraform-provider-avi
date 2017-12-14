@@ -15,11 +15,19 @@ func ResourceDosRateLimitProfileSchema() *schema.Resource {
 			"dos_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDosThresholdProfileSchema()},
+				Elem:     ResourceDosThresholdProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rl_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateLimiterProfileSchema()},
+				Elem:     ResourceRateLimiterProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

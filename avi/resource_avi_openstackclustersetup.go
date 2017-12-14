@@ -30,7 +30,8 @@ func ResourceOpenStackClusterSetupSchema() *schema.Resource {
 			},
 			"keystone_host": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"privilege": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

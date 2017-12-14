@@ -14,10 +14,12 @@ func ResourceHTTPStatusRangeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"begin": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"end": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

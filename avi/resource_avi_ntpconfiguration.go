@@ -15,15 +15,18 @@ func ResourceNTPConfigurationSchema() *schema.Resource {
 			"ntp_authentication_keys": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNTPAuthenticationKeySchema()},
+				Elem:     ResourceNTPAuthenticationKeySchema(),
+			},
 			"ntp_server_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"ntp_servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNTPServerSchema()},
+				Elem:     ResourceNTPServerSchema(),
+			},
 		},
 	}
 }

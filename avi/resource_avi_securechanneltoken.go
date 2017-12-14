@@ -19,10 +19,12 @@ func ResourceSecureChannelTokenSchema() *schema.Resource {
 			"metadata": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSecureChannelMetadataSchema()},
+				Elem:     ResourceSecureChannelMetadataSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"node_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -30,7 +32,8 @@ func ResourceSecureChannelTokenSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

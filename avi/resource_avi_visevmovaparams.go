@@ -18,7 +18,8 @@ func ResourceVISeVmOvaParamsSchema() *schema.Resource {
 			},
 			"controller_ip_addr": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mode": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -33,7 +34,8 @@ func ResourceVISeVmOvaParamsSchema() *schema.Resource {
 			},
 			"sevm_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"single_socket_affinity": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -50,7 +52,8 @@ func ResourceVISeVmOvaParamsSchema() *schema.Resource {
 			"vcenter_ds_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVcenterDatastoreSchema()},
+				Elem:     ResourceVcenterDatastoreSchema(),
+			},
 			"vcenter_ds_mode": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -62,7 +65,8 @@ func ResourceVISeVmOvaParamsSchema() *schema.Resource {
 			"vcenter_internal": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "UNIFIED ADMIN"},
+				Default:  "UNIFIED ADMIN",
+			},
 			"vcenter_mem_reserv": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

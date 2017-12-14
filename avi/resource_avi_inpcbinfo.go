@@ -19,7 +19,11 @@ func ResourceInpcbInfoSchema() *schema.Resource {
 			"client_mim": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceEtherHeaderSchema()},
+				Elem:     ResourceEtherHeaderSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"inp_flags": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

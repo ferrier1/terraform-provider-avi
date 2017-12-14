@@ -15,7 +15,11 @@ func ResourceSdbValueSchema() *schema.Resource {
 			"ip_persistent_value": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpPersistentValueSchema()},
+				Elem:     ResourceIpPersistentValueSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"prst_srv_id": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -23,14 +27,19 @@ func ResourceSdbValueSchema() *schema.Resource {
 			"ssl_value": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSslValueSchema()},
+				Elem:     ResourceSslValueSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"string_val": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"timeout": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

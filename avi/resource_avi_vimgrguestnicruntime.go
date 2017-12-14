@@ -28,14 +28,17 @@ func ResourceVIMgrGuestNicRuntimeSchema() *schema.Resource {
 			"guest_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrIPSubnetRuntimeSchema()},
+				Elem:     ResourceVIMgrIPSubnetRuntimeSchema(),
+			},
 			"label": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "Unknown"},
+				Default:  "Unknown",
+			},
 			"mac_addr": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mgmt_vnic": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -54,7 +57,8 @@ func ResourceVIMgrGuestNicRuntimeSchema() *schema.Resource {
 			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -14,10 +14,15 @@ func ResourceNetworkSecurityPolicyDosUnblockSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ips": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrMatchSchema()},
+				Required: true, Elem: ResourceIpAddrMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

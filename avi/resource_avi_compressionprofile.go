@@ -18,17 +18,21 @@ func ResourceCompressionProfileSchema() *schema.Resource {
 			},
 			"compression": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"filter": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCompressionFilterSchema()},
+				Elem:     ResourceCompressionFilterSchema(),
+			},
 			"remove_accept_encoding_header": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

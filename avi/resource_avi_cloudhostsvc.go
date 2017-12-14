@@ -14,10 +14,12 @@ func ResourceCloudHostSvcSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"available": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

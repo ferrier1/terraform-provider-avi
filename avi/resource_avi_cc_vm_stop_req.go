@@ -15,7 +15,8 @@ func Resourcecc_vm_stop_reqSchema() *schema.Resource {
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"delete": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -27,17 +28,21 @@ func Resourcecc_vm_stop_reqSchema() *schema.Resource {
 			},
 			"nscalein": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"pool_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerIdSchema()},
+				Elem:     ResourceServerIdSchema(),
+			},
 			"total_instances": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

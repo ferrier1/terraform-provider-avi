@@ -14,11 +14,16 @@ func ResourceHTTPSecurityActionSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"action": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"file": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPLocalFileSchema()},
+				Elem:     ResourceHTTPLocalFileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"https_port": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -26,7 +31,11 @@ func ResourceHTTPSecurityActionSchema() *schema.Resource {
 			"rate_limit": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+				Elem:     ResourceRateProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"status_code": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

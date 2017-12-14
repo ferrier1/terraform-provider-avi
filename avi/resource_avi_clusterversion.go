@@ -14,7 +14,8 @@ func ResourceClusterVersionSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

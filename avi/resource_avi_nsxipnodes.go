@@ -15,7 +15,8 @@ func ResourcensxIpNodesSchema() *schema.Resource {
 			"ipnode": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxIpNodeSchema()},
+				Elem:     ResourcensxIpNodeSchema(),
+			},
 		},
 	}
 }

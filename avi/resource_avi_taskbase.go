@@ -15,7 +15,11 @@ func ResourceTaskBaseSchema() *schema.Resource {
 			"db_notification": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTaskDbNotificationBaseSchema()},
+				Elem:     ResourceTaskDbNotificationBaseSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"flags": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -23,21 +27,32 @@ func ResourceTaskBaseSchema() *schema.Resource {
 			"request": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTaskRequestBaseSchema()},
+				Elem:     ResourceTaskRequestBaseSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"response": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTaskResponseBaseSchema()},
+				Elem:     ResourceTaskResponseBaseSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sender_node_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

@@ -19,7 +19,8 @@ func ResourceGslbGeoDbFileSchema() *schema.Resource {
 			"format": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "GSLB_GEODB_FILE_FORMAT_AVI"},
+				Default:  "GSLB_GEODB_FILE_FORMAT_AVI",
+			},
 		},
 	}
 }

@@ -14,10 +14,12 @@ func ResourceTimeStampSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"secs": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"usecs": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

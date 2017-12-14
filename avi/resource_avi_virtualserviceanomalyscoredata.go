@@ -15,11 +15,13 @@ func ResourceVirtualServiceAnomalyScoreDataSchema() *schema.Resource {
 			"anomalous_l4_metrics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"anomalous_l7_metrics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"per_anomalous_l4_metrics": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
@@ -31,10 +33,12 @@ func ResourceVirtualServiceAnomalyScoreDataSchema() *schema.Resource {
 			"pool_anomaly_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcePoolAnomalyScoreSchema()},
+				Elem:     ResourcePoolAnomalyScoreSchema(),
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -46,7 +50,8 @@ func ResourceVirtualServiceAnomalyScoreDataSchema() *schema.Resource {
 			"serviceengine_anomaly_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServiceEngineAnomalyScoreSchema()},
+				Elem:     ResourceServiceEngineAnomalyScoreSchema(),
+			},
 		},
 	}
 }

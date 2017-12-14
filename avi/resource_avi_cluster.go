@@ -16,11 +16,13 @@ func ResourceClusterSchema() map[string]*schema.Schema {
 	return map[string]*schema.Schema{
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"nodes": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceClusterNodeSchema()},
+			Elem:     ResourceClusterNodeSchema(),
+		},
 		"rejoin_nodes_automatically": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -33,11 +35,16 @@ func ResourceClusterSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"virtual_ip": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+			Elem:     ResourceIpAddrSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 	}
 }
 

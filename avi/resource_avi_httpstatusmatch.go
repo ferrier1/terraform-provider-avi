@@ -14,15 +14,18 @@ func ResourceHTTPStatusMatchSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"match_criteria": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ranges": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHTTPStatusRangeSchema()},
+				Elem:     ResourceHTTPStatusRangeSchema(),
+			},
 			"status_codes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeInt}},
+				Elem:     &schema.Schema{Type: schema.TypeInt},
+			},
 		},
 	}
 }

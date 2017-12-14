@@ -18,7 +18,8 @@ func ResourceSamlServiceProviderNodeSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"signing_cert": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

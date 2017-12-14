@@ -23,7 +23,8 @@ func ResourcensxSystemEventSchema() *schema.Resource {
 			"eventmetadata": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxEventMetaDataSchema()},
+				Elem:     ResourcensxEventMetaDataSchema(),
+			},
 			"eventsource": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

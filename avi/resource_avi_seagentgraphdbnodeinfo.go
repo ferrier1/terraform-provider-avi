@@ -15,27 +15,33 @@ func ResourceSeAgentGraphDBNodeInfoSchema() *schema.Resource {
 			"num_obj": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_obj_active": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_obj_awaiting_dp": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_obj_error": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_obj_ew_subnet_error": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"obj": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAgentGraphDBNodeObjectSchema()},
+				Elem:     ResourceSeAgentGraphDBNodeObjectSchema(),
+			},
 		},
 	}
 }

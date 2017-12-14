@@ -15,7 +15,8 @@ func ResourceVINetworkSubnetVMsSchema() *schema.Resource {
 			"vms": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNetworkSubnetVMSchema()},
+				Elem:     ResourceNetworkSubnetVMSchema(),
+			},
 		},
 	}
 }

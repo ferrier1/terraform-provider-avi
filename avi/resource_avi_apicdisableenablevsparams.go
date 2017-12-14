@@ -14,10 +14,15 @@ func ResourceAPICDisableEnableVsParamsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"enable": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"vs": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceSchema()},
+				Required: true, Elem: ResourceVirtualServiceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

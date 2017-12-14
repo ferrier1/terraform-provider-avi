@@ -15,42 +15,79 @@ func Resourcecc_verify_login_reqSchema() *schema.Resource {
 			"aws_login": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAWSLoginSchema()},
+				Elem:     ResourceAWSLoginSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"azure_login": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudConnectorUserSchema()},
+				Elem:     ResourceCloudConnectorUserSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cs_login": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudStackLoginSchema()},
+				Elem:     ResourceCloudStackLoginSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"docker_login": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDockerLoginSchema()},
+				Elem:     ResourceDockerLoginSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ms_login": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMesosLoginSchema()},
+				Elem:     ResourceMesosLoginSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"os_login": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOpenstackLoginSchema()},
+				Elem:     ResourceOpenstackLoginSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"oshiftk8s_login": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOShiftK8SLoginSchema()},
+				Elem:     ResourceOShiftK8SLoginSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rancher_login": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRancherLoginSchema()},
+				Elem:     ResourceRancherLoginSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vca_login": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVCALoginSchema()},
+				Elem:     ResourceVCALoginSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vtype": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -15,11 +15,13 @@ func ResourcePGDeploymentRuleSchema() *schema.Resource {
 			"metric_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "health.health_score_value"},
+				Default:  "health.health_score_value",
+			},
 			"operator": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "CO_GE"},
+				Default:  "CO_GE",
+			},
 			"threshold": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,

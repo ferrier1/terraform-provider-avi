@@ -17,11 +17,16 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"active_standby_se_tag": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "ACTIVE_STANDBY_SE_1"},
+			Default:  "ACTIVE_STANDBY_SE_1",
+		},
 		"analytics_policy": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceAnalyticsPolicySchema()},
+			Elem:     ResourceAnalyticsPolicySchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"analytics_profile_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -33,7 +38,11 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"client_auth": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPClientAuthenticationParamsSchema()},
+			Elem:     ResourceHTTPClientAuthenticationParamsSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"close_client_conn_on_config_update": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -46,19 +55,29 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"cloud_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "/api/cloud?name=Default-Cloud"},
+			Default:  "/api/cloud?name=Default-Cloud",
+		},
 		"cloud_type": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "CLOUD_NONE"},
+			Default:  "CLOUD_NONE",
+		},
 		"connections_rate_limit": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+			Elem:     ResourceRateProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"content_rewrite": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceContentRewriteProfileSchema()},
+			Elem:     ResourceContentRewriteProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"created_by": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -75,11 +94,13 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"dns_info": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceDnsInfoSchema()},
+			Elem:     ResourceDnsInfoSchema(),
+		},
 		"dns_policies": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceDnsPoliciesSchema()},
+			Elem:     ResourceDnsPoliciesSchema(),
+		},
 		"east_west_placement": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -110,11 +131,13 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"flow_dist": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "LOAD_AWARE"},
+			Default:  "LOAD_AWARE",
+		},
 		"flow_label_type": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "NO_LABEL"},
+			Default:  "NO_LABEL",
+		},
 		"fqdn": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -126,7 +149,8 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"http_policies": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceHTTPPoliciesSchema()},
+			Elem:     ResourceHTTPPoliciesSchema(),
+		},
 		"ign_pool_net_reach": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -140,6 +164,7 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"max_cps_per_client": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"microservice_ref": &schema.Schema{
 			Type:     schema.TypeString,
@@ -147,7 +172,8 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"network_profile_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -159,11 +185,16 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"nsx_securitygroup": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"performance_limits": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourcePerformanceLimitsSchema()},
+			Elem:     ResourcePerformanceLimitsSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"pool_group_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -180,7 +211,11 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"requests_rate_limit": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceRateProfileSchema()},
+			Elem:     ResourceRateProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"scaleout_ecmp": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -201,23 +236,31 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"service_pool_select": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceServicePoolSelectorSchema()},
+			Elem:     ResourceServicePoolSelectorSchema(),
+		},
 		"services": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceServiceSchema()},
+			Elem:     ResourceServiceSchema(),
+		},
 		"sideband_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceSidebandProfileSchema()},
+			Elem:     ResourceSidebandProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"snat_ip": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrSchema()},
+			Elem:     ResourceIpAddrSchema(),
+		},
 		"ssl_key_and_certificate_refs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"ssl_profile_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -230,7 +273,8 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"static_dns_records": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceDnsRecordSchema()},
+			Elem:     ResourceDnsRecordSchema(),
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -242,7 +286,8 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"type": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "VS_TYPE_NORMAL"},
+			Default:  "VS_TYPE_NORMAL",
+		},
 		"use_bridge_ip_as_vip": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -256,11 +301,13 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"vh_domain_name": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"vh_parent_vs_uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -268,7 +315,8 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"vip": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceVipSchema()},
+			Elem:     ResourceVipSchema(),
+		},
 		"vrf_context_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -276,7 +324,8 @@ func ResourceVirtualServiceSchema() map[string]*schema.Schema {
 		"vs_datascripts": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceVSDataScriptsSchema()},
+			Elem:     ResourceVSDataScriptsSchema(),
+		},
 		"vsvip_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,

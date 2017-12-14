@@ -23,7 +23,8 @@ func ResourceAttackMetaDataSchema() *schema.Resource {
 			"url": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

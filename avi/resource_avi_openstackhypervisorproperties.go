@@ -14,11 +14,13 @@ func ResourceOpenStackHypervisorPropertiesSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"hypervisor": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"image_properties": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcePropertySchema()},
+				Elem:     ResourcePropertySchema(),
+			},
 		},
 	}
 }

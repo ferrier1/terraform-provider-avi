@@ -35,7 +35,11 @@ func ResourceCC_OpenStackSchema() *schema.Resource {
 			"cfg": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOpenStackConfigurationSchema()},
+				Elem:     ResourceOpenStackConfigurationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cfgdrv_ext": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -67,11 +71,19 @@ func ResourceCC_OpenStackSchema() *schema.Resource {
 			"gc_avi": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_CronSchema()},
+				Elem:     ResourceCC_CronSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gc_cc": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_CronSchema()},
+				Elem:     ResourceCC_CronSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"glance_url": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -87,7 +99,11 @@ func ResourceCC_OpenStackSchema() *schema.Resource {
 			"mgmt_nw": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_MgmtNwSchema()},
+				Elem:     ResourceCC_MgmtNwSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"mgmt_nw_err": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -131,7 +147,8 @@ func ResourceCC_OpenStackSchema() *schema.Resource {
 			"park_intfs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_ParkIntfSchema()},
+				Elem:     ResourceCC_ParkIntfSchema(),
+			},
 			"patch_state": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

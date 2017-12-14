@@ -18,37 +18,45 @@ func ResourceCompressionFilterSchema() *schema.Resource {
 			},
 			"index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"ip_addr_prefixes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+			},
 			"ip_addr_ranges": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrRangeSchema()},
+				Elem:     ResourceIpAddrRangeSchema(),
+			},
 			"ip_addrs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"ip_addrs_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"level": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"match": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "IS_IN"},
+				Default:  "IS_IN",
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"user_agent": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

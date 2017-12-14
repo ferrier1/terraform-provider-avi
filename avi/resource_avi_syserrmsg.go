@@ -15,14 +15,19 @@ func ResourceSyserrMsgSchema() *schema.Resource {
 			"info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSyserrInfoSchema()},
+				Elem:     ResourceSyserrInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"str": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -19,7 +19,8 @@ func ResourceClusterRuntimeSchema() *schema.Resource {
 			"overall_state": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "CONTROLLER_WORKERS_INITIALIZING"},
+				Default:  "CONTROLLER_WORKERS_INITIALIZING",
+			},
 			"rollback": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

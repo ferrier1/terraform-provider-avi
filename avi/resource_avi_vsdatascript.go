@@ -14,10 +14,12 @@ func ResourceVSDataScriptSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"evt": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"script": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

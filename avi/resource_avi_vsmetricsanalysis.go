@@ -15,11 +15,13 @@ func ResourceVsMetricsAnalysisSchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"se_metrics_issues": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsSeMetricsAnalysisSchema()},
+				Elem:     ResourceVsSeMetricsAnalysisSchema(),
+			},
 		},
 	}
 }

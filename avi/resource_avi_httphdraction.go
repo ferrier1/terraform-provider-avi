@@ -14,15 +14,24 @@ func ResourceHTTPHdrActionSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"action": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"cookie": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPCookieDataSchema()},
+				Elem:     ResourceHTTPCookieDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"hdr": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPHdrDataSchema()},
+				Elem:     ResourceHTTPHdrDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

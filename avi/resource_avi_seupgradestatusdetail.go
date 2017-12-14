@@ -31,7 +31,8 @@ func ResourceSeUpgradeStatusDetailSchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"progress_percent": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -43,11 +44,16 @@ func ResourceSeUpgradeStatusDetailSchema() *schema.Resource {
 			"summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeUpgradeStatusSummarySchema()},
+				Elem:     ResourceSeUpgradeStatusSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tasks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeTaskSchema()},
+				Elem:     ResourceSeTaskSchema(),
+			},
 		},
 	}
 }

@@ -23,11 +23,13 @@ func ResourceVIValidateVcenterRspSchema() *schema.Resource {
 			"ctrl_vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIControllerVnicInfoSchema()},
+				Elem:     ResourceVIControllerVnicInfoSchema(),
+			},
 			"datacenters": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIDCInfoSchema()},
+				Elem:     ResourceVIDCInfoSchema(),
+			},
 			"discovery_dc_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -38,7 +40,8 @@ func ResourceVIValidateVcenterRspSchema() *schema.Resource {
 			},
 			"status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vcenter_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

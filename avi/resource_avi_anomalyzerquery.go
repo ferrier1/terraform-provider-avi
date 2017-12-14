@@ -20,7 +20,8 @@ func ResourceAnomalyzerQuerySchema() *schema.Resource {
 			"aggregation": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_ANOMALY_AGG_NONE"},
+				Default:  "METRICS_ANOMALY_AGG_NONE",
+			},
 			"aggregation_window": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -34,10 +35,12 @@ func ResourceAnomalyzerQuerySchema() *schema.Resource {
 			"dimension_filter_op": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_FILTER_EQUALS"},
+				Default:  "METRICS_FILTER_EQUALS",
+			},
 			"entity_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"include_refs": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -55,7 +58,8 @@ func ResourceAnomalyzerQuerySchema() *schema.Resource {
 			},
 			"metric_entity": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"metric_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -71,7 +75,8 @@ func ResourceAnomalyzerQuerySchema() *schema.Resource {
 			"order_by": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "metric_timestamp"},
+				Default:  "metric_timestamp",
+			},
 			"page": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -87,11 +92,13 @@ func ResourceAnomalyzerQuerySchema() *schema.Resource {
 			"priority": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "ANZ_PRIORITY_HIGH"},
+				Default:  "ANZ_PRIORITY_HIGH",
+			},
 			"result_format": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_FORMAT_JSON"},
+				Default:  "METRICS_FORMAT_JSON",
+			},
 			"server": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -103,7 +110,8 @@ func ResourceAnomalyzerQuerySchema() *schema.Resource {
 			"start": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "1970-01-01T00:00:00"},
+				Default:  "1970-01-01T00:00:00",
+			},
 			"step": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

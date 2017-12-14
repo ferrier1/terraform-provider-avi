@@ -15,10 +15,12 @@ func Resourcecc_nw_runtime_rspSchema() *schema.Resource {
 			"nwruntime": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrNWRuntimeSchema()},
+				Elem:     ResourceVIMgrNWRuntimeSchema(),
+			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

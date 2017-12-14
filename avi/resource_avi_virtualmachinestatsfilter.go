@@ -14,10 +14,12 @@ func ResourceVirtualMachineStatsFilterSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"cpu_utilization": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"some_other_metric": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

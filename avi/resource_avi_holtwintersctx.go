@@ -15,26 +15,32 @@ func ResourceHoltWintersCtxSchema() *schema.Resource {
 			"deviation": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"level": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"prediction": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"prediction_interval_high": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"prediction_interval_low": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"trend": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 		},
 	}

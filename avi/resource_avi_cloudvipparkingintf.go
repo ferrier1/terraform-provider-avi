@@ -26,7 +26,8 @@ func ResourceCloudVipParkingIntfSchema() *schema.Resource {
 			},
 			"subnet_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vtype": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

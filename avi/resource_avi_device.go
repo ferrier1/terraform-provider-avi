@@ -15,18 +15,31 @@ func ResourceDeviceSchema() *schema.Resource {
 			"cpu": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCpuSchema()},
+				Elem:     ResourceCpuSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"network": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVmNetworkSchema()},
+				Elem:     ResourceVmNetworkSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"storage": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceStorageSchema()},
+				Elem:     ResourceStorageSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -14,10 +14,12 @@ func ResourceCloudStackConfigurationSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"access_key_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"api_url": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"cntr_public_ip": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -25,17 +27,20 @@ func ResourceCloudStackConfigurationSchema() *schema.Resource {
 			"hypervisor": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "KVM"},
+				Default:  "KVM",
+			},
 			"mgmt_network_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mgmt_network_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"secret_access_key": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

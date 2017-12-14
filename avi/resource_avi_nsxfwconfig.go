@@ -23,15 +23,27 @@ func ResourcensxFwConfigSchema() *schema.Resource {
 			"layer2sections": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcesectionsSchema()},
+				Elem:     ResourcesectionsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"layer3redirectsections": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcesectionsSchema()},
+				Elem:     ResourcesectionsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"layer3sections": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcesectionsSchema()},
+				Elem:     ResourcesectionsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"timestamp": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

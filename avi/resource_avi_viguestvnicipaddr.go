@@ -14,10 +14,12 @@ func ResourceVIGuestvNicIPAddrSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ip_addr": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mask": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

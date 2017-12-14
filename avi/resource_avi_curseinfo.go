@@ -14,14 +14,16 @@ func ResourceCurSeInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"is_primary": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"is_standby": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
 			},
 			"se_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

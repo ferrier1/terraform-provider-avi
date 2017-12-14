@@ -15,15 +15,27 @@ func ResourceClientInsightsSamplingSchema() *schema.Resource {
 			"client_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrMatchSchema()},
+				Elem:     ResourceIpAddrMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sample_uris": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceStringMatchSchema()},
+				Elem:     ResourceStringMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"skip_uris": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceStringMatchSchema()},
+				Elem:     ResourceStringMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

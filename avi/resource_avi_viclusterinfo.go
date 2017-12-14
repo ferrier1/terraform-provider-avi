@@ -14,13 +14,16 @@ func ResourceVIClusterInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"cluster_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"dc_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"managed_object_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

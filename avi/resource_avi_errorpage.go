@@ -32,7 +32,11 @@ func ResourceErrorPageSchema() *schema.Resource {
 			"match": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPStatusMatchSchema()},
+				Elem:     ResourceHTTPStatusMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

@@ -130,7 +130,8 @@ func ResourceMetricsVserverDNSObjSchema() *schema.Resource {
 			},
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"pct_errored_queries": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,

@@ -98,7 +98,8 @@ func ResourceControllerStatsObjSchema() *schema.Resource {
 			},
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sum_total_se_bytes": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,

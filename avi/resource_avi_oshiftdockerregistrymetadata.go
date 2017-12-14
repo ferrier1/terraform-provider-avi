@@ -15,15 +15,21 @@ func ResourceOshiftDockerRegistryMetaDataSchema() *schema.Resource {
 			"registry_namespace": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "default"},
+				Default:  "default",
+			},
 			"registry_service": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "docker-registry"},
+				Default:  "docker-registry",
+			},
 			"registry_vip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

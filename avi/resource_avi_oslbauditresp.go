@@ -15,7 +15,8 @@ func ResourceOsLbAuditRespSchema() *schema.Resource {
 			"hist": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceOsLbProvAuditDetailSchema()},
+				Elem:     ResourceOsLbProvAuditDetailSchema(),
+			},
 		},
 	}
 }

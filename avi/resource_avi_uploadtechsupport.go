@@ -14,7 +14,8 @@ func ResourceUploadTechSupportSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"case_number": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"portal_token": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

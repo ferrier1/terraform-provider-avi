@@ -15,29 +15,35 @@ func ResourceAlertScriptParamSchema() *schema.Resource {
 			"app_events": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceApplicationLogSchema()},
+				Elem:     ResourceApplicationLogSchema(),
+			},
 			"conn_events": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConnectionLogSchema()},
+				Elem:     ResourceConnectionLogSchema(),
+			},
 			"events": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceEventLogAlertScriptParamsSchema()},
+				Elem:     ResourceEventLogAlertScriptParamsSchema(),
+			},
 			"last_throttle_timestamp": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
 			},
 			"level": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"metric_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricLogSchema()},
+				Elem:     ResourceMetricLogSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"obj_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -48,7 +54,8 @@ func ResourceAlertScriptParamSchema() *schema.Resource {
 			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"threshold": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -56,6 +63,7 @@ func ResourceAlertScriptParamSchema() *schema.Resource {
 			"throttle_count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 		},
 	}

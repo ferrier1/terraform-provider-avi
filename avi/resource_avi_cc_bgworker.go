@@ -27,10 +27,12 @@ func ResourceCC_BGWorkerSchema() *schema.Resource {
 			"tasks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_BGTaskSchema()},
+				Elem:     ResourceCC_BGTaskSchema(),
+			},
 			"thread_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

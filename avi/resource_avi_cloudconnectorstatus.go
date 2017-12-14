@@ -15,11 +15,16 @@ func ResourceCloudConnectorStatusSchema() *schema.Resource {
 			"detail": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudStatusSchema()},
+				Elem:     ResourceCloudStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

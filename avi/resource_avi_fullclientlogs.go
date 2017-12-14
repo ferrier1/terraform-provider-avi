@@ -24,7 +24,8 @@ func ResourceFullClientLogsSchema() *schema.Resource {
 			},
 			"enabled": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"throttle": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

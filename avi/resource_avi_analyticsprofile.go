@@ -22,7 +22,8 @@ func ResourceAnalyticsProfileSchema() map[string]*schema.Schema {
 		"apdex_response_tolerated_factor": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "4.0"},
+			Default:  "4.0",
+		},
 		"apdex_rtt_threshold": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -31,7 +32,8 @@ func ResourceAnalyticsProfileSchema() map[string]*schema.Schema {
 		"apdex_rtt_tolerated_factor": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "4.0"},
+			Default:  "4.0",
+		},
 		"apdex_rum_threshold": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -40,7 +42,8 @@ func ResourceAnalyticsProfileSchema() map[string]*schema.Schema {
 		"apdex_rum_tolerated_factor": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "4.0"},
+			Default:  "4.0",
+		},
 		"apdex_server_response_threshold": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -49,7 +52,8 @@ func ResourceAnalyticsProfileSchema() map[string]*schema.Schema {
 		"apdex_server_response_tolerated_factor": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "4.0"},
+			Default:  "4.0",
+		},
 		"apdex_server_rtt_threshold": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -58,15 +62,24 @@ func ResourceAnalyticsProfileSchema() map[string]*schema.Schema {
 		"apdex_server_rtt_tolerated_factor": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "4.0"},
+			Default:  "4.0",
+		},
 		"client_log_config": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceClientLogConfigurationSchema()},
+			Elem:     ResourceClientLogConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"client_log_streaming_config": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceClientLogStreamingConfigSchema()},
+			Elem:     ResourceClientLogStreamingConfigSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"conn_lossy_ooo_threshold": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -139,7 +152,8 @@ func ResourceAnalyticsProfileSchema() map[string]*schema.Schema {
 		"exclude_http_error_codes": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeInt}},
+			Elem:     &schema.Schema{Type: schema.TypeInt},
+		},
 		"exclude_invalid_dns_domain_as_error": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -218,98 +232,122 @@ func ResourceAnalyticsProfileSchema() map[string]*schema.Schema {
 		"hs_performance_boost": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"hs_pscore_traffic_threshold_l4_client": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "10.0"},
+			Default:  "10.0",
+		},
 		"hs_pscore_traffic_threshold_l4_server": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "10.0"},
+			Default:  "10.0",
+		},
 		"hs_security_certscore_expired": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
+			Default:  "0.0",
 		},
 		"hs_security_certscore_gt30d": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "5.0"},
+			Default:  "5.0",
+		},
 		"hs_security_certscore_le07d": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "2.0"},
+			Default:  "2.0",
+		},
 		"hs_security_certscore_le30d": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "4.0"},
+			Default:  "4.0",
+		},
 		"hs_security_chain_invalidity_penalty": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "1.0"},
+			Default:  "1.0",
+		},
 		"hs_security_cipherscore_eq000b": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
+			Default:  "0.0",
 		},
 		"hs_security_cipherscore_ge128b": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "5.0"},
+			Default:  "5.0",
+		},
 		"hs_security_cipherscore_lt128b": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "3.5"},
+			Default:  "3.5",
+		},
 		"hs_security_encalgo_score_none": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
+			Default:  "0.0",
 		},
 		"hs_security_encalgo_score_rc4": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "2.5"},
+			Default:  "2.5",
+		},
 		"hs_security_hsts_penalty": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "1.0"},
+			Default:  "1.0",
+		},
 		"hs_security_nonpfs_penalty": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "1.0"},
+			Default:  "1.0",
+		},
 		"hs_security_selfsignedcert_penalty": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "1.0"},
+			Default:  "1.0",
+		},
 		"hs_security_ssl30_score": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "3.5"},
+			Default:  "3.5",
+		},
 		"hs_security_tls10_score": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "5.0"},
+			Default:  "5.0",
+		},
 		"hs_security_tls11_score": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "5.0"},
+			Default:  "5.0",
+		},
 		"hs_security_tls12_score": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "5.0"},
+			Default:  "5.0",
+		},
 		"hs_security_weak_signature_algo_penalty": &schema.Schema{
 			Type:     schema.TypeFloat,
 			Optional: true,
-			Default:  "1.0"},
+			Default:  "1.0",
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"ranges": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceHTTPStatusRangeSchema()},
+			Elem:     ResourceHTTPStatusRangeSchema(),
+		},
 		"resp_code_block": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -317,7 +355,8 @@ func ResourceAnalyticsProfileSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

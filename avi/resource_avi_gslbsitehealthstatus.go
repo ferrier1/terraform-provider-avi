@@ -15,35 +15,46 @@ func ResourceGslbSiteHealthStatusSchema() *schema.Resource {
 			"controller_gsinfo": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbPoolMemberRuntimeInfoSchema()},
+				Elem:     ResourceGslbPoolMemberRuntimeInfoSchema(),
+			},
 			"datapath_gsinfo": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbPoolMemberRuntimeInfoSchema()},
+				Elem:     ResourceGslbPoolMemberRuntimeInfoSchema(),
+			},
 			"dns_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbDnsInfoSchema()},
+				Elem:     ResourceGslbDnsInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gap_table": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+			},
 			"geo_table": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+			},
 			"ghm_table": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+			},
 			"glb_table": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+			},
 			"gs_table": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+			},
 			"sw_version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -15,7 +15,8 @@ func ResourcensxDynamicSetSchema() *schema.Resource {
 			"dynamiccriteria": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxDynamicCriteriaSchema()},
+				Elem:     ResourcensxDynamicCriteriaSchema(),
+			},
 			"operator": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

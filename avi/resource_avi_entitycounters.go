@@ -15,7 +15,8 @@ func ResourceEntityCountersSchema() *schema.Resource {
 			"counters": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVcenterPerfCounterSchema()},
+				Elem:     ResourceVcenterPerfCounterSchema(),
+			},
 			"disk1_usage": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -35,7 +36,8 @@ func ResourceEntityCountersSchema() *schema.Resource {
 			"interested": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVmwarePerfMetricIdSchema()},
+				Elem:     ResourceVmwarePerfMetricIdSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -51,11 +53,13 @@ func ResourceEntityCountersSchema() *schema.Resource {
 			"supported": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVmwarePerfMetricIdSchema()},
+				Elem:     ResourceVmwarePerfMetricIdSchema(),
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

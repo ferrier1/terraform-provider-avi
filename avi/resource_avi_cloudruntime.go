@@ -14,7 +14,8 @@ func ResourceCloudRuntimeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"network_sync_complete": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -27,7 +28,8 @@ func ResourceCloudRuntimeSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

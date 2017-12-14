@@ -15,7 +15,8 @@ func ResourceIpNexthopListSchema() *schema.Resource {
 			"ip_nexthops": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpNexthopSchema()},
+				Elem:     ResourceIpNexthopSchema(),
+			},
 		},
 	}
 }

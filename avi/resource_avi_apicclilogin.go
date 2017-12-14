@@ -14,13 +14,16 @@ func ResourceApicCliLoginSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"apic_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"apic_password": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"apic_username": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

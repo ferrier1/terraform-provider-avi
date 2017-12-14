@@ -14,23 +14,28 @@ func ResourceLcEntrySchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"ip_addr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"max_queue_length": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_open_connections": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"weight": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

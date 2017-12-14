@@ -15,7 +15,8 @@ func ResourcesectionsSchema() *schema.Resource {
 			"section": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcesectionSchema()},
+				Elem:     ResourcesectionSchema(),
+			},
 		},
 	}
 }

@@ -17,11 +17,13 @@ func ResourceNetworkSchema() map[string]*schema.Schema {
 		"cloud_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "/api/cloud?name=Default-Cloud"},
+			Default:  "/api/cloud?name=Default-Cloud",
+		},
 		"configured_subnets": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceSubnetSchema()},
+			Elem:     ResourceSubnetSchema(),
+		},
 		"dhcp_enabled": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -34,7 +36,8 @@ func ResourceNetworkSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"synced_from_se": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -47,7 +50,8 @@ func ResourceNetworkSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"vcenter_dvs": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,

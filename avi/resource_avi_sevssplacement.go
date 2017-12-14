@@ -39,7 +39,8 @@ func ResourceSeVssPlacementSchema() *schema.Resource {
 			"se_vss_placement_entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVssPlacementEntrySchema()},
+				Elem:     ResourceSeVssPlacementEntrySchema(),
+			},
 			"stretch_factor": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

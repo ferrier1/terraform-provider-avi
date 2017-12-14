@@ -14,10 +14,12 @@ func ResourceHTTPLocalFileSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"content_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"file_content": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -19,7 +19,8 @@ func ResourceSePlacementAnalysisSchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_eastwest_vs_on_controller": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -47,11 +48,13 @@ func ResourceSePlacementAnalysisSchema() *schema.Resource {
 			"vs_on_controller_not_on_se": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVsPlacementAnalysisSchema()},
+				Elem:     ResourceSeVsPlacementAnalysisSchema(),
+			},
 			"vs_on_se_not_on_controller": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVsPlacementAnalysisSchema()},
+				Elem:     ResourceSeVsPlacementAnalysisSchema(),
+			},
 		},
 	}
 }

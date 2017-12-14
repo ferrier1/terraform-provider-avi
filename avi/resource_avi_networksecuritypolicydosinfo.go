@@ -15,11 +15,13 @@ func ResourceNetworkSecurityPolicyDosInfoSchema() *schema.Resource {
 			"ip_count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"rules": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNetworkSecurityRuleSchema()},
+				Elem:     ResourceNetworkSecurityRuleSchema(),
+			},
 		},
 	}
 }

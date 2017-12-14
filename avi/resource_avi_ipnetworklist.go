@@ -15,7 +15,8 @@ func ResourceIpNetworkListSchema() *schema.Resource {
 			"ip_networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpNetworkSchema()},
+				Elem:     ResourceIpNetworkSchema(),
+			},
 		},
 	}
 }

@@ -14,7 +14,8 @@ func ResourceCC_RefCntSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ref_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"tenant_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

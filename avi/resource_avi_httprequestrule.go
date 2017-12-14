@@ -18,14 +18,17 @@ func ResourceHTTPRequestRuleSchema() *schema.Resource {
 			},
 			"enable": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"hdr_action": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHTTPHdrActionSchema()},
+				Elem:     ResourceHTTPHdrActionSchema(),
+			},
 			"index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"log": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -33,22 +36,39 @@ func ResourceHTTPRequestRuleSchema() *schema.Resource {
 			"match": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMatchTargetSchema()},
+				Elem:     ResourceMatchTargetSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"redirect_action": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPRedirectActionSchema()},
+				Elem:     ResourceHTTPRedirectActionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rewrite_url_action": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPRewriteURLActionSchema()},
+				Elem:     ResourceHTTPRewriteURLActionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"switching_action": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPSwitchingActionSchema()},
+				Elem:     ResourceHTTPSwitchingActionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

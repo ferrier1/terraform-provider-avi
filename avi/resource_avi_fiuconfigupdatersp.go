@@ -15,7 +15,8 @@ func ResourceFiuConfigUpdateRspSchema() *schema.Resource {
 			"fiu_config_rsps": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceFiuConfigRspSchema()},
+				Elem:     ResourceFiuConfigRspSchema(),
+			},
 		},
 	}
 }

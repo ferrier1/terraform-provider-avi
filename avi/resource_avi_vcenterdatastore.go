@@ -14,7 +14,8 @@ func ResourceVcenterDatastoreSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"datastore_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -15,10 +15,12 @@ func ResourceVcenterMapSchema() *schema.Resource {
 			"datacenters": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDatacenterMapSchema()},
+				Elem:     ResourceDatacenterMapSchema(),
+			},
 			"vcenter_url": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -14,7 +14,8 @@ func ResourceAutoScaleStateSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"autoscale_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"autoscale_in_progress": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -31,7 +32,8 @@ func ResourceAutoScaleStateSchema() *schema.Resource {
 			"last_action": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SCALEOUT"},
+				Default:  "SCALEOUT",
+			},
 			"last_autoscale_ts": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -47,7 +49,8 @@ func ResourceAutoScaleStateSchema() *schema.Resource {
 			"last_scalein_reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_SUCCESS"},
+				Default:  "SYSERR_SUCCESS",
+			},
 			"last_scalein_ts": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -55,7 +58,8 @@ func ResourceAutoScaleStateSchema() *schema.Resource {
 			"last_scaleout_reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_SUCCESS"},
+				Default:  "SYSERR_SUCCESS",
+			},
 			"last_scaleout_ts": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -63,10 +67,12 @@ func ResourceAutoScaleStateSchema() *schema.Resource {
 			"launch_error": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_SUCCESS"},
+				Default:  "SYSERR_SUCCESS",
+			},
 			"launch_retries": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"max_oper_capacity": &schema.Schema{
 				Type:     schema.TypeInt,

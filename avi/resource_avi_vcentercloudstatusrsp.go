@@ -14,7 +14,8 @@ func ResourceVcenterCloudStatusRspSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

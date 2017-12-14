@@ -15,7 +15,8 @@ func ResourceGslbHealthMonitorProxySchema() *schema.Resource {
 			"proxy_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "GSLB_HEALTH_MONITOR_PROXY_PRIVATE_MEMBERS"},
+				Default:  "GSLB_HEALTH_MONITOR_PROXY_PRIVATE_MEMBERS",
+			},
 			"site_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

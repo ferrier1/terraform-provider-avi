@@ -14,18 +14,22 @@ func ResourceDnsSrvRdataSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"priority": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"target": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "default.host"},
+				Default:  "default.host",
+			},
 			"weight": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 		},
 	}

@@ -22,7 +22,11 @@ func ResourceGslbSchema() map[string]*schema.Schema {
 		"client_ip_addr_group": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbClientIpAddrGroupSchema()},
+			Elem:     ResourceGslbClientIpAddrGroupSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"description": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -30,7 +34,8 @@ func ResourceGslbSchema() map[string]*schema.Schema {
 		"dns_configs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceDNSConfigSchema()},
+			Elem:     ResourceDNSConfigSchema(),
+		},
 		"is_federated": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -47,7 +52,8 @@ func ResourceGslbSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"send_interval": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -56,7 +62,8 @@ func ResourceGslbSchema() map[string]*schema.Schema {
 		"sites": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceGslbSiteSchema()},
+			Elem:     ResourceGslbSiteSchema(),
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -64,14 +71,17 @@ func ResourceGslbSchema() map[string]*schema.Schema {
 		"third_party_sites": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceGslbThirdPartySiteSchema()},
+			Elem:     ResourceGslbThirdPartySiteSchema(),
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"view_id": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 	}
 }

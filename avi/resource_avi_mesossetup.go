@@ -19,7 +19,8 @@ func ResourceMesosSetupSchema() *schema.Resource {
 			"failed_hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"fleet_endpoint": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -27,7 +28,8 @@ func ResourceMesosSetupSchema() *schema.Resource {
 			"hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"mesos_access": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -39,11 +41,13 @@ func ResourceMesosSetupSchema() *schema.Resource {
 			"missing_hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"new_hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

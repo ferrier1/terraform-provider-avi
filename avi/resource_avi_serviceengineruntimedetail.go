@@ -15,7 +15,8 @@ func ResourceServiceEngineRuntimeDetailSchema() *schema.Resource {
 			"active_tags": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"at_curr_ver": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -23,7 +24,11 @@ func ResourceServiceEngineRuntimeDetailSchema() *schema.Resource {
 			"counters": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServiceEngineCountersSchema()},
+				Elem:     ResourceServiceEngineCountersSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gateway_up": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -31,7 +36,11 @@ func ResourceServiceEngineRuntimeDetailSchema() *schema.Resource {
 			"hb_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeHbStatusSchema()},
+				Elem:     ResourceSeHbStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"inband_mgmt": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -39,7 +48,8 @@ func ResourceServiceEngineRuntimeDetailSchema() *schema.Resource {
 			"migrate_state": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SE_MIGRATE_STATE_IDLE"},
+				Default:  "SE_MIGRATE_STATE_IDLE",
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -51,7 +61,11 @@ func ResourceServiceEngineRuntimeDetailSchema() *schema.Resource {
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"power_state": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -59,7 +73,11 @@ func ResourceServiceEngineRuntimeDetailSchema() *schema.Resource {
 			"resources": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeResourcesSchema()},
+				Elem:     ResourceSeResourcesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_connected": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -67,7 +85,8 @@ func ResourceServiceEngineRuntimeDetailSchema() *schema.Resource {
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "0.0.0"},
+				Default:  "0.0.0",
+			},
 			"vinfra_discovered": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -75,7 +94,8 @@ func ResourceServiceEngineRuntimeDetailSchema() *schema.Resource {
 			"vnic": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVnicRuntimeSchema()},
+				Elem:     ResourceVnicRuntimeSchema(),
+			},
 		},
 	}
 }

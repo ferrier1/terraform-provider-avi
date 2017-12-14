@@ -14,15 +14,21 @@ func ResourceClusterStateSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"cluster_state": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceClusterOperationalStatusSchema()},
+				Required: true, Elem: ResourceClusterOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"node_states": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceClusterNodeStateSchema()},
+				Elem:     ResourceClusterNodeStateSchema(),
+			},
 			"service_states": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceClusterServiceStateSchema()},
+				Elem:     ResourceClusterServiceStateSchema(),
+			},
 		},
 	}
 }

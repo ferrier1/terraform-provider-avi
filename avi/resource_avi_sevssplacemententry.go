@@ -19,7 +19,8 @@ func ResourceSeVssPlacementEntrySchema() *schema.Resource {
 			"se_vs_placement_entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVsPlacementEntrySchema()},
+				Elem:     ResourceSeVsPlacementEntrySchema(),
+			},
 		},
 	}
 }

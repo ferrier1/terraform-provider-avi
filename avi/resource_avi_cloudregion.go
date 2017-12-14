@@ -14,14 +14,17 @@ func ResourceCloudRegionSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"endpoint": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"zones": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCloudAZSchema()},
+				Elem:     ResourceCloudAZSchema(),
+			},
 		},
 	}
 }

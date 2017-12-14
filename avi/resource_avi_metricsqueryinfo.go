@@ -18,7 +18,11 @@ func ResourceMetricsQueryInfoSchema() *schema.Resource {
 			},
 			"metrics_query": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceMetricsQuerySchema()},
+				Required: true, Elem: ResourceMetricsQuerySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

@@ -18,11 +18,13 @@ func ResourceSeVniReachUpdReqSchema() *schema.Resource {
 			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeResourceVnicSchema()},
+				Elem:     ResourceSeResourceVnicSchema(),
+			},
 		},
 	}
 }

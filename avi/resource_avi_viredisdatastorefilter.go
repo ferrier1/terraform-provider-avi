@@ -18,7 +18,8 @@ func ResourceVIRedisDatastoreFilterSchema() *schema.Resource {
 			},
 			"table": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

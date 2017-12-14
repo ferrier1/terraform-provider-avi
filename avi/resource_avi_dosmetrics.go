@@ -15,10 +15,12 @@ func ResourceDosMetricsSchema() *schema.Resource {
 			"attacker_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMaliciousIpInfoSchema()},
+				Elem:     ResourceMaliciousIpInfoSchema(),
+			},
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

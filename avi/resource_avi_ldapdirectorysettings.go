@@ -19,11 +19,13 @@ func ResourceLdapDirectorySettingsSchema() *schema.Resource {
 			"group_filter": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "(objectClass=*)"},
+				Default:  "(objectClass=*)",
+			},
 			"group_member_attribute": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "member"},
+				Default:  "member",
+			},
 			"group_member_is_full_dn": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -36,7 +38,8 @@ func ResourceLdapDirectorySettingsSchema() *schema.Resource {
 			"group_search_scope": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "AUTH_LDAP_SCOPE_SUBTREE"},
+				Default:  "AUTH_LDAP_SCOPE_SUBTREE",
+			},
 			"ignore_referrals": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -45,7 +48,8 @@ func ResourceLdapDirectorySettingsSchema() *schema.Resource {
 			"user_attributes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"user_id_attribute": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -57,7 +61,8 @@ func ResourceLdapDirectorySettingsSchema() *schema.Resource {
 			"user_search_scope": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "AUTH_LDAP_SCOPE_ONE"},
+				Default:  "AUTH_LDAP_SCOPE_ONE",
+			},
 		},
 	}
 }

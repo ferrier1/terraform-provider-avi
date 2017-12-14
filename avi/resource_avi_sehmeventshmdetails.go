@@ -18,7 +18,8 @@ func ResourceSeHmEventShmDetailsSchema() *schema.Resource {
 			},
 			"health_monitor": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"resp_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

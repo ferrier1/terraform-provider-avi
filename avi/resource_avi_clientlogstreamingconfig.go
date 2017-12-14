@@ -24,7 +24,8 @@ func ResourceClientLogStreamingConfigSchema() *schema.Resource {
 			"log_types_to_send": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "LOGS_ALL"},
+				Default:  "LOGS_ALL",
+			},
 			"max_logs_per_second": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

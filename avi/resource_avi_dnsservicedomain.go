@@ -14,7 +14,8 @@ func ResourceDnsServiceDomainSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"domain_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"num_dns_ip": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

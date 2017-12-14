@@ -18,7 +18,8 @@ func ResourceMarathonLoginSchema() *schema.Resource {
 			},
 			"marathon_url": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"marathon_username": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

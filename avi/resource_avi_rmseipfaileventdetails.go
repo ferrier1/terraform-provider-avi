@@ -19,7 +19,8 @@ func ResourceRmSeIpFailEventDetailsSchema() *schema.Resource {
 			"networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRmAddVnicSchema()},
+				Elem:     ResourceRmAddVnicSchema(),
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

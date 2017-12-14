@@ -14,10 +14,12 @@ func ResourceVISetMgmtIpSERspSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"sevm_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"status": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"status_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -19,11 +19,16 @@ func ResourceGslbDnsInfoSchema() *schema.Resource {
 			"dns_vs_states": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbPerDnsStateSchema()},
+				Elem:     ResourceGslbPerDnsStateSchema(),
+			},
 			"gs_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbDnsGsStatusSchema()},
+				Elem:     ResourceGslbDnsGsStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"retry_count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -31,7 +36,8 @@ func ResourceGslbDnsInfoSchema() *schema.Resource {
 			"se_table": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbDnsSeInfoSchema()},
+				Elem:     ResourceGslbDnsSeInfoSchema(),
+			},
 		},
 	}
 }

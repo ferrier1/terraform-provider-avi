@@ -26,7 +26,8 @@ func ResourceURIParamTokenSchema() *schema.Resource {
 			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

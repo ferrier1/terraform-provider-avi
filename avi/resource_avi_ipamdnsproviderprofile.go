@@ -22,49 +22,84 @@ func ResourceIpamDnsProviderProfileSchema() map[string]*schema.Schema {
 		"aws_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpamDnsAwsProfileSchema()},
+			Elem:     ResourceIpamDnsAwsProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"azure_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpamDnsAzureProfileSchema()},
+			Elem:     ResourceIpamDnsAzureProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"custom_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpamDnsCustomProfileSchema()},
+			Elem:     ResourceIpamDnsCustomProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"gcp_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpamDnsGCPProfileSchema()},
+			Elem:     ResourceIpamDnsGCPProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"infoblox_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpamDnsInfobloxProfileSchema()},
+			Elem:     ResourceIpamDnsInfobloxProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"internal_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpamDnsInternalProfileSchema()},
+			Elem:     ResourceIpamDnsInternalProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"openstack_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpamDnsOpenstackProfileSchema()},
+			Elem:     ResourceIpamDnsOpenstackProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"proxy_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceProxyConfigurationSchema()},
+			Elem:     ResourceProxyConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
 		},
 		"type": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

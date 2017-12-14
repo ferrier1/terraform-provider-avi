@@ -15,7 +15,11 @@ func ResourceSeAgentGraphDBNodeStatsSchema() *schema.Resource {
 			"delete_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeAgentGraphDBNodeTxnStatsSchema()},
+				Elem:     ResourceSeAgentGraphDBNodeTxnStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"num_create": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -35,11 +39,19 @@ func ResourceSeAgentGraphDBNodeStatsSchema() *schema.Resource {
 			"read_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeAgentGraphDBNodeTxnStatsSchema()},
+				Elem:     ResourceSeAgentGraphDBNodeTxnStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"update_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeAgentGraphDBNodeTxnStatsSchema()},
+				Elem:     ResourceSeAgentGraphDBNodeTxnStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

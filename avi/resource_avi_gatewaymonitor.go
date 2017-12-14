@@ -14,7 +14,11 @@ func ResourceGatewayMonitorSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"gateway_ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gateway_monitor_fail_threshold": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -33,7 +37,11 @@ func ResourceGatewayMonitorSchema() *schema.Resource {
 			"subnet": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

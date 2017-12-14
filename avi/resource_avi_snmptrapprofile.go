@@ -16,7 +16,8 @@ func ResourceSnmpTrapProfileSchema() map[string]*schema.Schema {
 	return map[string]*schema.Schema{
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -24,11 +25,13 @@ func ResourceSnmpTrapProfileSchema() map[string]*schema.Schema {
 		"trap_servers": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceSnmpTrapServerSchema()},
+			Elem:     ResourceSnmpTrapServerSchema(),
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

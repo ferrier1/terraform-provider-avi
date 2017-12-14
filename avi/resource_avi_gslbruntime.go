@@ -23,15 +23,24 @@ func ResourceGslbRuntimeSchema() *schema.Resource {
 			"event_cache": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceEventCacheSchema()},
+				Elem:     ResourceEventCacheSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"flr_state": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+			},
 			"ldr_state": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCfgStateSchema()},
+				Elem:     ResourceCfgStateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -39,7 +48,8 @@ func ResourceGslbRuntimeSchema() *schema.Resource {
 			"site": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbSiteRuntimeSchema()},
+				Elem:     ResourceGslbSiteRuntimeSchema(),
+			},
 			"tenant_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -47,11 +57,13 @@ func ResourceGslbRuntimeSchema() *schema.Resource {
 			"third_party_sites": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbThirdPartySiteRuntimeSchema()},
+				Elem:     ResourceGslbThirdPartySiteRuntimeSchema(),
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

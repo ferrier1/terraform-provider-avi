@@ -14,10 +14,12 @@ func Resourcecc_create_se_rspSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"cookie": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

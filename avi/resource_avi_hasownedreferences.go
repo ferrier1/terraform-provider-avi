@@ -15,10 +15,12 @@ func ResourceHasOwnedReferencesSchema() *schema.Resource {
 			"multiple_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIsOwnedReferenceSchema()},
+				Elem:     ResourceIsOwnedReferenceSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -26,7 +28,8 @@ func ResourceHasOwnedReferencesSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

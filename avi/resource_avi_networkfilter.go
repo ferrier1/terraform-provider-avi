@@ -14,7 +14,8 @@ func ResourceNetworkFilterSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"network_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"server_filter": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

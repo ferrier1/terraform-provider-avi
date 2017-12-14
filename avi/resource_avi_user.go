@@ -15,7 +15,8 @@ func ResourceUserSchema() *schema.Resource {
 			"access": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceUserRoleSchema()},
+				Elem:     ResourceUserRoleSchema(),
+			},
 			"default_tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -39,7 +40,8 @@ func ResourceUserSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"user_profile_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -47,7 +49,8 @@ func ResourceUserSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

@@ -15,23 +15,43 @@ func ResourcePlacementOpInfoSchema() *schema.Resource {
 			"create_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCreateInfoSchema()},
+				Elem:     ResourceCreateInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"mod_vnic_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceModVnicInfoSchema()},
+				Elem:     ResourceModVnicInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"switchover_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSwitchoverInfoSchema()},
+				Elem:     ResourceSwitchoverInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vip_vnic_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceUpdVipVnicInfoSchema()},
+				Elem:     ResourceUpdVipVnicInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vnic_ip_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVnicIpInfoSchema()},
+				Elem:     ResourceVnicIpInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

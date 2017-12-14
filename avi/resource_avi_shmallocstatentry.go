@@ -14,16 +14,20 @@ func ResourceShMallocStatEntrySchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"sh_malloc_type_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"sh_malloc_type_fail": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"sh_malloc_type_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sh_malloc_type_size": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -14,10 +14,12 @@ func ResourceIpAddrSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"addr": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

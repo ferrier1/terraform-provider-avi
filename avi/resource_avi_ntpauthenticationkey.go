@@ -15,7 +15,8 @@ func ResourceNTPAuthenticationKeySchema() *schema.Resource {
 			"algorithm": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "NTP_AUTH_ALGORITHM_MD5"},
+				Default:  "NTP_AUTH_ALGORITHM_MD5",
+			},
 			"key": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

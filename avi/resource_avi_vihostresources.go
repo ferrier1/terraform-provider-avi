@@ -15,7 +15,8 @@ func ResourceVIHostResourcesSchema() *schema.Resource {
 			"hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHostResourceInfoSchema()},
+				Elem:     ResourceHostResourceInfoSchema(),
+			},
 		},
 	}
 }

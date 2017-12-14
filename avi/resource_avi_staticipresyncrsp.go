@@ -15,11 +15,13 @@ func ResourceStaticIPResyncRspSchema() *schema.Resource {
 			"added_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceStaticIPInfoSchema()},
+				Elem:     ResourceStaticIPInfoSchema(),
+			},
 			"deleted_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceStaticIPInfoSchema()},
+				Elem:     ResourceStaticIPInfoSchema(),
+			},
 		},
 	}
 }

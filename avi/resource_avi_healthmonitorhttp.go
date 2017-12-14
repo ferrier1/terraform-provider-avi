@@ -20,7 +20,8 @@ func ResourceHealthMonitorHttpSchema() *schema.Resource {
 			"http_request": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "GET / HTTP/1.0"},
+				Default:  "GET / HTTP/1.0",
+			},
 			"http_response": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -28,11 +29,13 @@ func ResourceHealthMonitorHttpSchema() *schema.Resource {
 			"http_response_code": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"maintenance_code": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeInt}},
+				Elem:     &schema.Schema{Type: schema.TypeInt},
+			},
 			"maintenance_response": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -40,7 +43,11 @@ func ResourceHealthMonitorHttpSchema() *schema.Resource {
 			"ssl_attributes": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthMonitorSSLAttributesSchema()},
+				Elem:     ResourceHealthMonitorSSLAttributesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

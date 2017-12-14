@@ -18,15 +18,18 @@ func ResourceHSMSafenetLunaSchema() *schema.Resource {
 			},
 			"is_ha": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"node_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHSMSafenetClientInfoSchema()},
+				Elem:     ResourceHSMSafenetClientInfoSchema(),
+			},
 			"server": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHSMSafenetLunaServerSchema()},
+				Elem:     ResourceHSMSafenetLunaServerSchema(),
+			},
 			"server_pem": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

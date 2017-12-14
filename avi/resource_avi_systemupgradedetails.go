@@ -15,7 +15,11 @@ func ResourceSystemUpgradeDetailsSchema() *schema.Resource {
 			"upgrade_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSystemUpgradeStateSchema()},
+				Elem:     ResourceSystemUpgradeStateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

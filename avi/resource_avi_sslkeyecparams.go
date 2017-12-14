@@ -15,7 +15,8 @@ func ResourceSSLKeyECParamsSchema() *schema.Resource {
 			"curve": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SSL_KEY_EC_CURVE_SECP256R1"},
+				Default:  "SSL_KEY_EC_CURVE_SECP256R1",
+			},
 		},
 	}
 }

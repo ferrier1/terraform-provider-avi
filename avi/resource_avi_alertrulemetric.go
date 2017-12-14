@@ -22,7 +22,11 @@ func ResourceAlertRuleMetricSchema() *schema.Resource {
 			},
 			"metric_threshold": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceAlertMetricThresholdSchema()},
+				Required: true, Elem: ResourceAlertMetricThresholdSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

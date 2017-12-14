@@ -35,7 +35,8 @@ func ResourceBgpRuntimeSchema() *schema.Resource {
 			"peers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceBgpPeerRuntimeSchema()},
+				Elem:     ResourceBgpPeerRuntimeSchema(),
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

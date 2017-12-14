@@ -15,7 +15,8 @@ func ResourceGslbConsistencyCheckerSchema() *schema.Resource {
 			"info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbInfoSchema()},
+				Elem:     ResourceGslbInfoSchema(),
+			},
 		},
 	}
 }

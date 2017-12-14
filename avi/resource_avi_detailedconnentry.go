@@ -23,15 +23,27 @@ func ResourceDetailedConnEntrySchema() *schema.Resource {
 			"inpcb_fast_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceInpcbFastInfoSchema()},
+				Elem:     ResourceInpcbFastInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"inpcb_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceInpcbInfoSchema()},
+				Elem:     ResourceInpcbInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"inpcb_proxy_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceInpcbProxyInfoSchema()},
+				Elem:     ResourceInpcbProxyInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"l_ip": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -43,15 +55,27 @@ func ResourceDetailedConnEntrySchema() *schema.Resource {
 			"socket_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSocketInfoSchema()},
+				Elem:     ResourceSocketInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tcpcb_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTcpcbInfoSchema()},
+				Elem:     ResourceTcpcbInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tcptw_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTcptwInfoSchema()},
+				Elem:     ResourceTcptwInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

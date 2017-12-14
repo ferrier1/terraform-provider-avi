@@ -19,21 +19,25 @@ func ResourceVirtualServicePerformanceScoreDataSchema() *schema.Resource {
 			"apdexr": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
-				Default:  "100.0"},
+				Default:  "100.0",
+			},
 			"avg_pool_performance_score": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
 			},
 			"oper_state": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"pool_performance_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcePoolPerformanceScoreSchema()},
+				Elem:     ResourcePoolPerformanceScoreSchema(),
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

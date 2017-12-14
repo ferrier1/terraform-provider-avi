@@ -23,7 +23,8 @@ func ResourceInterfaceSummaryEntrySchema() *schema.Resource {
 			"ip_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpInterfaceSchema()},
+				Elem:     ResourceIpInterfaceSchema(),
+			},
 			"linux_intf_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

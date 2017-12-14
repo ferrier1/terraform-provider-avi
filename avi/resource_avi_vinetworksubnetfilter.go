@@ -14,13 +14,16 @@ func ResourceVINetworkSubnetFilterSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ip_subnet": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mask": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"network_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

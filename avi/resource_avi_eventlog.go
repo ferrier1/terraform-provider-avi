@@ -27,14 +27,20 @@ func ResourceEventLogSchema() *schema.Resource {
 			"event_details": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceEventDetailsSchema()},
+				Elem:     ResourceEventDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"event_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"event_pages": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"ignore_event_details_display": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -43,7 +49,8 @@ func ResourceEventLogSchema() *schema.Resource {
 			"internal": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "EVENT_INTERNAL"},
+				Default:  "EVENT_INTERNAL",
+			},
 			"is_security_event": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -51,7 +58,8 @@ func ResourceEventLogSchema() *schema.Resource {
 			},
 			"module": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"obj_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -71,10 +79,12 @@ func ResourceEventLogSchema() *schema.Resource {
 			"related_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"report_timestamp": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"tenant": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

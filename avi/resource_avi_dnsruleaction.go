@@ -15,15 +15,27 @@ func ResourceDnsRuleActionSchema() *schema.Resource {
 			"allow": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsRuleActionAllowDropSchema()},
+				Elem:     ResourceDnsRuleActionAllowDropSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gslb_site_selection": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsRuleActionGslbSiteSelectionSchema()},
+				Elem:     ResourceDnsRuleActionGslbSiteSelectionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"response": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsRuleActionResponseSchema()},
+				Elem:     ResourceDnsRuleActionResponseSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

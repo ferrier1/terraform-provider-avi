@@ -19,11 +19,13 @@ func ResourceVsCandidateSeHostListSchema() *schema.Resource {
 			"host": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsCandidateHostSchema()},
+				Elem:     ResourceVsCandidateHostSchema(),
+			},
 			"se": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsCandidateSeSchema()},
+				Elem:     ResourceVsCandidateSeSchema(),
+			},
 		},
 	}
 }

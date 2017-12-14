@@ -14,7 +14,11 @@ func ResourcensxVshieldAppConfigurationSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"excludelistconfiguration": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourcensxExcludeListConfigurationSchema()},
+				Required: true, Elem: ResourcensxExcludeListConfigurationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

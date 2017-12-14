@@ -15,26 +15,35 @@ func ResourceIpamDnsInfobloxProfileSchema() *schema.Resource {
 			"dns_view": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "default"},
+				Default:  "default",
+			},
 			"ip_address": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"network_view": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "default"},
+				Default:  "default",
+			},
 			"usable_domains": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"usable_subnets": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+			},
 			"wapi_version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "2.0"},
+				Default:  "2.0",
+			},
 		},
 	}
 }

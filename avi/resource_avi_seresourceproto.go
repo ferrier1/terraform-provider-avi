@@ -17,7 +17,8 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"active_tags": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"at_curr_ver": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -30,11 +31,16 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"azure_info": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureInfoSchema()},
+			Elem:     ResourceAzureInfoSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"bootup_consumers": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"bootup_failed": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -52,7 +58,8 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"container_type": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "CONTAINER_TYPE_HOST"},
+			Default:  "CONTAINER_TYPE_HOST",
+		},
 		"controller_created": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -74,6 +81,7 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"del_start_ticks": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"disconnected": &schema.Schema{
 			Type:     schema.TypeBool,
@@ -82,11 +90,13 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		},
 		"disk_gb": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"enable_state": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SE_STATE_ENABLED"},
+			Default:  "SE_STATE_ENABLED",
+		},
 		"flavor": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -112,15 +122,18 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"ip_mac_addr": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"ip_masks": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeInt}},
+			Elem:     &schema.Schema{Type: schema.TypeInt},
+		},
 		"ips": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrSchema()},
+			Elem:     ResourceIpAddrSchema(),
+		},
 		"last_reboot_ticks": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -128,7 +141,8 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"masked_ips": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceIpAddrSchema()},
+			Elem:     ResourceIpAddrSchema(),
+		},
 		"max_ips_per_vnic": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -139,13 +153,16 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		},
 		"memory": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"memory_free": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"memory_inuse": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"mgmt_net_uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -157,6 +174,7 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"next_vnic_gc_ticks": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"next_vnic_op_ticks": &schema.Schema{
 			Type:     schema.TypeInt,
@@ -170,14 +188,17 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"pending_consumers": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourcePendingConsumerSchema()},
+			Elem:     ResourcePendingConsumerSchema(),
+		},
 		"reason_code": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SE_DEREG_POWERED_OFF"},
+			Default:  "SE_DEREG_POWERED_OFF",
+		},
 		"reboot_attempts": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
+			Default:  0,
 		},
 		"ref": &schema.Schema{
 			Type:     schema.TypeString,
@@ -186,7 +207,8 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"resources_consumed": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceSeResourceConsumedProtoSchema()},
+			Elem:     ResourceSeResourceConsumedProtoSchema(),
+		},
 		"se_group_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -194,7 +216,11 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"static_ip": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+			Elem:     ResourceIpAddrSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"unused_since": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -206,17 +232,21 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		},
 		"vcpus": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"vcpus_free": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"vcpus_inuse": &schema.Schema{
 			Type:     schema.TypeInt,
-			Required: true},
+			Required: true,
+		},
 		"version": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "0.0.0"},
+			Default:  "0.0.0",
+		},
 		"vinfra_discovered": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -225,15 +255,21 @@ func ResourceSeResourceProtoSchema() map[string]*schema.Schema {
 		"vnic_op": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeVnicOpProtoSchema()},
+			Elem:     ResourceSeVnicOpProtoSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"vnic_op_consumers": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"vnics": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceSeResourceVnicSchema()},
+			Elem:     ResourceSeResourceVnicSchema(),
+		},
 		"warm_starting": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,

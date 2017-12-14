@@ -15,7 +15,8 @@ func ResourceDNSRegisterInfoSchema() *schema.Resource {
 			"dns_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsInfoSchema()},
+				Elem:     ResourceDnsInfoSchema(),
+			},
 			"error": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,7 +24,11 @@ func ResourceDNSRegisterInfoSchema() *schema.Resource {
 			"fip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"total_records": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -31,7 +36,11 @@ func ResourceDNSRegisterInfoSchema() *schema.Resource {
 			"vip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vip_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -39,11 +48,13 @@ func ResourceDNSRegisterInfoSchema() *schema.Resource {
 			"vs_names": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vs_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

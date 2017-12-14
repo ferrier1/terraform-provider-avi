@@ -20,7 +20,8 @@ func ResourceDnsServiceApplicationProfileSchema() *schema.Resource {
 			"authoritative_domain_names": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"dns_over_tcp_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -29,7 +30,8 @@ func ResourceDnsServiceApplicationProfileSchema() *schema.Resource {
 			"domain_names": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"ecs_stripping_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -47,7 +49,8 @@ func ResourceDnsServiceApplicationProfileSchema() *schema.Resource {
 			"error_response": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "DNS_ERROR_RESPONSE_NONE"},
+				Default:  "DNS_ERROR_RESPONSE_NONE",
+			},
 			"negative_caching_ttl": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

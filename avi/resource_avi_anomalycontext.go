@@ -15,26 +15,44 @@ func ResourceAnomalyContextSchema() *schema.Resource {
 			"ema_context": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceExponentialMovingAverageCtxSchema()},
+				Elem:     ResourceExponentialMovingAverageCtxSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ewma_context": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceExponentialMovingAverageCtxSchema()},
+				Elem:     ResourceExponentialMovingAverageCtxSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"hw_at_as_context": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHoltWintersCtxSchema()},
+				Elem:     ResourceHoltWintersCtxSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"hw_at_ms_context": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHoltWintersCtxSchema()},
+				Elem:     ResourceHoltWintersCtxSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"prediction_interval_high": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"prediction_interval_low": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 		},
 	}

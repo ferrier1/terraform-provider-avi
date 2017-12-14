@@ -15,11 +15,16 @@ func ResourceDnsInfoSchema() *schema.Resource {
 			"algorithm": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "DNS_RECORD_RESPONSE_CONSISTENT_HASH"},
+				Default:  "DNS_RECORD_RESPONSE_CONSISTENT_HASH",
+			},
 			"cname": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsCnameRdataSchema()},
+				Elem:     ResourceDnsCnameRdataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"fqdn": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -40,7 +45,8 @@ func ResourceDnsInfoSchema() *schema.Resource {
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "DNS_RECORD_A"},
+				Default:  "DNS_RECORD_A",
+			},
 		},
 	}
 }

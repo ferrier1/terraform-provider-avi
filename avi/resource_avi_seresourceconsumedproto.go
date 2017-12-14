@@ -24,6 +24,7 @@ func ResourceSeResourceConsumedProtoSchema() *schema.Resource {
 			"attach_ip_fail_cnt": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"attach_ip_fail_str": &schema.Schema{
 				Type:     schema.TypeString,
@@ -32,7 +33,8 @@ func ResourceSeResourceConsumedProtoSchema() *schema.Resource {
 			"attach_ip_fail_syserr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_FAILURE"},
+				Default:  "SYSERR_FAILURE",
+			},
 			"attach_ip_in_progress": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -49,7 +51,8 @@ func ResourceSeResourceConsumedProtoSchema() *schema.Resource {
 			},
 			"consumer_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"cookie": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -57,11 +60,13 @@ func ResourceSeResourceConsumedProtoSchema() *schema.Resource {
 			"failover_attempts": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"floating_intf_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"is_primary": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -83,6 +88,7 @@ func ResourceSeResourceConsumedProtoSchema() *schema.Resource {
 			"last_failover_attempt_ticks": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"marked_for_delete": &schema.Schema{
 				Type:     schema.TypeBool,
@@ -104,7 +110,8 @@ func ResourceSeResourceConsumedProtoSchema() *schema.Resource {
 			},
 			"res_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sec_idx": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -122,15 +129,21 @@ func ResourceSeResourceConsumedProtoSchema() *schema.Resource {
 			"vip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vip_intf_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVipInterfaceListSchema()},
+				Elem:     ResourceSeVipInterfaceListSchema(),
+			},
 			"vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeResourceVnicSchema()},
+				Elem:     ResourceSeResourceVnicSchema(),
+			},
 		},
 	}
 }

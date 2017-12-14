@@ -25,7 +25,8 @@ func ResourceTCPProxyProfileSchema() *schema.Resource {
 			"cc_algo": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "CC_ALGO_NEW_RENO"},
+				Default:  "CC_ALGO_NEW_RENO",
+			},
 			"idle_connection_timeout": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -34,7 +35,8 @@ func ResourceTCPProxyProfileSchema() *schema.Resource {
 			"idle_connection_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "KEEP_ALIVE"},
+				Default:  "KEEP_ALIVE",
+			},
 			"ignore_time_wait": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -43,6 +45,7 @@ func ResourceTCPProxyProfileSchema() *schema.Resource {
 			"ip_dscp": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"max_retransmissions": &schema.Schema{
 				Type:     schema.TypeInt,

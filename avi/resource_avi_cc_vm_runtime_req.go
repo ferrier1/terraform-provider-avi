@@ -15,7 +15,8 @@ func Resourcecc_vm_runtime_reqSchema() *schema.Resource {
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"network_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

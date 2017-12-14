@@ -17,15 +17,24 @@ func ResourceVrfContextSchema() map[string]*schema.Schema {
 		"bgp_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceBgpProfileSchema()},
+			Elem:     ResourceBgpProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"cloud_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "/api/cloud?name=Default-Cloud"},
+			Default:  "/api/cloud?name=Default-Cloud",
+		},
 		"debugvrfcontext": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceDebugVrfContextSchema()},
+			Elem:     ResourceDebugVrfContextSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"description": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -33,18 +42,25 @@ func ResourceVrfContextSchema() map[string]*schema.Schema {
 		"gateway_mon": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceGatewayMonitorSchema()},
+			Elem:     ResourceGatewayMonitorSchema(),
+		},
 		"internal_gateway_monitor": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceInternalGatewayMonitorSchema()},
+			Elem:     ResourceInternalGatewayMonitorSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"static_routes": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceStaticRouteSchema()},
+			Elem:     ResourceStaticRouteSchema(),
+		},
 		"system_default": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -57,7 +73,8 @@ func ResourceVrfContextSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

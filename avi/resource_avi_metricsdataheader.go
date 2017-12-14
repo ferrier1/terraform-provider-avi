@@ -15,11 +15,16 @@ func ResourceMetricsDataHeaderSchema() *schema.Resource {
 			"derivation_data": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricsDerivationDataSchema()},
+				Elem:     ResourceMetricsDerivationDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dimension_data": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsDimensionDataSchema()},
+				Elem:     ResourceMetricsDimensionDataSchema(),
+			},
 			"entity_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -40,10 +45,12 @@ func ResourceMetricsDataHeaderSchema() *schema.Resource {
 			"missing_intervals": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsMissingDataIntervalSchema()},
+				Elem:     ResourceMetricsMissingDataIntervalSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"obj_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -68,7 +75,11 @@ func ResourceMetricsDataHeaderSchema() *schema.Resource {
 			"statistics": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricStatisticsSchema()},
+				Elem:     ResourceMetricStatisticsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tenant_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -76,7 +87,8 @@ func ResourceMetricsDataHeaderSchema() *schema.Resource {
 			"units": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRIC_COUNT"},
+				Default:  "METRIC_COUNT",
+			},
 		},
 	}
 }

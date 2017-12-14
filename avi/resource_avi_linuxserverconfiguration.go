@@ -15,7 +15,8 @@ func ResourceLinuxServerConfigurationSchema() *schema.Resource {
 			"hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceLinuxServerHostSchema()},
+				Elem:     ResourceLinuxServerHostSchema(),
+			},
 			"se_inband_mgmt": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

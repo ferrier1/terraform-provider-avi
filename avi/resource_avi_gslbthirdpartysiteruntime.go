@@ -15,7 +15,11 @@ func ResourceGslbThirdPartySiteRuntimeSchema() *schema.Resource {
 			"site_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbSiteRuntimeInfoSchema()},
+				Elem:     ResourceGslbSiteRuntimeInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

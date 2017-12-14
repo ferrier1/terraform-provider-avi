@@ -15,15 +15,21 @@ func ResourceVirtualServiceDbExtensionSchema() *schema.Resource {
 			"apic_extension": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsApicExtensionSchema()},
+				Elem:     ResourceVsApicExtensionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ipam_dns_records": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsRecordSchema()},
+				Elem:     ResourceDnsRecordSchema(),
+			},
 			"lif": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"redis_db": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -39,19 +45,23 @@ func ResourceVirtualServiceDbExtensionSchema() *schema.Resource {
 			"tls_ticket_key": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceTLSTicketSchema()},
+				Elem:     ResourceTLSTicketSchema(),
+			},
 			"version": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"vh_child_vs_uuid": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vip_runtime": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVipDbExtensionSchema()},
+				Elem:     ResourceVipDbExtensionSchema(),
+			},
 		},
 	}
 }

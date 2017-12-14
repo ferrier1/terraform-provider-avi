@@ -14,7 +14,8 @@ func ResourceHealthScoreMetricSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"hs_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

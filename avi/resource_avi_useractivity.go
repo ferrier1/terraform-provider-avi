@@ -15,10 +15,12 @@ func ResourceUserActivitySchema() *schema.Resource {
 			"concurrent_sessions": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"failed_login_attempts": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"last_login_ip": &schema.Schema{
 				Type:     schema.TypeString,
@@ -43,11 +45,13 @@ func ResourceUserActivitySchema() *schema.Resource {
 			"previous_password": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

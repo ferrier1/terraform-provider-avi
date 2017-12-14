@@ -15,11 +15,16 @@ func ResourceStaticIPRspSchema() *schema.Resource {
 			"ip_alloc": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceStaticIPInfoSchema()},
+				Elem:     ResourceStaticIPInfoSchema(),
+			},
 			"rsp_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceStaticIPRspStatusSchema()},
+				Elem:     ResourceStaticIPRspStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

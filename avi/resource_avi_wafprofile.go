@@ -17,7 +17,11 @@ func ResourceWafProfileSchema() map[string]*schema.Schema {
 		"config": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceWafConfigSchema()},
+			Elem:     ResourceWafConfigSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"description": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -25,10 +29,12 @@ func ResourceWafProfileSchema() map[string]*schema.Schema {
 		"files": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceWafDataFileSchema()},
+			Elem:     ResourceWafDataFileSchema(),
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -36,7 +42,8 @@ func ResourceWafProfileSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

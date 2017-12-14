@@ -15,7 +15,8 @@ func ResourceSidebandProfileSchema() *schema.Resource {
 			"ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"sideband_max_request_body_size": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

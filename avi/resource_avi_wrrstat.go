@@ -15,13 +15,16 @@ func ResourceWrrStatSchema() *schema.Resource {
 			"entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceWrrEntrySchema()},
+				Elem:     ResourceWrrEntrySchema(),
+			},
 			"next_index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"total_weight": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

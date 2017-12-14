@@ -14,7 +14,8 @@ func ResourcensxFwObjTypeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"typename": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

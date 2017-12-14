@@ -15,18 +15,31 @@ func ResourceNetworkProfileUnionSchema() *schema.Resource {
 			"tcp_fast_path_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTCPFastPathProfileSchema()},
+				Elem:     ResourceTCPFastPathProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tcp_proxy_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTCPProxyProfileSchema()},
+				Elem:     ResourceTCPProxyProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"udp_fast_path_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceUDPFastPathProfileSchema()},
+				Elem:     ResourceUDPFastPathProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

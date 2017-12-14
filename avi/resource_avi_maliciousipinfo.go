@@ -14,14 +14,17 @@ func ResourceMaliciousIpInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"count": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"dos_dimension": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "DOS_IP"},
+				Default:  "DOS_IP",
+			},
 			"dst_ip": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"interface": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -29,13 +32,19 @@ func ResourceMaliciousIpInfoSchema() *schema.Resource {
 			"meta_data": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAttackMetaDataSchema()},
+				Elem:     ResourceAttackMetaDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"src_ip": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

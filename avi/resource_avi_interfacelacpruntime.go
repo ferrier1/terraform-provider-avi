@@ -15,7 +15,8 @@ func ResourceInterfaceLacpRuntimeSchema() *schema.Resource {
 			"interface_lacp_entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceInterfaceLacpEntrySchema()},
+				Elem:     ResourceInterfaceLacpEntrySchema(),
+			},
 		},
 	}
 }

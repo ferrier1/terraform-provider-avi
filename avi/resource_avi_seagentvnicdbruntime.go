@@ -35,11 +35,13 @@ func ResourceSeAgentVnicDBRuntimeSchema() *schema.Resource {
 			"vnic": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAgentVnicRuntimeSchema()},
+				Elem:     ResourceSeAgentVnicRuntimeSchema(),
+			},
 			"vrf": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeAgentVrfRuntimeSchema()},
+				Elem:     ResourceSeAgentVrfRuntimeSchema(),
+			},
 		},
 	}
 }

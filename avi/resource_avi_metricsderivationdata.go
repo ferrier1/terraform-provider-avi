@@ -14,7 +14,8 @@ func ResourceMetricsDerivationDataSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"derivation_fn": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"exclude_derived_metric": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -31,7 +32,8 @@ func ResourceMetricsDerivationDataSchema() *schema.Resource {
 			},
 			"metric_ids": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"result_has_additional_fields": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

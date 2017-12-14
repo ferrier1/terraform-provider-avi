@@ -32,7 +32,8 @@ func ResourceSSLCertificateSchema() *schema.Resource {
 			"expiry_status": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SSL_CERTIFICATE_GOOD"},
+				Default:  "SSL_CERTIFICATE_GOOD",
+			},
 			"fingerprint": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -40,11 +41,19 @@ func ResourceSSLCertificateSchema() *schema.Resource {
 			"issuer": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLCertificateDescriptionSchema()},
+				Elem:     ResourceSSLCertificateDescriptionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"key_params": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLKeyParamsSchema()},
+				Elem:     ResourceSSLKeyParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"not_after": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -76,11 +85,16 @@ func ResourceSSLCertificateSchema() *schema.Resource {
 			"subject": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLCertificateDescriptionSchema()},
+				Elem:     ResourceSSLCertificateDescriptionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"subject_alt_names": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"text": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -14,64 +14,88 @@ func ResourceHttpCacheStatsDetailSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"available_size": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"etype_adds": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHttpCacheETypeStatsSchema()},
+				Elem:     ResourceHttpCacheETypeStatsSchema(),
+			},
 			"etype_objects": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHttpCacheETypeStatsSchema()},
+				Elem:     ResourceHttpCacheETypeStatsSchema(),
+			},
 			"fetch": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHttpCacheStatSchema()},
+				Elem:     ResourceHttpCacheStatSchema(),
+			},
 			"global_evicts": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"incoming": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceHttpCacheStatsObjSchema()},
+				Required: true, Elem: ResourceHttpCacheStatsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"local_evicts": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"lookups": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"mcopy_fail": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"meta_size": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"msplit_fail": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"outgoing": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceHttpCacheStatsObjSchema()},
+				Required: true, Elem: ResourceHttpCacheStatsObjSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reval": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHttpCacheStatSchema()},
+				Elem:     ResourceHttpCacheStatSchema(),
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"shm_fail": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"store": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHttpCacheStatSchema()},
+				Elem:     ResourceHttpCacheStatSchema(),
+			},
 			"store_out": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHttpCacheStatSchema()},
+				Elem:     ResourceHttpCacheStatSchema(),
+			},
 		},
 	}
 }

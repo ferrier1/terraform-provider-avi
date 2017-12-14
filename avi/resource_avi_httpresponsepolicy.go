@@ -15,7 +15,8 @@ func ResourceHTTPResponsePolicySchema() *schema.Resource {
 			"rules": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHTTPResponseRuleSchema()},
+				Elem:     ResourceHTTPResponseRuleSchema(),
+			},
 		},
 	}
 }

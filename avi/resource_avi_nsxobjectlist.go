@@ -15,15 +15,18 @@ func ResourcensxObjectListSchema() *schema.Resource {
 			"application": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxApplicationSchema()},
+				Elem:     ResourcensxApplicationSchema(),
+			},
 			"ipset": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceipsetSchema()},
+				Elem:     ResourceipsetSchema(),
+			},
 			"securitygroup": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcesecuritygroupSchema()},
+				Elem:     ResourcesecuritygroupSchema(),
+			},
 		},
 	}
 }

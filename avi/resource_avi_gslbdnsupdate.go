@@ -19,7 +19,8 @@ func ResourceGslbDnsUpdateSchema() *schema.Resource {
 			"obj_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbObjectInfoSchema()},
+				Elem:     ResourceGslbObjectInfoSchema(),
+			},
 			"send_interval": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -27,7 +28,8 @@ func ResourceGslbDnsUpdateSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

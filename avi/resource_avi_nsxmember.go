@@ -43,11 +43,19 @@ func ResourcensxMemberSchema() *schema.Resource {
 			"scope": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxScopeSchema()},
+				Elem:     ResourcensxScopeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxFwObjTypeSchema()},
+				Elem:     ResourcensxFwObjTypeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"universalrevision": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

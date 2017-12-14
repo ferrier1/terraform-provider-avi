@@ -24,7 +24,8 @@ func ResourceAdminAuthConfigurationSchema() *schema.Resource {
 			"mapping_rules": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAuthMappingRuleSchema()},
+				Elem:     ResourceAuthMappingRuleSchema(),
+			},
 		},
 	}
 }

@@ -14,14 +14,17 @@ func ResourceInterfaceRuntimeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVnicInfoSchema()},
+				Elem:     ResourceVnicInfoSchema(),
+			},
 		},
 	}
 }

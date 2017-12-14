@@ -86,7 +86,8 @@ func ResourceMetricsDataSchema() *schema.Resource {
 			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 			"value_str": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

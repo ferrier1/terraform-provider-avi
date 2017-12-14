@@ -30,37 +30,49 @@ func ResourceVirtualServiceStateDBCacheSummarySchema() *schema.Resource {
 			"last_state": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "OPER_DISABLED"},
+				Default:  "OPER_DISABLED",
+			},
 			"last_updated_time": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_events": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_old_events": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"pool_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"se": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVsRuntimeSummarySchema()},
+				Elem:     ResourceSeVsRuntimeSummarySchema(),
+			},
 			"summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceRuntimeSummarySchema()},
+				Elem:     ResourceVirtualServiceRuntimeSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vip_last_states": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVirtualServiceVipMetaDataSchema()},
+				Elem:     ResourceVirtualServiceVipMetaDataSchema(),
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

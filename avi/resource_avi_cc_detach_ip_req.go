@@ -15,18 +15,27 @@ func Resourcecc_detach_ip_reqSchema() *schema.Resource {
 			"azure_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureInfoSchema()},
+				Elem:     ResourceAzureInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"cookie": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"ip_pfx": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Required: true, Elem: ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"mac_addr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -46,7 +55,8 @@ func Resourcecc_detach_ip_reqSchema() *schema.Resource {
 			"se_intfs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeIntfSchema()},
+				Elem:     ResourceSeIntfSchema(),
+			},
 			"se_vm_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -54,7 +64,8 @@ func Resourcecc_detach_ip_reqSchema() *schema.Resource {
 			"services": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsProtocolSchema()},
+				Elem:     ResourceVsProtocolSchema(),
+			},
 			"tenant_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

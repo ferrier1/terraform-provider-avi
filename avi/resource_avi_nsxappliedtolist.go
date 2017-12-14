@@ -15,7 +15,8 @@ func ResourcensxAppliedToListSchema() *schema.Resource {
 			"appliedto": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxAppliedToSchema()},
+				Elem:     ResourcensxAppliedToSchema(),
+			},
 		},
 	}
 }

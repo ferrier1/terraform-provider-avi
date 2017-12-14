@@ -22,10 +22,18 @@ func ResourceSeAgentRouteSchema() *schema.Resource {
 			},
 			"dst_ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gateway": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gwmon_disable": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -36,7 +44,8 @@ func ResourceSeAgentRouteSchema() *schema.Resource {
 			},
 			"mask": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"metric": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

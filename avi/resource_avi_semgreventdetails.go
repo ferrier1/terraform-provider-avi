@@ -27,7 +27,11 @@ func ResourceSeMgrEventDetailsSchema() *schema.Resource {
 			"gcp_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGcpInfoSchema()},
+				Elem:     ResourceGcpInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"host_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -46,7 +50,8 @@ func ResourceSeMgrEventDetailsSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -66,11 +71,13 @@ func ResourceSeMgrEventDetailsSchema() *schema.Resource {
 			"vs_name": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

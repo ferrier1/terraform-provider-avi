@@ -15,13 +15,19 @@ func Resourcecc_lbprov_plugin_rspSchema() *schema.Resource {
 			"data": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOsLbProvPluginsDetailSchema()},
+				Elem:     ResourceOsLbProvPluginsDetailSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

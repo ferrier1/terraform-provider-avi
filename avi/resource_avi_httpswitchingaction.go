@@ -14,11 +14,16 @@ func ResourceHTTPSwitchingActionSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"action": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"file": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPLocalFileSchema()},
+				Elem:     ResourceHTTPLocalFileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_group_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -30,7 +35,11 @@ func ResourceHTTPSwitchingActionSchema() *schema.Resource {
 			"server": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePoolServerSchema()},
+				Elem:     ResourcePoolServerSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"status_code": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

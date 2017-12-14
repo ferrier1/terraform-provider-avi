@@ -35,11 +35,16 @@ func Resourcecc_vip_infoSchema() *schema.Resource {
 			"dns_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsInfoSchema()},
+				Elem:     ResourceDnsInfoSchema(),
+			},
 			"fip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"fip_subnet": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -55,7 +60,11 @@ func Resourcecc_vip_infoSchema() *schema.Resource {
 			"vip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vip_subnet": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -19,7 +19,8 @@ func ResourceRancherLoginSchema() *schema.Resource {
 			"rancher_servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"secret_key": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

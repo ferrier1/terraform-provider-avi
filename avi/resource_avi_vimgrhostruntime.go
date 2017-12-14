@@ -15,7 +15,8 @@ func ResourceVIMgrHostRuntimeSchema() *schema.Resource {
 			"cloud_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/api/cloud?name=Default-Cloud"},
+				Default:  "/api/cloud?name=Default-Cloud",
+			},
 			"cluster_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -32,7 +33,8 @@ func ResourceVIMgrHostRuntimeSchema() *schema.Resource {
 			"connection_state": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "connected"},
+				Default:  "connected",
+			},
 			"cpu_hz": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -43,7 +45,8 @@ func ResourceVIMgrHostRuntimeSchema() *schema.Resource {
 			},
 			"managed_object_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mem": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -54,11 +57,13 @@ func ResourceVIMgrHostRuntimeSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"network_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_cpu_cores": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -74,7 +79,8 @@ func ResourceVIMgrHostRuntimeSchema() *schema.Resource {
 			"pnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCdpLldpInfoSchema()},
+				Elem:     ResourceCdpLldpInfoSchema(),
+			},
 			"powerstate": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -106,15 +112,18 @@ func ResourceVIMgrHostRuntimeSchema() *schema.Resource {
 			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vm_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

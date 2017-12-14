@@ -23,7 +23,8 @@ func ResourceGslbSiteSchema() *schema.Resource {
 			"dns_vses": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbSiteDnsVsSchema()},
+				Elem:     ResourceGslbSiteDnsVsSchema(),
+			},
 			"enabled": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -32,19 +33,26 @@ func ResourceGslbSiteSchema() *schema.Resource {
 			"hm_proxies": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbHealthMonitorProxySchema()},
+				Elem:     ResourceGslbHealthMonitorProxySchema(),
+			},
 			"ip_addresses": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"location": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbGeoLocationSchema()},
+				Elem:     ResourceGslbGeoLocationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"member_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "GSLB_PASSIVE_MEMBER"},
+				Default:  "GSLB_PASSIVE_MEMBER",
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

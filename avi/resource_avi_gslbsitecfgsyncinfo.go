@@ -15,11 +15,16 @@ func ResourceGslbSiteCfgSyncInfoSchema() *schema.Resource {
 			"errored_objects": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVersionInfoSchema()},
+				Elem:     ResourceVersionInfoSchema(),
+			},
 			"last_changed_time": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sync_state": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

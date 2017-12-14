@@ -16,10 +16,15 @@ func ResourceHardwareSecurityModuleGroupSchema() map[string]*schema.Schema {
 	return map[string]*schema.Schema{
 		"hsm": &schema.Schema{
 			Type:     schema.TypeSet,
-			Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceHardwareSecurityModuleSchema()},
+			Required: true, Elem: ResourceHardwareSecurityModuleSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -27,7 +32,8 @@ func ResourceHardwareSecurityModuleGroupSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

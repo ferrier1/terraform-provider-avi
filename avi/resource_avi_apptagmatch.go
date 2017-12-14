@@ -14,7 +14,8 @@ func ResourceAppTagMatchSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"match_criteria": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tag": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

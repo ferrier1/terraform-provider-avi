@@ -32,7 +32,8 @@ func ResourceSSLKeyAndCertificateImportSchema() *schema.Resource {
 			"format": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SSL_PEM"},
+				Default:  "SSL_PEM",
+			},
 			"hardwaresecuritymodulegroup_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -52,11 +53,13 @@ func ResourceSSLKeyAndCertificateImportSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SSL_CERTIFICATE_TYPE_VIRTUALSERVICE"},
+				Default:  "SSL_CERTIFICATE_TYPE_VIRTUALSERVICE",
+			},
 		},
 	}
 }

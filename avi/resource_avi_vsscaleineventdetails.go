@@ -27,18 +27,28 @@ func ResourceVsScaleInEventDetailsSchema() *schema.Resource {
 			"scale_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceScaleStatusSchema()},
+				Elem:     ResourceScaleStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_assigned": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVipSeAssignedSchema()},
+				Elem:     ResourceVipSeAssignedSchema(),
+			},
 			"se_requested": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceResourceSchema()},
+				Elem:     ResourceVirtualServiceResourceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

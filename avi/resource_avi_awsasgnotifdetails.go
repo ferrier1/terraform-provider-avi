@@ -35,7 +35,11 @@ func ResourceAWSASGNotifDetailsSchema() *schema.Resource {
 			"instance_ip_addr": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -14,14 +14,16 @@ func ResourceVITenantNetworkMapSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"network_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tenant_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"vrf_context_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

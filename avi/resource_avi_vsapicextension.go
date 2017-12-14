@@ -18,15 +18,18 @@ func ResourceVsApicExtensionSchema() *schema.Resource {
 			},
 			"txn_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vnic": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsSeVnicSchema()},
+				Elem:     ResourceVsSeVnicSchema(),
+			},
 		},
 	}
 }

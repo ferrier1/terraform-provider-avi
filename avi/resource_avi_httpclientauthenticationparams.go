@@ -23,7 +23,11 @@ func ResourceHTTPClientAuthenticationParamsSchema() *schema.Resource {
 			"request_uri_path": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceStringMatchSchema()},
+				Elem:     ResourceStringMatchSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

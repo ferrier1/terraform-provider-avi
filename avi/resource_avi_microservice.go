@@ -14,11 +14,13 @@ func ResourceMicroServiceSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"application_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"containers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMicroServiceContainerSchema()},
+				Elem:     ResourceMicroServiceContainerSchema(),
+			},
 			"created_by": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -33,10 +35,12 @@ func ResourceMicroServiceSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"orchestrator_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -44,7 +48,8 @@ func ResourceMicroServiceSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

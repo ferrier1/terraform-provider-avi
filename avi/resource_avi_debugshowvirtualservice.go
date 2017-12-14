@@ -14,7 +14,8 @@ func ResourceDebugShowVirtualServiceSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tail": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

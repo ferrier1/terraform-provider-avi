@@ -15,11 +15,16 @@ func ResourceDnsRecordSchema() *schema.Resource {
 			"algorithm": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "DNS_RECORD_RESPONSE_ROUND_ROBIN"},
+				Default:  "DNS_RECORD_RESPONSE_ROUND_ROBIN",
+			},
 			"cname": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsCnameRdataSchema()},
+				Elem:     ResourceDnsCnameRdataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"delegated": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -32,30 +37,36 @@ func ResourceDnsRecordSchema() *schema.Resource {
 			"fqdn": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"ip_address": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsARdataSchema()},
+				Elem:     ResourceDnsARdataSchema(),
+			},
 			"ns": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsNsRdataSchema()},
+				Elem:     ResourceDnsNsRdataSchema(),
+			},
 			"num_records_in_response": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"service_locator": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsSrvRdataSchema()},
+				Elem:     ResourceDnsSrvRdataSchema(),
+			},
 			"ttl": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"wildcard_match": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

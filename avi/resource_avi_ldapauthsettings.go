@@ -24,11 +24,13 @@ func ResourceLdapAuthSettingsSchema() *schema.Resource {
 			"email_attribute": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "email"},
+				Default:  "email",
+			},
 			"full_name_attribute": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "name"},
+				Default:  "name",
+			},
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -41,15 +43,24 @@ func ResourceLdapAuthSettingsSchema() *schema.Resource {
 			"server": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"settings": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceLdapDirectorySettingsSchema()},
+				Elem:     ResourceLdapDirectorySettingsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"user_bind": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceLdapUserBindSettingsSchema()},
+				Elem:     ResourceLdapUserBindSettingsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

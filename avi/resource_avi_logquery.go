@@ -51,11 +51,13 @@ func ResourceLogQuerySchema() *schema.Resource {
 			"filter": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"format": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "json"},
+				Default:  "json",
+			},
 			"groupby": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -86,18 +88,22 @@ func ResourceLogQuerySchema() *schema.Resource {
 			"qrtype": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "QUERY_RANGE_TIME"},
+				Default:  "QUERY_RANGE_TIME",
+			},
 			"query_id": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"start": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"step": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "0"},
+				Default:  "0",
+			},
 			"timeout": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -110,7 +116,8 @@ func ResourceLogQuerySchema() *schema.Resource {
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "QUERY_CONN_LOGS"},
+				Default:  "QUERY_CONN_LOGS",
+			},
 			"udf": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -118,7 +125,8 @@ func ResourceLogQuerySchema() *schema.Resource {
 			},
 			"virtualservice": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

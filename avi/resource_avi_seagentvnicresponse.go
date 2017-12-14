@@ -14,7 +14,8 @@ func ResourceSeAgentVnicResponseSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"status": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

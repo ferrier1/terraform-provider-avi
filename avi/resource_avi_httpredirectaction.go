@@ -15,7 +15,11 @@ func ResourceHTTPRedirectActionSchema() *schema.Resource {
 			"host": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceURIParamSchema()},
+				Elem:     ResourceURIParamSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"keep_query": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -24,18 +28,24 @@ func ResourceHTTPRedirectActionSchema() *schema.Resource {
 			"path": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceURIParamSchema()},
+				Elem:     ResourceURIParamSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"port": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"protocol": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"status_code": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "HTTP_REDIRECT_STATUS_CODE_302"},
+				Default:  "HTTP_REDIRECT_STATUS_CODE_302",
+			},
 		},
 	}
 }

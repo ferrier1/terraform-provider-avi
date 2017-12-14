@@ -14,14 +14,16 @@ func Resourcecc_discover_rspSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"discovered": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"elapsed": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

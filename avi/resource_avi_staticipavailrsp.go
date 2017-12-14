@@ -15,7 +15,8 @@ func ResourceStaticIPAvailRspSchema() *schema.Resource {
 			"ip_avail": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceStaticIPAvailInfoSchema()},
+				Elem:     ResourceStaticIPAvailInfoSchema(),
+			},
 			"status": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

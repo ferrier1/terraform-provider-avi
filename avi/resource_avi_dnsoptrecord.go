@@ -19,7 +19,8 @@ func ResourceDnsOptRecordSchema() *schema.Resource {
 			"options": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsEdnsOptionSchema()},
+				Elem:     ResourceDnsEdnsOptionSchema(),
+			},
 			"udp_payload_size": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

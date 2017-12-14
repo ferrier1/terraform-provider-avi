@@ -26,11 +26,13 @@ func ResourceSingleLicenseSchema() *schema.Resource {
 			},
 			"customer_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"enforced_params": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"last_update": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -41,7 +43,8 @@ func ResourceSingleLicenseSchema() *schema.Resource {
 			},
 			"license_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"license_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -49,7 +52,8 @@ func ResourceSingleLicenseSchema() *schema.Resource {
 			"license_tier": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"license_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -76,7 +80,8 @@ func ResourceSingleLicenseSchema() *schema.Resource {
 			},
 			"valid_until": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

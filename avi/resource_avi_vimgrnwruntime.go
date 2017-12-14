@@ -27,7 +27,8 @@ func ResourceVIMgrNWRuntimeSchema() *schema.Resource {
 			"cloud_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/api/cloud?name=Default-Cloud"},
+				Default:  "/api/cloud?name=Default-Cloud",
+			},
 			"datacenter_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -39,7 +40,8 @@ func ResourceVIMgrNWRuntimeSchema() *schema.Resource {
 			"host_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"interested_nw": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -47,17 +49,20 @@ func ResourceVIMgrNWRuntimeSchema() *schema.Resource {
 			"ip_subnet": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrIPSubnetRuntimeSchema()},
+				Elem:     ResourceVIMgrIPSubnetRuntimeSchema(),
+			},
 			"managed_object_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mgmtnw": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"num_ports": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -76,11 +81,13 @@ func ResourceVIMgrNWRuntimeSchema() *schema.Resource {
 			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vlan": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -88,11 +95,13 @@ func ResourceVIMgrNWRuntimeSchema() *schema.Resource {
 			"vlan_range": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVlanRangeSchema()},
+				Elem:     ResourceVlanRangeSchema(),
+			},
 			"vm_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vrf_context_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

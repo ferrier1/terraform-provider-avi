@@ -14,7 +14,8 @@ func ResourceVsDosStatRuntimeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"bad_rst_flood": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"conn_ip_rl_action_drops": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -34,14 +35,23 @@ func ResourceVsDosStatRuntimeSchema() *schema.Resource {
 			"cps_likely_doser_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCpsDoserStatsSchema()},
+				Elem:     ResourceCpsDoserStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cps_vlikely_doser_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCpsDoserStatsSchema()},
+				Elem:     ResourceCpsDoserStatsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dos_app_error": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"dos_conn": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -56,13 +66,16 @@ func ResourceVsDosStatRuntimeSchema() *schema.Resource {
 			},
 			"dos_http_abort": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"dos_http_error": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"dos_http_timeout": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"dos_req": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -121,13 +134,16 @@ func ResourceVsDosStatRuntimeSchema() *schema.Resource {
 			},
 			"dos_ssl_error": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"fake_session": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"malformed_flood": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"non_syn_flood": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -162,13 +178,16 @@ func ResourceVsDosStatRuntimeSchema() *schema.Resource {
 			},
 			"small_window_stress": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"syn_flood": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"zero_window_stress": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

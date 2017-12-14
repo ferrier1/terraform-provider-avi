@@ -19,27 +19,42 @@ func ResourceCC_LinuxServerSchema() *schema.Resource {
 			"cfg": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceLinuxServerConfigurationSchema()},
+				Elem:     ResourceLinuxServerConfigurationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_HostSchema()},
+				Elem:     ResourceCC_HostSchema(),
+			},
 			"inited_hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"ipam_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_IpamInfoSchema()},
+				Elem:     ResourceCC_IpamInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sshinfo": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_SshInfoSchema()},
+				Elem:     ResourceCC_SshInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"uninited_hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"version_tag": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

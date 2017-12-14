@@ -31,11 +31,19 @@ func ResourceCC_AWSSchema() *schema.Resource {
 			"cfg": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAwsConfigurationSchema()},
+				Elem:     ResourceAwsConfigurationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gc_cc": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_CronSchema()},
+				Elem:     ResourceCC_CronSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"htoken_expiry": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -55,11 +63,13 @@ func ResourceCC_AWSSchema() *schema.Resource {
 			"mgmt_nws": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_MgmtNwSchema()},
+				Elem:     ResourceCC_MgmtNwSchema(),
+			},
 			"park_intfs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_ParkIntfSchema()},
+				Elem:     ResourceCC_ParkIntfSchema(),
+			},
 			"route53_err": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

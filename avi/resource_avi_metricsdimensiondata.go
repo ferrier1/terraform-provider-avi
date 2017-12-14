@@ -14,10 +14,12 @@ func ResourceMetricsDimensionDataSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"dimension": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"dimension_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

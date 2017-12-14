@@ -24,7 +24,8 @@ func ResourceVsPlacementAnalysisSchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_hosts": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -36,11 +37,13 @@ func ResourceVsPlacementAnalysisSchema() *schema.Resource {
 			"se_placement_issues": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsSePlacementAnalysisSchema()},
+				Elem:     ResourceVsSePlacementAnalysisSchema(),
+			},
 			"vip_analysis": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVipPlacementAnalaysisSchema()},
+				Elem:     ResourceVipPlacementAnalaysisSchema(),
+			},
 		},
 	}
 }

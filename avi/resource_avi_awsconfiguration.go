@@ -24,7 +24,11 @@ func ResourceAwsConfigurationSchema() *schema.Resource {
 			"ebs_encryption": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: Resourceaws_encryptionSchema()},
+				Elem:     Resourceaws_encryptionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"free_elasticips": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -37,7 +41,8 @@ func ResourceAwsConfigurationSchema() *schema.Resource {
 			"region": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "us-west-1"},
+				Default:  "us-west-1",
+			},
 			"route53_integration": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -46,7 +51,11 @@ func ResourceAwsConfigurationSchema() *schema.Resource {
 			"s3_encryption": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: Resourceaws_encryptionSchema()},
+				Elem:     Resourceaws_encryptionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"secret_access_key": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -72,11 +81,13 @@ func ResourceAwsConfigurationSchema() *schema.Resource {
 			},
 			"vpc_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"zones": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAwsZoneConfigSchema()},
+				Elem:     ResourceAwsZoneConfigSchema(),
+			},
 		},
 	}
 }

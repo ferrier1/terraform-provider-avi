@@ -14,14 +14,16 @@ func ResourcePartitionInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"path": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"quota": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"size": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

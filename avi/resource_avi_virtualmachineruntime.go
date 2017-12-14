@@ -14,10 +14,12 @@ func ResourceVirtualMachineRuntimeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"processes": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"up": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

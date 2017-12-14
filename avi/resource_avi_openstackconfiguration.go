@@ -14,7 +14,8 @@ func ResourceOpenStackConfigurationSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"admin_tenant": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"admin_tenant_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -60,15 +61,18 @@ func ResourceOpenStackConfigurationSchema() *schema.Resource {
 			"hypervisor": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "KVM"},
+				Default:  "KVM",
+			},
 			"hypervisor_properties": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceOpenStackHypervisorPropertiesSchema()},
+				Elem:     ResourceOpenStackHypervisorPropertiesSchema(),
+			},
 			"img_format": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "OS_IMG_FMT_AUTO"},
+				Default:  "OS_IMG_FMT_AUTO",
+			},
 			"import_keystone_tenants": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -95,7 +99,8 @@ func ResourceOpenStackConfigurationSchema() *schema.Resource {
 			},
 			"mgmt_network_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mgmt_network_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -143,11 +148,13 @@ func ResourceOpenStackConfigurationSchema() *schema.Resource {
 			},
 			"privilege": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"prov_name": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"region": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -155,7 +162,8 @@ func ResourceOpenStackConfigurationSchema() *schema.Resource {
 			"role_mapping": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceOpenStackRoleMappingSchema()},
+				Elem:     ResourceOpenStackRoleMappingSchema(),
+			},
 			"se_group_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -173,7 +181,8 @@ func ResourceOpenStackConfigurationSchema() *schema.Resource {
 			"usable_network_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"use_admin_url": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

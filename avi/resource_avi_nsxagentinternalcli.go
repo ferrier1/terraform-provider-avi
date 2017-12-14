@@ -15,35 +15,43 @@ func ResourceNsxAgentInternalCliSchema() *schema.Resource {
 			"avi_app_map": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAviAppMapCliSchema()},
+				Elem:     ResourceAviAppMapCliSchema(),
+			},
 			"avi_obj_app_map": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAviObjAppMapCliSchema()},
+				Elem:     ResourceAviObjAppMapCliSchema(),
+			},
 			"l3_section": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNsxL3SectionCliSchema()},
+				Elem:     ResourceNsxL3SectionCliSchema(),
+			},
 			"mgmt_ipsets": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpsetInfoCliSchema()},
+				Elem:     ResourceIpsetInfoCliSchema(),
+			},
 			"rules": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNsxDfwRuleCliSchema()},
+				Elem:     ResourceNsxDfwRuleCliSchema(),
+			},
 			"sg_ips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceObjMapCliSchema()},
+				Elem:     ResourceObjMapCliSchema(),
+			},
 			"sg_map": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceObjMapCliSchema()},
+				Elem:     ResourceObjMapCliSchema(),
+			},
 			"vs_se_ipsets": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpsetInfoCliSchema()},
+				Elem:     ResourceIpsetInfoCliSchema(),
+			},
 		},
 	}
 }

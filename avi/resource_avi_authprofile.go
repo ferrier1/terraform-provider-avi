@@ -21,33 +21,52 @@ func ResourceAuthProfileSchema() map[string]*schema.Schema {
 		"http": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceAuthProfileHTTPClientParamsSchema()},
+			Elem:     ResourceAuthProfileHTTPClientParamsSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"ldap": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceLdapAuthSettingsSchema()},
+			Elem:     ResourceLdapAuthSettingsSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"saml": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceSamlSettingsSchema()},
+			Elem:     ResourceSamlSettingsSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"tacacs_plus": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceTacacsPlusAuthSettingsSchema()},
+			Elem:     ResourceTacacsPlusAuthSettingsSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
 		},
 		"type": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

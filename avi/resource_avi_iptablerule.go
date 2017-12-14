@@ -14,19 +14,32 @@ func ResourceIptableRuleSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"action": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"dnat_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dst_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dst_port": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePortRangeSchema()},
+				Elem:     ResourcePortRangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"input_interface": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -42,11 +55,19 @@ func ResourceIptableRuleSchema() *schema.Resource {
 			"src_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"src_port": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcePortRangeSchema()},
+				Elem:     ResourcePortRangeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"tag": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -27,15 +27,21 @@ func ResourceGslbPoolMemberDetailSchema() *schema.Resource {
 			"health_check_failures": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"health_status": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"lb_fail_count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -55,7 +61,11 @@ func ResourceGslbPoolMemberDetailSchema() *schema.Resource {
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ratio": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

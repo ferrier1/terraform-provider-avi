@@ -22,15 +22,18 @@ func ResourceControllerLicenseSchema() *schema.Resource {
 			},
 			"customer_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"license_tier": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"licenses": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSingleLicenseSchema()},
+				Elem:     ResourceSingleLicenseSchema(),
+			},
 			"max_apps": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -62,10 +65,12 @@ func ResourceControllerLicenseSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"valid_until": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -15,7 +15,11 @@ func ResourceVirtualServiceRuntimeSchema() *schema.Resource {
 			"apic_extension": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsApicExtensionSchema()},
+				Elem:     ResourceVsApicExtensionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"controller_ip": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,7 +27,11 @@ func ResourceVirtualServiceRuntimeSchema() *schema.Resource {
 			"datapath_debug": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDebugVirtualServiceSchema()},
+				Elem:     ResourceDebugVirtualServiceSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"east_west": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -32,15 +40,24 @@ func ResourceVirtualServiceRuntimeSchema() *schema.Resource {
 			"gslb_dns_geo_update": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbDnsGeoUpdateSchema()},
+				Elem:     ResourceGslbDnsGeoUpdateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"gslb_dns_update": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbDnsUpdateSchema()},
+				Elem:     ResourceGslbDnsUpdateSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ipam_dns_records": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsRecordSchema()},
+				Elem:     ResourceDnsRecordSchema(),
+			},
 			"is_dns_vs": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -49,11 +66,16 @@ func ResourceVirtualServiceRuntimeSchema() *schema.Resource {
 			"last_changed_time": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"lif": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"manual_placement": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -71,6 +93,7 @@ func ResourceVirtualServiceRuntimeSchema() *schema.Resource {
 			"num_additional_se": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"one_plus_one_ha": &schema.Schema{
 				Type:     schema.TypeBool,
@@ -110,27 +133,33 @@ func ResourceVirtualServiceRuntimeSchema() *schema.Resource {
 			"tls_ticket_key": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceTLSTicketSchema()},
+				Elem:     ResourceTLSTicketSchema(),
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "VS_TYPE_NORMAL"},
+				Default:  "VS_TYPE_NORMAL",
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"version": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"vh_child_vs_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vip_runtime": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVipRuntimeSchema()},
+				Elem:     ResourceVipRuntimeSchema(),
+			},
 		},
 	}
 }

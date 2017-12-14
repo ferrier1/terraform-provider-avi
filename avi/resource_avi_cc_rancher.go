@@ -19,23 +19,40 @@ func ResourceCC_RancherSchema() *schema.Resource {
 			"cfg": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceRancherConfigurationSchema()},
+				Elem:     ResourceRancherConfigurationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"dns_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_DnsInfoSchema()},
+				Elem:     ResourceCC_DnsInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_HostSchema()},
+				Elem:     ResourceCC_HostSchema(),
+			},
 			"ipam_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_IpamInfoSchema()},
+				Elem:     ResourceCC_IpamInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sshinfo": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_SshInfoSchema()},
+				Elem:     ResourceCC_SshInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

@@ -15,7 +15,11 @@ func ResourceTcpcbInfoSchema() *schema.Resource {
 			"cc_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCcInfoSchema()},
+				Elem:     ResourceCcInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"irs": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -79,11 +83,16 @@ func ResourceTcpcbInfoSchema() *schema.Resource {
 			"sackblks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSackBlkSchema()},
+				Elem:     ResourceSackBlkSchema(),
+			},
 			"sackhint": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSackHintSchema()},
+				Elem:     ResourceSackHintSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"snd_conj_window": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

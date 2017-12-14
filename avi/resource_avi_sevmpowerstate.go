@@ -15,15 +15,18 @@ func ResourceSeVmPowerStateSchema() *schema.Resource {
 			"power_off": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "poweredOff"},
+				Default:  "poweredOff",
+			},
 			"power_on": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "poweredOn"},
+				Default:  "poweredOn",
+			},
 			"suspended": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "suspended"},
+				Default:  "suspended",
+			},
 		},
 	}
 }

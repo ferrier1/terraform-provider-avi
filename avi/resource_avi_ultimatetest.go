@@ -14,10 +14,15 @@ func ResourceUltimateTestSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"most_difficult": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceMostDifficultObjectEverSchema()},
+				Required: true, Elem: ResourceMostDifficultObjectEverSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -25,7 +30,8 @@ func ResourceUltimateTestSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

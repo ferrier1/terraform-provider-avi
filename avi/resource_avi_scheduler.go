@@ -37,7 +37,8 @@ func ResourceSchedulerSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"run_mode": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -49,7 +50,8 @@ func ResourceSchedulerSchema() map[string]*schema.Schema {
 		"scheduler_action": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "SCHEDULER_ACTION_BACKUP"},
+			Default:  "SCHEDULER_ACTION_BACKUP",
+		},
 		"start_date_time": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -61,7 +63,8 @@ func ResourceSchedulerSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

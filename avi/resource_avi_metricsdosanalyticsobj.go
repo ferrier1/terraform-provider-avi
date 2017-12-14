@@ -18,7 +18,8 @@ func ResourceMetricsDosAnalyticsObjSchema() *schema.Resource {
 			},
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sum_attack_duration": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,

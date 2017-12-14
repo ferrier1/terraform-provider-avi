@@ -14,10 +14,12 @@ func ResourceClearAdminDownReqSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"consumer_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

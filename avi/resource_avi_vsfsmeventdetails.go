@@ -19,10 +19,15 @@ func ResourceVsFsmEventDetailsSchema() *schema.Resource {
 			"vs_rt": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceRuntimeSchema()},
+				Elem:     ResourceVirtualServiceRuntimeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

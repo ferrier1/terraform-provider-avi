@@ -15,10 +15,12 @@ func ResourceAllSeUpgradeEventDetailsSchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_se": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_vs": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -26,7 +28,11 @@ func ResourceAllSeUpgradeEventDetailsSchema() *schema.Resource {
 			"request": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeUpgradeParamsSchema()},
+				Elem:     ResourceSeUpgradeParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

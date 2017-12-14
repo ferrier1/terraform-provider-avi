@@ -15,10 +15,12 @@ func ResourceDosThresholdProfileSchema() *schema.Resource {
 			"thresh_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDosThresholdSchema()},
+				Elem:     ResourceDosThresholdSchema(),
+			},
 			"thresh_period": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

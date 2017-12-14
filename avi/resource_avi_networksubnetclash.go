@@ -14,11 +14,13 @@ func ResourceNetworkSubnetClashSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"ip_nw": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

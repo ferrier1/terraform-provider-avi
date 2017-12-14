@@ -14,7 +14,8 @@ func ResourceMetricsRumPreaggCountryObjSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"node_obj_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"num_samples": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

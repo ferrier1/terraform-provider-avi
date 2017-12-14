@@ -20,10 +20,12 @@ func ResourceMesosLoginSchema() *schema.Resource {
 			"marathon_logins": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMarathonLoginSchema()},
+				Elem:     ResourceMarathonLoginSchema(),
+			},
 			"mesos_url": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

@@ -14,24 +14,36 @@ func ResourceOsLbProvPluginFormSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"neutron_host_ip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"neutron_host_passwd": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"neutron_host_user": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"op_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"prov_host_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"prov_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "avi_adc"},
+				Default:  "avi_adc",
+			},
 			"prov_svc_passwd": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -15,11 +15,16 @@ func ResourceGslbServiceDownResponseSchema() *schema.Resource {
 			"fallback_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "GSLB_SERVICE_DOWN_RESPONSE_NONE"},
+				Default:  "GSLB_SERVICE_DOWN_RESPONSE_NONE",
+			},
 		},
 	}
 }

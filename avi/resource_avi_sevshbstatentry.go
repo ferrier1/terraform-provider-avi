@@ -15,15 +15,18 @@ func ResourceSeVsHbStatEntrySchema() *schema.Resource {
 			"aggregatable_vss": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRepeatedStringsSchema()},
+				Elem:     ResourceRepeatedStringsSchema(),
+			},
 			"has_hb_issues_vss": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRepeatedStringsSchema()},
+				Elem:     ResourceRepeatedStringsSchema(),
+			},
 			"num_se_vs_hb_in_pkt": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCountHistogramBarSchema()},
+				Elem:     ResourceCountHistogramBarSchema(),
+			},
 			"se_num_hb_issues_reported": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -67,7 +70,8 @@ func ResourceSeVsHbStatEntrySchema() *schema.Resource {
 			"short_vs_uuid_len_sent": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCountHistogramBarSchema()},
+				Elem:     ResourceCountHistogramBarSchema(),
+			},
 		},
 	}
 }

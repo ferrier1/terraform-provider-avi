@@ -15,7 +15,8 @@ func ResourceVCALoginSchema() *schema.Resource {
 			"host": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "iam.vchs.vmware.com"},
+				Default:  "iam.vchs.vmware.com",
+			},
 			"instance": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

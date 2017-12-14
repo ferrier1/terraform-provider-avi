@@ -18,7 +18,8 @@ func ResourcePoolGroupMemberSchema() *schema.Resource {
 			},
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"priority_label": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

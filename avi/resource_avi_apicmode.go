@@ -14,7 +14,8 @@ func ResourceAPICModeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"apic_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"cloud_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

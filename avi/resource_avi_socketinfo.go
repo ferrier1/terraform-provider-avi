@@ -63,7 +63,11 @@ func ResourceSocketInfoSchema() *schema.Resource {
 			"so_rcv": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSocketBufferInfoSchema()},
+				Elem:     ResourceSocketBufferInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"so_ref_count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -71,11 +75,19 @@ func ResourceSocketInfoSchema() *schema.Resource {
 			"so_snd": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSocketBufferInfoSchema()},
+				Elem:     ResourceSocketBufferInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"so_starttime": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"so_state": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

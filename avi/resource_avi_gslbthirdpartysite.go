@@ -20,11 +20,16 @@ func ResourceGslbThirdPartySiteSchema() *schema.Resource {
 			"hm_proxies": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbHealthMonitorProxySchema()},
+				Elem:     ResourceGslbHealthMonitorProxySchema(),
+			},
 			"location": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbGeoLocationSchema()},
+				Elem:     ResourceGslbGeoLocationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

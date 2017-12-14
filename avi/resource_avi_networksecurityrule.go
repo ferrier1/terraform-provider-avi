@@ -14,10 +14,12 @@ func ResourceNetworkSecurityRuleSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"action": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"age": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"created_by": &schema.Schema{
 				Type:     schema.TypeString,
@@ -25,10 +27,12 @@ func ResourceNetworkSecurityRuleSchema() *schema.Resource {
 			},
 			"enable": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"log": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -36,14 +40,23 @@ func ResourceNetworkSecurityRuleSchema() *schema.Resource {
 			},
 			"match": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceNetworkSecurityMatchTargetSchema()},
+				Required: true, Elem: ResourceNetworkSecurityMatchTargetSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"rl_param": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceNetworkSecurityPolicyActionRLParamSchema()},
+				Elem:     ResourceNetworkSecurityPolicyActionRLParamSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

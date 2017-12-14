@@ -22,7 +22,11 @@ func ResourcePGDeploymentRuleResultSchema() *schema.Resource {
 			},
 			"rule": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourcePGDeploymentRuleSchema()},
+				Required: true, Elem: ResourcePGDeploymentRuleSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

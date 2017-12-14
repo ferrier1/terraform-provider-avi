@@ -15,7 +15,11 @@ func ResourceGslbGeoDbEntrySchema() *schema.Resource {
 			"file": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbGeoDbFileSchema()},
+				Elem:     ResourceGslbGeoDbFileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"priority": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

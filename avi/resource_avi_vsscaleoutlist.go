@@ -19,11 +19,13 @@ func ResourceVsScaleoutListSchema() *schema.Resource {
 			"host": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsScaleoutHostSchema()},
+				Elem:     ResourceVsScaleoutHostSchema(),
+			},
 			"se": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsScaleoutSeSchema()},
+				Elem:     ResourceVsScaleoutSeSchema(),
+			},
 		},
 	}
 }

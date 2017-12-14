@@ -15,10 +15,15 @@ func ResourceRebalanceScaleoutEventDetailsSchema() *schema.Resource {
 			"scaleout_params": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsScaleoutParamsSchema()},
+				Elem:     ResourceVsScaleoutParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

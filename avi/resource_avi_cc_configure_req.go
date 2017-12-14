@@ -14,11 +14,19 @@ func Resourcecc_configure_reqSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"cc_config": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceCloudSchema()},
+				Required: true, Elem: ResourceCloudSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cc_old_config": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudSchema()},
+				Elem:     ResourceCloudSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

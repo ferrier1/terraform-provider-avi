@@ -19,7 +19,8 @@ func ResourceEventGenParamsSchema() *schema.Resource {
 			"events": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"pool": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

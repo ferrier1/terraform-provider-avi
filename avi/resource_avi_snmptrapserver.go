@@ -18,15 +18,24 @@ func ResourceSnmpTrapServerSchema() *schema.Resource {
 			},
 			"ip_addr": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Required: true, Elem: ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"user": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSnmpV3UserParamsSchema()},
+				Elem:     ResourceSnmpV3UserParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SNMP_VER2"},
+				Default:  "SNMP_VER2",
+			},
 		},
 	}
 }

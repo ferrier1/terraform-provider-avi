@@ -15,7 +15,11 @@ func ResourceGslbRuntimeDetailSchema() *schema.Resource {
 			"info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceGslbRuntimeSchema()},
+				Elem:     ResourceGslbRuntimeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

@@ -19,7 +19,11 @@ func ResourceHTTPHdrDataSchema() *schema.Resource {
 			"value": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPHdrValueSchema()},
+				Elem:     ResourceHTTPHdrValueSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

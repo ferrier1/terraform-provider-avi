@@ -14,20 +14,25 @@ func ResourceOsLbProvPluginsDetailSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"horizon_lb_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"neutron_lb_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"provs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceOsLbProvPluginDetailSchema()},
+				Elem:     ResourceOsLbProvPluginDetailSchema(),
+			},
 			"selinux_avi_enabled": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"selinux_state": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

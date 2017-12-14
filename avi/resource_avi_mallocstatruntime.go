@@ -15,7 +15,8 @@ func ResourceMallocStatRuntimeSchema() *schema.Resource {
 			"mallocstat_entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMallocStatEntrySchema()},
+				Elem:     ResourceMallocStatEntrySchema(),
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

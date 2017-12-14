@@ -25,7 +25,8 @@ func ResourceSeListSchema() *schema.Resource {
 			"attach_ip_status": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "Programming Network reachability to the Virtual Service IP in the Cloud"},
+				Default:  "Programming Network reachability to the Virtual Service IP in the Cloud",
+			},
 			"attach_ip_success": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -44,7 +45,8 @@ func ResourceSeListSchema() *schema.Resource {
 			"floating_intf_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"geo_download": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -97,7 +99,8 @@ func ResourceSeListSchema() *schema.Resource {
 			},
 			"se_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sec_idx": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -106,7 +109,11 @@ func ResourceSeListSchema() *schema.Resource {
 			"snat_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vcpus": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -115,15 +122,21 @@ func ResourceSeListSchema() *schema.Resource {
 			"version": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "0.0.0"},
+				Default:  "0.0.0",
+			},
 			"vip_intf_ip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vip_intf_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSeVipInterfaceListSchema()},
+				Elem:     ResourceSeVipInterfaceListSchema(),
+			},
 			"vip_intf_mac": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -136,11 +149,13 @@ func ResourceSeListSchema() *schema.Resource {
 			"vlan_id": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"vnic": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsSeVnicSchema()},
+				Elem:     ResourceVsSeVnicSchema(),
+			},
 		},
 	}
 }

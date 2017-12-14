@@ -14,14 +14,20 @@ func ResourceServiceEngineStateDBCacheSummarySchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"last_updated_time": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServiceEngineRuntimeSummarySchema()},
+				Elem:     ResourceServiceEngineRuntimeSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

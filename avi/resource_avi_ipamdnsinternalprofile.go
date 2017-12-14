@@ -15,7 +15,8 @@ func ResourceIpamDnsInternalProfileSchema() *schema.Resource {
 			"dns_service_domain": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsServiceDomainSchema()},
+				Elem:     ResourceDnsServiceDomainSchema(),
+			},
 			"dns_virtualservice_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -28,7 +29,8 @@ func ResourceIpamDnsInternalProfileSchema() *schema.Resource {
 			"usable_network_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

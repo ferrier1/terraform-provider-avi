@@ -29,7 +29,8 @@ func ResourceVcenterHostDiagSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"powerstate_up": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

@@ -15,7 +15,11 @@ func ResourceCC_AzureSchema() *schema.Resource {
 			"azure_cfg": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureConfigurationSchema()},
+				Elem:     ResourceAzureConfigurationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

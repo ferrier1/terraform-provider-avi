@@ -15,11 +15,13 @@ func ResourceVsOperationalAnalysisSummarySchema() *schema.Resource {
 			"eastwest_vs_with_oper_issues_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_eastwest_vs_with_oper_issues": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -31,7 +33,8 @@ func ResourceVsOperationalAnalysisSummarySchema() *schema.Resource {
 			"vs_with_oper_issues_ref": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

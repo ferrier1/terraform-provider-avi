@@ -22,24 +22,28 @@ func ResourceVIVMInfoSchema() *schema.Resource {
 			},
 			"dc_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"dc_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"host": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"managed_object_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"mem_reservation": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"power_state": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"sevm": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -62,10 +66,12 @@ func ResourceVIVMInfoSchema() *schema.Resource {
 			},
 			"vm_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vm_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

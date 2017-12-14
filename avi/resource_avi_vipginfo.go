@@ -27,17 +27,20 @@ func ResourceVIPGInfoSchema() *schema.Resource {
 			"hosts": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"managed_object_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"num_ports": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
 			},
 			"pg_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"switch_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -49,7 +52,8 @@ func ResourceVIPGInfoSchema() *schema.Resource {
 			"vlan_id_range": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVlanRangeSchema()},
+				Elem:     ResourceVlanRangeSchema(),
+			},
 		},
 	}
 }

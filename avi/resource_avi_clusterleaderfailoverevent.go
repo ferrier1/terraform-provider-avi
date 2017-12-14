@@ -15,11 +15,19 @@ func ResourceClusterLeaderFailoverEventSchema() *schema.Resource {
 			"leader_node": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterNodeSchema()},
+				Elem:     ResourceClusterNodeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"previous_leader_node": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceClusterNodeSchema()},
+				Elem:     ResourceClusterNodeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

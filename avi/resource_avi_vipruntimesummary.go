@@ -15,15 +15,27 @@ func ResourceVipRuntimeSummarySchema() *schema.Resource {
 			"config_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigurationStatusSchema()},
+				Elem:     ResourceConfigurationStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"first_se_assigned_time": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"last_scale_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceScaleStatusSchema()},
+				Elem:     ResourceScaleStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"migrate_in_progress": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -50,14 +62,20 @@ func ResourceVipRuntimeSummarySchema() *schema.Resource {
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"percent_ses_up": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"progress_percent": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"recommendation": &schema.Schema{
 				Type:     schema.TypeString,
@@ -66,7 +84,11 @@ func ResourceVipRuntimeSummarySchema() *schema.Resource {
 			"scale_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceScaleStatusSchema()},
+				Elem:     ResourceScaleStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"scalein_in_progress": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -80,7 +102,8 @@ func ResourceVipRuntimeSummarySchema() *schema.Resource {
 			"service_engine": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVipSeAssignedSchema()},
+				Elem:     ResourceVipSeAssignedSchema(),
+			},
 			"user_scaleout_pending": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -88,11 +111,16 @@ func ResourceVipRuntimeSummarySchema() *schema.Resource {
 			},
 			"vip_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vip_placement_resolution_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVipPlacementResolutionInfoSchema()},
+				Elem:     ResourceVipPlacementResolutionInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

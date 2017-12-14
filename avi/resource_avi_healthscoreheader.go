@@ -15,11 +15,16 @@ func ResourceHealthScoreHeaderSchema() *schema.Resource {
 			"anomaly_penalty_statistics": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricStatisticsSchema()},
+				Elem:     ResourceMetricStatisticsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"contributors": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHealthScoreTypeContributorDataSchema()},
+				Elem:     ResourceHealthScoreTypeContributorDataSchema(),
+			},
 			"entity_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -36,15 +41,21 @@ func ResourceHealthScoreHeaderSchema() *schema.Resource {
 			"missing_intervals": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsMissingDataIntervalSchema()},
+				Elem:     ResourceMetricsMissingDataIntervalSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "health_score"},
+				Default:  "health_score",
+			},
 			"performance_score_statistics": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricStatisticsSchema()},
+				Elem:     ResourceMetricStatisticsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -52,11 +63,19 @@ func ResourceHealthScoreHeaderSchema() *schema.Resource {
 			"resources_penalty_statistics": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricStatisticsSchema()},
+				Elem:     ResourceMetricStatisticsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"security_penalty_statistics": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricStatisticsSchema()},
+				Elem:     ResourceMetricStatisticsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"server": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -68,11 +87,16 @@ func ResourceHealthScoreHeaderSchema() *schema.Resource {
 			"statistics": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMetricStatisticsSchema()},
+				Elem:     ResourceMetricStatisticsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"units": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRIC_COUNT"},
+				Default:  "METRIC_COUNT",
+			},
 		},
 	}
 }

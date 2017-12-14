@@ -22,7 +22,8 @@ func ResourcePoolGroupDeploymentPolicySchema() map[string]*schema.Schema {
 		"cloud_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "/api/cloud?name=Default-Cloud"},
+			Default:  "/api/cloud?name=Default-Cloud",
+		},
 		"description": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -34,15 +35,18 @@ func ResourcePoolGroupDeploymentPolicySchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"rules": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourcePGDeploymentRuleSchema()},
+			Elem:     ResourcePGDeploymentRuleSchema(),
+		},
 		"scheme": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "BLUE_GREEN"},
+			Default:  "BLUE_GREEN",
+		},
 		"target_test_traffic_ratio": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -60,7 +64,8 @@ func ResourcePoolGroupDeploymentPolicySchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"webhook_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,

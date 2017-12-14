@@ -75,11 +75,13 @@ func ResourcevNICSchema() *schema.Resource {
 			},
 			"mac_address": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"members": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMemberInterfaceSchema()},
+				Elem:     ResourceMemberInterfaceSchema(),
+			},
 			"mtu": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -104,18 +106,22 @@ func ResourcevNICSchema() *schema.Resource {
 			"vlan_id": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"vlan_interfaces": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVlanInterfaceSchema()},
+				Elem:     ResourceVlanInterfaceSchema(),
+			},
 			"vnic_networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcevNICNetworkSchema()},
+				Elem:     ResourcevNICNetworkSchema(),
+			},
 			"vrf_id": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"vrf_ref": &schema.Schema{
 				Type:     schema.TypeString,

@@ -15,19 +15,23 @@ func ResourceDebugServiceEngineSchema() *schema.Resource {
 			"cpu_shares": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDebugSeCpuSharesSchema()},
+				Elem:     ResourceDebugSeCpuSharesSchema(),
+			},
 			"flags": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDebugSeDataplaneSchema()},
+				Elem:     ResourceDebugSeDataplaneSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "VM name unknown"},
+				Default:  "VM name unknown",
+			},
 			"seagent_debug": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDebugSeAgentSchema()},
+				Elem:     ResourceDebugSeAgentSchema(),
+			},
 			"tenant_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -35,7 +39,8 @@ func ResourceDebugServiceEngineSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

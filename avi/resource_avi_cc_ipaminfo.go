@@ -47,7 +47,8 @@ func ResourceCC_IpamInfoSchema() *schema.Resource {
 			"park_intfs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_ParkIntfSchema()},
+				Elem:     ResourceCC_ParkIntfSchema(),
+			},
 			"ready": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

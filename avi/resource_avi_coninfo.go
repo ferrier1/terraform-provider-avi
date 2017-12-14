@@ -14,14 +14,20 @@ func ResourceConInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"con_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConServerSchema()},
+				Elem:     ResourceConServerSchema(),
+			},
 			"vip": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceConVipSchema()},
+				Required: true, Elem: ResourceConVipSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

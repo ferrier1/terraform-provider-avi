@@ -15,7 +15,8 @@ func ResourceServiceEngineAnalysisSummarySchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_hosts": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -35,15 +36,27 @@ func ResourceServiceEngineAnalysisSummarySchema() *schema.Resource {
 			"se_config_summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeConfigAnalysisSummarySchema()},
+				Elem:     ResourceSeConfigAnalysisSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_operational_summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeOperationalAnalysisSummarySchema()},
+				Elem:     ResourceSeOperationalAnalysisSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_placement_summary": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSePlacementAnalysisSummarySchema()},
+				Elem:     ResourceSePlacementAnalysisSummarySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

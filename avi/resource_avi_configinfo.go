@@ -15,7 +15,8 @@ func ResourceConfigInfoSchema() *schema.Resource {
 			"queue": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVersionInfoSchema()},
+				Elem:     ResourceVersionInfoSchema(),
+			},
 			"reader_count": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

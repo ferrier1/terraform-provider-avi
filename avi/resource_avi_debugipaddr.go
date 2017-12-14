@@ -15,15 +15,18 @@ func ResourceDebugIpAddrSchema() *schema.Resource {
 			"addrs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"prefixes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+			},
 			"ranges": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrRangeSchema()},
+				Elem:     ResourceIpAddrRangeSchema(),
+			},
 		},
 	}
 }

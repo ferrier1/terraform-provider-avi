@@ -15,21 +15,26 @@ func ResourceAnomalyEventDetailsSchema() *schema.Resource {
 			"deviation": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 			"metric_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"metric_timestamp": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"model": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "EXPONENTIAL_WEIGHTED_MOVING_AVG"},
+				Default:  "EXPONENTIAL_WEIGHTED_MOVING_AVG",
+			},
 			"models": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"node_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -48,14 +53,16 @@ func ResourceAnomalyEventDetailsSchema() *schema.Resource {
 			},
 			"priority": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"server": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

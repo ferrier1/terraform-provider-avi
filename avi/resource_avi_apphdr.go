@@ -14,13 +14,16 @@ func ResourceAppHdrSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"hdr_match_case": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"hdr_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"hdr_string_op": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

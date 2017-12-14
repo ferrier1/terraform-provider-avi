@@ -15,13 +15,16 @@ func ResourceCookieMatchSchema() *schema.Resource {
 			"match_case": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "INSENSITIVE"},
+				Default:  "INSENSITIVE",
+			},
 			"match_criteria": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

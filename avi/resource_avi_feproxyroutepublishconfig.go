@@ -15,7 +15,8 @@ func ResourceFeProxyRoutePublishConfigSchema() *schema.Resource {
 			"mode": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "FE_PROXY_ROUTE_PUBLISH_NONE"},
+				Default:  "FE_PROXY_ROUTE_PUBLISH_NONE",
+			},
 			"publisher_port": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

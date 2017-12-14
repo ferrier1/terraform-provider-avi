@@ -23,7 +23,8 @@ func ResourceAWSLoginSchema() *schema.Resource {
 			"region": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "us-west-1"},
+				Default:  "us-west-1",
+			},
 			"secret_access_key": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

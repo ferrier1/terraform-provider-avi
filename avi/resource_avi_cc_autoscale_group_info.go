@@ -35,11 +35,13 @@ func Resourcecc_autoscale_group_infoSchema() *schema.Resource {
 			"servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerSchema()},
+				Elem:     ResourceServerSchema(),
+			},
 			"zones": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

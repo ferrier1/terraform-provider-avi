@@ -15,13 +15,16 @@ func Resourcecc_lbprov_audit_status_rspSchema() *schema.Resource {
 			"hist": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceOsLbProvAuditDetailSchema()},
+				Elem:     ResourceOsLbProvAuditDetailSchema(),
+			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

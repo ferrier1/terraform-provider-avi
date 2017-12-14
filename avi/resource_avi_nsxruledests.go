@@ -15,10 +15,12 @@ func ResourcensxRuleDestsSchema() *schema.Resource {
 			"destination": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxSrcDestSchema()},
+				Elem:     ResourcensxSrcDestSchema(),
+			},
 			"excluded": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

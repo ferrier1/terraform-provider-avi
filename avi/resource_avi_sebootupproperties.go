@@ -65,22 +65,30 @@ func ResourceSeBootupPropertiesSchema() *schema.Resource {
 			"se_dp_compression": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeBootupCompressionPropertiesSchema()},
+				Elem:     ResourceSeBootupCompressionPropertiesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_dpdk_pmd": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"se_emulated_cores": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"se_ip_encap_ipc": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"se_l3_encap_ipc": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"se_log_buffer_app_blocking_dequeue": &schema.Schema{
 				Type:     schema.TypeBool,
@@ -160,6 +168,7 @@ func ResourceSeBootupPropertiesSchema() *schema.Resource {
 			"se_use_dpdk": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"ssl_sess_cache_per_vs": &schema.Schema{
 				Type:     schema.TypeInt,

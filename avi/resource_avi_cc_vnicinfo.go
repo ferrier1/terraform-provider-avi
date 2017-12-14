@@ -18,7 +18,8 @@ func ResourceCC_VnicInfoSchema() *schema.Resource {
 			},
 			"network_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"port_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -26,7 +27,8 @@ func ResourceCC_VnicInfoSchema() *schema.Resource {
 			"status": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SYSERR_SUCCESS"},
+				Default:  "SYSERR_SUCCESS",
+			},
 			"status_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

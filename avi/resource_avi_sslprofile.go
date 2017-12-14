@@ -17,15 +17,18 @@ func ResourceSSLProfileSchema() map[string]*schema.Schema {
 		"accepted_ciphers": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "AES:3DES:RC4"},
+			Default:  "AES:3DES:RC4",
+		},
 		"accepted_versions": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceSSLVersionSchema()},
+			Elem:     ResourceSSLVersionSchema(),
+		},
 		"cipher_enums": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     &schema.Schema{Type: schema.TypeString}},
+			Elem:     &schema.Schema{Type: schema.TypeString},
+		},
 		"description": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -41,7 +44,8 @@ func ResourceSSLProfileSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"prefer_client_cipher_ordering": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -55,7 +59,11 @@ func ResourceSSLProfileSchema() map[string]*schema.Schema {
 		"ssl_rating": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLRatingSchema()},
+			Elem:     ResourceSSLRatingSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"ssl_session_timeout": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -64,7 +72,8 @@ func ResourceSSLProfileSchema() map[string]*schema.Schema {
 		"tags": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceTagSchema()},
+			Elem:     ResourceTagSchema(),
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -72,7 +81,8 @@ func ResourceSSLProfileSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

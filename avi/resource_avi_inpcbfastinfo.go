@@ -63,7 +63,11 @@ func ResourceInpcbFastInfoSchema() *schema.Resource {
 			"inp_starttime": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"inp_syns_sent": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

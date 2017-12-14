@@ -14,10 +14,12 @@ func ResourcePortRangeSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"end": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"start": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

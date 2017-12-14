@@ -15,39 +15,75 @@ func ResourcensxObjectsSchema() *schema.Resource {
 			"firewallconfiguration": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxFwConfigSchema()},
+				Elem:     ResourcensxFwConfigSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ipnodes": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxIpNodesSchema()},
+				Elem:     ResourcensxIpNodesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ipset": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceipsetSchema()},
+				Elem:     ResourceipsetSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"list": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxObjectListSchema()},
+				Elem:     ResourcensxObjectListSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pagedsystemeventlist": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxSystemEventListSchema()},
+				Elem:     ResourcensxSystemEventListSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rule": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceruleSchema()},
+				Elem:     ResourceruleSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sections": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcesectionsSchema()},
+				Elem:     ResourcesectionsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"versions": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxVersionsSchema()},
+				Elem:     ResourcensxVersionsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vshieldappconfiguration": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxVshieldAppConfigurationSchema()},
+				Elem:     ResourcensxVshieldAppConfigurationSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

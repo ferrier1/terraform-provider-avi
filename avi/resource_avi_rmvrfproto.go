@@ -14,7 +14,11 @@ func ResourceRmVrfProtoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"vrf_context": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVrfContextSchema()},
+				Required: true, Elem: ResourceVrfContextSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

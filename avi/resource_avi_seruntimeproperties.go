@@ -15,7 +15,8 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"app_headers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceAppHdrSchema()},
+				Elem:     ResourceAppHdrSchema(),
+			},
 			"baremetal_dispatcher_handles_flows": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -49,7 +50,11 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"dos_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDosThresholdProfileSchema()},
+				Elem:     ResourceDosThresholdProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"downstream_send_timeout": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -78,6 +83,7 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"dupip_frequency": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"dupip_timeout_count": &schema.Schema{
 				Type:     schema.TypeInt,
@@ -107,6 +113,7 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"global_mtu": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"http_rum_console_log": &schema.Schema{
 				Type:     schema.TypeBool,
@@ -196,7 +203,8 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"log_agent_max_storage_ignore_percent": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
-				Default:  "20.0"},
+				Default:  "20.0",
+			},
 			"log_agent_min_storage_per_vs": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -205,6 +213,7 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"log_agent_pause_interval": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"log_agent_sleep_interval": &schema.Schema{
 				Type:     schema.TypeInt,
@@ -252,6 +261,7 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"mcache_store_se_max_size": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"ngx_free_connection_stack": &schema.Schema{
 				Type:     schema.TypeBool,
@@ -261,6 +271,7 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"persistence_mem_max": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"scaleout_udp_per_pkt": &schema.Schema{
 				Type:     schema.TypeBool,
@@ -305,10 +316,15 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"se_dp_compression": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeRuntimeCompressionPropertiesSchema()},
+				Elem:     ResourceSeRuntimeCompressionPropertiesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_dp_hm_drops": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"se_dp_if_state_poll_interval": &schema.Schema{
 				Type:     schema.TypeInt,
@@ -328,6 +344,7 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"se_dp_vnic_queue_stall_event_sleep": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"se_dp_vnic_queue_stall_threshold": &schema.Schema{
 				Type:     schema.TypeInt,
@@ -377,6 +394,7 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"se_packet_buffer_max": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"se_random_tcp_drops": &schema.Schema{
 				Type:     schema.TypeBool,
@@ -386,15 +404,21 @@ func ResourceSeRuntimePropertiesSchema() *schema.Resource {
 			"se_rate_limiters": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeRateLimitersSchema()},
+				Elem:     ResourceSeRateLimitersSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"service_ip_subnets": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+			},
 			"service_port_ranges": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcePortRangeSchema()},
+				Elem:     ResourcePortRangeSchema(),
+			},
 			"services_accessible_all_interfaces": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

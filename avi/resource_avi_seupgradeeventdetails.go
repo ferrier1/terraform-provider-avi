@@ -15,7 +15,8 @@ func ResourceSeUpgradeEventDetailsSchema() *schema.Resource {
 			"notes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"num_vs": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -26,7 +27,8 @@ func ResourceSeUpgradeEventDetailsSchema() *schema.Resource {
 			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

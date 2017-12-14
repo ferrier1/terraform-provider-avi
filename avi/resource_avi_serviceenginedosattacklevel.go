@@ -15,7 +15,11 @@ func ResourceServiceEngineDosAttackLevelSchema() *schema.Resource {
 			"hs_entity": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHealthScoreEntitySchema()},
+				Elem:     ResourceHealthScoreEntitySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,10 +27,15 @@ func ResourceServiceEngineDosAttackLevelSchema() *schema.Resource {
 			"score_data": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServiceEngineDosAttackLevelDataSchema()},
+				Elem:     ResourceServiceEngineDosAttackLevelDataSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"value": &schema.Schema{
 				Type:     schema.TypeFloat,
 				Optional: true,
+				Default:  "0.0",
 			},
 		},
 	}

@@ -17,7 +17,11 @@ func ResourceCloudSchema() map[string]*schema.Schema {
 		"apic_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceAPICConfigurationSchema()},
+			Elem:     ResourceAPICConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"apic_mode": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -26,19 +30,32 @@ func ResourceCloudSchema() map[string]*schema.Schema {
 		"aws_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceAwsConfigurationSchema()},
+			Elem:     ResourceAwsConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"azure_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureConfigurationSchema()},
+			Elem:     ResourceAzureConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"cloudstack_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceCloudStackConfigurationSchema()},
+			Elem:     ResourceCloudStackConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"custom_tags": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceCustomTagSchema()},
+			Elem:     ResourceCustomTagSchema(),
+		},
 		"dhcp_enabled": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -51,7 +68,11 @@ func ResourceCloudSchema() map[string]*schema.Schema {
 		"docker_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceDockerConfigurationSchema()},
+			Elem:     ResourceDockerConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"east_west_dns_provider_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -76,11 +97,19 @@ func ResourceCloudSchema() map[string]*schema.Schema {
 		"linuxserver_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceLinuxServerConfigurationSchema()},
+			Elem:     ResourceLinuxServerConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"mesos_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceMesosConfigurationSchema()},
+			Elem:     ResourceMesosConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"mtu": &schema.Schema{
 			Type:     schema.TypeInt,
 			Optional: true,
@@ -88,11 +117,16 @@ func ResourceCloudSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"nsx_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceNsxConfigurationSchema()},
+			Elem:     ResourceNsxConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"obj_name_prefix": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -100,11 +134,19 @@ func ResourceCloudSchema() map[string]*schema.Schema {
 		"openstack_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceOpenStackConfigurationSchema()},
+			Elem:     ResourceOpenStackConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"oshiftk8s_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceOShiftK8SConfigurationSchema()},
+			Elem:     ResourceOShiftK8SConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"prefer_static_routes": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -113,11 +155,19 @@ func ResourceCloudSchema() map[string]*schema.Schema {
 		"proxy_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceProxyConfigurationSchema()},
+			Elem:     ResourceProxyConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"rancher_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceRancherConfigurationSchema()},
+			Elem:     ResourceRancherConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"state_based_dns_registration": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -130,18 +180,28 @@ func ResourceCloudSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"vca_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourcevCloudAirConfigurationSchema()},
+			Elem:     ResourcevCloudAirConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"vcenter_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourcevCenterConfigurationSchema()},
+			Elem:     ResourcevCenterConfigurationSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"vtype": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 	}
 }
 

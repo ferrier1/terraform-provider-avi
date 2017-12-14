@@ -19,7 +19,8 @@ func Resourcecc_autoscale_servers_info_reqSchema() *schema.Resource {
 			"group_names": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

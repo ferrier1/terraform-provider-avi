@@ -15,14 +15,16 @@ func Resourcecc_webhook_mesos_reqSchema() *schema.Resource {
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"response": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"response_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"status_code": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

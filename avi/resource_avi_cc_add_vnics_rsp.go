@@ -15,10 +15,12 @@ func Resourcecc_add_vnics_rspSchema() *schema.Resource {
 			"cc_vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_VnicInfoSchema()},
+				Elem:     ResourceCC_VnicInfoSchema(),
+			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -26,7 +28,8 @@ func Resourcecc_add_vnics_rspSchema() *schema.Resource {
 			"vnics": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcevNICSchema()},
+				Elem:     ResourcevNICSchema(),
+			},
 		},
 	}
 }

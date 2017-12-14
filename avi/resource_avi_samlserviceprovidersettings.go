@@ -31,11 +31,13 @@ func ResourceSamlServiceProviderSettingsSchema() *schema.Resource {
 			"saml_entity_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "AUTH_SAML_CLUSTER_VIP"},
+				Default:  "AUTH_SAML_CLUSTER_VIP",
+			},
 			"sp_nodes": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceSamlServiceProviderNodeSchema()},
+				Elem:     ResourceSamlServiceProviderNodeSchema(),
+			},
 			"tech_contact_email": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

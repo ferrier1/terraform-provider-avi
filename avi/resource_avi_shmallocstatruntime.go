@@ -19,7 +19,8 @@ func ResourceShMallocStatRuntimeSchema() *schema.Resource {
 			"sh_mallocstat_entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceShMallocStatEntrySchema()},
+				Elem:     ResourceShMallocStatEntrySchema(),
+			},
 		},
 	}
 }

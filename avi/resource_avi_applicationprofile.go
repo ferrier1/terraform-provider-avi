@@ -21,18 +21,31 @@ func ResourceApplicationProfileSchema() map[string]*schema.Schema {
 		"dns_service_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsServiceApplicationProfileSchema()},
+			Elem:     ResourceDnsServiceApplicationProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"dos_rl_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceDosRateLimitProfileSchema()},
+			Elem:     ResourceDosRateLimitProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"http_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPApplicationProfileSchema()},
+			Elem:     ResourceHTTPApplicationProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"preserve_client_ip": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -41,18 +54,24 @@ func ResourceApplicationProfileSchema() map[string]*schema.Schema {
 		"tcp_app_profile": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Set:      func(v interface{}) int { return 0 }, Elem: ResourceTCPApplicationProfileSchema()},
+			Elem:     ResourceTCPApplicationProfileSchema(),
+			Set: func(v interface{}) int {
+				return 0
+			},
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
 		},
 		"type": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 	}
 }
 

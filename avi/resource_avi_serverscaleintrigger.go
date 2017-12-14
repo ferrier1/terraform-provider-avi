@@ -14,11 +14,13 @@ func ResourceServerScaleInTriggerSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerIdSchema()},
+				Elem:     ResourceServerIdSchema(),
+			},
 		},
 	}
 }

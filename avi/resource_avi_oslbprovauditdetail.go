@@ -22,10 +22,12 @@ func ResourceOsLbProvAuditDetailSchema() *schema.Resource {
 			},
 			"job_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"job_ts": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"passed": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

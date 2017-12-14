@@ -24,11 +24,13 @@ func ResourceVIMgrVcenterRuntimeSchema() *schema.Resource {
 			"cloud_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/api/cloud?name=Default-Cloud"},
+				Default:  "/api/cloud?name=Default-Cloud",
+			},
 			"datacenter_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"disc_end_time": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -55,7 +57,8 @@ func ResourceVIMgrVcenterRuntimeSchema() *schema.Resource {
 			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"num_clusters": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -94,11 +97,13 @@ func ResourceVIMgrVcenterRuntimeSchema() *schema.Resource {
 			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vcenter_connected": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -114,7 +119,8 @@ func ResourceVIMgrVcenterRuntimeSchema() *schema.Resource {
 			},
 			"vcenter_url": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

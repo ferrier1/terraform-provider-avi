@@ -15,15 +15,27 @@ func ResourceIcmpStatRuntimeSchema() *schema.Resource {
 			"icps_inhist": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIcmpHistSchema()},
+				Elem:     ResourceIcmpHistSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"icps_outhist": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIcmpHistSchema()},
+				Elem:     ResourceIcmpHistSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"more_stats": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIcmpStatSchema()},
+				Elem:     ResourceIcmpStatSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

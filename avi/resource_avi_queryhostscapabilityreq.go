@@ -14,7 +14,11 @@ func ResourceQueryHostsCapabilityReqSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"admin": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceVIAdminCredentialsSchema()},
+				Required: true, Elem: ResourceVIAdminCredentialsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"async": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -35,7 +39,8 @@ func ResourceQueryHostsCapabilityReqSchema() *schema.Resource {
 			"host_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceHostInfoSchema()},
+				Elem:     ResourceHostInfoSchema(),
+			},
 			"ignore_vcenter_query": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -43,10 +48,12 @@ func ResourceQueryHostsCapabilityReqSchema() *schema.Resource {
 			},
 			"memory": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_cpu": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"obj_type": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -57,7 +64,8 @@ func ResourceQueryHostsCapabilityReqSchema() *schema.Resource {
 			},
 			"ovf_path": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"se_mgmt_nw": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -69,7 +77,8 @@ func ResourceQueryHostsCapabilityReqSchema() *schema.Resource {
 			"vcenter_ds_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVcenterDatastoreSchema()},
+				Elem:     ResourceVcenterDatastoreSchema(),
+			},
 			"vcenter_ds_mode": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -22,10 +22,12 @@ func ResourcePoolResourcesScoreDataSchema() *schema.Resource {
 			},
 			"pool_ref": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -37,7 +39,8 @@ func ResourcePoolResourcesScoreDataSchema() *schema.Resource {
 			"server_resources_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceServerResourcesScoreSchema()},
+				Elem:     ResourceServerResourcesScoreSchema(),
+			},
 		},
 	}
 }

@@ -15,7 +15,8 @@ func ResourceOverlappingSubnetInfoSchema() *schema.Resource {
 			"network_subnets": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceOverlappingSubnetPairSchema()},
+				Elem:     ResourceOverlappingSubnetPairSchema(),
+			},
 			"vrf_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

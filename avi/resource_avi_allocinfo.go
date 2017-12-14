@@ -14,16 +14,20 @@ func ResourceAllocInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"bytes_allocated": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"number_of_dallocs": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"number_of_mallocs": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"number_of_requests": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

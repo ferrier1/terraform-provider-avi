@@ -21,7 +21,8 @@ func ResourceWafPolicySchema() map[string]*schema.Schema {
 		"crs_groups": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceWafRuleGroupSchema()},
+			Elem:     ResourceWafRuleGroupSchema(),
+		},
 		"description": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -29,22 +30,27 @@ func ResourceWafPolicySchema() map[string]*schema.Schema {
 		"mode": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "WAF_MODE_DETECTION_ONLY"},
+			Default:  "WAF_MODE_DETECTION_ONLY",
+		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"paranoia_level": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Default:  "WAF_PARANOIA_LEVEL_LOW"},
+			Default:  "WAF_PARANOIA_LEVEL_LOW",
+		},
 		"post_crs_groups": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceWafRuleGroupSchema()},
+			Elem:     ResourceWafRuleGroupSchema(),
+		},
 		"pre_crs_groups": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceWafRuleGroupSchema()},
+			Elem:     ResourceWafRuleGroupSchema(),
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -52,7 +58,8 @@ func ResourceWafPolicySchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"waf_profile_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,

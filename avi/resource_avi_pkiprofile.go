@@ -17,7 +17,8 @@ func ResourcePKIProfileSchema() map[string]*schema.Schema {
 		"ca_certs": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceSSLCertificateSchema()},
+			Elem:     ResourceSSLCertificateSchema(),
+		},
 		"created_by": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -30,7 +31,8 @@ func ResourcePKIProfileSchema() map[string]*schema.Schema {
 		"crls": &schema.Schema{
 			Type:     schema.TypeList,
 			Optional: true,
-			Elem:     ResourceCRLSchema()},
+			Elem:     ResourceCRLSchema(),
+		},
 		"ignore_peer_chain": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,
@@ -43,7 +45,8 @@ func ResourcePKIProfileSchema() map[string]*schema.Schema {
 		},
 		"name": &schema.Schema{
 			Type:     schema.TypeString,
-			Required: true},
+			Required: true,
+		},
 		"tenant_ref": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
@@ -51,7 +54,8 @@ func ResourcePKIProfileSchema() map[string]*schema.Schema {
 		"uuid": &schema.Schema{
 			Type:     schema.TypeString,
 			Optional: true,
-			Computed: true},
+			Computed: true,
+		},
 		"validate_only_leaf_crl": &schema.Schema{
 			Type:     schema.TypeBool,
 			Optional: true,

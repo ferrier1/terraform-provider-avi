@@ -31,7 +31,11 @@ func ResourceSeHmEventPoolDetailsSchema() *schema.Resource {
 			"server": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeHmEventServerDetailsSchema()},
+				Elem:     ResourceSeHmEventServerDetailsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"src_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

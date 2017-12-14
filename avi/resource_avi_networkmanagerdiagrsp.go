@@ -19,7 +19,11 @@ func ResourceNetworkManagerDiagRspSchema() *schema.Resource {
 			"networks": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVcenterNetworkDiagSchema()},
+				Elem:     ResourceVcenterNetworkDiagSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"success": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -28,7 +32,8 @@ func ResourceNetworkManagerDiagRspSchema() *schema.Resource {
 			"summary": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "Success"},
+				Default:  "Success",
+			},
 		},
 	}
 }

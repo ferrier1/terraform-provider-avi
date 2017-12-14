@@ -43,7 +43,8 @@ func ResourceAzureSetupSchema() *schema.Resource {
 			"vips": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"vnet_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -51,7 +52,8 @@ func ResourceAzureSetupSchema() *schema.Resource {
 			"vs_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

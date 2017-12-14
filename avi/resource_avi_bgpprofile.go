@@ -15,7 +15,8 @@ func ResourceBgpProfileSchema() *schema.Resource {
 			"community": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"hold_time": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -23,11 +24,13 @@ func ResourceBgpProfileSchema() *schema.Resource {
 			},
 			"ibgp": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"ip_communities": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpCommunitySchema()},
+				Elem:     ResourceIpCommunitySchema(),
+			},
 			"keepalive_interval": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -35,11 +38,13 @@ func ResourceBgpProfileSchema() *schema.Resource {
 			},
 			"local_as": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"peers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceBgpPeerSchema()},
+				Elem:     ResourceBgpPeerSchema(),
+			},
 			"send_community": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

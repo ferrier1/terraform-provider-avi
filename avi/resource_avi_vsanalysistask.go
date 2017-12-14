@@ -15,29 +15,51 @@ func ResourceVsAnalysisTaskSchema() *schema.Resource {
 			"config": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConfigAnalysisSchema()},
+				Elem:     ResourceConfigAnalysisSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"metrics": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsMetricsAnalysisSchema()},
+				Elem:     ResourceVsMetricsAnalysisSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"operational": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsOperationalAnalysisSchema()},
+				Elem:     ResourceVsOperationalAnalysisSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"placement": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsPlacementAnalysisSchema()},
+				Elem:     ResourceVsPlacementAnalysisSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"task_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"task_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"traffic": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsTrafficAnalysisSchema()},
+				Elem:     ResourceVsTrafficAnalysisSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

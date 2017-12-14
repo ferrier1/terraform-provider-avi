@@ -15,28 +15,40 @@ func ResourceruleSchema() *schema.Resource {
 			"action": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "reject"},
+				Default:  "reject",
+			},
 			"appliedtolist": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxAppliedToListSchema()},
+				Elem:     ResourcensxAppliedToListSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"destinations": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxRuleDestsSchema()},
+				Elem:     ResourcensxRuleDestsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"direction": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"disabled": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"logged": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -52,11 +64,19 @@ func ResourceruleSchema() *schema.Resource {
 			"services": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxServicesSchema()},
+				Elem:     ResourcensxServicesSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"sources": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourcensxRuleSrcsSchema()},
+				Elem:     ResourcensxRuleSrcsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

@@ -15,10 +15,15 @@ func ResourceSdbKeySchema() *schema.Resource {
 			"ip_persistent_key": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpPersistentKeySchema()},
+				Elem:     ResourceIpPersistentKeySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"key_type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"obj_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -30,14 +35,19 @@ func ResourceSdbKeySchema() *schema.Resource {
 			"ssl_key": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSslKeySchema()},
+				Elem:     ResourceSslKeySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"string_key": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

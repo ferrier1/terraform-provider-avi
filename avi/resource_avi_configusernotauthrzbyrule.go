@@ -15,11 +15,13 @@ func ResourceConfigUserNotAuthrzByRuleSchema() *schema.Resource {
 			"roles": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "No Roles"},
+				Default:  "No Roles",
+			},
 			"tenants": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "No Tenants"},
+				Default:  "No Tenants",
+			},
 			"user": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

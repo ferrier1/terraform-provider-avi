@@ -14,10 +14,12 @@ func ResourceMetricRespLatencyTimeIntervalSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"end": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"start": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

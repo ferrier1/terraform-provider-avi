@@ -14,10 +14,12 @@ func ResourceSummarizedSubnetInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"cidr_prefix": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"network": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

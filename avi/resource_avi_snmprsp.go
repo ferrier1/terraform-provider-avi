@@ -15,18 +15,31 @@ func ResourceSnmpRspSchema() *schema.Resource {
 			"controller_mib_entry": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceControllerMibEntrySchema()},
+				Elem:     ResourceControllerMibEntrySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rpc_status": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"serviceengine_mib_entry": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceServiceEngineMibEntrySchema()},
+				Elem:     ResourceServiceEngineMibEntrySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"virtualservice_mib_entry": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVirtualServiceMibEntrySchema()},
+				Elem:     ResourceVirtualServiceMibEntrySchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

@@ -15,10 +15,12 @@ func ResourceVcenterSupportedCountersSchema() *schema.Resource {
 			"counters": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVmwarePerfCounterInfoSchema()},
+				Elem:     ResourceVmwarePerfCounterInfoSchema(),
+			},
 			"vcenter": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

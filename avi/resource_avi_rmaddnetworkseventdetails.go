@@ -15,7 +15,8 @@ func ResourceRmAddNetworksEventDetailsSchema() *schema.Resource {
 			"networks": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceRmAddVnicSchema()},
+				Elem:     ResourceRmAddVnicSchema(),
+			},
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,11 +32,13 @@ func ResourceRmAddNetworksEventDetailsSchema() *schema.Resource {
 			"vs_name": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

@@ -14,11 +14,13 @@ func ResourceVIControllerVnicInfoSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"portgroup": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vnic_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIGuestvNicIPAddrSchema()},
+				Elem:     ResourceVIGuestvNicIPAddrSchema(),
+			},
 		},
 	}
 }

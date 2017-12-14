@@ -18,7 +18,8 @@ func ResourceVinfraVcenterBadCredentialsSchema() *schema.Resource {
 			},
 			"vcenter": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vcenter_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

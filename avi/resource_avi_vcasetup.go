@@ -22,7 +22,8 @@ func ResourceVCASetupSchema() *schema.Resource {
 			},
 			"instance": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"privilege": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

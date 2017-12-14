@@ -23,14 +23,23 @@ func ResourceAuthMappingRuleSchema() *schema.Resource {
 			"attribute_match": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAuthMatchAttributeSchema()},
+				Elem:     ResourceAuthMatchAttributeSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"group_match": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAuthMatchGroupMembershipSchema()},
+				Elem:     ResourceAuthMatchGroupMembershipSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"is_superuser": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -42,7 +51,8 @@ func ResourceAuthMappingRuleSchema() *schema.Resource {
 			"role_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"tenant_attribute_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -50,7 +60,8 @@ func ResourceAuthMappingRuleSchema() *schema.Resource {
 			"tenant_refs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

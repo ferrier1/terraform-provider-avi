@@ -35,7 +35,11 @@ func ResourceDnsResponseSchema() *schema.Resource {
 			"opt_record": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceDnsOptRecordSchema()},
+				Elem:     ResourceDnsOptRecordSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"query_or_response": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -47,7 +51,8 @@ func ResourceDnsResponseSchema() *schema.Resource {
 			"records": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsResourceRecordSchema()},
+				Elem:     ResourceDnsResourceRecordSchema(),
+			},
 			"recursion_available": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

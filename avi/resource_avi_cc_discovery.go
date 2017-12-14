@@ -15,15 +15,21 @@ func ResourceCC_DiscoverySchema() *schema.Resource {
 			"discovery_tenants": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_TenantSchema()},
+				Elem:     ResourceCC_TenantSchema(),
+			},
 			"failed_tenants": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_TenantSchema()},
+				Elem:     ResourceCC_TenantSchema(),
+			},
 			"poll": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceCC_CronSchema()},
+				Elem:     ResourceCC_CronSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ran_discovery": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -31,7 +37,8 @@ func ResourceCC_DiscoverySchema() *schema.Resource {
 			"tracked_tenants": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCC_TenantSchema()},
+				Elem:     ResourceCC_TenantSchema(),
+			},
 		},
 	}
 }

@@ -15,7 +15,11 @@ func ResourceConfigurationStatusSchema() *schema.Resource {
 			"last_changed_time": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceTimeStampSchema()},
+				Elem:     ResourceTimeStampSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"pvt_data": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -27,7 +31,8 @@ func ResourceConfigurationStatusSchema() *schema.Resource {
 			"reason": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"reason_code": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,

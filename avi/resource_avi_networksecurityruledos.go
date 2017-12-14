@@ -14,14 +14,17 @@ func ResourceNetworkSecurityRuleDosSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"action": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"age": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"enable": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"log": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -29,11 +32,19 @@ func ResourceNetworkSecurityRuleDosSchema() *schema.Resource {
 			},
 			"match": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceNetworkSecurityMatchTargetSchema()},
+				Required: true, Elem: ResourceNetworkSecurityMatchTargetSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rl_param": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceNetworkSecurityPolicyActionRLParamSchema()},
+				Elem:     ResourceNetworkSecurityPolicyActionRLParamSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

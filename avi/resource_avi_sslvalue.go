@@ -14,7 +14,8 @@ func ResourceSslValueSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"session": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

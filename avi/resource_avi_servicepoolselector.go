@@ -22,10 +22,12 @@ func ResourceServicePoolSelectorSchema() *schema.Resource {
 			},
 			"service_port": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"service_port_range_end": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"service_protocol": &schema.Schema{
 				Type:     schema.TypeString,

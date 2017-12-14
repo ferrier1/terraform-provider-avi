@@ -15,7 +15,8 @@ func ResourceRepeatedUintsSchema() *schema.Resource {
 			"vals": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeInt}},
+				Elem:     &schema.Schema{Type: schema.TypeInt},
+			},
 		},
 	}
 }

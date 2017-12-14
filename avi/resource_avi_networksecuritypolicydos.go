@@ -15,10 +15,12 @@ func ResourceNetworkSecurityPolicyDosSchema() *schema.Resource {
 			"rules": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceNetworkSecurityRuleDosSchema()},
+				Elem:     ResourceNetworkSecurityRuleDosSchema(),
+			},
 			"vs_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vs_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

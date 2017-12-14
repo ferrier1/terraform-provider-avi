@@ -15,10 +15,12 @@ func Resourcecc_autoscale_group_info_rspSchema() *schema.Resource {
 			"group_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     Resourcecc_autoscale_group_infoSchema()},
+				Elem:     Resourcecc_autoscale_group_infoSchema(),
+			},
 			"ret_status": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ret_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

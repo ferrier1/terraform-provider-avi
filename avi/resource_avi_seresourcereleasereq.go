@@ -25,18 +25,22 @@ func ResourceSeResourceReleaseReqSchema() *schema.Resource {
 			"dns_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsInfoSchema()},
+				Elem:     ResourceDnsInfoSchema(),
+			},
 			"num_se": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_stby_se": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"rel_reason": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "SE_REL_NOT_IN_USE"},
+				Default:  "SE_REL_NOT_IN_USE",
+			},
 			"release_all_se": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -45,14 +49,23 @@ func ResourceSeResourceReleaseReqSchema() *schema.Resource {
 			"res_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsResProfileSchema()},
+				Elem:     ResourceVsResProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"se_uuid": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"svc_id": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceSeMgrSvcIdSchema()},
+				Required: true, Elem: ResourceSeMgrSvcIdSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"use_res_profile": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

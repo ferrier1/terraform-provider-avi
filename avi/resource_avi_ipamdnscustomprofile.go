@@ -19,15 +19,18 @@ func ResourceIpamDnsCustomProfileSchema() *schema.Resource {
 			"dynamic_params": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceCustomParamsSchema()},
+				Elem:     ResourceCustomParamsSchema(),
+			},
 			"usable_domains": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"usable_subnets": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+			},
 		},
 	}
 }

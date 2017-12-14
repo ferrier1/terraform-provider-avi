@@ -19,11 +19,13 @@ func ResourceMetricsRuleOptionsSchema() *schema.Resource {
 			"high_wms": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeFloat}},
+				Elem:     &schema.Schema{Type: schema.TypeFloat},
+			},
 			"low_wms": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeFloat}},
+				Elem:     &schema.Schema{Type: schema.TypeFloat},
+			},
 			"only_positive_anomalies": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

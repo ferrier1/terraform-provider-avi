@@ -14,15 +14,24 @@ func ResourceSSLKeyParamsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"algorithm": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"ec_params": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLKeyECParamsSchema()},
+				Elem:     ResourceSSLKeyECParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"rsa_params": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSSLKeyRSAParamsSchema()},
+				Elem:     ResourceSSLKeyRSAParamsSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

@@ -15,13 +15,19 @@ func ResourceHTTPSecurityRuleSchema() *schema.Resource {
 			"action": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceHTTPSecurityActionSchema()},
+				Elem:     ResourceHTTPSecurityActionSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"enable": &schema.Schema{
 				Type:     schema.TypeBool,
-				Required: true},
+				Required: true,
+			},
 			"index": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"log": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -29,10 +35,15 @@ func ResourceHTTPSecurityRuleSchema() *schema.Resource {
 			"match": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceMatchTargetSchema()},
+				Elem:     ResourceMatchTargetSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

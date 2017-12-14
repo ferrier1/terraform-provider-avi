@@ -14,7 +14,8 @@ func ResourceApplicationAnomalyScoreDataSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"reason": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"reason_attr": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -26,7 +27,8 @@ func ResourceApplicationAnomalyScoreDataSchema() *schema.Resource {
 			"virtualservice_anomaly_scores": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVirtualServiceAnomalyScoreSchema()},
+				Elem:     ResourceVirtualServiceAnomalyScoreSchema(),
+			},
 		},
 	}
 }

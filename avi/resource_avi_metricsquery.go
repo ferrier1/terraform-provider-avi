@@ -37,7 +37,8 @@ func ResourceMetricsQuerySchema() *schema.Resource {
 			"client_insights": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "ACTIVE"},
+				Default:  "ACTIVE",
+			},
 			"country": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -54,11 +55,13 @@ func ResourceMetricsQuerySchema() *schema.Resource {
 			"dimension_aggregation": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_DIMENSION_AGG_NONE"},
+				Default:  "METRICS_DIMENSION_AGG_NONE",
+			},
 			"dimension_filter_op": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_FILTER_EQUALS"},
+				Default:  "METRICS_FILTER_EQUALS",
+			},
 			"dimension_limit": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -71,14 +74,17 @@ func ResourceMetricsQuerySchema() *schema.Resource {
 			"dimensions": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"entity_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"filters": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceMetricsFiltersSchema()},
+				Elem:     ResourceMetricsFiltersSchema(),
+			},
 			"id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -108,13 +114,16 @@ func ResourceMetricsQuerySchema() *schema.Resource {
 			},
 			"metric_entity": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"metric_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"microservice_levels": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"obj_id": &schema.Schema{
 				Type:     schema.TypeString,
@@ -123,7 +132,8 @@ func ResourceMetricsQuerySchema() *schema.Resource {
 			"order_by": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "metric_timestamp"},
+				Default:  "metric_timestamp",
+			},
 			"os": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -152,11 +162,13 @@ func ResourceMetricsQuerySchema() *schema.Resource {
 			"result_format": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_FORMAT_JSON"},
+				Default:  "METRICS_FORMAT_JSON",
+			},
 			"sampling_level": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "METRICS_SAMPLING_FORCE"},
+				Default:  "METRICS_SAMPLING_FORCE",
+			},
 			"server": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -168,7 +180,8 @@ func ResourceMetricsQuerySchema() *schema.Resource {
 			"start": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "1970-01-01T00:00:00"},
+				Default:  "1970-01-01T00:00:00",
+			},
 			"step": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
@@ -185,7 +198,8 @@ func ResourceMetricsQuerySchema() *schema.Resource {
 			"url": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"validate_data": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,

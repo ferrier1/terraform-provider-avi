@@ -15,11 +15,16 @@ func ResourceIpamDnsSubnetDomainListSchema() *schema.Resource {
 			"dns_records": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpamDnsRecordInfoSchema()},
+				Elem:     ResourceIpamDnsRecordInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"domains": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"error": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -27,11 +32,13 @@ func ResourceIpamDnsSubnetDomainListSchema() *schema.Resource {
 			"subnets": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+			},
 			"zdomains": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsDomainSchema()},
+				Elem:     ResourceDnsDomainSchema(),
+			},
 		},
 	}
 }

@@ -15,14 +15,17 @@ func ResourceHealthMonitorDNSSchema() *schema.Resource {
 			"qtype": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "DNS_QUERY_TYPE"},
+				Default:  "DNS_QUERY_TYPE",
+			},
 			"query_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"rcode": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "RCODE_NO_ERROR"},
+				Default:  "RCODE_NO_ERROR",
+			},
 			"response_string": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

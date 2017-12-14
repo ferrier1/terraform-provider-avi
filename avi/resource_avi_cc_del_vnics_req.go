@@ -15,7 +15,8 @@ func Resourcecc_del_vnics_reqSchema() *schema.Resource {
 			"cc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "cloud-0"},
+				Default:  "cloud-0",
+			},
 			"cookie": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,10 +24,12 @@ func Resourcecc_del_vnics_reqSchema() *schema.Resource {
 			"mac_addrs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"se_vm_uuid": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

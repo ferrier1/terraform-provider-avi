@@ -15,7 +15,8 @@ func ResourceGslbDnsGeoUpdateSchema() *schema.Resource {
 			"obj_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbObjectInfoSchema()},
+				Elem:     ResourceGslbObjectInfoSchema(),
+			},
 			"ops": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -23,7 +24,8 @@ func ResourceGslbDnsGeoUpdateSchema() *schema.Resource {
 			"se_list": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 		},
 	}
 }

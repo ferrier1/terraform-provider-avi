@@ -15,7 +15,11 @@ func ResourceSeConsumerCliProtoSchema() *schema.Resource {
 			"consumer": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceSeConsumerProtoSchema()},
+				Elem:     ResourceSeConsumerProtoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

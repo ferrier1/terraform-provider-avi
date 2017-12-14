@@ -14,7 +14,8 @@ func ResourceHealthMonitorExternalSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"command_code": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"command_parameters": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

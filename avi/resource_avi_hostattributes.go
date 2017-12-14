@@ -14,7 +14,8 @@ func ResourceHostAttributesSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"attr_key": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"attr_val": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

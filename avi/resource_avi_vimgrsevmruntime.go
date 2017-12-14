@@ -19,7 +19,11 @@ func ResourceVIMgrSEVMRuntimeSchema() *schema.Resource {
 			"azure_info": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceAzureInfoSchema()},
+				Elem:     ResourceAzureInfoSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"cloud_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -27,7 +31,8 @@ func ResourceVIMgrSEVMRuntimeSchema() *schema.Resource {
 			"cloud_ref": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "/api/cloud?name=Default-Cloud"},
+				Default:  "/api/cloud?name=Default-Cloud",
+			},
 			"connection_state": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -63,7 +68,8 @@ func ResourceVIMgrSEVMRuntimeSchema() *schema.Resource {
 			"guest_nic": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVIMgrGuestNicRuntimeSchema()},
+				Elem:     ResourceVIMgrGuestNicRuntimeSchema(),
+			},
 			"host": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -90,10 +96,12 @@ func ResourceVIMgrSEVMRuntimeSchema() *schema.Resource {
 			},
 			"managed_object_id": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"powerstate": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -116,11 +124,13 @@ func ResourceVIMgrSEVMRuntimeSchema() *schema.Resource {
 			},
 			"type": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 			"vcenter_datacenter_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

@@ -15,14 +15,16 @@ func ResourceVIAdminCredentialsSchema() *schema.Resource {
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "root"},
+				Default:  "root",
+			},
 			"privilege": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
 			},
 			"vcenter_url": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vi_mgr_token": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

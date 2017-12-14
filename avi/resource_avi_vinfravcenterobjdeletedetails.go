@@ -14,10 +14,12 @@ func ResourceVinfraVcenterObjDeleteDetailsSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"obj_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"vcenter": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

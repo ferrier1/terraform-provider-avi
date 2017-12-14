@@ -18,7 +18,8 @@ func ResourceMicroServiceMatchSchema() *schema.Resource {
 			},
 			"match_criteria": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

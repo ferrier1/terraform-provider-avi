@@ -15,6 +15,7 @@ func ResourceIntelligentAutoScaleStateSchema() *schema.Resource {
 			"estimated_capacity": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 		},
 	}

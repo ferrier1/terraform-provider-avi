@@ -15,7 +15,8 @@ func ResourceGslbServiceHmonStatSchema() *schema.Resource {
 			"groups": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceGslbPoolHmonSchema()},
+				Elem:     ResourceGslbPoolHmonSchema(),
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,7 +32,8 @@ func ResourceGslbServiceHmonStatSchema() *schema.Resource {
 			"uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Computed: true},
+				Computed: true,
+			},
 		},
 	}
 }

@@ -14,7 +14,11 @@ func ResourcensxSgDynamicMemberSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"dynamicset": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourcensxDynamicSetSchema()},
+				Required: true, Elem: ResourcensxDynamicSetSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 		},
 	}
 }

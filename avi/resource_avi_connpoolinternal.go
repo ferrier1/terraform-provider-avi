@@ -15,11 +15,19 @@ func ResourceConnpoolInternalSchema() *schema.Resource {
 			"config": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConnpoolConfigSchema()},
+				Elem:     ResourceConnpoolConfigSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"oper_status": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceOperationalStatusSchema()},
+				Elem:     ResourceOperationalStatusSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -31,7 +39,8 @@ func ResourceConnpoolInternalSchema() *schema.Resource {
 			"servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConnpoolServerInternalSchema()},
+				Elem:     ResourceConnpoolServerInternalSchema(),
+			},
 		},
 	}
 }

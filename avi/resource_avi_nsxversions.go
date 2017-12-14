@@ -15,7 +15,8 @@ func ResourcensxVersionsSchema() *schema.Resource {
 			"version": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourcensxVersionSchema()},
+				Elem:     ResourcensxVersionSchema(),
+			},
 		},
 	}
 }

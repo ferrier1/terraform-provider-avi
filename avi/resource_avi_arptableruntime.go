@@ -15,7 +15,8 @@ func ResourceArptableRuntimeSchema() *schema.Resource {
 			"arp_entry": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceArpEntrySchema()},
+				Elem:     ResourceArpEntrySchema(),
+			},
 			"proc_id": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,

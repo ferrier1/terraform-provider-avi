@@ -14,7 +14,8 @@ func ResourceClusterNodeRebootSchema() *schema.Resource {
 		Schema: map[string]*schema.Schema{
 			"node_name": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

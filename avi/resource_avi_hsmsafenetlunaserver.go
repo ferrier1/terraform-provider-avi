@@ -26,10 +26,12 @@ func ResourceHSMSafenetLunaServerSchema() *schema.Resource {
 			},
 			"remote_ip": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 			"server_cert": &schema.Schema{
 				Type:     schema.TypeString,
-				Required: true},
+				Required: true,
+			},
 		},
 	}
 }

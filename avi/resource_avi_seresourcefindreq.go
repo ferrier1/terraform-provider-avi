@@ -15,7 +15,8 @@ func ResourceSeResourceFindReqSchema() *schema.Resource {
 			"active_standby_se_tag": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
-				Default:  "ACTIVE_STANDBY_SE_1"},
+				Default:  "ACTIVE_STANDBY_SE_1",
+			},
 			"apic_mode": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -38,7 +39,8 @@ func ResourceSeResourceFindReqSchema() *schema.Resource {
 			"dns_info": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceDnsInfoSchema()},
+				Elem:     ResourceDnsInfoSchema(),
+			},
 			"east_west_placement": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -57,7 +59,11 @@ func ResourceSeResourceFindReqSchema() *schema.Resource {
 			"fip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"ign_pool_net_reach": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -66,7 +72,8 @@ func ResourceSeResourceFindReqSchema() *schema.Resource {
 			"lifs": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -78,14 +85,17 @@ func ResourceSeResourceFindReqSchema() *schema.Resource {
 			},
 			"num_se": &schema.Schema{
 				Type:     schema.TypeInt,
-				Required: true},
+				Required: true,
+			},
 			"num_standby_se": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"num_vnics": &schema.Schema{
 				Type:     schema.TypeInt,
 				Optional: true,
+				Default:  0,
 			},
 			"parent_uuid": &schema.Schema{
 				Type:     schema.TypeString,
@@ -94,7 +104,11 @@ func ResourceSeResourceFindReqSchema() *schema.Resource {
 			"res_profile": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceVsResProfileSchema()},
+				Elem:     ResourceVsResProfileSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"scaleout_ecmp": &schema.Schema{
 				Type:     schema.TypeBool,
 				Optional: true,
@@ -107,19 +121,26 @@ func ResourceSeResourceFindReqSchema() *schema.Resource {
 			"servers": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceConServerSchema()},
+				Elem:     ResourceConServerSchema(),
+			},
 			"service_subnet": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceIpAddrPrefixSchema()},
+				Elem:     ResourceIpAddrPrefixSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"services": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceVsProtocolSchema()},
+				Elem:     ResourceVsProtocolSchema(),
+			},
 			"snat_ip": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     ResourceIpAddrSchema()},
+				Elem:     ResourceIpAddrSchema(),
+			},
 			"static_se_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -127,10 +148,15 @@ func ResourceSeResourceFindReqSchema() *schema.Resource {
 			"static_se_uuids": &schema.Schema{
 				Type:     schema.TypeList,
 				Optional: true,
-				Elem:     &schema.Schema{Type: schema.TypeString}},
+				Elem:     &schema.Schema{Type: schema.TypeString},
+			},
 			"svc_id": &schema.Schema{
 				Type:     schema.TypeSet,
-				Required: true, Set: func(v interface{}) int { return 0 }, Elem: ResourceSeMgrSvcIdSchema()},
+				Required: true, Elem: ResourceSeMgrSvcIdSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"svc_notify_q_name": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
@@ -147,7 +173,11 @@ func ResourceSeResourceFindReqSchema() *schema.Resource {
 			"vip": &schema.Schema{
 				Type:     schema.TypeSet,
 				Optional: true,
-				Set:      func(v interface{}) int { return 0 }, Elem: ResourceConVipSchema()},
+				Elem:     ResourceConVipSchema(),
+				Set: func(v interface{}) int {
+					return 0
+				},
+			},
 			"vrf_context_uuid": &schema.Schema{
 				Type:     schema.TypeString,
 				Optional: true,
