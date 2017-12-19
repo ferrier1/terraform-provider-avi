@@ -60,6 +60,7 @@ func TestProvider(t *testing.T) {
 	}
 
 	// Validating pool resource in avi provider and datasource for pool
+
 	var hmconfigs = map[string]interface{}{"name": "", "uuid": "",
 		"type": ""}
 
