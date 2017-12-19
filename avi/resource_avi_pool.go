@@ -46,6 +46,14 @@ func ResourcePoolSchema() map[string]*schema.Schema {
 			},
 			Elem: ResourceFailAction(),
 		},
+		"tenant_ref": &schema.Schema{
+			Type:     schema.TypeString,
+			Optional: true,
+		},
+		"vrf_ref": &schema.Schema{
+			Type:     schema.TypeString,
+			Optional: true,
+		},
 	}
 }
 
