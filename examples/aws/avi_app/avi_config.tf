@@ -272,36 +272,6 @@ resource "avi_poolgroup" "terraform-poolgroup" {
   }
 }
 
-/*
-resource "avi_vsvip" "terraform-vip" {
-  name            = "aws_vip"
-  tenant_ref      = "${data.avi_tenant.default_tenant.id}"
-  cloud_ref       = "${data.avi_cloud.aws_cloud_cfg.id}"
-  vrf_context_ref = "${data.avi_vrfcontext.terraform_vrf.id}"
-
-  vip {
-    auto_allocate_ip  = true
-    avi_allocated_vip = true
-    availability_zone = "${var.aws_availability_zone}"
-    subnet_uuid       = "${data.aws_subnet.terraform-subnet-0.id}"
-
-    ip_address = {
-      addr = "10.144.43.5"
-      type = "V4"
-    }
-
-    subnet = {
-      ip_addr = {
-        addr = "${var.aws_subnet_ip}"
-        type = "V4"
-      }
-
-      mask = "${var.aws_subnet_mask}"
-    }
-  }
-}
-*/
-
 resource "avi_virtualservice" "terraform-virtualservice" {
   name                         = "aws_vs"
   pool_group_ref               = "${avi_poolgroup.terraform-poolgroup.id}"
@@ -323,12 +293,6 @@ resource "avi_virtualservice" "terraform-virtualservice" {
     avi_allocated_vip = true
     availability_zone = "${var.aws_availability_zone}"
     subnet_uuid       = "${data.aws_subnet.terraform-subnets-0.id}"
-
-    /*ip_address = {
-      addr = "10.144.43.5"
-      type = "V4"
-    }
-    */
 
     subnet = {
       ip_addr = {
