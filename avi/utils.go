@@ -146,10 +146,10 @@ func ApiCreateOrUpdate(d *schema.ResourceData, meta interface{}, objType string,
 				log.Printf("[INFO] using cloud %v \n", cloudUUID)
 
 				err = client.AviSession.GetObject(objType, session.SetName(name.(string)),
-					session.SetResult(&existing_obj), session.SetCloudUUID(cloudUUID))
+					session.SetResult(&existing_obj), session.SetCloudUUID(cloudUUID), session.SetSkipDefault(true))
 			} else {
 				err = client.AviSession.GetObject(objType, session.SetName(name.(string)),
-					session.SetResult(&existing_obj))
+					session.SetResult(&existing_obj), session.SetSkipDefault(true))
 			}
 			if err != nil {
 				// object not found
@@ -200,7 +200,7 @@ func ApiRead(d *schema.ResourceData, meta interface{}, objType string, s map[str
 		log.Printf("[DEBUG] reading object with uuid %v \n", uuid)
 	}
 	if uuid != "" {
-		path := "api/" + objType + "/" + uuid
+		path := "api/" + objType + "/" + uuid + "?skip_default=true"
 		log.Printf("[DEBUG] reading object with id %v path %v\n", uuid, path)
 		err := client.AviSession.Get(path, &obj)
 		if err != nil {
@@ -214,11 +214,11 @@ func ApiRead(d *schema.ResourceData, meta interface{}, objType string, s map[str
 			cloudUUID := strings.SplitN(cloudRef.(string), "api/cloud/", 2)[1]
 			log.Printf("[DEBUG] using cloud %v \n", cloudUUID)
 			err = client.AviSession.GetObject(objType, session.SetName(name.(string)),
-				session.SetResult(&obj), session.SetCloudUUID(cloudUUID))
+				session.SetResult(&obj), session.SetCloudUUID(cloudUUID), session.SetSkipDefault(true))
 		} else {
 			log.Printf("[DEBUG] using name %v \n", name)
 			err = client.AviSession.GetObject(objType, session.SetName(name.(string)),
-				session.SetResult(&obj))
+				session.SetResult(&obj), session.SetSkipDefault(true))
 		}
 		if err != nil {
 			d.SetId("")
@@ -249,7 +249,7 @@ func ResourceImporter(d *schema.ResourceData, meta interface{}, objType string, 
 	}
 	var data interface{}
 	client := meta.(*clients.AviClient)
-	path := "api/" + objType + "/"
+	path := "api/" + objType + "?skip_default=true"
 	log.Printf("[DEBUG] reading object with path %v\n", path)
 
 	err := client.AviSession.Get(path, &data)

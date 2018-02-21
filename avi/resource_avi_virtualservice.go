@@ -386,7 +386,7 @@ func resourceAviVirtualServiceUpdate(d *schema.ResourceData, meta interface{}) e
 	err := ApiRead(d, meta, "virtualservice", s)
 	if err == nil {
 		uuid := d.Get("uuid").(string)
-		vspath := "api/virtualservice/" + uuid
+		vspath := "api/virtualservice/" + uuid + "?skip_default=true"
 		err = client.AviSession.Get(vspath, &existingvs)
 		if err == nil {
 			if _, err := ApiDataToSchema(existingvs, &obj, s); err == nil {
