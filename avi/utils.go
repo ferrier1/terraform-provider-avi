@@ -144,7 +144,7 @@ func ApiCreateOrUpdate(d *schema.ResourceData, meta interface{}, objType string,
 			err = client.AviSession.Put(path, data, &robj)
 		} else if name, ok := d.GetOk("name"); ok {
 			var existing_obj interface{}
-			if cloudRef, ok := d.GetOk("cloud_ref"); ok && strings.Contains(cloudRef.(string), "api/cloud/"){
+			if cloudRef, ok := d.GetOk("cloud_ref"); ok && strings.Contains(cloudRef.(string), "api/cloud/") {
 				cloudUUID := strings.SplitN(cloudRef.(string), "api/cloud/", 2)[1]
 				log.Printf("[INFO] ApiCreateOrUpdate: using cloud %v \n", cloudUUID)
 
@@ -215,7 +215,7 @@ func ApiRead(d *schema.ResourceData, meta interface{}, objType string, s map[str
 		}
 	} else if name, ok := d.GetOk("name"); ok {
 		var err error
-		if cloudRef, ok := d.GetOk("cloud_ref"); ok && strings.Contains(cloudRef.(string), "api/cloud/"){
+		if cloudRef, ok := d.GetOk("cloud_ref"); ok && strings.Contains(cloudRef.(string), "api/cloud/") {
 			cloudUUID := strings.SplitN(cloudRef.(string), "api/cloud/", 2)[1]
 			log.Printf("[DEBUG] ApiRead using cloud %v \n", cloudUUID)
 			err = client.AviSession.GetObject(objType, session.SetName(name.(string)),
