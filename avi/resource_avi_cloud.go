@@ -110,11 +110,73 @@ func ResourceCloudSchema() map[string]*schema.Schema {
 		"linuxserver_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
-			Elem:     ResourceLinuxServerConfigurationSchema(),
-			Set: func(v interface{}) int {
-				return 0
+			Elem: &schema.Resource{
+				Schema: map[string]*schema.Schema{
+					"se_sys_disk_size_gb": {
+						Type:     schema.TypeString,
+						Required: true,
+					},
+					"se_log_disk_size_gb": {
+						Type:     schema.TypeString,
+						Required: true,
+					},
+					"se_inband_mgmt": {
+						Type:     schema.TypeString,
+						Required: true,
+					},
+					"ssh_user_ref": {
+						Type:     schema.TypeString,
+						Required: true,
+					},
+					"hosts": &schema.Schema{
+						Type:     schema.TypeList,
+						Optional: true,
+						Elem: &schema.Resource{
+							Schema: map[string]*schema.Schema{
+								"host_ip": {
+									Type:     schema.TypeSet,
+									Required: true,
+									Elem: &schema.Resource{
+										Schema: map[string]*schema.Schema{
+											"type": {
+												Type:     schema.TypeString,
+												Required: true,
+											},
+											"addr": {
+												Type:     schema.TypeString,
+												Required: true,
+											},
+										},
+									},
+								},
+								"se_group_ref": &schema.Schema{
+									Type:     schema.TypeString,
+									Optional: true,
+								},
+
+								"host_attr": {
+									Type:     schema.TypeList,
+									Required: true,
+									Elem: &schema.Resource{
+										Schema: map[string]*schema.Schema{
+											"attr_key": {
+												Type:     schema.TypeString,
+												Required: true,
+											},
+											"attr_val": {
+												Type:     schema.TypeString,
+												Required: true,
+											},
+										},
+									},
+								},
+							},
+						},
+					},
+				},
 			},
 		},
+
 		"mesos_configuration": &schema.Schema{
 			Type:     schema.TypeSet,
 			Optional: true,
